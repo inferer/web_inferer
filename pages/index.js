@@ -1,6 +1,8 @@
 import LogoText from '../components/LogoText';
 import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
+import Link from "next/link";
+import router from "next/router";
 
 export default function Home() {
     return (
@@ -22,19 +24,24 @@ export default function Home() {
                         <div className="menu_item">
                             FAQ
                         </div>
-                        <LaunchAppButton/>
+
+                        <LaunchAppButton onClick={()=>{
+                            router.push('/app')
+                        }}/>
                     </div>
                 </div>
             </div>
 
-            <div style={{width:"100%", height:"58.5px"}}/>
+            <div style={{width: "100%", height: "58.5px"}}/>
 
             {/*page 1*/}
             <div className="subpage_1">
                 <img src="/home_curve.png"></img>
                 <div className="subpage_1_title_wrapper">
-                    <img src="/subpage_1_title_bg.png" style={{width: '988px',
-                        height: '376px', marginTop: '-170px'}}/>
+                    <img src="/subpage_1_title_bg.png" style={{
+                        width: '988px',
+                        height: '376px', marginTop: '-170px'
+                    }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
                     <p className="subpage_1_title">INFERER</p>
@@ -52,35 +59,41 @@ export default function Home() {
             <div className="subpage_2">
                 <LogoText text="What's Inferer" customStyle={{marginTop: '117px'}}/>
                 <div className="subtitle">
-                    Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and contribute to greate user ecysystem on chain.
+                    Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
+                    hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
                 <img src="/icon_logo_big.png" style={{marginTop: '26px'}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
-                Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and contribute to greate user ecysystem on chain.
+                    Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
+                    hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
                 <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px'}}/>
             </div>
 
             {/*page 3*/}
             <div className="subpage_3">
-                <LogoText text="Built on Data Analysis" customStyle={{marginTop:'112px'}}></LogoText>
+                <LogoText text="Built on Data Analysis" customStyle={{marginTop: '112px'}}></LogoText>
                 <div className="subtitle">
-                Blockchain is unique with its immutable data on chain and all data is public to everyone, which we believe the solution for bots also points to data. We could learn from data on chain and evaluate bots based on the behaviors in data.
+                    Blockchain is unique with its immutable data on chain and all data is public to everyone, which we
+                    believe the solution for bots also points to data. We could learn from data on chain and evaluate
+                    bots based on the behaviors in data.
                 </div>
                 <img src="/img_2.png" style={{marginTop: '47px'}}/>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
-                Verification is processed internally in Inferer. We would not need user interaction the way like reCaptcha in web2, which doesn’t cause trouble to users.
+                    Verification is processed internally in Inferer. We would not need user interaction the way like
+                    reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
                 <img src="/img_3.png" style={{marginTop: '54px', marginBottom: '112px'}}/>
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
-                <LogoText text="Products" customStyle={{marginTop:'105px'}}></LogoText>
+                <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subpage_4_card_1">
-                    <img src='/img_card_left.png' style={{width: '390px', height: '270px', marginLeft: '-109px', marginTop: '-97px'}}/>
+                    <img src='/img_card_left.png'
+                         style={{width: '390px', height: '270px', marginLeft: '-109px', marginTop: '-97px'}}/>
                     <div className='subpage_4_title_container' style={{marginLeft: '72px'}}>
                         <div className='subpage_4_title'>
                             Inferer Search
@@ -110,27 +123,33 @@ export default function Home() {
                             </span>
                     </div>
 
-                    <img src='/img_card_right.png' style={{width: '390px', height: '270px', marginRight: '-167px', marginTop: '-97px'}}/>
+                    <img src='/img_card_right.png'
+                         style={{width: '390px', height: '270px', marginRight: '-167px', marginTop: '-97px'}}/>
                 </div>
             </div>
 
             {/*page 5*/}
             <div className="subpage_5">
-                <LogoText text="Inferer community" customStyle={{marginTop:'108px'}}></LogoText>
+                <LogoText text="Inferer community" customStyle={{marginTop: '108px'}}></LogoText>
                 <div className="subtitle">
-                    Inferer is born in web3 and values community. Community would play a big role in inferer evaluation and management. We hope inferer community could help contribute to great user ecosystem on chain.
+                    Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
+                    and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
                 <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px'}}/>
             </div>
 
             {/*page 6*/}
             <div className="subpage_6">
-                <LogoText text="Contact us" customStyle={{marginTop:'108px'}}></LogoText>
+                <LogoText text="Contact us" customStyle={{marginTop: '108px'}}></LogoText>
                 <div className='card_container'>
-                    <ContactCard title='Twitter' subtitle='Inferer is born in web3 and values community.' icon={'/icon_twitter.png'}/>
-                    <ContactCard title='Discord' subtitle='Inferer is born in web3 and values community.' icon={'/icon_discord.png'}/>
-                    <ContactCard title='Email' subtitle='Inferer is born in web3 and values community.' icon={'/icon_email.png'}/>
-                    <ContactCard title='Github' subtitle='Inferer is born in web3 and values community.' icon={'/icon_github.png'}/>
+                    <ContactCard title='Twitter' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_twitter.png'}/>
+                    <ContactCard title='Discord' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_discord.png'}/>
+                    <ContactCard title='Email' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_email.png'}/>
+                    <ContactCard title='Github' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_github.png'}/>
                 </div>
             </div>
 
@@ -168,9 +187,9 @@ export default function Home() {
                 flex-direction: row;
                 justify-content: center;
               }
-              
+
               .nav_bar::after {
-              
+
               }
 
               .nav_bar_content {
@@ -392,9 +411,9 @@ export default function Home() {
                 line-height: 21px;
                 color: #646787;
               }
-              
+
               .span_link {
-              font-family: 'Source Han Sans CN';
+                font-family: 'Source Han Sans CN';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
@@ -406,10 +425,10 @@ export default function Home() {
 
             `}</style>
             <style global jsx>{`
-                body {
-                  width: 100%;
-                  background-color: #0d0b17;
-                }
+              body {
+                width: 100%;
+                background-color: #0d0b17;
+              }
             `}</style>
         </div>
     );

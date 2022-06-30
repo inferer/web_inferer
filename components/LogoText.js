@@ -1,4 +1,4 @@
-// index.js
+// app.js
 import React from 'react';
 
 export default ({ text, customStyle }) => (
