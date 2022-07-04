@@ -36,7 +36,7 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png"></img>
+                <img src="/home_curve.png" style={{marginTop: '117px'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
                         width: '988px',
@@ -188,10 +188,6 @@ export default function Home() {
                 justify-content: center;
               }
 
-              .nav_bar::after {
-
-              }
-
               .nav_bar_content {
                 min-width: 1200px;
                 width: 1200px;
@@ -230,7 +226,7 @@ export default function Home() {
               }
 
               .subpage_1_title_wrapper {
-                margin-top: -165px;
+                margin-top: -48px;
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -247,7 +243,7 @@ export default function Home() {
               }
 
               .subpage_1_subtitle_wrapper {
-                margin-top: -75px;
+                margin-top: 42px;
                 position: absolute;
                 display: flex;
                 justify-content: center;
