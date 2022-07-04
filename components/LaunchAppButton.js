@@ -22,10 +22,13 @@ export default class LaunchAppButton extends React.Component {
                   }
 
                   .color_bg {
+                    filter: none;
                     width: 100%;
                     height: 100%;
                     background-image: url("/button_color_bg.png");
                     background-size: 100%;
+                    animation-fill-mode: forwards;
+                    transition: filter 0.5s
                   }
 
                   .button {
@@ -52,6 +55,8 @@ export default class LaunchAppButton extends React.Component {
 
                   .container:hover .color_bg {
                     filter: blur(20px);
+                    animation-fill-mode: forwards;
+                    transition: filter 0.5s
                   }
 
                 `}</style>
