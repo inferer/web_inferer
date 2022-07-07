@@ -36,7 +36,7 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png" style={{marginTop: '117px'}}></img>
+                <img src="/home_curve.png" style={{marginTop: '0px'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
                         width: '988px',
@@ -48,9 +48,9 @@ export default function Home() {
                 </div>
                 <div className="subpage_1_subtitle_wrapper">
                     <p className="subpage_1_subtitle">
-                        Built on data analysis , Serve for user verification
+                        BUILT ON DATA ANALYSIS, SERVER FOR WEB3 IDENTITY
                         <br/>
-                        Hope to help contribute to great user ecosystem on chain
+                        HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
                     </p>
                 </div>
             </div>
@@ -234,7 +234,7 @@ export default function Home() {
               }
 
               .subpage_1_title {
-                font-family: 'Source Han Sans SC';
+                font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 170px;
@@ -251,11 +251,11 @@ export default function Home() {
               }
 
               .subpage_1_subtitle {
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 1);
                 text-align: center;
-                font-family: 'Source Han Sans SC';
+                font-family: D-DIN-Light;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 22px;
               }
 
