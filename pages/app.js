@@ -25,7 +25,7 @@ export default class Home extends React.Component {
                     <div className="nav_bar_content">
                         <img src="/icon_nav_logo_blue.svg" className="logo"/>
                         <div className="connect_button">
-                            CONNECT TO WALLET
+                            CONNECT
                         </div>
                     </div>
                 </div>
@@ -34,8 +34,8 @@ export default class Home extends React.Component {
 
                 {/*内容*/}
                 <div className="search_content">
-                    <div className="title" ref={this.title}>INFERER</div>
-                    <div className="subtitle" ref={this.subtitle}>Search address for verification</div>
+                    <div className="title" ref={this.title}>ISCIENCE</div>
+                    <div className="subtitle" ref={this.subtitle}>Search historical data</div>
                     <div className="search_bar" ref={this.searchBar}>
                         <SearchBar
                             customStyle={{marginTop: "72px"}}
