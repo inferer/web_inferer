@@ -3,6 +3,9 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
+import {
+  Button
+} from '@mui/material';
 
 export default function Home() {
     return (
@@ -12,9 +15,9 @@ export default function Home() {
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
                     <div className="menu_container">
-                        <div className="menu_item">
+                        <Button className="menu_item">
                             DOCS
-                        </div>
+                        </Button>
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
@@ -253,7 +256,7 @@ export default function Home() {
               .subpage_1_subtitle {
                 color: rgba(255, 255, 255, 1);
                 text-align: center;
-                font-family: D-DIN-Light;
+                font-family: D-DIN-Regular;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 22px;
