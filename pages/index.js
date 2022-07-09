@@ -21,10 +21,10 @@ export default function Home() {
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
-                        <div className="menu_item">
+                        <div className="menu_item" onClick={()=>{router.push('/index2')}}>
                             COMMUNITY
                         </div>
-                        <div className="menu_item">
+                        <div className="menu_item" onClick={()=>{router.push('/index1')}}>
                             FAQ
                         </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
                             </span>
                         </div>
                         <span className='span_link'>
-                                Check docs for more detail ->
+                                Check for more detail ->
                             </span>
                     </div>
 

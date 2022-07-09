@@ -1,0 +1,23 @@
+.community-1{
+    padding: 160px 0 85px 0;
+}
+.name{
+    font-family: 'DIN';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.name-detail{
+    font-family: 'DIN';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+
+    color: #979797;
+}
