@@ -1,5 +1,7 @@
 // app.js
 import React from 'react';
+import axios from 'axios'
+import router from "next/router";
 
 class EvaluationResult extends React.Component {
     scoreImageURL() {
@@ -45,14 +47,52 @@ class EvaluationResult extends React.Component {
                 return ''
         }
     }
+    result = [
+      'Participate PoAP activity',
+      'Initial transaction timestamp is 2020/05/21',
+      'Participate PoAP activity',
+      'Participate PoAP activity',
+    ]
+
+    initRate(nums) {
+      const expresses = [
+        {rate: "/on-start.png", choose: true,},
+        {rate: "/on-start.png", choose: true},
+        {rate: "/on-start.png", choose: true},
+        {rate: "/on-start.png", choose: false},
+        {rate: "/on-start.png", choose: false},
+      ]
+      for(let i=0;i< nums.length;i++){
+        for(let itme of expresses) {
+          itme.choose = true
+        }
+      }
+      return expresses.map((value,index)=>{
+        return <div key={index+2} className={ value.choose ? 'on-start':  'in-start' } onClick={()=>{
+          if(value.choose){
+            value.choose = false
+          } else {
+            value.choose = true
+          }
+        }}></div>
+      })
+    }
+  
 
     render() {
         return (
             <div className='container' style={this.props.customStyle}>
+               
+                {/* <div className="title_dividing_line"></div> */}
+                <div className='connect-top'>
                 <div className="title">Evaluation Result</div>
-                <div className="title_dividing_line"></div>
-                <img className="score_icon" src={this.scoreImageURL()}></img>
-                <div className={this.scoreDescStyle()}>{this.props.scoreDesc}</div>
+                  <div className='connect-top-line'></div>
+                  <div className="rate_container">
+                    {this.initRate(2)}
+                  </div>
+                </div>
+                {/* <img className="score_icon" src={this.scoreImageURL()}></img> */}
+                {/* <div className={this.scoreDescStyle()}>{this.props.scoreDesc}</div> */}
 
                 <div className="key_factors_container">
                     <div style={{display: "flex", flexDirection: "row", height: "80px", alignItems: "center"}}>
@@ -64,7 +104,7 @@ class EvaluationResult extends React.Component {
                         {
                             this.props.keyFactors.map((keyFactor, index) => {
                                 return (
-                                    <div key={keyFactor} className='key_factors_item_style' style={{background: index%2 == 0 ? "#F0F2FF" : "#FFFFFF"}}>
+                                    <div key={index} className='key_factors_item_style' style={{background: index%2 == 0 ? "#F0F2FF" : "#FFFFFF"}}>
                                         <img src="/icon_keyfactor_item.svg" className="key_factors_item_icon"></img>
                                         <div className="key_factors_item_title">{keyFactor}</div>
                                     </div>
@@ -74,7 +114,9 @@ class EvaluationResult extends React.Component {
                     </div>
 
                     <div style={{display: "flex", justifyContent: "flex-end", }}>
-                        <div className="feedback">Incorrect? Feedback us</div>
+                        <div className="feedback" onClick={()=>{
+                              router.push('/feedback')
+                            }}>Incorrect? Feedback us</div>
                     </div>
                 </div>
 
@@ -89,6 +131,18 @@ class EvaluationResult extends React.Component {
                     border-radius: 14px;
                     display: flex;
                     flex-direction: column;
+                  }
+                  .in-start{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/in-start.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .on-start{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/on-start.png) no-repeat;
+                    background-size: 100%;
                   }
 
                   .title {
@@ -111,6 +165,14 @@ class EvaluationResult extends React.Component {
                     margin-left: 52px;
                     margin-top: 30px;
                   }
+                  .connect-top-line{
+                    width: 406px;
+                    height: 4px;
+                    background: url(/line.png) no-repeat;
+                    background-size: 100%;
+                    margin-top: 11px;
+                    margin-bottom: 19px;
+                }
 
                   .score_icon {
                     position: absolute;
@@ -298,6 +360,33 @@ class EvaluationResult extends React.Component {
                     margin-bottom: 13px;
                   }
 
+                `}</style>
+                 <style global jsx>{`
+                  body {
+                    width: 100%;
+                    background-color: #0d0b17;
+                  }
+                  .connect-top{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .rate_container{
+                  display:flex;
+                }
+                  .in-start{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/in-start.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .on-start{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/on-start.png) no-repeat;
+                    background-size: 100%;
+                  }
                 `}</style>
             </div>
         )

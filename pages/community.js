@@ -3,8 +3,9 @@ import LaunchAppButton from '../components/LaunchAppButton';
 import router from "next/router";
 import SearchBar from '../components/SearchBar';
 import EvaluationResult from '../components/EvaluationResult'
+import Header from '../components/Header'
 
-export default class Home extends React.Component {
+export default class Community extends React.Component {
     constructor() {
         super();
         this.title = React.createRef()
@@ -20,29 +21,7 @@ export default class Home extends React.Component {
     render() {
         return (
         <div className="container">
-           <div className="nav_bar">
-                <div className="nav_bar_content">
-                    <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <div className="menu_item">
-                            COMMUNITY
-                        </div>
-                        <div className="menu_item">
-                            FAQ
-                        </div>
-
-                        <LaunchAppButton onClick={()=>{
-                            router.push('/app')
-                        }}/>
-                    </div>
-                </div>
-           </div>
+           <Header></Header>
             <div className="content">
                 <div className='content-fq'>
                     <div className='coon-1204'>
