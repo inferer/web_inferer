@@ -65,13 +65,13 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_big.png" style={{marginTop: '26px'}}/>
+                <img src="/icon_logo_big.png" style={{marginTop: '26px', width: '17%', height: '17%'}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px'}}/>
+                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '50%', height: '50%'}}/>
             </div>
 
             {/*page 3*/}
@@ -184,7 +184,7 @@ export default function Home() {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 117px;
+                height: 10%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -200,8 +200,8 @@ export default function Home() {
               }
 
               .logo {
-                width: 22%;
-                height: 22%;
+                width: 30%;
+                height: 30%;
                 -webkit-user-drag: none;
               }
 
@@ -257,7 +257,7 @@ export default function Home() {
                 font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 150px;
+                font-size: 9vw;
                 line-height: 252px;
                 color: white;
               }
@@ -276,7 +276,7 @@ export default function Home() {
                 font-family: D-DIN-Regular;
                 font-style: normal;
                 font-weight: 500;
-                font-size: 22px;
+                font-size: 1.2vw;
               }
 
               .subpage_2 {
