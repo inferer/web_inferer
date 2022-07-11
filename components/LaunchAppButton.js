@@ -40,7 +40,7 @@ export default class LaunchAppButton extends React.Component {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    pointer-events: none
+                    cursor: pointer;
                   }
 
                   .button_text {
@@ -54,9 +54,9 @@ export default class LaunchAppButton extends React.Component {
                   }
 
                   .container:hover .color_bg {
-                    filter: blur(20px);
+                    filter: blur(30px);
                     animation-fill-mode: forwards;
-                    transition: filter 0.5s
+                    transition: filter 0.8s
                   }
 
                 `}</style>

@@ -17,16 +17,16 @@ export default function MHeader() {
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
-                        <div className="menu_item" onClick={()=>{
+                        <button className="menu_button_item" onClick={()=>{
                            router.push('/community')
                         }}>
                             COMMUNITY
-                        </div>
-                        <div className="menu_item" onClick={()=>{
+                        </button>
+                        <button className="menu_button_item" onClick={()=>{
                           router.push('/faq')
                         }}>
                             FAQ
-                        </div>
+                        </button>
 
 
                         <LaunchAppButton onClick={()=>{
@@ -82,6 +82,21 @@ export default function MHeader() {
                 color: white;
                 font-weight: 500;
                 font-size: 16px;
+              }
+
+              .menu_button_item {
+                background-color: transparent; 
+                border: none;
+                margin-left: 25px;
+                margin-right: 25px;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+              }
+
+              .menu_button_item:hover {
+                color: #44488F;
               }
 
               .subpage_1 {

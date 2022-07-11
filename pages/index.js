@@ -3,6 +3,9 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
+import {
+  Button
+} from '@mui/material';
 
 export default function Home() {
     return (
@@ -12,9 +15,9 @@ export default function Home() {
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
                     <div className="menu_container">
-                        <div className="menu_item">
+                        <Button className="menu_item">
                             DOCS
-                        </div>
+                        </Button>
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
@@ -36,7 +39,7 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png" style={{marginTop: '117px'}}></img>
+                <img src="/home_curve.png" style={{marginTop: '0px'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
                         width: '988px',
@@ -48,9 +51,9 @@ export default function Home() {
                 </div>
                 <div className="subpage_1_subtitle_wrapper">
                     <p className="subpage_1_subtitle">
-                        Built on data analysis , Serve for user verification
+                        BUILT ON DATA ANALYSIS, SERVER FOR WEB3 IDENTITY
                         <br/>
-                        Hope to help contribute to great user ecosystem on chain
+                        HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
                     </p>
                 </div>
             </div>
@@ -123,7 +126,7 @@ export default function Home() {
                             </span>
                     </div>
 
-                    <img src='/img_card_right.png'
+                    <img src='/img_card_right2.png'
                          style={{width: '390px', height: '270px', marginRight: '-167px', marginTop: '-97px'}}/>
                 </div>
             </div>
@@ -227,6 +230,10 @@ export default function Home() {
                 cursor: pointer;
               }
 
+              .menu_button_item:hover {
+                color: #44488F;
+              }
+
               .subpage_1 {
                 width: 100%;
                 heght: 881px;
@@ -245,7 +252,7 @@ export default function Home() {
               }
 
               .subpage_1_title {
-                font-family: 'Source Han Sans SC';
+                font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 170px;
@@ -262,11 +269,11 @@ export default function Home() {
               }
 
               .subpage_1_subtitle {
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 1);
                 text-align: center;
-                font-family: 'Source Han Sans SC';
+                font-family: D-DIN-Regular;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 22px;
               }
 

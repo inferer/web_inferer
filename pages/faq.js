@@ -26,6 +26,9 @@ export default class Faq extends React.Component {
                     <div className='coon-1204'>
                         <ul className='ul'>
                             <li>
+                                <div className='gap'></div>
+                            </li>
+                            <li>
                                 <div className='flex-c flex-j'>
                                     <div className='jt flex-c flex-j'>
                                     <div className='faq'></div>
@@ -160,17 +163,30 @@ export default class Faq extends React.Component {
                 background: url(/bg-center.png) repeat;
                 background-size: 100%;
             }
+
+            .gap {
+                background-color: transparent; 
+                width: 1204px;
+                height: 80px;
+              }
+
             .coon-1204{
                 position: relative;
                 width: 1204px;
                 height: 100%;
                 margin: 0 auto;
             }
+            // .content-fq{
+            //     width: 100%;
+            //     height: 972px;
+            //     background: url(/content-yun.png) no-repeat;
+            //     background-size: 100%;
+            // }
             .content-fq{
-                // width: 100%;
-                // height: 972px;
-                // background: url(/content-bg-gy.jpg) no-repeat;
-                // background-size: 100%;
+                width: 100%;
+                height: 100%;
+                background: url(/content-yun.png) no-repeat;
+                background-size: 100%;
             }
             .jt{
                 width: 320px;
@@ -203,6 +219,7 @@ export default class Faq extends React.Component {
             }
             .item2{
                 margin-top:12px;
+                margin-left:1.5em;
                 font-family: 'DIN';
                 font-style: normal;
                 font-weight: 700;
@@ -210,6 +227,7 @@ export default class Faq extends React.Component {
                 line-height: 21px;
                 letter-spacing: 0.02em;
                 color: #DADADA;
+                text-indent:-1.4em;
             }
             .content-bg{
                 width: 100%;
@@ -217,6 +235,7 @@ export default class Faq extends React.Component {
                 background: url(/conten-foot.png) no-repeat;
                 background-size: 100%;
             }
+
             .foot{
                 background: #17152A;
                 height: 66px;
