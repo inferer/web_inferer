@@ -39,11 +39,11 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png" style={{marginTop: '117px'}}></img>
+                <img src="/home_curve.png" style={{marginTop: '60px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
-                        width: '988px',
-                        height: '376px', marginTop: '-170px'
+                        width: '788px',
+                        height: '300px', marginTop: '-170px'
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
@@ -200,8 +200,8 @@ export default function Home() {
               }
 
               .logo {
-                width: 30px;
-                height: 30px;
+                width: 22%;
+                height: 22%;
                 -webkit-user-drag: none;
               }
 
@@ -212,11 +212,13 @@ export default function Home() {
               }
 
               .menu_item {
+                font-family: 'DIN';
+                font-style: normal;
                 margin-left: 25px;
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 15px;
               }
 
               .menu_button_item {
@@ -244,7 +246,7 @@ export default function Home() {
               }
 
               .subpage_1_title_wrapper {
-                margin-top: -48px;
+                margin-top: -110px;
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -255,7 +257,7 @@ export default function Home() {
                 font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 170px;
+                font-size: 150px;
                 line-height: 252px;
                 color: white;
               }
