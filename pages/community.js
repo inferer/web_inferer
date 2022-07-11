@@ -31,7 +31,6 @@ export default class Community extends React.Component {
                         </div>
                     </div>
                     <div className='community-2 '>
-                    <div className='right-bg'></div>
                     <div className='coon-1204 flex-b'>
                     <div className='left flex-l'>
                         <span className='community-2-name'>Owned by the community</span>
@@ -44,12 +43,15 @@ export default class Community extends React.Component {
                         process, which improves inferer all the time.
                         </span>
                     </div>
-                            <div className='right'></div>
+                            <div className='right'>
+                                <img className='right-img' src='/community-right.png' />
+                                <div className='right-bg'></div>
+                            </div>
                     </div>
                         </div>
                         <div className='community-3'>
-                            <div className='community-3-bg'></div>
                             <div className='coon-1204'>
+                                <div className='community-3-bg'></div>
                                 <div className='community-join flex-l flex-j'>
                                     <div className='community-title flex-l'>
                                         <span className='title-m'>Join the community</span>
@@ -77,8 +79,8 @@ export default class Community extends React.Component {
                                         </ul>
                                     </div>
                                     <div className='community-input flex-b'>
-                                        <input className='input' placeholder='Your e-mail'></input>
-                                        <bottom className='submit'>Subscribe</bottom>
+                                        <input type="text" className='input' placeholder='Your e-mail'></input>
+                                        <div className='submit'>Subscribe</div>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +165,7 @@ export default class Community extends React.Component {
                 padding-bottom:205px;
             }
             .community-1{
-                padding: 160px 0 85px 0;
+                padding: 100px 0 115px 0;
             }
             .name{
                 font-family: 'DIN';
@@ -186,7 +188,6 @@ export default class Community extends React.Component {
                 color: #FFFFFF;
             }
             .community-2{
-                position: relative;
                 background: #0D0C1E;
                 padding: 74px 0 83px 0;
             }
@@ -218,17 +219,20 @@ export default class Community extends React.Component {
                 margin-top: 30px
             }
             .right{
+                position: relative;
+            }
+            .right-img{
+                position: relative;
+                z-index: 1;
                 width: 397px;
                 height: 397px;
-                background: url(/community-right.png) no-repeat;
-                background-size: 100%;
             }
             .right-bg{
                 position: absolute;
                 width: 674px;
                 height: 678px;
-                top:-80px;
-                right:-52px;
+                top: -120px;
+                right: -110px;
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
             }
@@ -239,14 +243,16 @@ export default class Community extends React.Component {
             }
             .community-3-bg{
                 position: absolute;
-                top:-232px;
-                left:0px;
+                top: -232px;
+                left: -172px;
                 width: 1581px;
                 height: 1148px;
                 background: url(/community-foot.png) no-repeat center;
                 background-size: 100%;
             }
             .community-join{
+                position: relative;
+                z-index:1;
                 padding:89px 194px 120px 194px;
                 background: #0D0C1E;
                 border-radius: 47px;

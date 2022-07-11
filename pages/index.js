@@ -39,7 +39,7 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png" style={{marginTop: '0px'}}></img>
+                <img src="/home_curve.png" style={{marginTop: '117px'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
                         width: '988px',

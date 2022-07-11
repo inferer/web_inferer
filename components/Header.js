@@ -3,28 +3,33 @@ import ContactCard from './ContactCard';
 import LaunchAppButton from './LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
+import React from 'react';
 
-export default function MHeader() {
+export default class Header extends React.Component{
+  constructor() {
+    super();
+    this.state = {type:''};
+}
+ 
+  render(){
     return (
         <div className="nav_bar">
             {/*导航栏*/}
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
                     <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
+                        <div className="menu_item" >
+                            DOC
                         </div>
-                        <div className="menu_item">
+                        <div className="menu_item {`${'DOCS' ==this.state.type ? 'active' : ''}`}">
                             WHITEPAPER
                         </div>
-                        <button className="menu_button_item" onClick={()=>{
-                           router.push('/community')
-                        }}>
+                        <button className="menu_button_item" onClick={(e)=>{
+                          this.tabClick('community',e)}}>
                             COMMUNITY
                         </button>
-                        <button className="menu_button_item" onClick={()=>{
-                          router.push('/faq')
-                        }}>
+                        <button className="menu_button_item" onClick={(e)=>{
+                          this.tabClick('faq',e)}}>
                             FAQ
                         </button>
 
@@ -34,6 +39,7 @@ export default function MHeader() {
                         }}/>
                     </div>
                 </div>
+
           
          <style jsx>{`
               .container {
@@ -311,4 +317,13 @@ export default function MHeader() {
             `}</style>
         </div>
     );
+}
+
+tabClick=(val,e)=>{
+  // this.setState({
+  //   type:val
+  // })
+  router.push('/'+val)
+
+}
 }
