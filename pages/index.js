@@ -39,11 +39,12 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
+                <img src="/home_yun.png" style={{marginTop: '60px', width: '100%', height: '100%', position: 'absolute', zIndex: '-1'}}></img>
                 <img src="/home_curve.png" style={{marginTop: '60px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img src="/subpage_1_title_bg.png" style={{
-                        width: '788px',
-                        height: '300px', marginTop: '-170px'
+                        width: '80%',
+                        height: '80%', marginTop: '-10%'
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
@@ -65,8 +66,9 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_big.png" style={{marginTop: '26px', width: '17%', height: '17%'}}/>
-                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
+                <img src="/icon_logo_big.png" style={{marginTop: '26px', width: '17%', height: '17%', zIndex: '1'}}/>
+                <img src="/lines.png" style={{marginTop: '-16%', width: '50%', height: '50%'}}/>
+                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '20px'}}></LogoText>
                 <div className="subtitle">
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
@@ -82,13 +84,96 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <img src="/img_2.png" style={{marginTop: '47px'}}/>
+                <div className="subpage_3_card_1">
+                    <div className='subpage_3_card_1_left'>
+                        <img src="/built_1.png" style={{width: '40%', height: '40%', marginTop: '30px'}}/>
+                        <div className="subpage_3_subtitle">
+                            Dapp Crypto User
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_1_right'>
+                        <img src="/built_1_1.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Airdrop
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_1_right'>
+                        <img src="/built_1_2.png" style={{width: '20%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Decentralized Social projects
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_1_right'>
+                        <img src="/built_1_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Fund transfer helper
+                        </div>
+                    </div>
+                </div>
+                <div className="subpage_3_card_2">
+                    <div className='subpage_3_card_2_left'>
+                        <img src="/built_2.png" style={{width: '40%', height: '28%', marginTop: '80px'}}/>
+                        <div className="subpage_3_subtitle">
+                            Inferer
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_2_right1'>
+                        <img src="/built_2_1.png" style={{width: '10%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text2" style={{display: 'inline'}}>
+                            Airdrop
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_2_right1'>
+                        <img src="/built_2_2.png" style={{width: '14%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text2">
+                            Inferer API
+                        </div>
+                    </div>
+                    {/* <div className='subpage_3_card_1_right'>
+                        <img src="/built_1_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Fund transfer helper
+                        </div>
+                    </div> */}
+                </div>
+                <div className="subpage_3_card_1">
+                    <div className='subpage_3_card_1_left'>
+                        <img src="/built_3.png" style={{width: '40%', height: '40%', marginTop: '30px'}}/>
+                        <div className="subpage_3_subtitle">
+                            Blockchain Public Data
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_3_right'>
+                        <img src="/built_3_1.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Ethereum
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_3_right'>
+                        <img src="/built_3_2.png" style={{width: '20%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            PlatON
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_3_right'>
+                        <img src="/built_3_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            Polygon
+                        </div>
+                    </div>
+                    <div className='subpage_3_card_3_right'>
+                        <img src="/built_3_4.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
+                        <div className="subpage_3_text">
+                            More
+                        </div>
+                    </div>
+                </div>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
-                    reCaptcha in web2, which doesn’t cause trouble to users.
+                    reCaptcha in web2, which doesn't cause trouble to users.
                 </div>
-                <img src="/img_3.png" style={{marginTop: '54px', marginBottom: '112px'}}/>
+                <img src="/img_3.png" style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
             </div>
 
             {/*page 4*/}
@@ -127,7 +212,7 @@ export default function Home() {
                     </div>
 
                     <img src='/img_card_right2.png'
-                         style={{width: '390px', height: '270px', marginRight: '-167px', marginTop: '-97px'}}/>
+                         style={{width: '43%', height: '160%', marginRight: '-167px', marginTop: '-120px'}}/>
                 </div>
             </div>
 
@@ -192,7 +277,7 @@ export default function Home() {
               }
 
               .nav_bar_content {
-                min-width: 1200px;
+                min-width: 500px;
                 width: 1200px;
                 display: flex;
                 align-items: center;
@@ -218,7 +303,7 @@ export default function Home() {
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 15px;
+                font-size: 0.8vw;
               }
 
               .menu_button_item {
@@ -228,7 +313,7 @@ export default function Home() {
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.8vw;
                 cursor: pointer;
               }
 
@@ -258,6 +343,7 @@ export default function Home() {
                 font-style: normal;
                 font-weight: 700;
                 font-size: 9vw;
+                letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
               }
@@ -271,12 +357,13 @@ export default function Home() {
               }
 
               .subpage_1_subtitle {
-                color: rgba(255, 255, 255, 1);
+                color: rgba(255, 255, 255, 0.8);
                 text-align: center;
                 font-family: D-DIN-Regular;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 1.2vw;
+                letter-spacing: 0.06vw;
               }
 
               .subpage_2 {
@@ -303,6 +390,133 @@ export default function Home() {
                 background-color: #0d0c1d;
               }
 
+              .subpage_3_card_1 {
+                margin-top: 20px;
+                width: 40%;
+                height: 183px;
+                background: #262437;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: row;
+                min-width: 500px;
+                padding-right: 2%;
+              }
+
+              .subpage_3_card_2 {
+                margin-top: 20px;
+                width: 40%;
+                height: 274px;
+                background: #262437;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: row;
+                min-width: 500px;
+                padding-right: 2%;
+              }
+
+              .subpage_3_card_1_left {
+                width: 200px;
+                height: 183px;
+                left: 516px;
+                top: 2657px;
+                background: #17152A;
+                border-radius: 16px 0px 0px 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 1%;
+              }
+
+              .subpage_3_card_2_left {
+                width: 200px;
+                height: 274px;
+                left: 516px;
+                top: 2657px;
+                background: #17152A;
+                border-radius: 16px 0px 0px 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-right: 1%;
+              }
+
+              .subpage_3_card_1_right {
+                width: 200px;
+                height: 128px;
+                left: 741px;
+                top: 2683px;
+                background: #17152A;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 5%;
+                margin-top: 2%;
+              }
+
+              .subpage_3_card_2_right1 {
+                width: 320px;
+                height: 80px;
+                left: 741px;
+                top: 2683px;
+                background: #17152A;
+                border-radius: 8px;
+                display: flex;
+                margin-left: 5%;
+                margin-top: 2%;
+                padding-left: 10%;
+              }
+
+              .subpage_3_card_3_right {
+                width: 180px;
+                height: 128px;
+                left: 741px;
+                top: 2683px;
+                background: #17152A;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 1%;
+                margin-top: 2%;
+              }
+
+              .subpage_3_subtitle {
+                text-align: center;
+                margin-top: 4px;
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.9vw;
+                line-height: 21px;
+                max-width: 140px;
+                color: #FFFFFF;
+              }
+
+              .subpage_3_text {
+                text-align: center;
+                margin-top: 7%;
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.7vw;
+                line-height: 21px;
+                max-width: 140px;
+                color: #FFFFFF;
+              }
+
+              .subpage_3_text2 {
+                margin-top: 13%;
+                margin-left: 10%;
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 0.7vw;
+                line-height: 21px;
+                max-width: 140px;
+                color: #FFFFFF;
+              }
+
               .subpage_4 {
                 width: 100%;
                 display: flex;
@@ -313,7 +527,7 @@ export default function Home() {
 
               .subpage_4_card_1 {
                 margin-top: 178px;
-                width: 1093px;
+                width: 65%;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;
@@ -324,7 +538,7 @@ export default function Home() {
               .subpage_4_card_2 {
                 margin-top: 170px;
                 margin-bottom: 112px;
-                width: 1093px;
+                width: 65%;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;
@@ -381,7 +595,8 @@ export default function Home() {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                width: 1209px;
+                width: 70%;
+                max-width: 1209px;
                 row-gap: 63px;
                 column-gap: 56px;
               }
@@ -401,11 +616,13 @@ export default function Home() {
                 color: white;
                 max-width: 940px;
                 margin-top: 29px;
+                margin-right: 40px;
+                margin-left: 40px;
               }
 
               .footer_bar {
                 width: 100%;
-                height: 60px;
+                height: 50px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -437,6 +654,15 @@ export default function Home() {
                 letter-spacing: 0.05em;
                 color: #6571ae;
                 text-decoration: underline
+              }
+              .right-bg{
+                position: absolute;
+                width: 674px;
+                height: 678px;
+                top: -120px;
+                right: -110px;
+                background: url(/qiu-bg.png) no-repeat;
+                background-size: 100%;
               }
 
             `}</style>

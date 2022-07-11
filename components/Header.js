@@ -63,7 +63,7 @@ export default class Header extends React.Component{
               }
 
               .nav_bar_content {
-                min-width: 1200px;
+                min-width: 500px;
                 width: 1200px;
                 display: flex;
                 align-items: center;
@@ -71,8 +71,8 @@ export default class Header extends React.Component{
               }
 
               .logo {
-                width: 30px;
-                height: 30px;
+                width: 20%;
+                height: 20%;
                 -webkit-user-drag: none;
               }
 
@@ -87,7 +87,7 @@ export default class Header extends React.Component{
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.8vw;
               }
 
               .menu_button_item {
@@ -97,7 +97,7 @@ export default class Header extends React.Component{
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.8vw;
                 cursor: pointer;
               }
 
