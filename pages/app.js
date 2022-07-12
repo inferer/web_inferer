@@ -36,7 +36,7 @@ export default class Home extends React.Component {
                             }}
                             onChange={this.handleChange()}
                           >
-                          <Option value="">Ethereum</Option>
+                          <Option value="Ethereum">Ethereum</Option>
                           <Option value="Platon">Platon</Option>
                         </Select>
                         <div className="connect_button">

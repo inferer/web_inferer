@@ -23,7 +23,7 @@ export default ({ title, subtitle, icon, customStyle }) => (
           }
           
           .icon {
-            margin-left: 34px;
+            margin-left: 10%;
             width: 58px;
             height: 59px;
           }
@@ -57,6 +57,13 @@ export default ({ title, subtitle, icon, customStyle }) => (
             width: 10px;
             height: 10px;
           }
+          @media (max-width:768px) {
+            .container {
+              flex-wrap: wrap;
+              justify-content: center;
+
+            }
+           }
         `}</style>
     </div>
 );

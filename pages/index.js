@@ -15,9 +15,9 @@ export default function Home() {
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
                     <div className="menu_container">
-                        <Button className="menu_item">
+                        <div className="menu_item">
                             DOCS
-                        </Button>
+                        </div>
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
@@ -34,25 +34,50 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            {/* 移动端样式 */}
+
+            <div className="nav_bar_mobile">
+                <div className="nav_bar_content">
+                    <img src="/icon_nav_logo.svg" className="logo"/>
+                    <div className="menu_container">
+                        <div className="menu_item">
+                            DOCS
+                        </div>
+                        <div className="menu_item">
+                            WHITEPAPER
+                        </div>
+                        <div className="menu_item" onClick={()=>{
+                           router.push('/community')
+                        }}>
+                            COMMUNITY
+                        </div>
+                        <div className="menu_item" onClick={()=>{
+                          router.push('/faq')
+                        }}>
+                            FAQ
+                        </div>
+
+                        <LaunchAppButton onClick={()=>{
+                            router.push('/app')
+                        }}/>
+                    </div>
+                </div>
+            </div>
 
             <div style={{width: "100%", height: "58.5px"}}/>
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_yun.png" style={{marginTop: '60px', width: '100%', height: '100%', position: 'absolute', zIndex: '-1'}}></img>
-                <img src="/home_curve.png" style={{marginTop: '60px', width: '100%', height: '100%'}}></img>
+                <img src="/home_curve.png" className="home_curve"></img>
                 <div className="subpage_1_title_wrapper">
-                    <img src="/subpage_1_title_bg.png" style={{
-                        width: '80%',
-                        height: '80%', marginTop: '-10%'
-                    }}/>
+                    <img src="/subpage_1_title_bg.png" className='title_bg_curve'/>
                 </div>
                 <div className="subpage_1_title_wrapper">
                     <p className="subpage_1_title">INFERER</p>
                 </div>
                 <div className="subpage_1_subtitle_wrapper">
                     <p className="subpage_1_subtitle">
-                        BUILT ON DATA ANALYSIS, SERVER FOR WEB3 IDENTITY
+                        BUILT ON DATA ANALYSIS , SERVE  FOR USER VERIFICATION
                         <br/>
                         HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
                     </p>
@@ -66,14 +91,13 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_big.png" style={{marginTop: '26px', width: '17%', height: '17%', zIndex: '1'}}/>
-                <img src="/lines.png" style={{marginTop: '-16%', width: '50%', height: '50%'}}/>
-                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '20px'}}></LogoText>
+                <img src="/icon_logo_big.png" style={{marginTop: '26px'}}/>
+                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '50%', height: '50%'}}/>
+                <img src="/img_1.png" className='img1_style img-w-100'  />
             </div>
 
             {/*page 3*/}
@@ -84,96 +108,13 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <div className="subpage_3_card_1">
-                    <div className='subpage_3_card_1_left'>
-                        <img src="/built_1.png" style={{width: '40%', height: '40%', marginTop: '30px'}}/>
-                        <div className="subpage_3_subtitle">
-                            Dapp Crypto User
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_1_right'>
-                        <img src="/built_1_1.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Airdrop
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_1_right'>
-                        <img src="/built_1_2.png" style={{width: '20%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Decentralized Social projects
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_1_right'>
-                        <img src="/built_1_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Fund transfer helper
-                        </div>
-                    </div>
-                </div>
-                <div className="subpage_3_card_2">
-                    <div className='subpage_3_card_2_left'>
-                        <img src="/built_2.png" style={{width: '40%', height: '28%', marginTop: '80px'}}/>
-                        <div className="subpage_3_subtitle">
-                            Inferer
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_2_right1'>
-                        <img src="/built_2_1.png" style={{width: '10%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text2" style={{display: 'inline'}}>
-                            Airdrop
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_2_right1'>
-                        <img src="/built_2_2.png" style={{width: '14%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text2">
-                            Inferer API
-                        </div>
-                    </div>
-                    {/* <div className='subpage_3_card_1_right'>
-                        <img src="/built_1_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Fund transfer helper
-                        </div>
-                    </div> */}
-                </div>
-                <div className="subpage_3_card_1">
-                    <div className='subpage_3_card_1_left'>
-                        <img src="/built_3.png" style={{width: '40%', height: '40%', marginTop: '30px'}}/>
-                        <div className="subpage_3_subtitle">
-                            Blockchain Public Data
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_3_right'>
-                        <img src="/built_3_1.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Ethereum
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_3_right'>
-                        <img src="/built_3_2.png" style={{width: '20%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            PlatON
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_3_right'>
-                        <img src="/built_3_3.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            Polygon
-                        </div>
-                    </div>
-                    <div className='subpage_3_card_3_right'>
-                        <img src="/built_3_4.png" style={{width: '15%', height: '25%', marginTop: '30px'}}/>
-                        <div className="subpage_3_text">
-                            More
-                        </div>
-                    </div>
-                </div>
+                <img src="/img_2.png" className='img-w-100' style={{marginTop: '47px'}}/>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
-                    reCaptcha in web2, which doesn't cause trouble to users.
+                    reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
-                <img src="/img_3.png" style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
+                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px'}}/>
             </div>
 
             {/*page 4*/}
@@ -181,12 +122,12 @@ export default function Home() {
                 <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subpage_4_card_1">
                     <img src='/img_card_left.png'
-                         style={{width: '390px', height: '270px', marginLeft: '-109px', marginTop: '-97px'}}/>
+                    className='img_card_left-bg' />
                     <div className='subpage_4_title_container' style={{marginLeft: '72px'}}>
                         <div className='subpage_4_title'>
                             Inferer Search
                         </div>
-                        <div style={{width: '542px', marginTop: '19px'}}>
+                        <div className='mg-w-100' style={{marginTop: '19px'}}>
                             <span className='subpage_4_subtitle'>
                                 Focus on instant-check search scenarios, which enable user to have a quick scan on address.
                             </span>
@@ -201,9 +142,9 @@ export default function Home() {
                         <div className='subpage_4_title'>
                             Inferer API
                         </div>
-                        <div style={{width: '678px', marginTop: '19px'}}>
+                        <div className='subpage_4_title_txt'>
                             <span className='subpage_4_subtitle'>
-                                Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers.
+                                Focus on pre-security check scenarios, which could be integrated in customer's product and help reduce the harm conducted by bots or hackers.
                             </span>
                         </div>
                         <span className='span_link'>
@@ -212,7 +153,7 @@ export default function Home() {
                     </div>
 
                     <img src='/img_card_right2.png'
-                         style={{width: '43%', height: '160%', marginRight: '-167px', marginTop: '-120px'}}/>
+                         className='img_card_right-bg' />
                 </div>
             </div>
 
@@ -223,7 +164,7 @@ export default function Home() {
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px'}}/>
+                <img src="/img_4.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px'}}/>
             </div>
 
             {/*page 6*/}
@@ -275,18 +216,33 @@ export default function Home() {
                 flex-direction: row;
                 justify-content: center;
               }
+              .nav_bar {
+                backdrop-filter: blur(100px);
+                background-color: transparent;
+                width: 100%;
+                height: 117px;
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              }
+
+              .nav_bar_mobile{
+                display:none;
+              }
 
               .nav_bar_content {
-                min-width: 500px;
+                min-width: 1200px;
                 width: 1200px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                z-index:2;
               }
 
               .logo {
-                width: 30%;
-                height: 30%;
+                width: 30px;
+                height: 30px;
                 -webkit-user-drag: none;
               }
 
@@ -303,7 +259,8 @@ export default function Home() {
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 0.8vw;
+                font-size: 16px;
+                cursor: pointer;
               }
 
               .menu_button_item {
@@ -313,7 +270,7 @@ export default function Home() {
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 0.8vw;
+                font-size: 16px;
                 cursor: pointer;
               }
 
@@ -331,7 +288,7 @@ export default function Home() {
               }
 
               .subpage_1_title_wrapper {
-                margin-top: -110px;
+                margin-top: -48px;
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -342,7 +299,7 @@ export default function Home() {
                 font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 9vw;
+                font-size: 170px;
                 letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
@@ -390,132 +347,132 @@ export default function Home() {
                 background-color: #0d0c1d;
               }
 
-              .subpage_3_card_1 {
-                margin-top: 20px;
-                width: 40%;
-                height: 183px;
-                background: #262437;
-                border-radius: 16px;
-                display: flex;
-                flex-direction: row;
-                min-width: 500px;
-                padding-right: 2%;
-              }
+              // .subpage_3_card_1 {
+              //   margin-top: 20px;
+              //   width: 40%;
+              //   height: 183px;
+              //   background: #262437;
+              //   border-radius: 16px;
+              //   display: flex;
+              //   flex-direction: row;
+              //   min-width: 500px;
+              //   padding-right: 2%;
+              // }
 
-              .subpage_3_card_2 {
-                margin-top: 20px;
-                width: 40%;
-                height: 274px;
-                background: #262437;
-                border-radius: 16px;
-                display: flex;
-                flex-direction: row;
-                min-width: 500px;
-                padding-right: 2%;
-              }
+              // .subpage_3_card_2 {
+              //   margin-top: 20px;
+              //   width: 40%;
+              //   height: 274px;
+              //   background: #262437;
+              //   border-radius: 16px;
+              //   display: flex;
+              //   flex-direction: row;
+              //   min-width: 500px;
+              //   padding-right: 2%;
+              // }
 
-              .subpage_3_card_1_left {
-                width: 200px;
-                height: 183px;
-                left: 516px;
-                top: 2657px;
-                background: #17152A;
-                border-radius: 16px 0px 0px 16px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-right: 1%;
-              }
+              // .subpage_3_card_1_left {
+              //   width: 200px;
+              //   height: 183px;
+              //   left: 516px;
+              //   top: 2657px;
+              //   background: #17152A;
+              //   border-radius: 16px 0px 0px 16px;
+              //   display: flex;
+              //   flex-direction: column;
+              //   align-items: center;
+              //   margin-right: 1%;
+              // }
 
-              .subpage_3_card_2_left {
-                width: 200px;
-                height: 274px;
-                left: 516px;
-                top: 2657px;
-                background: #17152A;
-                border-radius: 16px 0px 0px 16px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-right: 1%;
-              }
+              // .subpage_3_card_2_left {
+              //   width: 200px;
+              //   height: 274px;
+              //   left: 516px;
+              //   top: 2657px;
+              //   background: #17152A;
+              //   border-radius: 16px 0px 0px 16px;
+              //   display: flex;
+              //   flex-direction: column;
+              //   align-items: center;
+              //   margin-right: 1%;
+              // }
 
-              .subpage_3_card_1_right {
-                width: 200px;
-                height: 128px;
-                left: 741px;
-                top: 2683px;
-                background: #17152A;
-                border-radius: 8px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-left: 5%;
-                margin-top: 2%;
-              }
+              // .subpage_3_card_1_right {
+              //   width: 200px;
+              //   height: 128px;
+              //   left: 741px;
+              //   top: 2683px;
+              //   background: #17152A;
+              //   border-radius: 8px;
+              //   display: flex;
+              //   flex-direction: column;
+              //   align-items: center;
+              //   margin-left: 5%;
+              //   margin-top: 2%;
+              // }
 
-              .subpage_3_card_2_right1 {
-                width: 320px;
-                height: 80px;
-                left: 741px;
-                top: 2683px;
-                background: #17152A;
-                border-radius: 8px;
-                display: flex;
-                margin-left: 5%;
-                margin-top: 2%;
-                padding-left: 10%;
-              }
+              // .subpage_3_card_2_right1 {
+              //   width: 320px;
+              //   height: 80px;
+              //   left: 741px;
+              //   top: 2683px;
+              //   background: #17152A;
+              //   border-radius: 8px;
+              //   display: flex;
+              //   margin-left: 5%;
+              //   margin-top: 2%;
+              //   padding-left: 10%;
+              // }
 
-              .subpage_3_card_3_right {
-                width: 180px;
-                height: 128px;
-                left: 741px;
-                top: 2683px;
-                background: #17152A;
-                border-radius: 8px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-left: 1%;
-                margin-top: 2%;
-              }
+              // .subpage_3_card_3_right {
+              //   width: 180px;
+              //   height: 128px;
+              //   left: 741px;
+              //   top: 2683px;
+              //   background: #17152A;
+              //   border-radius: 8px;
+              //   display: flex;
+              //   flex-direction: column;
+              //   align-items: center;
+              //   margin-left: 1%;
+              //   margin-top: 2%;
+              // }
 
-              .subpage_3_subtitle {
-                text-align: center;
-                margin-top: 4px;
-                font-family: 'Source Han Sans CN';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 0.9vw;
-                line-height: 21px;
-                max-width: 140px;
-                color: #FFFFFF;
-              }
+              // .subpage_3_subtitle {
+              //   text-align: center;
+              //   margin-top: 4px;
+              //   font-family: 'Source Han Sans CN';
+              //   font-style: normal;
+              //   font-weight: 500;
+              //   font-size: 0.9vw;
+              //   line-height: 21px;
+              //   max-width: 140px;
+              //   color: #FFFFFF;
+              // }
 
-              .subpage_3_text {
-                text-align: center;
-                margin-top: 7%;
-                font-family: 'Source Han Sans CN';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 0.7vw;
-                line-height: 21px;
-                max-width: 140px;
-                color: #FFFFFF;
-              }
+              // .subpage_3_text {
+              //   text-align: center;
+              //   margin-top: 7%;
+              //   font-family: 'Source Han Sans CN';
+              //   font-style: normal;
+              //   font-weight: 500;
+              //   font-size: 0.7vw;
+              //   line-height: 21px;
+              //   max-width: 140px;
+              //   color: #FFFFFF;
+              // }
 
-              .subpage_3_text2 {
-                margin-top: 13%;
-                margin-left: 10%;
-                font-family: 'Source Han Sans CN';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 0.7vw;
-                line-height: 21px;
-                max-width: 140px;
-                color: #FFFFFF;
-              }
+              // .subpage_3_text2 {
+              //   margin-top: 13%;
+              //   margin-left: 10%;
+              //   font-family: 'Source Han Sans CN';
+              //   font-style: normal;
+              //   font-weight: 500;
+              //   font-size: 0.7vw;
+              //   line-height: 21px;
+              //   max-width: 140px;
+              //   color: #FFFFFF;
+              // }
 
               .subpage_4 {
                 width: 100%;
@@ -527,7 +484,7 @@ export default function Home() {
 
               .subpage_4_card_1 {
                 margin-top: 178px;
-                width: 65%;
+                width: 1093px;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;
@@ -535,10 +492,17 @@ export default function Home() {
                 flex-direction: row;
               }
 
+              .img_card_left-bg{
+                width: 390px;
+                height: 270px;
+                margin-left: -109px;
+                margin-top: -97px
+              }
+
               .subpage_4_card_2 {
                 margin-top: 170px;
                 margin-bottom: 112px;
-                width: 65%;
+                width: 1093px;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;
@@ -592,13 +556,17 @@ export default function Home() {
               .card_container {
                 margin-top: 67px;
                 margin-bottom: 288px;
+                width:100%;
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
-                width: 70%;
-                max-width: 1209px;
+                // flex-wrap: wrap;
+                // width: 1209px;
                 row-gap: 63px;
-                column-gap: 56px;
+                column-gap: 5%;
+              }
+
+              icon{
+                margin-left: 2% !important;
               }
 
               .img_curve {
@@ -616,13 +584,11 @@ export default function Home() {
                 color: white;
                 max-width: 940px;
                 margin-top: 29px;
-                margin-right: 40px;
-                margin-left: 40px;
               }
 
               .footer_bar {
                 width: 100%;
-                height: 50px;
+                height: 60px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -655,6 +621,29 @@ export default function Home() {
                 color: #6571ae;
                 text-decoration: underline
               }
+
+              .home_curve{
+                margin-top: 117px;
+              }
+              .title_bg_curve{
+                width: 988px;
+                height: 376px;
+                margin-top: -170px;
+              }
+              .img1_style{
+                margin-top: 41px;
+                margin-bottom: 112px
+              }
+              .subpage_4_title_txt{
+                width: 678px;
+                margin-top: 19px
+              }
+              .img_card_right-bg{
+                width: 450px;
+                height: 340px;
+                margin-right: -167px;
+                margin-top: -115px;
+              }
               .right-bg{
                 position: absolute;
                 width: 674px;
@@ -663,6 +652,248 @@ export default function Home() {
                 right: -110px;
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
+              }
+              // 响应式样式
+              @media (max-width:768px) {
+                .container{
+                  min-width: 100%
+                }
+                .nav_bar{
+                  display: none;
+                  color:red;
+                }
+                .nav_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .nav_bar_mobile{
+                  display:block;
+                }
+                .logo{
+                  display:none;
+                }
+                .menu_container{
+                  width:100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                }
+                .menu_item{
+                  margin:0;
+                  padding:20px 0;
+                }
+                .home_curve{
+                  height:300px;
+                }
+                .title_bg_curve{
+                  width:100%;
+                }
+                .subpage_1_title{
+                  font-size: 100px;
+                }
+                .img1_style{
+                  margin-top: 30px;
+                  margin-bottom: 80px
+                }
+                .subtitle{
+                  text-align: center;
+                  width:100%;
+                  max-width:100%;
+                  word-break: break-word;
+                }
+                .subpage_4_card_1{
+                  width:100%;
+                  height: 213px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+                .img_card_left-bg{
+                  width: 190px;
+                  height: 170px;
+                  margin-left: 0px;
+                  margin-top: 0px;
+                }
+                .subpage_4_card_2{
+                  width:100%;
+                  align-items: center;
+                }
+                .subpage_4_title_txt{
+                  width: 350px;
+                  margin-top: 19px
+                }
+                .img_card_right-bg{
+                  width: 30%;
+                  height: 170px;
+                  margin-right: 0;
+                  margin-top: 0;
+                }
+                .card_container{
+                  display: flex
+                  width:100%;
+                  justify-content: center;
+                  margin-bottom: 88px;
+                }
+                .footer_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .img-w-100{
+                  width:100%;
+                }
+              }
+              @media (min-width: 768px) and (max-width:992px) {
+                .nav_bar{
+                  display: none;
+                  color:red;
+                }
+                .nav_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .nav_bar_mobile{
+                  display:block;
+                }
+                .logo{
+                  display:none;
+                }
+                .menu_container{
+                  width:100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                }
+                .menu_item{
+                  margin:0;
+                  padding:20px 0;
+                }
+                .home_curve{
+                  height:300px;
+                }
+                .title_bg_curve{
+                  width:100%;
+                }
+                .subpage_1_title{
+                  font-size: 100px;
+                }
+                .img1_style{
+                  margin-top: 30px;
+                  margin-bottom: 80px
+                }
+                .subtitle{
+                  text-align: center;
+                  width:100%;
+                }
+                .subpage_4_card_1{
+                  width:100%;
+                  height: 213px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+                .img_card_left-bg{
+                  width: 190px;
+                  height: 170px;
+                  margin-left: 0px;
+                  margin-top: 0px;
+                }
+                .subpage_4_card_2{
+                  width:100%;
+                  align-items: center;
+                }
+                .subpage_4_title_txt{
+                  width: 350px;
+                  margin-top: 19px
+                }
+                .img_card_right-bg{
+                  width: 290px;
+                  height: 170px;
+                  margin-right: 0;
+                  margin-top: 0;
+                }
+                .card_container{
+                  width:100%;
+                  justify-content: center;
+                  margin-bottom: 88px;
+                  flex-wrap: wrap;
+                  width: 600px;
+                }
+              .footer_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .img-w-100{
+                  width:100%;
+                }
+              }
+              @media (min-width:992px) and (max-width:1200px) {
+                .nav_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .home_curve{
+                  height:300px;
+                }
+                .title_bg_curve{
+                  width:100%;
+                }
+                .subpage_1_title{
+                  font-size: 100px;
+                }
+                .img1_style{
+                  margin-top: 30px;
+                  margin-bottom: 80px
+                }
+                .subtitle{
+                  text-align: center;
+                  width:100%;
+                }
+                .subpage_4_card_1{
+                  width:100%;
+                  height: 213px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+                .img_card_left-bg{
+               
+                }
+                .subpage_4_card_2{
+                  width:100%;
+                  align-items: center;
+                }
+                .subpage_4_title_txt{
+                  width: 350px;
+                  margin-top: 8px
+                }
+                .img_card_right-bg{
+                  width: 280px;
+                  height: 270px;
+                  margin-right: 0;
+                  margin-top: -110px;
+                }
+                .card_container{
+                  margin-bottom: 88px;
+                  flex-wrap: wrap;
+                  width: 1209px;
+                }
+                .footer_bar_content{
+                  width:100%;
+                  min-width:100%;
+                }
+                .img-w-100{
+                  width:100%;
+                }
+                
+              }
+               @media (min-width:1380px) {
+                .card_container{
+                  margin-bottom: 88px;
+                  flex-wrap: wrap;
+                  width: 1209px;
+                }
               }
 
             `}</style>

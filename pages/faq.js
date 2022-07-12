@@ -116,6 +116,10 @@ export default class Faq extends React.Component {
                 width: 100%;
                 height: 100%;
                 background: #17152a;
+                
+            }
+            .container ::-webkit-scrollbar{
+                display:none;
             }
             .nav_bar {
                 z-index: 5;
@@ -162,8 +166,23 @@ export default class Faq extends React.Component {
                 width: 100%;
                 background: url(/bg-center.png) repeat;
                 background-size: 100%;
-                height: calc(100vh - 66px);;
+                height: calc(100vh - 176px);;
                 overflow-y: auto;
+            }
+            ::-webkit-scrollbar{
+              width: 7px;
+       
+           }
+           ::-webkit-scrollbar-track{
+               background-color: #25243a;
+               -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);
+               border-radius:5px;
+    
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+        
             }
             .list-content{
                 position: relative;
@@ -190,7 +209,7 @@ export default class Faq extends React.Component {
                 background-size: 100%;
             }
             .list{
-                margin-top: 22px;
+                margin-top: 11px;
                 padding: 25px 17px;
                 background: #25243A;
                 box-shadow: 0px 0px 6px rgba(17, 14, 45, 0.5);
@@ -236,6 +255,16 @@ export default class Faq extends React.Component {
             .pl-40{
                 padding-left:40px
             }
+            @media (max-width:1200px) {
+                .w-1200{
+                    width:80%;
+                    margin:0 auto;
+                    
+                }
+                ul{
+                    padding:0 !important
+                }
+               }
             `}</style>
             <style global jsx>{`
                 body {
