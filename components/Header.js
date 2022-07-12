@@ -78,7 +78,7 @@ export default class Header extends React.Component{
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 117px;
+                height: 6%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -113,7 +113,7 @@ export default class Header extends React.Component{
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
               .menu_button_item {
@@ -124,7 +124,7 @@ export default class Header extends React.Component{
                 margin-right: 25px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
 

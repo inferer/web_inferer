@@ -209,28 +209,29 @@ export default function Home() {
                 flex-direction: column;
                 align-items: center;
                 width: 100%;
+
               }
 
               .nav_bar {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 10%;
+                height: 6%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
               }
-              .nav_bar {
-                backdrop-filter: blur(100px);
-                background-color: transparent;
-                width: 100%;
-                height: 117px;
-                position: fixed;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-              }
+              // .nav_bar {
+              //   backdrop-filter: blur(100px);
+              //   background-color: transparent;
+              //   width: 100%;
+              //   height: 117px;
+              //   position: fixed;
+              //   display: flex;
+              //   flex-direction: row;
+              //   justify-content: center;
+              // }
 
               .nav_bar_mobile{
                 display:none;
@@ -246,8 +247,9 @@ export default function Home() {
               }
 
               .logo {
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
+                margin-left: 110px;
                 -webkit-user-drag: none;
               }
 
@@ -261,10 +263,10 @@ export default function Home() {
                 font-family: 'DIN';
                 font-style: normal;
                 margin-left: 25px;
-                margin-right: 25px;
+                margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
 
@@ -273,10 +275,10 @@ export default function Home() {
                 background-color: transparent; 
                 border: none;
                 margin-left: 25px;
-                margin-right: 25px;
+                margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
 
