@@ -22,7 +22,7 @@ export default class Faq extends React.Component {
         <div className="container">
            <Header></Header>
             <div className="content">
-                <div className='content-fq w-1200'>
+                <div className='content-fq w-1200' style={{marginTop: '60px'}}>
                     <div className='list-content'>
                         <ul className='ul'>
                             <li></li>
@@ -164,8 +164,9 @@ export default class Faq extends React.Component {
               }
               .content{
                 width: 100%;
-                background: url(/bg-center.png) repeat;
+                background: url(/faq2.png) repeat;
                 background-size: 100%;
+                backgroud-position: cebter;
                 height: calc(100vh - 176px);;
                 overflow-y: auto;
             }
@@ -233,6 +234,8 @@ export default class Faq extends React.Component {
                 line-height: 21px;
                 letter-spacing: 0.02em;
                 color: #DADADA;
+                padding-left: 1.5em;
+                text-indent: -1.5em;
             }
             .content-bg{
                 width: 100%;

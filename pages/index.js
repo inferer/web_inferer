@@ -68,9 +68,12 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve.png" className="home_curve"></img>
+                <img src="/home_curve_yun.png" style={{marginTop: '-60px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
-                    <img src="/subpage_1_title_bg.png" className='title_bg_curve'/>
+                    <img src="/subpage_1_title_bg.png" style={{
+                        width: '80%',
+                        height: '80%', marginTop: '-10%'
+                    }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
                     <p className="subpage_1_title">INFERER</p>
@@ -91,13 +94,13 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_big.png" style={{marginTop: '26px'}}/>
+                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '50%', height: '50%'}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/img_1.png" className='img1_style img-w-100'  />
+                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '50%', height: '50%'}} />
             </div>
 
             {/*page 3*/}
@@ -108,19 +111,21 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <img src="/img_2.png" className='img-w-100' style={{marginTop: '47px'}}/>
+                <img src="/built.png" style={{marginTop: '26px', width: '50%', height: '50%'}}/>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
                     reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
-                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px'}}/>
+                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
                 <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
-                <div className="subpage_4_card_1">
+                <img src="/inferer_search.png" style={{marginTop: '26px', width: '70%', height: '70%'}}/>
+                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', marginLeft: '50px', width: '70%', height: '70%'}}/>
+                {/* <div className="subpage_4_card_1">
                     <img src='/img_card_left.png'
                     className='img_card_left-bg' />
                     <div className='subpage_4_title_container' style={{marginLeft: '72px'}}>
@@ -154,7 +159,7 @@ export default function Home() {
 
                     <img src='/img_card_right2.png'
                          className='img_card_right-bg' />
-                </div>
+                </div> */}
             </div>
 
             {/*page 5*/}
@@ -164,7 +169,7 @@ export default function Home() {
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px'}}/>
+                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
             </div>
 
             {/*page 6*/}
@@ -264,6 +269,7 @@ export default function Home() {
               }
 
               .menu_button_item {
+                font-family: 'DIN';
                 background-color: transparent; 
                 border: none;
                 margin-left: 25px;
@@ -288,7 +294,7 @@ export default function Home() {
               }
 
               .subpage_1_title_wrapper {
-                margin-top: -48px;
+                margin-top: -110px;
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -299,7 +305,7 @@ export default function Home() {
                 font-family: D-DIN-Bold;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 170px;
+                font-size: 9vw;
                 letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
@@ -584,6 +590,8 @@ export default function Home() {
                 color: white;
                 max-width: 940px;
                 margin-top: 29px;
+                margin-right: 40px;
+                margin-left: 40px;
               }
 
               .footer_bar {
@@ -653,11 +661,11 @@ export default function Home() {
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
               }
-              // 响应式样式
+              // // 响应式样式
               @media (max-width:768px) {
-                .container{
-                  min-width: 100%
-                }
+                // .container{
+                //   min-width: 100%
+                // }
                 .nav_bar{
                   display: none;
                   color:red;
@@ -683,65 +691,75 @@ export default function Home() {
                   margin:0;
                   padding:20px 0;
                 }
-                .home_curve{
-                  height:300px;
+                .menu_button_item {
+                  background-color: transparent; 
+                  border: none;
+                  margin:0;
+                  padding:20px 0;
+                  cursor: pointer;
                 }
-                .title_bg_curve{
-                  width:100%;
+                .menu_button_item:hover {
+                  color: #44488F;
                 }
-                .subpage_1_title{
-                  font-size: 100px;
-                }
-                .img1_style{
-                  margin-top: 30px;
-                  margin-bottom: 80px
-                }
-                .subtitle{
-                  text-align: center;
-                  width:100%;
-                  max-width:100%;
-                  word-break: break-word;
-                }
-                .subpage_4_card_1{
-                  width:100%;
-                  height: 213px;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                }
-                .img_card_left-bg{
-                  width: 190px;
-                  height: 170px;
-                  margin-left: 0px;
-                  margin-top: 0px;
-                }
-                .subpage_4_card_2{
-                  width:100%;
-                  align-items: center;
-                }
-                .subpage_4_title_txt{
-                  width: 350px;
-                  margin-top: 19px
-                }
-                .img_card_right-bg{
-                  width: 30%;
-                  height: 170px;
-                  margin-right: 0;
-                  margin-top: 0;
-                }
-                .card_container{
-                  display: flex
-                  width:100%;
-                  justify-content: center;
-                  margin-bottom: 88px;
-                }
-                .footer_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .img-w-100{
-                  width:100%;
-                }
+              //   .home_curve{
+              //     height:300px;
+              //   }
+              //   .title_bg_curve{
+              //     width:100%;
+              //   }
+              //   .subpage_1_title{
+              //     font-size: 100px;
+              //   }
+              //   .img1_style{
+              //     margin-top: 30px;
+              //     margin-bottom: 80px
+              //   }
+              //   .subtitle{
+              //     text-align: center;
+              //     width:100%;
+              //     max-width:100%;
+              //     word-break: break-word;
+              //   }
+              //   .subpage_4_card_1{
+              //     width:100%;
+              //     height: 213px;
+              //     display: flex;
+              //     justify-content: space-between;
+              //     align-items: center;
+              //   }
+              //   .img_card_left-bg{
+              //     width: 190px;
+              //     height: 170px;
+              //     margin-left: 0px;
+              //     margin-top: 0px;
+              //   }
+              //   .subpage_4_card_2{
+              //     width:100%;
+              //     align-items: center;
+              //   }
+              //   .subpage_4_title_txt{
+              //     width: 350px;
+              //     margin-top: 19px
+              //   }
+              //   .img_card_right-bg{
+              //     width: 30%;
+              //     height: 170px;
+              //     margin-right: 0;
+              //     margin-top: 0;
+              //   }
+              //   .card_container{
+              //     display: flex
+              //     width:100%;
+              //     justify-content: center;
+              //     margin-bottom: 88px;
+              //   }
+              //   .footer_bar_content{
+              //     width:100%;
+              //     min-width:100%;
+              //   }
+              //   .img-w-100{
+              //     width:100%;
+              //   }
               }
               @media (min-width: 768px) and (max-width:992px) {
                 .nav_bar{
@@ -769,132 +787,142 @@ export default function Home() {
                   margin:0;
                   padding:20px 0;
                 }
-                .home_curve{
-                  height:300px;
+                .menu_button_item {
+                  background-color: transparent; 
+                  border: none;
+                  margin:0;
+                  padding:20px 0;
+                  cursor: pointer;
                 }
-                .title_bg_curve{
-                  width:100%;
+                .menu_button_item:hover {
+                  color: #44488F;
                 }
-                .subpage_1_title{
-                  font-size: 100px;
-                }
-                .img1_style{
-                  margin-top: 30px;
-                  margin-bottom: 80px
-                }
-                .subtitle{
-                  text-align: center;
-                  width:100%;
-                }
-                .subpage_4_card_1{
-                  width:100%;
-                  height: 213px;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                }
-                .img_card_left-bg{
-                  width: 190px;
-                  height: 170px;
-                  margin-left: 0px;
-                  margin-top: 0px;
-                }
-                .subpage_4_card_2{
-                  width:100%;
-                  align-items: center;
-                }
-                .subpage_4_title_txt{
-                  width: 350px;
-                  margin-top: 19px
-                }
-                .img_card_right-bg{
-                  width: 290px;
-                  height: 170px;
-                  margin-right: 0;
-                  margin-top: 0;
-                }
-                .card_container{
-                  width:100%;
-                  justify-content: center;
-                  margin-bottom: 88px;
-                  flex-wrap: wrap;
-                  width: 600px;
-                }
-              .footer_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .img-w-100{
-                  width:100%;
-                }
+              //   .home_curve{
+              //     height:300px;
+              //   }
+              //   .title_bg_curve{
+              //     width:100%;
+              //   }
+              //   .subpage_1_title{
+              //     font-size: 100px;
+              //   }
+              //   .img1_style{
+              //     margin-top: 30px;
+              //     margin-bottom: 80px
+              //   }
+              //   .subtitle{
+              //     text-align: center;
+              //     width:100%;
+              //   }
+              //   .subpage_4_card_1{
+              //     width:100%;
+              //     height: 213px;
+              //     display: flex;
+              //     justify-content: space-between;
+              //     align-items: center;
+              //   }
+              //   .img_card_left-bg{
+              //     width: 190px;
+              //     height: 170px;
+              //     margin-left: 0px;
+              //     margin-top: 0px;
+              //   }
+              //   .subpage_4_card_2{
+              //     width:100%;
+              //     align-items: center;
+              //   }
+              //   .subpage_4_title_txt{
+              //     width: 350px;
+              //     margin-top: 19px
+              //   }
+              //   .img_card_right-bg{
+              //     width: 290px;
+              //     height: 170px;
+              //     margin-right: 0;
+              //     margin-top: 0;
+              //   }
+              //   .card_container{
+              //     width:100%;
+              //     justify-content: center;
+              //     margin-bottom: 88px;
+              //     flex-wrap: wrap;
+              //     width: 600px;
+              //   }
+              // .footer_bar_content{
+              //     width:100%;
+              //     min-width:100%;
+              //   }
+              //   .img-w-100{
+              //     width:100%;
+              //   }
               }
               @media (min-width:992px) and (max-width:1200px) {
                 .nav_bar_content{
                   width:100%;
                   min-width:100%;
                 }
-                .home_curve{
-                  height:300px;
-                }
-                .title_bg_curve{
-                  width:100%;
-                }
-                .subpage_1_title{
-                  font-size: 100px;
-                }
-                .img1_style{
-                  margin-top: 30px;
-                  margin-bottom: 80px
-                }
-                .subtitle{
-                  text-align: center;
-                  width:100%;
-                }
-                .subpage_4_card_1{
-                  width:100%;
-                  height: 213px;
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                }
-                .img_card_left-bg{
+              //   .home_curve{
+              //     height:300px;
+              //   }
+              //   .title_bg_curve{
+              //     width:100%;
+              //   }
+              //   .subpage_1_title{
+              //     font-size: 100px;
+              //   }
+              //   .img1_style{
+              //     margin-top: 30px;
+              //     margin-bottom: 80px
+              //   }
+              //   .subtitle{
+              //     text-align: center;
+              //     width:100%;
+              //   }
+              //   .subpage_4_card_1{
+              //     width:100%;
+              //     height: 213px;
+              //     display: flex;
+              //     justify-content: space-between;
+              //     align-items: center;
+              //   }
+              //   .img_card_left-bg{
                
-                }
-                .subpage_4_card_2{
-                  width:100%;
-                  align-items: center;
-                }
-                .subpage_4_title_txt{
-                  width: 350px;
-                  margin-top: 8px
-                }
-                .img_card_right-bg{
-                  width: 280px;
-                  height: 270px;
-                  margin-right: 0;
-                  margin-top: -110px;
-                }
-                .card_container{
-                  margin-bottom: 88px;
-                  flex-wrap: wrap;
-                  width: 1209px;
-                }
-                .footer_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .img-w-100{
-                  width:100%;
-                }
+              //   }
+              //   .subpage_4_card_2{
+              //     width:100%;
+              //     align-items: center;
+              //   }
+              //   .subpage_4_title_txt{
+              //     width: 350px;
+              //     margin-top: 8px
+              //   }
+              //   .img_card_right-bg{
+              //     width: 280px;
+              //     height: 270px;
+              //     margin-right: 0;
+              //     margin-top: -110px;
+              //   }
+              //   .card_container{
+              //     margin-bottom: 88px;
+              //     flex-wrap: wrap;
+              //     width: 1209px;
+              //   }
+              //   .footer_bar_content{
+              //     width:100%;
+              //     min-width:100%;
+              //   }
+              //   .img-w-100{
+              //     width:100%;
+              //   }
                 
               }
-               @media (min-width:1380px) {
-                .card_container{
-                  margin-bottom: 88px;
-                  flex-wrap: wrap;
-                  width: 1209px;
-                }
-              }
+              //  @media (min-width:1380px) {
+              //   .card_container{
+              //     margin-bottom: 88px;
+              //     flex-wrap: wrap;
+              //     width: 1209px;
+              //   }
+              // }
 
             `}</style>
             <style global jsx>{`
