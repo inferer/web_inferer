@@ -37,15 +37,13 @@ export default function Home() {
 
             <div style={{width: "100%", height: "58.5px"}}/>
             <div className="content">
-                <div className='content-fq w-1200' style={{marginTop: '30px'}}>
+                <div className='content-fq' style={{marginTop: '4.44%'}}>
                     <div className='list-content'>
                         <ul className='ul'>
                             <li></li>
                             <li>
                                 <div className='flex-c flex-j'>
-                                    <div className='jt flex-c flex-j'>
                                     <div className='faq'></div>
-                                    </div>
                                 </div>
                             </li>
                             <li className='list flex-l'>
@@ -103,9 +101,9 @@ export default function Home() {
             <div className="footer_bar">
                 <div className="footer_bar_content">
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                        <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
+                        {/* <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/> */}
                         <div className='footer_text' style={{marginLeft: '3px'}}>
-                            Made by Inferer Labs, Thanks to PlatON
+                            Made by Inferer Labs
                         </div>
                     </div>
                     <div className='footer_text'>
@@ -124,11 +122,22 @@ export default function Home() {
 
               }
 
+              // .nav_bar {
+              //   backdrop-filter: blur(100px);
+              //   background-color: transparent;
+              //   width: 100%;
+              //   height: 100px;
+              //   position: fixed;
+              //   display: flex;
+              //   flex-direction: row;
+              //   justify-content: center;
+              // }
+
               .nav_bar {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 100px;
+                height: 9.8%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -275,8 +284,8 @@ export default function Home() {
             .flex-s {
                 display: flex;
             }
-            .w-1200{
-                width:1200px;
+            .content-fq{
+                width:62.71%;
                 margin: 0 auto;
 
             }
@@ -295,13 +304,13 @@ export default function Home() {
                 display: flex;
                 justify-content: center;
             }
-            .jt{
-                width: 320px;
-                height: 44px;
-                margin-bottom: 30px;
-                background: url(/contnet-jt.png) no-repeat;
-                background-size: 100%;
-            }
+            // .jt{
+            //     width: 320px;
+            //     height: 44px;
+            //     margin-bottom: 30px;
+            //     background: url(/contnet-jt.png) no-repeat;
+            //     background-size: 100%;
+            // }
 
               .subtitle {
                 font-family: 'D-DIN-Normal';
@@ -393,34 +402,37 @@ export default function Home() {
 
              
                .faq{
-                width: 208px;
-                height: 80px;
-                background: url(/faq.png) no-repeat;
+                width: 26.58%;
+                height: 112px;
+                background: url(/faq-title.png) no-repeat;
                 background-size: 100%;
-            }
+                }
+
+                
             .list{
-                margin-top: 11px;
+                margin-top: 29px;
                 padding: 20px 17px;
                 background: #25243A;
                 box-shadow: 0px 0px 6px rgba(17, 14, 45, 0.5);
                 border-radius: 10px;
             }
             .item1{
-                font-family: 'DIN';
-                font-style: normal;
+                font-family: 'DIN-Bold';
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 29px;
                 letter-spacing: 0.02em;
                 color: #727ABA;
+                padding-left: 1.5em;
+                text-indent: -1.5em;
             }
             .item2{
                 margin-top:12px;
-                font-family: 'DIN';
+                font-family: 'D-DIN-Regular';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 17px;
-                line-height: 21px;
+                font-size: 16px;
+                line-height: 22px;
                 letter-spacing: 0.02em;
                 color: #DADADA;
                 padding-left: 1.5em;
@@ -437,8 +449,8 @@ export default function Home() {
               }
               .content{
                 width: 100%;
-                background: url(/faq2.png) repeat;
-                background-size: 100%;
+                background: url(/faq2.png) no-repeat;
+                background-size: 100% 100%;
                 backgroud-position: cebter;
                 height: calc(100vh - 66px);;
                 overflow-y: auto;
@@ -488,9 +500,9 @@ export default function Home() {
 
             @media (max-width:1280px) {
                 
-                .w-1200{
-                  width:800px!important;
-                }
+                // .content-fq{
+                //   width:800px!important;
+                // }
                 .footer_bar {
                   width: 800px!important;
                 }
@@ -498,15 +510,19 @@ export default function Home() {
                   min-width:800px !important;
 
                 }
-               }
+            }
 
               
-               @media (max-width:768px) {
+            @media (max-width:768px) {
                 .nav_bar_content{
                   min-width:320px !important;
 
                 }
-               }
+
+                  .faq{
+                  height: 8px;
+                  }
+            }
            
 
             `}</style>

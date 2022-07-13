@@ -44,6 +44,12 @@ export default function Home() {
                             <span className='name-detail'>Inferer community is an ecosystem of users, developers, designers and evaluators. </span>
                         </div>
                     </div>
+                    {/* <div className='test'>
+                        <div className='community-1 flex-l'>
+                            <span className='name'>Community</span>
+                            <span className='name-detail'>Inferer community is an ecosystem of users, developers, designers and evaluators. </span>
+                        </div>
+                    </div> */}
                     <div className='community-2 '>
                     <div className='coon-1204 flex-b'>
                     <div className='left flex-l'>
@@ -128,6 +134,12 @@ export default function Home() {
                 justify-content: space-between;
                 z-index:2;
               }
+
+              .test {
+                  margin-left: 20.85%
+              }
+
+              
 
               .logo {
                 width: 25px;
@@ -245,19 +257,20 @@ export default function Home() {
                 font-size: 22px;
                 line-height: 27px;
                 letter-spacing: 0.02em;
-                color: #FFFFFF;
+                color: rgba(255, 255, 255, 0.6);
             }
             .community-2{
                 background: #0D0C1E;
                 padding: 74px 0 83px 0;
             }
             .left{
+                width: 62.86%
                 padding-top: 114px;
                 width: calc(100% - 397px);
                 margin-right: 97px
             }
             .community-2-name{
-                font-family: 'DIN';
+                font-family: 'DIN-Regular';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 28px;
@@ -268,12 +281,13 @@ export default function Home() {
             }
             .community-2-name-detail {
                 margin-top: 12px;
-                font-family: 'DIN';
+                font-family: 'DIN-Regular';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 22px;
                 line-height: 27px;
-                color: #979797;
+                letter-spacing: 0.02em;
+                color: rgba(255, 255, 255, 0.6);
             }
             .community-2-next-detail{
                 margin-top: 30px
@@ -337,7 +351,7 @@ export default function Home() {
                 font-size: 22px;
                 line-height: 27px;
                 text-align: center;
-                text-transform: capitalize;
+                // text-transform: capitalize;
                 color: #979797;
             }
             .radius{
@@ -385,7 +399,15 @@ export default function Home() {
                 padding:16px 0 15px 25px;
                 background: #17152A;
                 border-radius: 10px 0px 0px 10px;
+                border-color: #ffffff
             }
+
+            .input:focus{
+                outline: none !important;
+                border:2px solid #44488F;
+                // box-shadow: 0 0 10px #719ECE;
+            }
+
             .submit{
                 height: 67px;
                 width: 193px;
