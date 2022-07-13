@@ -1,27 +1,41 @@
-import React from 'react';
+import LogoText from '../components/LogoText';
+import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
+import Link from "next/link";
 import router from "next/router";
-import SearchBar from '../components/SearchBar';
-import EvaluationResult from '../components/EvaluationResult'
-import Header from '../components/Header'
+import {
+  Button
+} from '@mui/material';
 
-export default class Community extends React.Component {
-    constructor() {
-        super();
-        this.title = React.createRef()
-        this.subtitle = React.createRef()
-        this.searchBar = React.createRef()
-        this.searchResult = React.createRef()
-        this.state = {scoreDesc: "EXCEPTIONAL", keyFactors: []};
-    }
-
-    random(min, max) {
-        return Math.round(Math.random() * (max - min)) + min;
-    }
-    render() {
-        return (
+export default function Home() {
+    return (
         <div className="container">
-           <Header></Header>
+            {/*导航栏*/}
+            <div className="nav_bar">
+                <div className="nav_bar_content">
+                    <img src="/icon_nav_logo.svg" className="logo"/>
+                    <div className="menu_container">
+                        <div className="menu_item">
+                            DOCS
+                        </div>
+                        <div className="menu_item">
+                            WHITEPAPER
+                        </div>
+                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
+                            COMMUNITY
+                        </button>
+                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
+                            FAQ
+                        </button>
+
+                        <LaunchAppButton onClick={()=>{
+                            router.push('/app')
+                        }}/>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{width: "100%", height: "58.5px"}}/>
             <div className="content">
                 <div className='content-fq'>
                     <div className='coon-1204'>
@@ -48,47 +62,122 @@ export default class Community extends React.Component {
                                 <div className='right-bg'></div>
                             </div>
                     </div>
-                        </div>
-                        <div className='community-3'>
-                            <div className='coon-1204'>
-                                <div className='community-3-bg'></div>
-                                <div className='community-join flex-l flex-j'>
-                                    <div className='community-title flex-l'>
-                                        <span className='title-m'>Join the community</span>
-                                        <p className='title-j'>Join the community and participate in our discussions. </p>
-                                    </div>
-                                    <div className='community-icon'>
-                                        <ul className='flex-b'>
-                                            <li className='flex-c flex-j flex-l'>
-                                                <div className='radius flex-c flex-j'>
-                                                <i className='twitter-icon'></i>
-                                                </div>
-                                                <span className='tips'>Twitter<br/> Community</span>
-                                            </li>
-                                            <li className='flex-c flex-j flex-l'>
-                                            <div className='discoverd-icon flex-c flex-j'>
-                                                </div>
-                                                <span className='tips'>Discord <br/> Community</span>
-                                            </li>
-                                            <li className='flex-c flex-j flex-l'>
-                                            <div className='radius flex-c flex-j'>
-                                                <i className='tel-icon'></i>
-                                                </div>
-                                                <span className='tips'>Telegram<br/>  Community</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div className='community-input flex-b'>
-                                        <input type="text" className='input' placeholder='Your e-mail'></input>
-                                        <div className='submit'>Subscribe</div>
-                                    </div>
-                                </div>
+                  </div>
+                 <div className='community-3'>
+                    <div className='coon-1204'>
+                        <div className='community-3-bg'></div>
+                        <div className='community-join flex-l flex-j'>
+                            <div className='community-title flex-l'>
+                                <span className='title-m'>Join the community</span>
+                                <p className='title-j'>Join the community and participate in our discussions. </p>
+                            </div>
+                            <div className='community-icon'>
+                                <ul className='flex-b'>
+                                    <li className='flex-c flex-j flex-l'>
+                                        <div className='radius flex-c flex-j'>
+                                        <i className='twitter-icon'></i>
+                                        </div>
+                                        <span className='tips'>Twitter<br/> Community</span>
+                                    </li>
+                                    <li className='flex-c flex-j flex-l'>
+                                    <div className='discoverd-icon flex-c flex-j'>
+                                        </div>
+                                        <span className='tips'>Discord <br/> Community</span>
+                                    </li>
+                                    <li className='flex-c flex-j flex-l'>
+                                    <div className='radius flex-c flex-j'>
+                                        <i className='tel-icon'></i>
+                                        </div>
+                                        <span className='tips'>Telegram<br/>  Community</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='community-input flex-b'>
+                                <input type="text" className='input' placeholder='Your e-mail'></input>
+                                <div className='submit'>Subscribe</div>
                             </div>
                         </div>
+                    </div>
+                 </div>
                 </div>
             </div>
+
             <style jsx>{`
-            .flex-s {
+              .container{
+                width: 100%;
+                height: 100%;
+                background: #17152A;
+              }
+
+              .nav_bar {
+                backdrop-filter: blur(100px);
+                background-color: transparent;
+                width: 100%;
+                height: 6%;
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              }
+              
+              .nav_bar_content {
+                min-width: 1200px;
+                width: 1200px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index:2;
+              }
+
+              .logo {
+                width: 25px;
+                height: 25px;
+                margin-left: 40px;
+                -webkit-user-drag: none;
+              }
+
+              .menu_container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+
+              .menu_item {
+                font-family: 'DIN';
+                font-style: normal;
+                margin-left: 25px;
+                margin-right: 15px;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+              }
+
+              .menu_button_item {
+                font-family: 'DIN';
+                background-color: transparent; 
+                border: none;
+                margin-left: 25px;
+                margin-right: 15px;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+              }
+
+              .menu_button_item:hover {
+                color: #44488F;
+              }
+              .right-bg{
+                position: absolute;
+                width: 674px;
+                height: 678px;
+                top: -120px;
+                right: -110px;
+                background: url(/qiu-bg.png) no-repeat;
+                background-size: 100%;
+              }
+              .flex-s {
                 display: flex;
             }
             .flex-b {
@@ -106,37 +195,7 @@ export default class Community extends React.Component {
                 display: flex;
                 justify-content: center;
             }
-            .container{
-                width: 100%;
-                height: 100%;
-                background: #17152A;
-            }
-            .nav_bar {
-                z-index: 5;
-                backdrop-filter: blur(100px);
-                background: #0D0C1E;
-                width: 100%;
-                height: 117px;
-                position: fixed;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-              }
-
-              .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-              }
-
-              .logo {
-                width: 30px;
-                height: 30px;
-                -webkit-user-drag: none;
-              }
-
+            
               .menu_container {
                 display: flex;
                 flex-direction: row;
@@ -157,9 +216,10 @@ export default class Community extends React.Component {
             }
             .coon-1204{
                 position: relative;
-                width: 1204px;
+                width: 1200px;
                 height: 100%;
                 margin: 0 auto;
+                padding:0 40px 0 40px;
             }
             .content{
                 padding-bottom:205px;
@@ -229,7 +289,6 @@ export default class Community extends React.Component {
             }
             .right-bg{
                 position: absolute;
-                width: 674px;
                 height: 678px;
                 top: -120px;
                 right: -110px;
@@ -342,16 +401,21 @@ export default class Community extends React.Component {
                 background: #44488F;
                 border-radius: 0px 10px 10px 0px;
             }
-        }
+           }
+
             `}</style>
+            
             <style global jsx>{`
-                body {
+              body {
                 width: 100%;
-                height: 100%;
-                color: rgba(0, 0, 0, 0.85);
+                background-color: #0d0b17;
+              }
+              @media (max-width:1280px) {
+                 .coon-1204{
+                  width:800px!important;
                 }
+               }
             `}</style>
         </div>
-        );
-    }
+    );
 }

@@ -34,35 +34,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* 移动端样式 */}
-
-            <div className="nav_bar_mobile">
-                <div className="nav_bar_content">
-                    <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <div className="menu_item" onClick={()=>{
-                           router.push('/community')
-                        }}>
-                            COMMUNITY
-                        </div>
-                        <div className="menu_item" onClick={()=>{
-                          router.push('/faq')
-                        }}>
-                            FAQ
-                        </div>
-
-                        <LaunchAppButton onClick={()=>{
-                            router.push('/app')
-                        }}/>
-                    </div>
-                </div>
-            </div>
 
             <div style={{width: "100%", height: "58.5px"}}/>
 
@@ -70,9 +41,10 @@ export default function Home() {
             <div className="subpage_1">
                 <img src="/home_curve_yun.png" style={{marginTop: '-60px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
-                    <img src="/subpage_1_title_bg.png" style={{
+                    <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
                         width: '80%',
-                        height: '80%', marginTop: '-10%'
+                        height: '80%', 
+                        marginTop: '-10%'
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
@@ -214,7 +186,7 @@ export default function Home() {
               .logo {
                 width: 25px;
                 height: 25px;
-                margin-left: 110px;
+                margin-left: 40px;
                 -webkit-user-drag: none;
               }
 
@@ -529,7 +501,7 @@ export default function Home() {
 
               .card_container {
                 margin-top: 67px;
-                margin-bottom: 288px;
+                margin-bottom: 10%;
                 width:100%;
                 display: flex;
                 flex-direction: row;
@@ -560,6 +532,7 @@ export default function Home() {
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;
+                text-indent: 1.5em
               }
 
               .footer_bar {
@@ -572,7 +545,8 @@ export default function Home() {
 
               .footer_bar_content {
                 min-width: 1200px;
-                width: 1200px;
+                width: 85%;
+                margin: 0 auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -629,268 +603,27 @@ export default function Home() {
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
               }
-              // // 响应式样式
-              @media (max-width:768px) {
-                // .container{
-                //   min-width: 100%
-                // }
-                .nav_bar{
-                  display: none;
-                  color:red;
+
+              @media (max-width:1280px) {
+                .subpage_1_title_bg{
+                  margin-top: -20px !important;
                 }
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
+                .card_container{
+                  width:800px!important
                 }
-                .nav_bar_mobile{
-                  display:block;
+                .footer_bar_content {
+                  min-width: 800px;
                 }
-                .logo{
-                  display:none;
+               }
+               @media (max-width:768px) {
+                .subpage_1_title_bg{
+                  margin-top: -20px !important;
                 }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
+                .card_container{
+                  width:500px!important
                 }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-                .menu_button_item {
-                  background-color: transparent; 
-                  border: none;
-                  margin:0;
-                  padding:20px 0;
-                  cursor: pointer;
-                }
-                .menu_button_item:hover {
-                  color: #44488F;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //     max-width:100%;
-              //     word-break: break-word;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-              //     width: 190px;
-              //     height: 170px;
-              //     margin-left: 0px;
-              //     margin-top: 0px;
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 19px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 30%;
-              //     height: 170px;
-              //     margin-right: 0;
-              //     margin-top: 0;
-              //   }
-              //   .card_container{
-              //     display: flex
-              //     width:100%;
-              //     justify-content: center;
-              //     margin-bottom: 88px;
-              //   }
-              //   .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-              }
-              @media (min-width: 768px) and (max-width:992px) {
-                .nav_bar{
-                  display: none;
-                  color:red;
-                }
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .nav_bar_mobile{
-                  display:block;
-                }
-                .logo{
-                  display:none;
-                }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
-                }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-                .menu_button_item {
-                  background-color: transparent; 
-                  border: none;
-                  margin:0;
-                  padding:20px 0;
-                  cursor: pointer;
-                }
-                .menu_button_item:hover {
-                  color: #44488F;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-              //     width: 190px;
-              //     height: 170px;
-              //     margin-left: 0px;
-              //     margin-top: 0px;
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 19px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 290px;
-              //     height: 170px;
-              //     margin-right: 0;
-              //     margin-top: 0;
-              //   }
-              //   .card_container{
-              //     width:100%;
-              //     justify-content: center;
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 600px;
-              //   }
-              // .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-              }
-              @media (min-width:992px) and (max-width:1200px) {
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-               
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 8px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 280px;
-              //     height: 270px;
-              //     margin-right: 0;
-              //     margin-top: -110px;
-              //   }
-              //   .card_container{
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 1209px;
-              //   }
-              //   .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-                
-              }
-              //  @media (min-width:1380px) {
-              //   .card_container{
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 1209px;
-              //   }
-              // }
+               }
+           
 
             `}</style>
             <style global jsx>{`

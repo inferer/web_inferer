@@ -13,7 +13,7 @@ export default class Header extends React.Component{
  
   render(){
     return (
-      <div className='heights'>
+     
         <div className="nav_bar">
           <div className="nav_bar_content">
             <img src="/icon_nav_logo.svg" className="logo"/>
@@ -40,41 +40,9 @@ export default class Header extends React.Component{
                 }}/>
             </div>
           </div>
-        </div>
 
-        <div className="nav_bar_mobile">
-           <div className="nav_bar_content">
-            <img src="/icon_nav_logo.svg" className="logo"/>
-            <div className="menu_container">
-                <div className="menu_item">
-                    DOCS
-                </div>
-                <div className="menu_item">
-                    WHITEPAPER
-                </div>
-                <div className="menu_item" onClick={()=>{
-                  router.push('/community')
-                }}>
-                    COMMUNITY
-                </div>
-                <div className="menu_item" onClick={()=>{
-                  router.push('/faq')
-                }}>
-                    FAQ
-                </div>
-
-                <LaunchAppButton onClick={()=>{
-                    router.push('/app')
-                }}/>
-            </div>
-        </div>
-        </div>
-        <style jsx>{`
-              
-              .heights{
-                min-height:117px
-              }
-              .nav_bar {
+          <style jsx>{`
+               .nav_bar {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
@@ -83,9 +51,6 @@ export default class Header extends React.Component{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-              }
-              .nav_bar_mobile{
-                display:none;
               }
               .nav_bar_content {
                 min-width: 1200px;
@@ -131,86 +96,17 @@ export default class Header extends React.Component{
               .menu_button_item:hover {
                 color: #44488F;
               }
+        `}</style>
 
-             
-              
-              // 响应式样式
-              @media (max-width:768px) {
-                .container{
-                  min-width: 100%
-                }
-                .nav_bar{
-                  display: none;
-                  color:red;
-                }
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .nav_bar_mobile{
-                  display:block;
-                }
-                .logo{
-                  display:none;
-                }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
-                }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-                
-              }
-              @media (min-width: 768px) and (max-width:992px) {
-                .nav_bar{
-                  display: none;
-                  color:red;
-                }
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .nav_bar_mobile{
-                  display:block;
-                }
-                .logo{
-                  display:none;
-                }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
-                }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-               
-              }
-              @media (min-width:992px) and (max-width:1200px) {
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-               }
-               
-            `}</style>
-    </div>
+        </div>
+
+      
+       
+    
     
    );
   }
 
-  tabClick=(val,e)=>{
-    router.push('/'+val)
-
-  }
   
 }
 

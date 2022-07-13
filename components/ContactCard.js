@@ -57,11 +57,16 @@ export default ({ title, subtitle, icon, customStyle }) => (
             width: 10px;
             height: 10px;
           }
-          @media (max-width:768px) {
+          @media (max-width:968px) {
             .container {
-              flex-wrap: wrap;
-              justify-content: center;
-
+              width: 373px !important;
+              height: 126px;
+            }
+           }
+           @media (max-width:768px) {
+            .container {
+              width: 237px !important;
+              height: 126px;
             }
            }
         `}</style>
