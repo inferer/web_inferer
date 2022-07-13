@@ -125,41 +125,6 @@ export default function Home() {
                 <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
                 <img src="/inferer_search.png" style={{marginTop: '26px', width: '70%', height: '70%'}}/>
                 <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', marginLeft: '50px', width: '70%', height: '70%'}}/>
-                {/* <div className="subpage_4_card_1">
-                    <img src='/img_card_left.png'
-                    className='img_card_left-bg' />
-                    <div className='subpage_4_title_container' style={{marginLeft: '72px'}}>
-                        <div className='subpage_4_title'>
-                            Inferer Search
-                        </div>
-                        <div className='mg-w-100' style={{marginTop: '19px'}}>
-                            <span className='subpage_4_subtitle'>
-                                Focus on instant-check search scenarios, which enable user to have a quick scan on address.
-                            </span>
-                            <span className='span_link'>
-                                Try IT OUT ->
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div className="subpage_4_card_2">
-                    <div className='subpage_4_title_container' style={{marginLeft: '66px'}}>
-                        <div className='subpage_4_title'>
-                            Inferer API
-                        </div>
-                        <div className='subpage_4_title_txt'>
-                            <span className='subpage_4_subtitle'>
-                                Focus on pre-security check scenarios, which could be integrated in customer's product and help reduce the harm conducted by bots or hackers.
-                            </span>
-                        </div>
-                        <span className='span_link'>
-                                Check for more detail ->
-                            </span>
-                    </div>
-
-                    <img src='/img_card_right2.png'
-                         className='img_card_right-bg' />
-                </div> */}
             </div>
 
             {/*page 5*/}
@@ -304,13 +269,14 @@ export default function Home() {
               }
 
               .subpage_1_title {
-                font-family: D-DIN-Bold;
+                font-family: D-DIN-Normal;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 9vw;
                 letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
+                letter-spacing: 0.04em;
               }
 
               .subpage_1_subtitle_wrapper {
@@ -324,11 +290,11 @@ export default function Home() {
               .subpage_1_subtitle {
                 color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                font-family: D-DIN-Regular;
+                font-family: D-DIN-Normal;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 1.2vw;
-                letter-spacing: 0.06vw;
+                letter-spacing: 0.08em;
               }
 
               .subpage_2 {
@@ -567,8 +533,8 @@ export default function Home() {
                 width:100%;
                 display: flex;
                 flex-direction: row;
-                // flex-wrap: wrap;
-                // width: 1209px;
+                flex-wrap: wrap;
+                width: 1209px;
                 row-gap: 63px;
                 column-gap: 5%;
               }
@@ -583,14 +549,14 @@ export default function Home() {
               }
 
               .subtitle {
-                font-family: 'Source Han Sans CN';
+                font-family: 'D-DIN-Normal';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 16px;
-                line-height: 24px;
+                font-size: 1.0vw;
+                line-height: 1.2vw;
                 letter-spacing: 0.02em;
                 color: white;
-                max-width: 940px;
+                max-width: 53%;
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;

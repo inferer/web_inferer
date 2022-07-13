@@ -25,7 +25,7 @@ export default ({ text, customStyle }) => (
           }
           
           .text {
-            font-family: 'Source Han Sans CN';
+            font-family: 'D-DIN-Normal';
             font-style: normal;
             font-weight: 700;
             font-size: 32px;
