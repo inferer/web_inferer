@@ -432,7 +432,9 @@ export default function Home() {
 
               .subpage_4_card_1 {
                 margin-top: 178px;
-                width: 1093px;
+                // width: 1093px;
+                width: 63.8%;
+                max-width: 1094px;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;

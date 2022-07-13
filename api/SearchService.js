@@ -53,7 +53,9 @@ class SearchService {
                 //     return null;
                 // }
 
-                return response
+                console.log("searchOnETH response = " + JSON.stringify(response));
+
+                return response.data
             })
             .catch(function (error) {
                 console.log("searchOnETH error = " + error);
@@ -126,54 +128,6 @@ class SearchService {
                 console.log("getBalanceByAddress result = " + JSON.stringify(result));
                 return result;
             });
-    }
-
-    getTxListByAddress_deprecated(address, callback) {
-        const request = require('request');
-        var options = {
-            url: "https://api.etherscan.io/api",
-            json: true,
-            qs: {
-                module: "account",
-                action: "txlist",
-                address: address,
-                startblock: 11565064,
-                endblock: 99999999,
-                page: 1,
-                offset: 10000,
-                sort: "asc",
-                apikey: "KTR5BWCPZP434R2M5ZC2UCVXT4CKXY5PP8",
-            },
-        };
-
-        request.get(options, (err, res) => {
-            if (err) { return console.log(err); }
-            callback(res.body);
-        });
-    }
-
-    getBalanceByAddress_deprecated(address, callback) {
-        const request = require('request');
-        var options = {
-            url: "https://api.etherscan.io/api",
-            json: true,
-            qs: {
-                module: "account",
-                action: "balance",
-                address: address,
-                tag: "latest",
-                apikey: "KTR5BWCPZP434R2M5ZC2UCVXT4CKXY5PP8",
-            },
-        };
-
-        request.get(options, (err, res) => {
-            if (err) { return console.log(err); }
-            callback(res.body.result);
-        });
-    }
-
-    filteroutNFTTxList(list, callback) {
-
     }
 }
 
