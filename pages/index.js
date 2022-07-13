@@ -10,6 +10,31 @@ import {
 export default function Home() {
     return (
         <div className="container">
+            
+
+            {/* <div style={{width: "100%", height: "58.5px"}}/> */}
+
+            {/*page 1*/}
+            <div className="subpage_1">
+                <img src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}}></img>
+                <div className="subpage_1_title_wrapper">
+                    <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
+                        width: '51.46%',
+                        marginTop: '-8%'
+                    }}/>
+                </div>
+                <div className="subpage_1_title_wrapper">
+                    <p className="subpage_1_title">INFERER</p>
+                </div>
+                <div className="subpage_1_subtitle_wrapper">
+                    <p className="subpage_1_subtitle">
+                        BUILT ON DATA ANALYSIS, SERVE FOR WEB3 IDENDITY
+                        <br/>
+                        HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
+                    </p>
+                </div>
+            </div>
+
             {/*导航栏*/}
             <div className="nav_bar">
                 <div className="nav_bar_content">
@@ -32,29 +57,6 @@ export default function Home() {
                             router.push('/app')
                         }}/>
                     </div>
-                </div>
-            </div>
-
-            {/* <div style={{width: "100%", height: "58.5px"}}/> */}
-
-            {/*page 1*/}
-            <div className="subpage_1">
-                <img src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}}></img>
-                <div className="subpage_1_title_wrapper">
-                    <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
-                        width: '51.46%',
-                        marginTop: '-8%'
-                    }}/>
-                </div>
-                <div className="subpage_1_title_wrapper">
-                    <p className="subpage_1_title">INFERER</p>
-                </div>
-                <div className="subpage_1_subtitle_wrapper">
-                    <p className="subpage_1_subtitle">
-                        BUILT ON DATA ANALYSIS, SERVE FOR WEB3 IDENDITY
-                        <br/>
-                        HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
-                    </p>
                 </div>
             </div>
 
@@ -131,7 +133,7 @@ export default function Home() {
                     <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                         <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
                         <div className='footer_text' style={{marginLeft: '3px'}}>
-                            Made by Inferer Labs, Thanks to PlatON
+                            Made by Inferer Labs
                         </div>
                     </div>
                     <div className='footer_text'>
@@ -154,7 +156,7 @@ export default function Home() {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 100px;
+                height: 9.8%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -185,9 +187,9 @@ export default function Home() {
               }
 
               .logo {
-                width: 25px;
-                height: 25px;
-                margin-left: 40px;
+                width: 32px;
+                height: 32px;
+                // margin-left: 0px;
                 -webkit-user-drag: none;
               }
 
@@ -576,22 +578,22 @@ export default function Home() {
                 text-decoration: underline
               }
 
-              .home_curve{
-                margin-top: 117px;
-              }
-              .title_bg_curve{
-                width: 988px;
-                height: 376px;
-                margin-top: -170px;
-              }
-              .img1_style{
-                margin-top: 41px;
-                margin-bottom: 112px
-              }
-              .subpage_4_title_txt{
-                width: 678px;
-                margin-top: 19px
-              }
+              // .home_curve{
+              //   margin-top: 117px;
+              // }
+              // .title_bg_curve{
+              //   width: 988px;
+              //   height: 376px;
+              //   margin-top: -170px;
+              // }
+              // .img1_style{
+              //   margin-top: 41px;
+              //   margin-bottom: 112px
+              // }
+              // .subpage_4_title_txt{
+              //   width: 678px;
+              //   margin-top: 19px
+              // }
               .img_card_right-bg{
                 width: 450px;
                 height: 340px;

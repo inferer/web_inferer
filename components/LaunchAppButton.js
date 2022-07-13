@@ -43,6 +43,10 @@ export default class LaunchAppButton extends React.Component {
                     cursor: pointer;
                   }
 
+                  .button:hover {
+                    background-color: #1F2143;
+                  }
+
                   .button_text {
                     font-family: 'Source Han Sans CN';
                     font-style: normal;
