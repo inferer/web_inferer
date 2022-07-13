@@ -544,6 +544,7 @@ export default function Home() {
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;
+                text-indent: 1.5em;
               }
 
               .footer_bar {
