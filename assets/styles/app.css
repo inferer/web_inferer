@@ -10,3 +10,8 @@
     font-family: 'D-DIN-Regular';
     src: url('../fonts/DIN-Regular.pfb.ttf');
 }
+
+@font-face {
+    font-family: 'D-DIN-Normal';
+    src: url('../fonts/DIN-Normal.ttf');
+}

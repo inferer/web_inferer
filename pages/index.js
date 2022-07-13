@@ -34,35 +34,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* 移动端样式 */}
-
-            <div className="nav_bar_mobile">
-                <div className="nav_bar_content">
-                    <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <div className="menu_item" onClick={()=>{
-                           router.push('/community')
-                        }}>
-                            COMMUNITY
-                        </div>
-                        <div className="menu_item" onClick={()=>{
-                          router.push('/faq')
-                        }}>
-                            FAQ
-                        </div>
-
-                        <LaunchAppButton onClick={()=>{
-                            router.push('/app')
-                        }}/>
-                    </div>
-                </div>
-            </div>
 
             <div style={{width: "100%", height: "58.5px"}}/>
 
@@ -70,9 +41,10 @@ export default function Home() {
             <div className="subpage_1">
                 <img src="/home_curve_yun.png" style={{marginTop: '-60px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
-                    <img src="/subpage_1_title_bg.png" style={{
+                    <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
                         width: '80%',
-                        height: '80%', marginTop: '-10%'
+                        height: '80%', 
+                        marginTop: '-10%'
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
@@ -123,43 +95,20 @@ export default function Home() {
             {/*page 4*/}
             <div className="subpage_4">
                 <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
-                <img src="/inferer_search.png" style={{marginTop: '26px', width: '70%', height: '70%'}}/>
-                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', marginLeft: '50px', width: '70%', height: '70%'}}/>
-                {/* <div className="subpage_4_card_1">
-                    <img src='/img_card_left.png'
-                    className='img_card_left-bg' />
-                    <div className='subpage_4_title_container' style={{marginLeft: '72px'}}>
-                        <div className='subpage_4_title'>
-                            Inferer Search
-                        </div>
-                        <div className='mg-w-100' style={{marginTop: '19px'}}>
-                            <span className='subpage_4_subtitle'>
-                                Focus on instant-check search scenarios, which enable user to have a quick scan on address.
-                            </span>
-                            <span className='span_link'>
-                                Try IT OUT ->
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div className="subpage_4_card_2">
-                    <div className='subpage_4_title_container' style={{marginLeft: '66px'}}>
-                        <div className='subpage_4_title'>
-                            Inferer API
-                        </div>
-                        <div className='subpage_4_title_txt'>
-                            <span className='subpage_4_subtitle'>
-                                Focus on pre-security check scenarios, which could be integrated in customer's product and help reduce the harm conducted by bots or hackers.
-                            </span>
-                        </div>
-                        <span className='span_link'>
-                                Check for more detail ->
-                            </span>
-                    </div>
+               
+                <img src="/inferer_search22.png" style={{marginTop: '26px', width: '70%', marginLeft: '50px',height: '70%'}}/>
+                <img src="/inferer_search11.png" style={{marginTop: '26px', marginBottom: '100px', marginLeft: '50px', width: '70%', height: '70%'}}/>
 
-                    <img src='/img_card_right2.png'
-                         className='img_card_right-bg' />
-                </div> */}
+                {/* <div style={{ marginTop: '26px', marginLeft: '100px'}}>
+                  <div style={{position:'relative'}}>
+                       <img src="/inferer_search1.png" style={{width: '70%',height: '70%',marginLeft: '50px'}}/>
+                       <img src="/img_card_left.png" style={{width: '70%',height: '70%',position:'absolute',top:'26px',left:'-25px'}}/>
+                    </div>
+                    <div style={{position:'relative'}}>
+                       <img src="/inferer_api2.png" style={{width: '70%',height: '70%',marginLeft: '50px'}}/>
+                       <img src="/img_card_right2.png" style={{ width: '70%',height: '70%',position:'absolute',top:'5px',right:'33px'}}/>
+                 </div>
+              </div> */}
             </div>
 
             {/*page 5*/}
@@ -216,7 +165,7 @@ export default function Home() {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 6%;
+                height: 100px;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -249,7 +198,7 @@ export default function Home() {
               .logo {
                 width: 25px;
                 height: 25px;
-                margin-left: 110px;
+                margin-left: 40px;
                 -webkit-user-drag: none;
               }
 
@@ -304,13 +253,14 @@ export default function Home() {
               }
 
               .subpage_1_title {
-                font-family: D-DIN-Bold;
+                font-family: D-DIN-Normal;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 9vw;
                 letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
+                letter-spacing: 0.04em;
               }
 
               .subpage_1_subtitle_wrapper {
@@ -324,11 +274,11 @@ export default function Home() {
               .subpage_1_subtitle {
                 color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                font-family: D-DIN-Regular;
+                font-family: D-DIN-Normal;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 1.2vw;
-                letter-spacing: 0.06vw;
+                letter-spacing: 0.08em;
               }
 
               .subpage_2 {
@@ -563,12 +513,12 @@ export default function Home() {
 
               .card_container {
                 margin-top: 67px;
-                margin-bottom: 288px;
+                margin-bottom: 10%;
                 width:100%;
                 display: flex;
                 flex-direction: row;
-                // flex-wrap: wrap;
-                // width: 1209px;
+                flex-wrap: wrap;
+                width: 1209px;
                 row-gap: 63px;
                 column-gap: 5%;
               }
@@ -583,14 +533,14 @@ export default function Home() {
               }
 
               .subtitle {
-                font-family: 'Source Han Sans CN';
+                font-family: 'D-DIN-Normal';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 16px;
-                line-height: 24px;
+                font-size: 1.0vw;
+                line-height: 1.2vw;
                 letter-spacing: 0.02em;
                 color: white;
-                max-width: 940px;
+                max-width: 53%;
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;
@@ -606,7 +556,8 @@ export default function Home() {
 
               .footer_bar_content {
                 min-width: 1200px;
-                width: 1200px;
+                width: 85%;
+                margin: 0 auto;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -663,268 +614,36 @@ export default function Home() {
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
               }
-              // // 响应式样式
-              @media (max-width:768px) {
-                // .container{
-                //   min-width: 100%
-                // }
-                .nav_bar{
-                  display: none;
-                  color:red;
+
+              @media (max-width:1280px) {
+                .subpage_1_title_bg{
+                  margin-top: -20px !important;
+                  height: '60%',
+                }
+                .card_container{
+                  width:800px!important
+                }
+                .footer_bar_content {
+                  min-width: 800px;
                 }
                 .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
+                  min-width:800px !important;
+
                 }
-                .nav_bar_mobile{
-                  display:block;
+               }
+               @media (max-width:768px) {
+                .subpage_1_title_bg{
+                  margin-top: -20px !important;
+                  height: '40%',
                 }
-                .logo{
-                  display:none;
-                }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
-                }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-                .menu_button_item {
-                  background-color: transparent; 
-                  border: none;
-                  margin:0;
-                  padding:20px 0;
-                  cursor: pointer;
-                }
-                .menu_button_item:hover {
-                  color: #44488F;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //     max-width:100%;
-              //     word-break: break-word;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-              //     width: 190px;
-              //     height: 170px;
-              //     margin-left: 0px;
-              //     margin-top: 0px;
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 19px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 30%;
-              //     height: 170px;
-              //     margin-right: 0;
-              //     margin-top: 0;
-              //   }
-              //   .card_container{
-              //     display: flex
-              //     width:100%;
-              //     justify-content: center;
-              //     margin-bottom: 88px;
-              //   }
-              //   .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-              }
-              @media (min-width: 768px) and (max-width:992px) {
-                .nav_bar{
-                  display: none;
-                  color:red;
+                .card_container{
+                  width:500px!important
                 }
                 .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-                .nav_bar_mobile{
-                  display:block;
-                }
-                .logo{
-                  display:none;
-                }
-                .menu_container{
-                  width:100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  flex-direction: column;
-                }
-                .menu_item{
-                  margin:0;
-                  padding:20px 0;
-                }
-                .menu_button_item {
-                  background-color: transparent; 
-                  border: none;
-                  margin:0;
-                  padding:20px 0;
-                  cursor: pointer;
-                }
-                .menu_button_item:hover {
-                  color: #44488F;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-              //     width: 190px;
-              //     height: 170px;
-              //     margin-left: 0px;
-              //     margin-top: 0px;
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 19px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 290px;
-              //     height: 170px;
-              //     margin-right: 0;
-              //     margin-top: 0;
-              //   }
-              //   .card_container{
-              //     width:100%;
-              //     justify-content: center;
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 600px;
-              //   }
-              // .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-              }
-              @media (min-width:992px) and (max-width:1200px) {
-                .nav_bar_content{
-                  width:100%;
-                  min-width:100%;
-                }
-              //   .home_curve{
-              //     height:300px;
-              //   }
-              //   .title_bg_curve{
-              //     width:100%;
-              //   }
-              //   .subpage_1_title{
-              //     font-size: 100px;
-              //   }
-              //   .img1_style{
-              //     margin-top: 30px;
-              //     margin-bottom: 80px
-              //   }
-              //   .subtitle{
-              //     text-align: center;
-              //     width:100%;
-              //   }
-              //   .subpage_4_card_1{
-              //     width:100%;
-              //     height: 213px;
-              //     display: flex;
-              //     justify-content: space-between;
-              //     align-items: center;
-              //   }
-              //   .img_card_left-bg{
-               
-              //   }
-              //   .subpage_4_card_2{
-              //     width:100%;
-              //     align-items: center;
-              //   }
-              //   .subpage_4_title_txt{
-              //     width: 350px;
-              //     margin-top: 8px
-              //   }
-              //   .img_card_right-bg{
-              //     width: 280px;
-              //     height: 270px;
-              //     margin-right: 0;
-              //     margin-top: -110px;
-              //   }
-              //   .card_container{
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 1209px;
-              //   }
-              //   .footer_bar_content{
-              //     width:100%;
-              //     min-width:100%;
-              //   }
-              //   .img-w-100{
-              //     width:100%;
-              //   }
-                
-              }
-              //  @media (min-width:1380px) {
-              //   .card_container{
-              //     margin-bottom: 88px;
-              //     flex-wrap: wrap;
-              //     width: 1209px;
-              //   }
-              // }
+                  min-width:320px !important;
+               }
+
+           
 
             `}</style>
             <style global jsx>{`

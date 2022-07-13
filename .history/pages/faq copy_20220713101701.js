@@ -4,7 +4,7 @@ import router from "next/router";
 import SearchBar from '../components/SearchBar';
 import EvaluationResult from '../components/EvaluationResult'
 
-export default class Home extends React.Component {
+export default class Faq extends React.Component {
     constructor() {
         super();
         this.title = React.createRef()
@@ -13,17 +13,12 @@ export default class Home extends React.Component {
         this.searchResult = React.createRef()
         this.state = {scoreDesc: "EXCEPTIONAL", keyFactors: []};
     }
-
     random(min, max) {
         return Math.round(Math.random() * (max - min)) + min;
     }
     render() {
         return (
         <div className="container">
-            <div className='top-left'></div>
-            <div className='bottom-left'></div>
-            <div className='bottom-right'></div>
-            <div className='content-center'></div>
             <div className="nav_bar">
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
@@ -34,66 +29,94 @@ export default class Home extends React.Component {
                         <div className="menu_item">
                             WHITEPAPER
                         </div>
-                        <div className="menu_item">
+                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
                             COMMUNITY
-                        </div>
-                        <div className="menu_item">
+                        </button>
+                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
                             FAQ
-                        </div>
+                        </button>
 
                         <LaunchAppButton onClick={()=>{
                             router.push('/app')
                         }}/>
                     </div>
                 </div>
-           </div>
+            </div>
             <div className="content">
-                <div className='content-fq'>
-                    <div className='coon-1204'>
-                        <ul className='content-ul-bg'>
+                <div className='content-fq w-1200' style={{marginTop: '60px'}}>
+                    <div className='list-content'>
+                        <ul className='ul'>
+                            <li></li>
                             <li>
                                 <div className='flex-c flex-j'>
                                     <div className='jt flex-c flex-j'>
-                                    <div className='faq'>FAQ</div>
+                                    <div className='faq'></div>
                                     </div>
                                 </div>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What's Inferer ?</span>
-                                <span className='item2'>A: Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and contribute to greate user ecysystem on chain.
-
+                                <span className='item2'>A: Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and   
+                                contribute to greate user ecysystem on chain.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What products do Inferer provide?</span>
-                                <span className='item2'>A: Currently we have Inferer Search and Inferer API, which serves in different purposes. Inferer Search focuses more on instant-check search scenarios, which enable user to have a quick scan on address whether it's bot related and what behaviors it generated before; Inferer API focuses more on pre-security check scenarios, which could help prevent hackers from invading system and contribute to more security ecosystem.
+                                <span className='item2'>A: Currently we have Inferer Search and Inferer API, which serves in different purposes. Inferer Search focuses more on instant-check search 
+     scenarios, which enable user to have a quick scan on address whether it's bot related and what behaviors it generated before; Inferer API 
+     focuses more on pre-security check scenarios, which could help prevent hackers from invading system and contribute to more security 
+     ecosystem.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What's Inferer evaluation result?</span>
-                                <span className='item2'>A: We learned from "Credit Score", and integrate it to our evaluation. Currenlty we have 5 evaluation levels, which includes Exceptional, Very Good, Good, Fair and Poor. These levels indicates the user behavior and the degree related with bots. We may adjust it if necessary in the future.
+                                <span className='item2'>A: We learned from "Credit Score", and integrate it to our evaluation. Currenlty we have 5 evaluation levels, which includes Exceptional, Very 
+     Good, Good, Fair and Poor. These levels indicates the user behavior and the degree related with bots. We may adjust it if necessary in the 
+     future.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: Can I use Inferer in our AirDrop activity?</span>
-                                <span className='item2'>A: Sure. Inferer fits well in AirDrop list management. It would help in filtering target users efficiently and save the project team much time and work.
+                                <span className='item2'>A: Sure. Inferer fits well in AirDrop list management. It would help in filtering target users efficiently and save the project team much time and 
+     work.
+                                </span>
+                            </li>
+                            <li className='list flex-l'>
+                                <span className='item1'>Q: What about community in Inferer ?</span>
+                                <span className='item2'>A: Inferer's born in web3 and focus on community all the time. We would need big community participation in our evaluation process. Also, 
+     Inferer would not be a centralized service provider and would be running backed up by our community.
+                                </span>
+                            </li>
+                            <li className='list flex-l'>
+                                <span className='item1'>Q: What if the evaluation result doesn't fit into the fact?</span>
+                                <span className='item2'>A: Inferer provide feedback feature in our product and welcome users provide further feedbacks when they believe it doesn't fit into the fact,   
+     which would help us improving our service. Internally, when we receive the feedback, we would have a re-analysis process on it and come   
+     up with a solution. And this whole process would be checked and published in community.
+                                </span>
+                            </li>
+                            <li className='list flex-l'>
+                                <span className='item1'>Q: What blockchains does Inferer support?</span>
+                                <span className='item2'>A: Currently Inferer is available in PlatON, Ethereum and Polygon.
                                 </span>
                             </li>
                         </ul>
                     </div>
                 </div>
-          
-
             </div>
             <div className="foot">
-                    <div className='coon-1204 flex-b'>
-                        <div>Made by Inferer Labs</div>
-                        <div>Thanks to Platon</div>
-                    </div>
+                <div className='w-1200 flex-b'>
+                    <div className='pl-40'>Made by Inferer Labs</div>
+                    <div>Thanks to Platon</div>
                 </div>
+            </div>
             <style jsx>{`
             .flex-s {
                 display: flex;
+            }
+            .w-1200{
+                width:1200px;
+                margin: 0 auto;
+
             }
             .flex-b {
                 display: flex;
@@ -110,56 +133,23 @@ export default class Home extends React.Component {
                 display: flex;
                 justify-content: center;
             }
-            .container{
-                position: relative;
+            .container {
+                min-width: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 width: 100%;
-                height: 100%;
-                background: url(/content-yun.png) no-repeat;
-                background-size: 100%;
-                background: #17152a;
-            }
-            .content-center{
-                // position: absolute;
-                // z-index:1;
-                // left: 0;
-                // right: 0;
-                // top: 103px;
-                // width: 100vw;
-                // height:972px;
-                // background: url(/yun.png) no-repeat;
-                // background-size: 100%;
-            }
-           .top-left{
-            // position: absolute;
-            // left: 162.61px;
-            // top: 1065.16px;
-            // width: 1272px;
-            // height: 1155px;
-            // background: url(/top-left.png) no-repeat;
-            // background-size: 100%;
-            // transform: rotate(-155.6deg);
-           }
-           .bottom-left{
-            width: 100%;
-            // background: url(/bg-center.png) repeat;
-            background-size: 100%;
-           }
-        .bottom-right{
-            background: url(/bottom-right.png) repeat;
-            background-size: 100%;
-            width: 357px;
-            height: 873px;
-            position: absolute;
-            right: 0;
-            top: 0;
 
-           }
+              } 
+            }
+            .container ::-webkit-scrollbar{
+                display:none;
+            }
             .nav_bar {
-                z-index: 5;
                 backdrop-filter: blur(100px);
-                background: #17152A;
+                background-color: transparent;
                 width: 100%;
-                height: 117px;
+                height: 6%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -192,23 +182,37 @@ export default class Home extends React.Component {
                 color: white;
                 font-weight: 500;
                 font-size: 16px;
+                cursor: pointer;
+            
               }
               .content{
-                position: relative;
-                z-index: 10;
-                padding-top:152px;
-               
-            }
-            .content-ul-bg{
                 width: 100%;
-                background: url(/bg-center.png) repeat;
+                background: url(/faq2.png) repeat;
                 background-size: 100%;
+                backgroud-position: cebter;
+                height: calc(100vh - 66px);
+                min-height:425px;
+                overflow-y: auto;
             }
+            ::-webkit-scrollbar{
+              width: 7px;
+       
+           }
+           ::-webkit-scrollbar-track{
+               background-color: #25243a;
+               -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);
+               border-radius:5px;
+    
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
         
-            .coon-1204{
-                width: 1204px;
-                height: 100%;
-                margin: 0 auto;
+            }
+            .list-content{
+                position: relative;
+                
+                
             }
             .content-fq{
                 // width: 100%;
@@ -224,18 +228,14 @@ export default class Home extends React.Component {
                 background-size: 100%;
             }
             .faq{
-                font-family: 'DIN';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 90px;
-                line-height: 110px;
-                text-align: center;
-                letter-spacing: 0.1em;
-                color: #50557E;
+                width: 208px;
+                height: 80px;
+                background: url(/faq.png) no-repeat;
+                background-size: 100%;
             }
             .list{
-                margin-top: 24px;
-                padding: 22px 27px;
+                margin-top: 11px;
+                padding: 25px 17px;
                 background: #25243A;
                 box-shadow: 0px 0px 6px rgba(17, 14, 45, 0.5);
                 border-radius: 10px;
@@ -258,6 +258,8 @@ export default class Home extends React.Component {
                 line-height: 21px;
                 letter-spacing: 0.02em;
                 color: #DADADA;
+                padding-left: 1.5em;
+                text-indent: -1.5em;
             }
             .content-bg{
                 width: 100%;
@@ -266,6 +268,8 @@ export default class Home extends React.Component {
                 background-size: 100%;
             }
             .foot{
+                position: relative;
+                width:100%;
                 background: #17152A;
                 height: 66px;
                 line-height: 66px;
@@ -275,6 +279,19 @@ export default class Home extends React.Component {
                 font-size: 18px;
                 color: #ffffff;
             }
+            .pl-40{
+                padding-left:40px
+            }
+            @media (max-width:1200px) {
+                .w-1200{
+                    width:80%;
+                    margin:0 auto;
+                    
+                }
+                ul{
+                    padding:0 !important
+                }
+               }
             `}</style>
             <style global jsx>{`
                 body {

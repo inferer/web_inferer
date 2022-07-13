@@ -1,28 +1,43 @@
-import React from 'react';
+import LogoText from '../components/LogoText';
+import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
+import Link from "next/link";
 import router from "next/router";
-import SearchBar from '../components/SearchBar';
-import EvaluationResult from '../components/EvaluationResult'
-import Header from '../components/Header'
+import {
+  Button
+} from '@mui/material';
 
-export default class Faq extends React.Component {
-    constructor() {
-        super();
-        this.title = React.createRef()
-        this.subtitle = React.createRef()
-        this.searchBar = React.createRef()
-        this.searchResult = React.createRef()
-        this.state = {scoreDesc: "EXCEPTIONAL", keyFactors: []};
-    }
-    random(min, max) {
-        return Math.round(Math.random() * (max - min)) + min;
-    }
-    render() {
-        return (
+export default function Home() {
+    return (
         <div className="container">
-           <Header></Header>
+            {/*导航栏*/}
+            <div className="nav_bar">
+                <div className="nav_bar_content">
+                    <img src="/icon_nav_logo.svg" className="logo"/>
+                    <div className="menu_container">
+                        <div className="menu_item">
+                            DOCS
+                        </div>
+                        <div className="menu_item">
+                            WHITEPAPER
+                        </div>
+                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
+                            COMMUNITY
+                        </button>
+                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
+                            FAQ
+                        </button>
+
+                        <LaunchAppButton onClick={()=>{
+                            router.push('/app')
+                        }}/>
+                    </div>
+                </div>
+            </div>
+
+            <div style={{width: "100%", height: "58.5px"}}/>
             <div className="content">
-                <div className='content-fq w-1200' style={{marginTop: '60px'}}>
+                <div className='content-fq w-1200' style={{marginTop: '30px'}}>
                     <div className='list-content'>
                         <ul className='ul'>
                             <li></li>
@@ -82,13 +97,181 @@ export default class Faq extends React.Component {
                     </div>
                 </div>
             </div>
-            <div className="foot">
-                <div className='w-1200 flex-b'>
-                    <div className='pl-40'>Made by Inferer Labs</div>
-                    <div>Thanks to Platon</div>
+
+
+            {/*footer*/}
+            <div className="footer_bar">
+                <div className="footer_bar_content">
+                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+                        <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
+                        <div className='footer_text' style={{marginLeft: '3px'}}>
+                            Made by Inferer Labs, Thanks to PlatON
+                        </div>
+                    </div>
+                    <div className='footer_text'>
+                        Thanks to Platon
+                    </div>
                 </div>
             </div>
+
             <style jsx>{`
+              .container {
+                min-width: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+              }
+
+              .nav_bar {
+                backdrop-filter: blur(100px);
+                background-color: transparent;
+                width: 100%;
+                height: 100px;
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              }
+
+
+              .nav_bar_content {
+                min-width: 1200px;
+                width: 1200px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index:2;
+              }
+
+              .logo {
+                width: 25px;
+                height: 25px;
+                margin-left: 40px;
+                -webkit-user-drag: none;
+              }
+
+              .menu_container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+              }
+
+              .menu_item {
+                font-family: 'DIN';
+                font-style: normal;
+                margin-left: 25px;
+                margin-right: 15px;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+              }
+
+              .menu_button_item {
+                font-family: 'DIN';
+                background-color: transparent; 
+                border: none;
+                margin-left: 25px;
+                margin-right: 15px;
+                color: white;
+                font-weight: 500;
+                font-size: 14px;
+                cursor: pointer;
+              }
+
+              .menu_button_item:hover {
+                color: #44488F;
+              }
+
+              .subpage_1 {
+                width: 100%;
+                heght: 881px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .subpage_1_title_wrapper {
+                margin-top: -110px;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .subpage_1_title {
+                font-family: D-DIN-Normal;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 9vw;
+                letter-spacing: 0.1vw;
+                line-height: 252px;
+                color: white;
+                letter-spacing: 0.04em;
+              }
+
+              .subpage_1_subtitle_wrapper {
+                margin-top: 42px;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+
+              .subpage_1_subtitle {
+                color: rgba(255, 255, 255, 0.8);
+                text-align: center;
+                font-family: D-DIN-Normal;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.2vw;
+                letter-spacing: 0.08em;
+              }
+
+              .subpage_2 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #171529;
+              }
+
+              .subpage_2_title_1 {
+                margin-top: 117px;
+              }
+
+              .subpage_2_title_2 {
+                margin-top: 88px;
+              }
+
+              .subpage_3 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #0d0c1d;
+              }
+
+               .subpage_4 {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #171529;
+              }
+
+              .subpage_4_card_1 {
+                margin-top: 178px;
+                width: 1093px;
+                height: 213px;
+                background: #0A0917;
+                border-radius: 21px;
+                display: flex;
+                flex-direction: row;
+              }
             .flex-s {
                 display: flex;
             }
@@ -112,90 +295,6 @@ export default class Faq extends React.Component {
                 display: flex;
                 justify-content: center;
             }
-            .container{
-                width: 100%;
-                height: 100%;
-                background: #17152a;
-                
-            }
-            .container ::-webkit-scrollbar{
-                display:none;
-            }
-            .nav_bar {
-                z-index: 5;
-                backdrop-filter: blur(100px);
-                background: #17152A;
-                width: 100%;
-                height: 117px;
-                position: fixed;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-              }
-
-              .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-              }
-
-              .logo {
-                width: 30px;
-                height: 30px;
-                -webkit-user-drag: none;
-              }
-
-              .menu_container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-              }
-
-              .menu_item {
-                margin-left: 25px;
-                margin-right: 25px;
-                color: white;
-                font-weight: 500;
-                font-size: 16px;
-                cursor: pointer;
-            
-              }
-              .content{
-                width: 100%;
-                background: url(/faq2.png) repeat;
-                background-size: 100%;
-                backgroud-position: cebter;
-                height: calc(100vh - 176px);;
-                overflow-y: auto;
-            }
-            ::-webkit-scrollbar{
-              width: 7px;
-       
-           }
-           ::-webkit-scrollbar-track{
-               background-color: #25243a;
-               -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);
-               border-radius:5px;
-    
-            }
-            ::-webkit-scrollbar-thumb{
-                background-color: rgba(0, 0, 0, 0.2);
-                border-radius: 5px;
-        
-            }
-            .list-content{
-                position: relative;
-                
-                
-            }
-            .content-fq{
-                // width: 100%;
-                // height: 972px;
-                // background: url(/content-bg-gy.jpg) no-repeat;
-                // background-size: 100%;
-            }
             .jt{
                 width: 320px;
                 height: 44px;
@@ -203,7 +302,97 @@ export default class Faq extends React.Component {
                 background: url(/contnet-jt.png) no-repeat;
                 background-size: 100%;
             }
-            .faq{
+
+              .subtitle {
+                font-family: 'D-DIN-Normal';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.0vw;
+                line-height: 1.2vw;
+                letter-spacing: 0.02em;
+                color: white;
+                max-width: 53%;
+                margin-top: 29px;
+                margin-right: 40px;
+                margin-left: 40px;
+              }
+
+              .footer_bar {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                position: absolute;
+                bottom:0;
+                left:0;
+                z-index:2;
+                background:#17152A;
+              }
+
+              .footer_bar_content {
+                min-width: 1200px;
+                width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              }
+
+              .footer_text {
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                color: #646787;
+              }
+
+              .span_link {
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0.05em;
+                color: #6571ae;
+                text-decoration: underline
+              }
+
+              .home_curve{
+                margin-top: 117px;
+              }
+              .title_bg_curve{
+                width: 988px;
+                height: 376px;
+                margin-top: -170px;
+              }
+              .img1_style{
+                margin-top: 41px;
+                margin-bottom: 112px
+              }
+              .subpage_4_title_txt{
+                width: 678px;
+                margin-top: 19px
+              }
+              .img_card_right-bg{
+                width: 450px;
+                height: 340px;
+                margin-right: -167px;
+                margin-top: -115px;
+              }
+              .right-bg{
+                position: absolute;
+                width: 674px;
+                height: 678px;
+                top: -120px;
+                right: -110px;
+                background: url(/qiu-bg.png) no-repeat;
+                background-size: 100%;
+              }
+
+             
+               .faq{
                 width: 208px;
                 height: 80px;
                 background: url(/faq.png) no-repeat;
@@ -211,7 +400,7 @@ export default class Faq extends React.Component {
             }
             .list{
                 margin-top: 11px;
-                padding: 25px 17px;
+                padding: 20px 17px;
                 background: #25243A;
                 box-shadow: 0px 0px 6px rgba(17, 14, 45, 0.5);
                 border-radius: 10px;
@@ -237,6 +426,44 @@ export default class Faq extends React.Component {
                 padding-left: 1.5em;
                 text-indent: -1.5em;
             }
+            .menu_item {
+                margin-left: 25px;
+                margin-right: 25px;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+            
+              }
+              .content{
+                width: 100%;
+                background: url(/faq2.png) repeat;
+                background-size: 100%;
+                backgroud-position: cebter;
+                height: calc(100vh - 66px);;
+                overflow-y: auto;
+                padding-bottom:80px;
+            }
+            ::-webkit-scrollbar{
+              width: 7px;
+       
+           }
+           ::-webkit-scrollbar-track{
+               background-color: #25243a;
+               -webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1);
+               border-radius:5px;
+    
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+        
+            }
+            .list-content{
+                position: relative;
+                
+                
+            }
             .content-bg{
                 width: 100%;
                 height: 175px;
@@ -258,25 +485,37 @@ export default class Faq extends React.Component {
             .pl-40{
                 padding-left:40px
             }
-            @media (max-width:1200px) {
+
+            @media (max-width:1280px) {
+                
                 .w-1200{
-                    width:80%;
-                    margin:0 auto;
-                    
+                  width:800px!important;
                 }
-                ul{
-                    padding:0 !important
+                .footer_bar {
+                  width: 800px!important;
+                }
+                .nav_bar_content{
+                  min-width:800px !important;
+
                 }
                }
+
+              
+               @media (max-width:768px) {
+                .nav_bar_content{
+                  min-width:320px !important;
+
+                }
+               }
+           
+
             `}</style>
             <style global jsx>{`
-                body {
+              body {
                 width: 100%;
-                height: 100%;
-                color: rgba(0, 0, 0, 0.85);
-                }
+                background-color: #0d0b17;
+              }
             `}</style>
         </div>
-        );
-    }
+    );
 }
