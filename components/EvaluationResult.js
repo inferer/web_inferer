@@ -184,9 +184,9 @@ class EvaluationResult extends React.Component {
                     </div>
 
                     <div style={{display: "flex", justifyContent: "flex-end", }}>
-                        <div className="feedback" onClick={()=>{
+                        <button className="feedback" onClick={()=>{
                               router.push('/feedback')
-                            }}>Incorrect? Feedback us</div>
+                            }}>Incorrect? Feedback us</button>
                     </div>
                 </div>
 
@@ -447,6 +447,8 @@ class EvaluationResult extends React.Component {
 
                   .feedback {
                     font-family: 'DIN';
+                    background-color: transparent; 
+                    border: none;
                     font-style: normal;
                     font-weight: 500;
                     font-size: 14px;
@@ -458,6 +460,7 @@ class EvaluationResult extends React.Component {
                     margin-top: 14px;
                     margin-right: 46px;
                     margin-bottom: 13px;
+                    cursor: pointer;
                   }
 
                 `}</style>

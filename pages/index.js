@@ -35,16 +35,15 @@ export default function Home() {
                 </div>
             </div>
 
-            <div style={{width: "100%", height: "58.5px"}}/>
+            {/* <div style={{width: "100%", height: "58.5px"}}/> */}
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve_yun.png" style={{marginTop: '-60px', width: '100%', height: '100%'}}></img>
+                <img src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}}></img>
                 <div className="subpage_1_title_wrapper">
                     <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
-                        width: '80%',
-                        height: '80%', 
-                        marginTop: '-10%'
+                        width: '51.46%',
+                        marginTop: '-8%'
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
@@ -52,7 +51,7 @@ export default function Home() {
                 </div>
                 <div className="subpage_1_subtitle_wrapper">
                     <p className="subpage_1_subtitle">
-                        BUILT ON DATA ANALYSIS , SERVE  FOR USER VERIFICATION
+                        BUILT ON DATA ANALYSIS, SERVE FOR WEB3 IDENDITY
                         <br/>
                         HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
                     </p>
@@ -66,13 +65,15 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '50%', height: '50%'}}/>
+                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%'}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
-                    Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
-                    hurting user experience on chain and contribute to greate user ecysystem on chain.
+                            So many bots we've seen on chain and they're huring user experience in many ways. The cost for
+                    building bots is too low to further generate more bots. It also increase the secrity risks in many
+                    products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
+                    hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '50%', height: '50%'}} />
+                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%'}} />
             </div>
 
             {/*page 3*/}
@@ -83,32 +84,20 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <img src="/built.png" style={{marginTop: '26px', width: '50%', height: '50%'}}/>
+                <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%'}}/>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
                     reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
-                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
+                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%'}}/>
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
-                <LogoText text="Products" customStyle={{marginTop: '105px'}}></LogoText>
-               
-                <img src="/inferer_search22.png" style={{marginTop: '26px', width: '70%', marginLeft: '50px',height: '70%'}}/>
-                <img src="/inferer_search11.png" style={{marginTop: '26px', marginBottom: '100px', marginLeft: '50px', width: '70%', height: '70%'}}/>
-
-                {/* <div style={{ marginTop: '26px', marginLeft: '100px'}}>
-                  <div style={{position:'relative'}}>
-                       <img src="/inferer_search1.png" style={{width: '70%',height: '70%',marginLeft: '50px'}}/>
-                       <img src="/img_card_left.png" style={{width: '70%',height: '70%',position:'absolute',top:'26px',left:'-25px'}}/>
-                    </div>
-                    <div style={{position:'relative'}}>
-                       <img src="/inferer_api2.png" style={{width: '70%',height: '70%',marginLeft: '50px'}}/>
-                       <img src="/img_card_right2.png" style={{ width: '70%',height: '70%',position:'absolute',top:'5px',right:'33px'}}/>
-                 </div>
-              </div> */}
+                <LogoText text="Products" customStyle={{marginTop: '5.35%'}}></LogoText>
+                <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%'}}/>
+                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%'}}/>
             </div>
 
             {/*page 5*/}
@@ -118,7 +107,7 @@ export default function Home() {
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '45%', height: '45%'}}/>
+                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%'}}/>
             </div>
 
             {/*page 6*/}
@@ -250,13 +239,15 @@ export default function Home() {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 100%;
+                height: 100%;
               }
 
               .subpage_1_title {
                 font-family: D-DIN-Normal;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 9vw;
+                font-size: 8.5vw;
                 letter-spacing: 0.1vw;
                 line-height: 252px;
                 color: white;
@@ -274,9 +265,8 @@ export default function Home() {
               .subpage_1_subtitle {
                 color: rgba(255, 255, 255, 0.8);
                 text-align: center;
-                font-family: D-DIN-Normal;
-                font-style: normal;
-                font-weight: 500;
+                font-family: D-DIN-Regular;
+                font-weight: 10;
                 font-size: 1.2vw;
                 letter-spacing: 0.08em;
               }
@@ -442,7 +432,9 @@ export default function Home() {
 
               .subpage_4_card_1 {
                 margin-top: 178px;
-                width: 1093px;
+                // width: 1093px;
+                width: 63.8%;
+                max-width: 1094px;
                 height: 213px;
                 background: #0A0917;
                 border-radius: 21px;
@@ -544,7 +536,7 @@ export default function Home() {
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;
-                text-indent: 1.5em;
+                text-indent: 1.5em
               }
 
               .footer_bar {
@@ -617,10 +609,9 @@ export default function Home() {
               }
 
               @media (max-width:1280px) {
-                .subpage_1_title_bg{
-                  margin-top: -20px !important;
-                  height: '60%',
-                }
+                // .subpage_1_title_bg{
+                //   margin-top: -20px !important;
+                // }
                 .card_container{
                   width:800px!important
                 }
@@ -633,10 +624,9 @@ export default function Home() {
                 }
                }
                @media (max-width:768px) {
-                .subpage_1_title_bg{
-                  margin-top: -20px !important;
-                  height: '40%',
-                }
+                // .subpage_1_title_bg{
+                //   margin-top: -20px !important;
+                // }
                 .card_container{
                   width:500px!important
                 }

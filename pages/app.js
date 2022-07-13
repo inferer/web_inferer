@@ -19,8 +19,49 @@ export default class Home extends React.Component {
 
     random(min, max) {
       return Math.round(Math.random() * (max - min)) + min;
-  }
+    }
+
+    async handleOnSearchEvent(text) {
+      const SearchService = require("../api/SearchService");
+      let searchService = new SearchService();
+      let response = await searchService.searchOnETH(text);
+      // console.log("handleOnSearchEvent response = " + JSON.stringify(response));
+      // searchService.searchOnETH(text, (response) => {
+        
+      // });
+
+      // 0x303425052e462dd0f3044aee17e1f5be9c7de783
+      let keyFactors = []
+      if(response.status == 200) {
+          for (var key of Object.keys(response.result.info)) {
+              if(typeof response.result.info[key]  === 'object') {
+                  for(var subKey of Object.keys(response.result.info[key])) {
+                      console.log("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
+                      keyFactors.push("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
+                  }
+              } else {
+                  console.log("[" + key + "] : " + response.result.info[key])
+                  keyFactors.push("[" + key + "] : " + response.result.info[key])
+              }
+          }
+
+          this.searchResult.current.style.display = "flex"
+          let scoreDesc = response.result.level
+          this.setState({scoreDesc: scoreDesc, keyFactors: keyFactors})
+      } else {
+
+
+
+      }
+
+
+
+      
+    }
+
+
   handleChange() {}
+
     render() {
         return (
             <div className="container">
@@ -41,9 +82,9 @@ export default class Home extends React.Component {
                           <Option value="Ethereum">Ethereum</Option>
                           <Option value="Platon">Platon</Option>
                         </Select>
-                        <div className="connect_button">
-                            CONNECT TO WALLET
-                        </div>
+                        <button className="connect_button">
+                            CONNECT TO WALLET2
+                        </button>
                         </div>
                     </div>
                 </div>
@@ -65,25 +106,26 @@ export default class Home extends React.Component {
                                   this.searchBar.current.style.marginTop = "-220px"
                                 }
                             }}
-                            onSearch={(text) => {
-                                let that = this;
-                                that.searchResult.current.style.display = "none"
-                                console.log("on search: " + text)
-                                // todo 替换为真实地址 增加地址前置校验等
-                                let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
-                                axios.get(api)
-                                    .then(function (response) {
-                                        console.log(response);
-                                        that.searchResult.current.style.display = "flex"
-                                        let descs = ["EXCEPTIONAL", "Very Good", "Good", "Fair", "Poor"]
-                                        let index = that.random(0, 4)
-                                        let scoreDesc = descs[index]
-                                        that.setState({scoreDesc: scoreDesc, keyFactors: ["Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity"]})
-                                    })
-                                    .catch(function (error) {
-                                        console.log(error);
-                                    });
-                            }}
+                            onSearch={(text) => this.handleOnSearchEvent(text)}
+                            // onSearch={(text) => {
+                            //     let that = this;
+                            //     that.searchResult.current.style.display = "none"
+                            //     console.log("on search: " + text)
+                            //     // todo 替换为真实地址 增加地址前置校验等
+                            //     let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
+                            //     axios.get(api)
+                            //         .then(function (response) {
+                            //             console.log(response);
+                            //             that.searchResult.current.style.display = "flex"
+                            //             let descs = ["EXCEPTIONAL", "Very Good", "Good", "Fair", "Poor"]
+                            //             let index = that.random(0, 4)
+                            //             let scoreDesc = descs[index]
+                            //             that.setState({scoreDesc: scoreDesc, keyFactors: ["Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity"]})
+                            //         })
+                            //         .catch(function (error) {
+                            //             console.log(error);
+                            //         });
+                            // }}
                             onFocus={() => {
 
                             }}
@@ -106,7 +148,7 @@ export default class Home extends React.Component {
                         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
                             <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
                             <div className='footer_text' style={{marginLeft: '3px'}}>
-                                Made by Inferer Labs, Thanks to PlatON
+                                Made by Inferer Labs
                             </div>
                         </div>
                         <div className='footer_text'>
@@ -142,6 +184,8 @@ export default class Home extends React.Component {
                     align-items: center;
                     justify-content: center;
                     color: white;
+                    border: none;
+                    cursor: pointer;
                   }
 
                   .nav_bar {

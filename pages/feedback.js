@@ -133,6 +133,11 @@ export default class Feedback extends React.Component {
                     align-items: center;
                     width: 100%;
                     background-image: linear-gradient(to bottom right, #D5F7FF, #EFDBFF);
+                    height: 100%;
+                    background-size: cover;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
                   }
                   .connect_button {
                     width: 210px;
