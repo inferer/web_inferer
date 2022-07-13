@@ -3,6 +3,8 @@ import SearchBar from '../components/SearchBar';
 import EvaluationResult from '../components/EvaluationResult'
 import axios from 'axios'
 import { Select } from 'antd';
+import { motion } from "framer-motion"
+import { AnimatePresence } from 'framer-motion';
 const { Option } = Select;
 
 export default class Home extends React.Component {
@@ -57,6 +59,11 @@ export default class Home extends React.Component {
                             customStyle={{marginTop: "72px"}}
                             onTextChanged={(text) => {
                                 console.log("changed: " + text)
+                                if (text){
+                                  this.title.current.style.opacity = "0"
+                                  this.subtitle.current.style.opacity = "0"
+                                  this.searchBar.current.style.marginTop = "-220px"
+                                }
                             }}
                             onSearch={(text) => {
                                 let that = this;
@@ -78,15 +85,14 @@ export default class Home extends React.Component {
                                     });
                             }}
                             onFocus={() => {
-                                this.title.current.style.opacity = "0"
-                                this.subtitle.current.style.opacity = "0"
-                                this.searchBar.current.style.marginTop = "-220px"
+
                             }}
                             onBlur={() => {
 
                             }}
                         />
                     </div>
+                    
 
                     <div className="search_result" ref={this.searchResult}>
                         <EvaluationResult customStyle={{marginTop: "12px"}} scoreDesc={this.state.scoreDesc}

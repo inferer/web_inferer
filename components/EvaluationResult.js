@@ -54,7 +54,50 @@ class EvaluationResult extends React.Component {
       'Participate PoAP activity',
     ]
 
-    initRate(nums) {
+    // initRate(nums) {
+    //   const expresses = [
+    //     {rate: "/on-start.png", choose: true,},
+    //     {rate: "/on-start.png", choose: true},
+    //     {rate: "/on-start.png", choose: true},
+    //     {rate: "/on-start.png", choose: false},
+    //     {rate: "/on-start.png", choose: false},
+    //   ]
+    //   for(let i=0;i< nums;i++){
+    //     for(let itme of expresses) {
+    //       itme.choose = true;
+    //     }
+    //   }
+    //   return expresses.map((value,index)=>{
+    //     return <div key={index+2} className={ value.choose ? 'on-start':  'in-start' } onClick={()=>{
+    //       if(value.choose){
+    //         value.choose = false
+    //       } else {
+    //         value.choose = true
+    //       }
+    //     }}></div>
+    //   })
+    // }
+
+    initRate(scoreDesc) {
+      var nums = 0;
+      switch(scoreDesc)
+      {
+        case "Poor":
+          nums = 1;
+          break;
+        case "Fair":
+          nums = 2;
+          break;
+        case "Good":
+          nums = 3;
+          break;
+        case "Very Good":
+          nums = 4;
+          break;
+        case "EXCEPTIONAL":
+          nums = 5;
+          break;
+      }
       const expresses = [
         {rate: "/on-start.png", choose: true,},
         {rate: "/on-start.png", choose: true},
@@ -62,13 +105,40 @@ class EvaluationResult extends React.Component {
         {rate: "/on-start.png", choose: false},
         {rate: "/on-start.png", choose: false},
       ]
-      for(let i=0;i< nums.length;i++){
+      for(let i=0;i< nums;i++){
         for(let itme of expresses) {
-          itme.choose = true
+          itme.choose = true;
         }
       }
+      var i = 0;
+      for (let itme of expresses) {
+          if (i++ < nums){
+            itme.choose = true;
+          }else{
+            itme.choose = false;
+          }
+      }
+      var level = '';
+      switch(nums)
+      {
+        case 1:
+          level = 'start-one';
+          break;
+        case 2:
+          level = 'start-two';
+          break;
+        case 3:
+          level = 'start-three';
+          break;
+        case 4:
+          level = 'start-four';
+          break;
+        case 5:
+          level = 'start-five';
+          break;
+      }
       return expresses.map((value,index)=>{
-        return <div key={index+2} className={ value.choose ? 'on-start':  'in-start' } onClick={()=>{
+        return <div key={index+2} className={ value.choose ? level : 'in-start' } onClick={()=>{
           if(value.choose){
             value.choose = false
           } else {
@@ -88,7 +158,7 @@ class EvaluationResult extends React.Component {
                 <div className="title">Evaluation Result</div>
                   <div className='connect-top-line'></div>
                   <div className="rate_container">
-                    {this.initRate(2)}
+                    {this.initRate(this.props.scoreDesc)}
                   </div>
                 </div>
                 {/* <img className="score_icon" src={this.scoreImageURL()}></img> */}
@@ -142,6 +212,36 @@ class EvaluationResult extends React.Component {
                     width: 28px;
                     height: 25px;
                     background: url(/on-start.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-one{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-one.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-two{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-two.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-three{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-three.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-four{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-four.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-five{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-five.png) no-repeat;
                     background-size: 100%;
                   }
 
@@ -385,6 +485,36 @@ class EvaluationResult extends React.Component {
                     width: 28px;
                     height: 25px;
                     background: url(/on-start.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-one{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-one.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-two{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-two.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-three{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-three.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-four{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-four.png) no-repeat;
+                    background-size: 100%;
+                  }
+                  .start-five{
+                    width: 28px;
+                    height: 25px;
+                    background: url(/start-five.png) no-repeat;
                     background-size: 100%;
                   }
                 `}</style>
