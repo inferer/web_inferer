@@ -57,7 +57,7 @@ export default ({ title, subtitle, icon, customStyle }) => (
             width: 10px;
             height: 10px;
           }
-          @media (max-width:968px) {
+          @media (max-width:1280px) {
             .container {
               width: 373px !important;
               height: 126px;

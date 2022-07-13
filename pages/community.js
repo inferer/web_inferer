@@ -113,7 +113,7 @@ export default function Home() {
                 backdrop-filter: blur(100px);
                 background-color: transparent;
                 width: 100%;
-                height: 6%;
+                height: 100px;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
@@ -410,11 +410,24 @@ export default function Home() {
                 width: 100%;
                 background-color: #0d0b17;
               }
-              @media (max-width:1280px) {
-                 .coon-1204{
-                  width:800px!important;
+             
+
+               @media (max-width:1280px) {
+                .coon-1204{
+                    width:800px!important;
+                  }
+                .nav_bar_content{
+                  min-width:800px !important;
+
                 }
                }
+               @media (max-width:768px) {
+                .nav_bar_content{
+                  min-width:320px !important;
+
+                }
+               }
+
             `}</style>
         </div>
     );
