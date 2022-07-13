@@ -53,7 +53,7 @@ export default function Home() {
                         community.
                         </span>
                         <span className='community-2-name-detail community-2-next-detail'>
-                        Inferer community would play in a big role in our evaluation system. They’re decentralized and become an internal part in our evaluation
+                        Inferer community would play in a big role in our evaluation system. They're decentralized and become an internal part in our evaluation
                         process, which improves inferer all the time.
                         </span>
                     </div>
