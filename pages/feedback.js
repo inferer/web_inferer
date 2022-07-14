@@ -266,6 +266,7 @@ export default class Feedback extends React.Component {
                   .rate_container{
                     display:flex;
                   }
+                  
                  .nav_bar_content_right{
                   position: relative;
                   display: flex;
