@@ -42,7 +42,7 @@ class SearchBar extends React.Component {
             display: flex;
             flex-direction: row;
             align-items: center;
-            width: 924px;
+            width: 724px;
             height: 76px;
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 0px 0px 8px #9FB3FF;
@@ -83,6 +83,22 @@ class SearchBar extends React.Component {
             text-align: center;
             letter-spacing: 0.08em;
             color: #9A98E6;
+          }
+          @media (max-width:1280px) {
+            .nav_bar_content{
+                width:760px !important;
+
+              }
+            .bar {
+              width:560px !important;
+           }
+          @media (max-width:768px) {
+            .bar {
+              width:320px !important;
+           }
+           .nav_bar_content{
+            width:320px !important;
+
           }
         `}</style>
             </div>

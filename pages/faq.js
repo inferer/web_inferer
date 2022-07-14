@@ -452,7 +452,7 @@ export default function Home() {
                 background: url(/faq2.png) no-repeat;
                 background-size: 100% 100%;
                 backgroud-position: cebter;
-                height: calc(100vh - 66px);;
+                height: calc(100vh - 66px);
                 overflow-y: auto;
                 padding-bottom:80px;
             }
@@ -503,8 +503,9 @@ export default function Home() {
                 // .content-fq{
                 //   width:800px!important;
                 // }
-                .footer_bar {
+                .footer_bar_content{
                   width: 800px!important;
+                  min-width: 800px!important;
                 }
                 .nav_bar_content{
                   min-width:800px !important;

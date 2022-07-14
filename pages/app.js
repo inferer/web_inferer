@@ -64,24 +64,38 @@ export default class Home extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container-box">
                 {/*导航栏*/}
                 <div className="nav_bar">
                     <div className="nav_bar_content">
                         <img src="/icon_nav_logo_blue.svg" className="logo"/>
                         <div className='nav_bar_content_right'>
                           <div className='connect-right-icon'></div>
-                        <Select
-                          className='connect_right'
-                          defaultValue="Ethereum"
+                          <div style={{ position: 'relative' }} id="area"></div>
+                          <Select
+                            className='connect_right'
+                            defaultValue="Ethereum"
+                            optionLabelProp="label"
                             style={{
-                              width: 164,
+                                width: 164,
                             }}
                             onChange={this.handleChange()}
-                          >
-                          <Option value="Ethereum">Ethereum</Option>
-                          <Option value="Platon">Platon</Option>
-                        </Select>
+                            getPopupContainer={() => document.getElementById('area')}>
+                              <Option value="Ethereum" label="Ethereum">
+                                <div role="img" aria-label="Ethereum" className='select-top'>
+                                  <div className='select-left'></div>
+                                  <span className='selelt-title'>Ethereum</span>
+                                  <i className='select-icon'></i>
+                                </div>
+                              </Option>
+                              <Option value="Platon"  label="Platon">
+                                <div role="img" aria-label="Platon" className='select-top'>
+                                  <div className='select-left'></div>
+                                  <span className='selelt-title'>Platon</span>
+                                  <i className='select-icon'></i>
+                                </div>
+                              </Option>
+                          </Select>
                         <button className="connect_button">
                             CONNECT TO WALLET2
                         </button>
@@ -136,17 +150,22 @@ export default class Home extends React.Component {
                     </div>
                     
 
+                    <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}>
                     <div className="search_result" ref={this.searchResult}>
                         <EvaluationResult customStyle={{marginTop: "12px"}} scoreDesc={this.state.scoreDesc}
                                           keyFactors={this.state.keyFactors}/>
                     </div>
+                    </motion.div>
                 </div>
 
 
                 <div className="footer_bar">
                     <div className="footer_bar_content">
                         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                            <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
+                            {/* <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/> */}
                             <div className='footer_text' style={{marginLeft: '3px'}}>
                                 Made by Inferer Labs
                             </div>
@@ -158,13 +177,14 @@ export default class Home extends React.Component {
                 </div>
 
                 <style jsx>{`
-                  .container {
+                  
+                  .container-box {
                     min-width: 600px;
-                    min-height: 1080px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
+                    overflow: hidden;
                     background-image: linear-gradient(to bottom right, #D5F7FF, #EFDBFF);
                   }
                   .nav_bar_content_right{
@@ -222,7 +242,7 @@ export default class Home extends React.Component {
                     text-align: center;
                     letter-spacing: 0.04em;
                     color: #A2A7D4;
-                    margin-top: 236px;
+                    margin: 10% 0 5% 0;
                     animation-fill-mode: forwards;
                     transition: opacity 0.25s
                   }
@@ -244,6 +264,11 @@ export default class Home extends React.Component {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    width:100%;
+                    min-height:400px;
+                    height:calc(100vh - 112px);
+                    overflow-y: scroll;
+                    padding-bottom:120px;
                   }
                   
                   .search_bar {
@@ -262,7 +287,7 @@ export default class Home extends React.Component {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.3);
+                    background-color: rgba(0, 0, 0, 0.25);
                     margin-top: auto;
                   }
 
@@ -278,9 +303,9 @@ export default class Home extends React.Component {
                     font-family: 'Source Han Sans CN';
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 21px;
-                    color: #646787;
+                    color: rgba(255, 255, 255, 0.8);
                   }
 
                 `}</style>
@@ -294,6 +319,7 @@ export default class Home extends React.Component {
                   height:44px;
                   margin-right:20px;
                   background: #FFFFFF;
+                  color: #6A88FF;
                   box-shadow: 0px 0px 6px rgba(85, 106, 232, 0.5);
                   border-radius: 7px;
                   display: flex;
@@ -312,6 +338,54 @@ export default class Home extends React.Component {
                  .ant-select-selection-item{
                   text-align: center!important;
                  }
+                 .ant-select-selector{
+                    box-shadow: none!important;
+                 }
+                 .ant-select-item-option-selected{
+                    position: relative;
+                 }
+                 .ant-select-item-option-selected .select-icon{
+                    position: absolute;
+                    right: 10px;
+                    top: 15px;
+                    display: block;
+                    background-color: green;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                 }
+                 .select-top{
+                  display: flex;
+                  align-items: center;
+                 }
+                 .selelt-title{
+                  margin-left: 15px
+                 }
+                 .select-left{
+                  width: 26px;
+                  height: 26px;
+                  background: url(/connect-icon.png);
+                  background-size: 100% auto;
+                 }
+                 @media (max-width:1280px) {
+                  .footer_bar_content {
+                    min-width: 760px!important;
+                    width: 760px!important;
+                  }
+                 .nav_bar_content{
+                   min-width:760px !important;
+                   width:760px !important;
+ 
+                 }
+                }
+                @media (max-width:768px) {
+                  .nav_bar_content{
+                    min-width:320px !important;
+                    width:320px !important;
+                  }
+                  .footer_bar_content {
+                     min-width: 320px;
+                  }
             `}</style>
             </div>
         );

@@ -2,6 +2,8 @@ import React, { startTransition } from 'react';
 import SearchBar from '../components/SearchBar';
 import axios from 'axios'
 import { Select } from 'antd';
+import { motion } from "framer-motion"
+import { AnimatePresence } from 'framer-motion';
 const { Option } = Select;
 
 export default class Feedback extends React.Component {
@@ -45,15 +47,15 @@ export default class Feedback extends React.Component {
                     </div>
                 </div>
 
-                <div style={{width: "100%", height: "58.5px"}}/>
+                {/* <div style={{width: "100%", height: "58.5px"}}/> */}
 
                 {/*内容*/}
-                <div className="search_content">
+                <div className="search_content" style={{marginTop: "117px"}}>
                     {/* <div className="title" ref={this.title}>ISCIENCE</div>
                     <div className="subtitle" ref={this.subtitle}>Search historical data</div> */}
                     <div className="search_bar" ref={this.searchBar}>
                         <SearchBar
-                            customStyle={{marginTop: "72px"}}
+                            customStyle={{marginTop: "10px"}}
                             onTextChanged={(text) => {
                                 console.log("changed: " + text)
                             }}
@@ -81,8 +83,11 @@ export default class Feedback extends React.Component {
                             }}
                             onBlur={() => {
 
-                            }}
-                        />
+                            }}/>
+                         <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}>
                         <div className="key_factors_container">
                           <div style={{display: "flex", flexDirection: "row", height: "80px", alignItems: "center"}}>
                             <img src="/icon_keey_factor.svg" className="key_factors_icon"></img>
@@ -103,7 +108,8 @@ export default class Feedback extends React.Component {
                                     <div className='feedback-submit-icon'></div>
                                 </div>
                             </div>
-                            </div>
+                        </div>
+                        </motion.div>
 
                          
                     </div>
@@ -113,7 +119,7 @@ export default class Feedback extends React.Component {
                 <div className="footer_bar">
                     <div className="footer_bar_content">
                         <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                            <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/>
+                            {/* <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/> */}
                             <div className='footer_text' style={{marginLeft: '3px'}}>
                                 Made by Inferer Labs, Thanks to PlatON
                             </div>
@@ -127,17 +133,14 @@ export default class Feedback extends React.Component {
                 <style jsx>{`
                   .container {
                     min-width: 600px;
-                    min-height: 1080px;
+                    // min-height: 1080px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
+                    overflow: hidden;
                     background-image: linear-gradient(to bottom right, #D5F7FF, #EFDBFF);
-                    height: 100%;
-                    background-size: cover;
-                    position: absolute;
-                    top: 0px;
-                    bottom: 0px;
+                   
                   }
                   .connect_button {
                     width: 210px;
@@ -164,7 +167,7 @@ export default class Feedback extends React.Component {
                   }
 
                   .nav_bar {
-                    z-index:10;
+                    
                     background-color: transparent;
                     width: 100%;
                     height: 117px;
@@ -172,6 +175,7 @@ export default class Feedback extends React.Component {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
+                    z-index:10;
                   }
 
                   .nav_bar_content {
@@ -219,6 +223,9 @@ export default class Feedback extends React.Component {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    width:100%;
+                    max-height:calc(100vh - 176px);
+                    overflow-y: scroll;
                   }
                   
                   .search_bar {
@@ -236,7 +243,7 @@ export default class Feedback extends React.Component {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    background-color: rgba(0, 0, 0, 0.3);
+                    background-color: rgba(0, 0, 0, 0.25);
                     margin-top: auto;
                   }
 
@@ -252,9 +259,9 @@ export default class Feedback extends React.Component {
                     font-family: 'Source Han Sans CN';
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 21px;
-                    color: #646787;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                   .rate_container{
                     display:flex;
@@ -445,37 +452,49 @@ export default class Feedback extends React.Component {
           color: #727ABA;
 
         }
+       `}</style>
+        <style global jsx>{`
+        .ant-select-selector {
+          height:100%;
+          border:none!important;
+        }
+        .connect_right{
+          width:164px;
+          height:44px;
+          margin-right:20px;
+          background: #FFFFFF;
+          box-shadow: 0px 0px 6px rgba(85, 106, 232, 0.5);
+          border-radius: 7px;
+          display: flex;
+          align-items: center;
+          }
+          .connect-right-icon{
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          width:26px;
+          height:26px;
+          z-index:9;
+          background: url(/connect-icon.png);
+          background-size: 26px 26px;
+          }
+          .ant-select-selection-item{
+              text-align: center!important;
+          }
+          @media (max-width:1280px) {
+            .nav_bar_content,.footer_bar_content{
+               min-width:760px !important;
+               width:760px !important;
+            }
+           
+          @media (max-width:768px) {
+            .nav_bar_content,.footer_bar_content{
+               min-width:320px !important;
+               width:320px !important;
+
+             }
             
-                `}</style>
-               <style global jsx>{`
-                .ant-select-selector {
-                  height:100%;
-                  border:none!important;
-                }
-                .connect_right{
-                  width:164px;
-                  height:44px;
-                  margin-right:20px;
-                  background: #FFFFFF;
-                  box-shadow: 0px 0px 6px rgba(85, 106, 232, 0.5);
-                  border-radius: 7px;
-                  display: flex;
-                  align-items: center;
-                 }
-                 .connect-right-icon{
-                  position: absolute;
-                  top: 10px;
-                  left: 10px;
-                  width:26px;
-                  height:26px;
-                  z-index:9;
-                  background: url(/connect-icon.png);
-                  background-size: 26px 26px;
-                 }
-                 .ant-select-selection-item{
-                  text-align: center!important;
-                 }
-            `}</style>
+       `}</style>
             </div>
         );
     }

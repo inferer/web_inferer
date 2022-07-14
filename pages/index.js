@@ -635,16 +635,12 @@ export default function Home() {
                 .nav_bar_content{
                   min-width:320px !important;
                }
-
-           
-
-            `}</style>
-            <style global jsx>{`
-              body {
+               body {
                 width: 100%;
                 background-color: #0d0b17;
               }
-            `}</style>
+          `}</style>
+           
         </div>
     );
 }

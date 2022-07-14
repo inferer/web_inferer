@@ -286,7 +286,6 @@ class EvaluationResult extends React.Component {
                     position: absolute;
                     right: 24px;
                     top: 54px;
-
                     font-family: 'DIN';
                     font-style: normal;
                     font-weight: 700;
@@ -519,6 +518,17 @@ class EvaluationResult extends React.Component {
                     height: 25px;
                     background: url(/start-five.png) no-repeat;
                     background-size: 100%;
+                  }
+                  @media (max-width:1280px) {
+                    .container{
+                        min-width:700px !important;
+                        width:700px !important;
+                     }
+                  @media (max-width:768px) {
+                   .container{
+                      min-width:320px !important;
+                      width:320px !important;
+        
                   }
                 `}</style>
             </div>
