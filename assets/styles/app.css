@@ -15,3 +15,38 @@
     font-family: 'D-DIN-Normal';
     src: url('../fonts/DIN-Normal.ttf');
 }
+
+.loadingContainer {
+    position: relative;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    width: 100vw;
+    height: 100vh;
+    background-color: #17152A;
+    overflow-x: hidden;
+  }
+  .myLoading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  .loading-box{
+    margin-top: 70px;
+    text-align: center;
+  }
+  .loading-img{
+    width: 80px;
+    height: 80px;
+   
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto; */
+  }

@@ -3,180 +3,195 @@ import SearchBar from '../components/SearchBar';
 import EvaluationResult from '../components/EvaluationResult'
 import axios from 'axios'
 import { Select } from 'antd';
-import { motion } from "framer-motion"
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion"
 const { Option } = Select;
 
 export default class Home extends React.Component {
-    constructor() {
-        super();
-        this.title = React.createRef()
-        this.subtitle = React.createRef()
-        this.searchBar = React.createRef()
-        this.searchResult = React.createRef()
-        this.state = {scoreDesc: "EXCEPTIONAL", keyFactors: []};
+  constructor() {
+    super();
+    this.title = React.createRef()
+    this.subtitle = React.createRef()
+    this.searchBar = React.createRef()
+    this.searchResult = React.createRef()
+    this.state = { scoreDesc: "EXCEPTIONAL", keyFactors: [], loading: false, isResult: false };
+  }
+
+
+
+  random(min, max) {
+    return Math.round(Math.random() * (max - min)) + min;
+  }
+
+  async handleOnSearchEvent(text) {
+    if (text === "0x303425052e462dd0f3044aee17e1f5be9c7de783") {
+      this.setState({ loading: true })
+    } else {
+      this.setState({ loading: false })
     }
+    //默认假设无查询结果
+    this.setState({ isResult: false })
+    const SearchService = require("../api/SearchService");
+    let searchService = new SearchService();
+    let response = await searchService.searchOnETH(text);
+    // console.log("handleOnSearchEvent response = " + JSON.stringify(response));
+    // searchService.searchOnETH(text, (response) => {
 
-    random(min, max) {
-      return Math.round(Math.random() * (max - min)) + min;
-    }
+    // });
 
-    async handleOnSearchEvent(text) {
-      const SearchService = require("../api/SearchService");
-      let searchService = new SearchService();
-      let response = await searchService.searchOnETH(text);
-      // console.log("handleOnSearchEvent response = " + JSON.stringify(response));
-      // searchService.searchOnETH(text, (response) => {
-        
-      // });
-
-      // 0x303425052e462dd0f3044aee17e1f5be9c7de783
-      let keyFactors = []
-      if(response.status == 200) {
-          for (var key of Object.keys(response.result.info)) {
-              if(typeof response.result.info[key]  === 'object') {
-                  for(var subKey of Object.keys(response.result.info[key])) {
-                      console.log("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
-                      keyFactors.push("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
-                  }
-              } else {
-                  console.log("[" + key + "] : " + response.result.info[key])
-                  keyFactors.push("[" + key + "] : " + response.result.info[key])
-              }
+    // 0x303425052e462dd0f3044aee17e1f5be9c7de783
+    let keyFactors = []
+    if (response && response.status == 200) {
+      // 查询到结果 显示
+      this.setState({ loading: false, isResult: true })
+      for (var key of Object.keys(response.result.info)) {
+        if (typeof response.result.info[key] === 'object') {
+          for (var subKey of Object.keys(response.result.info[key])) {
+            console.log("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
+            keyFactors.push("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
           }
-
-          this.searchResult.current.style.display = "flex"
-          let scoreDesc = response.result.level
-          this.setState({scoreDesc: scoreDesc, keyFactors: keyFactors})
-      } else {
-
-
-
+        } else {
+          console.log("[" + key + "] : " + response.result.info[key])
+          keyFactors.push("[" + key + "] : " + response.result.info[key])
+        }
       }
 
+      // this.searchResult.current.style.display = "flex"
+      let scoreDesc = response.result.level
+      this.setState({ scoreDesc: scoreDesc, keyFactors: keyFactors })
+    } else {
+      // 未查询到结果 隐藏
+      this.setState({ loading: false, isResult: false })
 
-
-      
     }
 
 
-  handleChange() {}
-
-    render() {
-        return (
-            <div className="container-box">
-                {/*导航栏*/}
-                <div className="nav_bar">
-                    <div className="nav_bar_content">
-                        <img src="/icon_nav_logo_blue.svg" className="logo"/>
-                        <div className='nav_bar_content_right'>
-                          <div className='connect-right-icon'></div>
-                          <div style={{ position: 'relative' }} id="area"></div>
-                          <Select
-                            className='connect_right'
-                            defaultValue="Ethereum"
-                            optionLabelProp="label"
-                            style={{
-                                width: 164,
-                            }}
-                            onChange={this.handleChange()}
-                            getPopupContainer={() => document.getElementById('area')}>
-                              <Option value="Ethereum" label="Ethereum">
-                                <div role="img" aria-label="Ethereum" className='select-top'>
-                                  <div className='select-left'></div>
-                                  <span className='selelt-title'>Ethereum</span>
-                                  <i className='select-icon'></i>
-                                </div>
-                              </Option>
-                              <Option value="Platon"  label="Platon">
-                                <div role="img" aria-label="Platon" className='select-top'>
-                                  <div className='select-left'></div>
-                                  <span className='selelt-title'>Platon</span>
-                                  <i className='select-icon'></i>
-                                </div>
-                              </Option>
-                          </Select>
-                        <button className="connect_button">
-                            CONNECT TO WALLET2
-                        </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div style={{width: "100%", height: "58.5px"}}/>
-
-                {/*内容*/}
-                <div className="search_content">
-                    <div className="title" ref={this.title}>INFERER</div>
-                    <div className="subtitle" ref={this.subtitle}>Search address for verification</div>
-                    <div className="search_bar" ref={this.searchBar}>
-                        <SearchBar
-                            customStyle={{marginTop: "72px"}}
-                            onTextChanged={(text) => {
-                                console.log("changed: " + text)
-                                if (text){
-                                  this.title.current.style.opacity = "0"
-                                  this.subtitle.current.style.opacity = "0"
-                                  this.searchBar.current.style.marginTop = "-220px"
-                                }
-                            }}
-                            onSearch={(text) => this.handleOnSearchEvent(text)}
-                            // onSearch={(text) => {
-                            //     let that = this;
-                            //     that.searchResult.current.style.display = "none"
-                            //     console.log("on search: " + text)
-                            //     // todo 替换为真实地址 增加地址前置校验等
-                            //     let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
-                            //     axios.get(api)
-                            //         .then(function (response) {
-                            //             console.log(response);
-                            //             that.searchResult.current.style.display = "flex"
-                            //             let descs = ["EXCEPTIONAL", "Very Good", "Good", "Fair", "Poor"]
-                            //             let index = that.random(0, 4)
-                            //             let scoreDesc = descs[index]
-                            //             that.setState({scoreDesc: scoreDesc, keyFactors: ["Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity"]})
-                            //         })
-                            //         .catch(function (error) {
-                            //             console.log(error);
-                            //         });
-                            // }}
-                            onFocus={() => {
-
-                            }}
-                            onBlur={() => {
-
-                            }}
-                        />
-                    </div>
-                    
-
-                    <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}>
-                    <div className="search_result" ref={this.searchResult}>
-                        <EvaluationResult customStyle={{marginTop: "12px"}} scoreDesc={this.state.scoreDesc}
-                                          keyFactors={this.state.keyFactors}/>
-                    </div>
-                    </motion.div>
-                </div>
 
 
-                <div className="footer_bar">
-                    <div className="footer_bar_content">
-                        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                            {/* <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/> */}
-                            <div className='footer_text' style={{marginLeft: '3px'}}>
-                                Made by Inferer Labs
-                            </div>
-                        </div>
-                        <div className='footer_text'>
-                            Thanks to Platon
-                        </div>
-                    </div>
-                </div>
+  }
 
-                <style jsx>{`
+
+  handleChange() { }
+
+  render() {
+    return (
+      <div className="container-box">
+        {/*导航栏*/}
+        <div className="nav_bar">
+          <div className="nav_bar_content">
+            <img src="/icon_nav_logo_blue.svg" className="logo" />
+            <div className='nav_bar_content_right'>
+              <div className='connect-right-icon'></div>
+              <div style={{ position: 'relative' }} id="area"></div>
+              <Select
+                className='connect_right'
+                defaultValue="Ethereum"
+                optionLabelProp="label"
+                style={{
+                  width: 164,
+                }}
+                onChange={this.handleChange()}
+                getPopupContainer={() => document.getElementById('area')}>
+                <Option value="Ethereum" label="Ethereum">
+                  <div role="img" aria-label="Ethereum" className='select-top'>
+                    <div className='select-left'></div>
+                    <span className='selelt-title'>Ethereum</span>
+                    <i className='select-icon'></i>
+                  </div>
+                </Option>
+                <Option value="Platon" label="Platon">
+                  <div role="img" aria-label="Platon" className='select-top'>
+                    <div className='select-left'></div>
+                    <span className='selelt-title'>Platon</span>
+                    <i className='select-icon'></i>
+                  </div>
+                </Option>
+              </Select>
+              <button className="connect_button">
+                CONNECT TO WALLET2
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ width: "100%", height: "58.5px" }} />
+
+        {/*内容*/}
+        <div className="search_content">
+          <div className="title" ref={this.title}>INFERER</div>
+          <div className="subtitle" ref={this.subtitle}>Search address for verification</div>
+          <div className="search_bar" ref={this.searchBar}>
+            <SearchBar
+              customStyle={{ marginTop: "72px" }}
+              onTextChanged={(text) => {
+                console.log("changed: " + text)
+                if (text) {
+                  this.title.current.style.opacity = "0"
+                  this.subtitle.current.style.opacity = "0"
+                  this.searchBar.current.style.marginTop = "-220px"
+                }
+              }}
+              onSearch={(text) => this.handleOnSearchEvent(text)}
+              // onSearch={(text) => {
+              //     let that = this;
+              //     that.searchResult.current.style.display = "none"
+              //     console.log("on search: " + text)
+              //     // todo 替换为真实地址 增加地址前置校验等
+              //     let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
+              //     axios.get(api)
+              //         .then(function (response) {
+              //             console.log(response);
+              //             that.searchResult.current.style.display = "flex"
+              //             let descs = ["EXCEPTIONAL", "Very Good", "Good", "Fair", "Poor"]
+              //             let index = that.random(0, 4)
+              //             let scoreDesc = descs[index]
+              //             that.setState({scoreDesc: scoreDesc, keyFactors: ["Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity"]})
+              //         })
+              //         .catch(function (error) {
+              //             console.log(error);
+              //         });
+              // }}
+              onFocus={() => {
+
+              }}
+              onBlur={() => {
+
+              }}
+            />
+            {
+              this.state.loading ? (<div className='loading-box'>
+                <img src="/loading.png" className='loading-img' />
+              </div>) : (<></>)
+            }
+          </div>
+          {this.state.isResult && (<motion.div
+            initial={{ opacity: 0, y: 2000 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1,
+            }}>
+            <div className="search_result" style={{ display: this.state.isResult ? 'flex' : 'none' }}>
+              <EvaluationResult customStyle={{ marginTop: "12px" }} scoreDesc={this.state.scoreDesc}
+                keyFactors={this.state.keyFactors} />
+            </div>
+          </motion.div>
+          )}
+        </div>
+
+        <div className="footer_bar">
+          <div className="footer_bar_content">
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+              {/* <img src="/icon_logo_left.png" style={{width: '12px', height: '12px'}}/> */}
+              <div className='footer_text' style={{ marginLeft: '3px' }}>
+                Made by Inferer Labs
+              </div>
+            </div>
+            <div className='footer_text'>
+              Thanks to Platon
+            </div>
+          </div>
+        </div>
+
+        <style jsx>{`
                   
                   .container-box {
                     min-width: 600px;
@@ -309,7 +324,7 @@ export default class Home extends React.Component {
                   }
 
                 `}</style>
-                <style global jsx>{`
+        <style global jsx>{`
                 .ant-select-selector {
                   height:100%;
                   border:none!important;
@@ -387,7 +402,6 @@ export default class Home extends React.Component {
                      min-width: 320px;
                   }
             `}</style>
-            </div>
-        );
-    }
+      </div>)
+  }
 }

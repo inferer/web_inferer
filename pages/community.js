@@ -124,6 +124,7 @@ export default function Home() {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                z-index:3;
               }
               
               .nav_bar_content {
