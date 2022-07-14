@@ -8,7 +8,12 @@
 
 @font-face {
     font-family: 'D-DIN-Regular';
-    src: url('../fonts/DIN-Regular.pfb.ttf');
+    src: url('../fonts/DIN-LIGHTALTERNATE.OTF');
+}
+
+@font-face {
+    font-family: 'D-DIN-Medium';
+    src: url('../fonts/DIN-MEDIUM.OTF');
 }
 
 @font-face {

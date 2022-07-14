@@ -59,7 +59,7 @@ export default function Home() {
                         community.
                         </span>
                         <span className='community-2-name-detail community-2-next-detail'>
-                        Inferer community would play in a big role in our evaluation system. They’re decentralized and become an internal part in our evaluation
+                        The community would play in a big role in our evaluation system. They're decentralized and become an internal part in our evaluation
                         process, which improves inferer all the time.
                         </span>
                     </div>
@@ -240,7 +240,7 @@ export default function Home() {
                 padding: 100px 0 115px 0;
             }
             .name{
-                font-family: 'DIN';
+                font-family: 'D-DIN-Medium';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 28px;
@@ -251,8 +251,7 @@ export default function Home() {
             }
             .name-detail{
                 margin-top: 18px;
-                font-family: 'DIN';
-                font-style: normal;
+                font-family: 'D-DIN-Regular';
                 font-weight: 500;
                 font-size: 22px;
                 line-height: 27px;
@@ -270,7 +269,7 @@ export default function Home() {
                 margin-right: 97px
             }
             .community-2-name{
-                font-family: 'DIN-Regular';
+                font-family: 'D-DIN-Medium';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 28px;
@@ -281,7 +280,7 @@ export default function Home() {
             }
             .community-2-name-detail {
                 margin-top: 12px;
-                font-family: 'DIN-Regular';
+                font-family: 'D-DIN-Regular';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 22px;
