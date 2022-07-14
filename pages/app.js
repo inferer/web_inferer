@@ -127,7 +127,7 @@ export default class Home extends React.Component {
                 if (text) {
                   this.title.current.style.opacity = "0"
                   this.subtitle.current.style.opacity = "0"
-                  this.searchBar.current.style.marginTop = "-220px"
+                  this.searchBar.current.style.marginTop = "-15.6%"
                 }
               }}
               onSearch={(text) => this.handleOnSearchEvent(text)}
@@ -164,7 +164,7 @@ export default class Home extends React.Component {
             }
           </div>
           {this.state.isResult && (<motion.div
-            initial={{ opacity: 0, y: 2000 }}
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 1,
@@ -251,13 +251,13 @@ export default class Home extends React.Component {
                   .title {
                     font-family: 'DIN';
                     font-style: normal;
-                    font-weight: 700;
-                    font-size: 120px;
-                    line-height: 147px;
+                    font-weight: 900;
+                    font-size: 110px;
+                    line-height: 0px;
                     text-align: center;
                     letter-spacing: 0.04em;
                     color: #A2A7D4;
-                    margin: 10% 0 5% 0;
+                    margin: 13% 0 4% 0;
                     animation-fill-mode: forwards;
                     transition: opacity 0.25s
                   }
@@ -266,7 +266,7 @@ export default class Home extends React.Component {
                     font-family: 'DIN';
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 30px;
+                    font-size: 25px;
                     line-height: 36px;
                     text-align: center;
                     letter-spacing: 0.04em;
