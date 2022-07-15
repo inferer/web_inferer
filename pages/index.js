@@ -67,7 +67,7 @@ export default function Home() {
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%'}}/>
+                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                             So many bots we've seen on chain and they're huring user experience in many ways. The cost for
@@ -75,7 +75,7 @@ export default function Home() {
                     products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
                     hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%'}} />
+                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}} />
             </div>
 
             {/*page 3*/}
@@ -86,20 +86,20 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%'}}/>
+                <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
                     reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
-                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%'}}/>
+                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
                 <LogoText text="Products" customStyle={{marginTop: '5.35%'}}></LogoText>
-                <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%'}}/>
-                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%'}}/>
+                <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
+                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 5*/}
@@ -109,7 +109,7 @@ export default function Home() {
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%'}}/>
+                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 6*/}
