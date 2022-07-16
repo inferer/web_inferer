@@ -9,28 +9,19 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className='bar' style={this.props.customStyle}>
+            <div className='bar' style={this.props.inputValue ? {marginTop: 0 } : {}} >
             <img src='/icon_search.svg' className="search_icon"></img>
-            <input
-                autoComplete="off"
-                id="query"
-                onInput={()=> {
-                    let text = document.getElementById("query").value;
-                    this.props.onTextChanged(text);
-                }}
-                onKeyDown={(e)=> {
-                    let keycode = e.keyCode;
-                    if (keycode == 13) {
-                        this.onSearch()
-                    }
-                }}
-                onFocus={(e)=>{
-                    this.props.onFocus();
-                }}
-                onBlur={(e)=>{
-                    this.props.onBlur();
-                }}
-            ></input>
+            <div className='inputBox'>
+              <input
+                  value={this.props.inputValue}
+                  autoComplete="off"
+                  id="query"
+                  onInput={()=> {
+                      let text = document.getElementById("query").value;
+                      this.props.onTextChanged(text);
+                  }}
+              ></input>
+            </div>
             <div className="search_button" onClick={()=>{
                 this.onSearch()
             }}>
@@ -38,32 +29,43 @@ class SearchBar extends React.Component {
             </div>
 
             <style jsx>{`
+          
           .bar {
+            width: 46%!important;
+            margin: 5% auto 0;
             display: flex;
             flex-direction: row;
             align-items: center;
-            width: 924px;
-            height: 76px;
+            height: 60px;
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 0px 0px 8px #9FB3FF;
             border-radius: 14px;
           }
+          .inputBox{
+            flex:1;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-left:5px;
+          }
 
           #query {
-            display: flex;
-            height: 100%;
-            flex-grow: 1;
+            width:100%;
+            overflow: hidden;
+            float:left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            flex: 1;
             border: none;
             border-color: transparent;
             background: none;
             font-size: 30px;
             outline: none;
-            margin-left: 19px;
           }
 
           .search_icon {
-            width: 35px;
-            height: 35px;
+            width: 24px;
+            height: 24px;
             margin-left: 19px;
           }
 
@@ -72,7 +74,7 @@ class SearchBar extends React.Component {
             align-items: center;
             justify-content: center;
             width: 172px;
-            height: 76px;
+            height: 100%;
             background: #FFFFFF;
             box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.25);
             border-radius: 14px;
@@ -83,22 +85,8 @@ class SearchBar extends React.Component {
             text-align: center;
             letter-spacing: 0.08em;
             color: #9A98E6;
-          }
-          @media (max-width:1280px) {
-            .nav_bar_content{
-                width:760px !important;
-
-              }
-            .bar {
-              width:560px !important;
-           }
-          @media (max-width:768px) {
-            .bar {
-              width:320px !important;
-           }
-           .nav_bar_content{
-            width:320px !important;
-
+            padding:0 20px;
+            cursor: pointer;
           }
         `}</style>
             </div>
