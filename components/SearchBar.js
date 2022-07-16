@@ -59,7 +59,8 @@ class SearchBar extends React.Component {
             border: none;
             border-color: transparent;
             background: none;
-            font-size: 30px;
+            font-size: 20px;
+            color: #71769D;
             outline: none;
           }
 
