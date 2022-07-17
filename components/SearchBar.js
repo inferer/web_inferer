@@ -9,7 +9,7 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className='bar' style={this.props.inputValue ? {marginTop: 0 } : {}} >
+            <div className='bar' style={this.props.inputValue || this.props.feedBackVisible ? {marginTop: 0 } : {}} >
             <img src='/icon_search.svg' className="search_icon"></img>
             <div className='inputBox'>
               <input
@@ -31,12 +31,12 @@ class SearchBar extends React.Component {
             <style jsx>{`
           
           .bar {
-            width: 46%!important;
-            margin: 5% auto 0;
+            width: 49vw!important;
+            margin: 6.6vh auto 0;
             display: flex;
             flex-direction: row;
             align-items: center;
-            height: 60px;
+            height: 7vh;
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 0px 0px 8px #9FB3FF;
             border-radius: 14px;
@@ -65,8 +65,8 @@ class SearchBar extends React.Component {
           }
 
           .search_icon {
-            width: 24px;
-            height: 24px;
+            width: 1.2vw;
+            height: 1.2vw;
             margin-left: 19px;
           }
 
@@ -74,19 +74,19 @@ class SearchBar extends React.Component {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 172px;
+            width: 8.9vw;
             height: 100%;
             background: #FFFFFF;
             box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.25);
             border-radius: 14px;
+            font-family: 'DIN';
             font-style: normal;
             font-weight: 700;
-            font-size: 30px;
+            font-size: 1.6vw;
             line-height: 45px;
             text-align: center;
             letter-spacing: 0.08em;
             color: #9A98E6;
-            padding:0 20px;
             cursor: pointer;
           }
         `}</style>

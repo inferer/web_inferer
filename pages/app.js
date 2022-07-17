@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../components/SearchBar';
 import EvaluationResult from '../components/EvaluationResult'
 import axios from 'axios'
+import Head from 'next/head'
 import { Select } from 'antd';
 import { motion, AnimatePresence } from "framer-motion"
 const { Option } = Select;
@@ -19,6 +20,8 @@ export default class Home extends React.Component {
       loading: false, 
       isResult: false,
       inputValue: '',
+      feedBackVisible: false,
+      textAreaValue: '',
     };
   }
 
@@ -41,26 +44,13 @@ export default class Home extends React.Component {
     const SearchService = require("../api/SearchService");
     let searchService = new SearchService();
     let response = await searchService.searchOnETH(text);
-    // console.log("handleOnSearchEvent response = " + JSON.stringify(response));
-    // searchService.searchOnETH(text, (response) => {
-
-    // });
-
-    // 0x303425052e462dd0f3044aee17e1f5be9c7de783
+    // let response = JSON.parse(`{"status":200,"message":"OK","result":{"level":"Poor","desc":"可能涉及Bot交易: 交易量较大","info":{"User Total Tx Count":"2055","User First Tx Timestamp":"5/18/2021, 6:21:52 PM","User Latest Tx Timestamp":"7/15/2022, 12:02:44 PM","Tx Info":{"Maximum tx value":"52.5 ETH","Minimum tx value":"0 ETH","Median tx value":"0.08 ETH","P80 tx value":"1 ETH"},"NFT Info":{"NFT mint count":"25","NFT burn count":"1","NFT send count":"7","NFT receive count":"74","NFT send interactor count":"6","NFT receive interactor count":"67","NFT total interactor count":"71"},"PoAP Info":{"PoAP mint count":0,"PoAP burn count":0,"PoAP send count":0,"PoAP receive count":0},"NFT Interactor":{"Top 3 Interacted Address":"0xc6efe835e985b116c75430f330b7a4c4aa29afe8, 0xed6552d7e16922982bf80cf43090d71bb4ec2179, 0xe6ff1989f68b6fd95b3b9f966d32c9e7d96e6255","Interacted Count":"6"},"NFT Interact Addresses":{"Interacted Addresses":"0xead6605b9e105e28bd35e9f494131c10c1281ce9, 0xebd9bb8bb470051339a7f13ab6842397b9cd6254, 0xed2a45611b967df5647a17dfeaa0dec40806de54 and more"}}}}`)
     let keyFactors = []
     if (response && response.status == 200) {
       // 查询到结果 显示
       this.setState({ loading: false, isResult: true })
-      for (var key of Object.keys(response.result.info)) {
-        if (typeof response.result.info[key] === 'object') {
-          for (var subKey of Object.keys(response.result.info[key])) {
-            console.log("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
-            keyFactors.push("[" + key + "][" + subKey + "] : " + response.result.info[key][subKey])
-          }
-        } else {
-          console.log("[" + key + "] : " + response.result.info[key])
-          keyFactors.push("[" + key + "] : " + response.result.info[key])
-        }
+      for(let key in response.result.info) {
+        keyFactors.push({key: key, value: response.result.info[key]});
       }
 
       // this.searchResult.current.style.display = "flex"
@@ -72,17 +62,51 @@ export default class Home extends React.Component {
 
     }
 
-
-
-
+  }
+  visibleChange() {
+    this.setState({feedBackVisible: true});
+  }
+  //提交事件
+  async submit() {
+    const SearchService = require("../api/SearchService");
+    let searchService = new SearchService();
+    let response = await searchService.feedBack({
+      address: inputValue,
+      content: textAreaValue
+    });
   }
 
+  clickWallet() {
+    if(initWeb3) {
+      initWeb3()
+    }else {
+      setTimeout(() => {
+        this.clickWallet();
+      }, 200)
+    }
+  }
 
   handleChange() { }
 
   render() {
     return (
       <>
+        <Head>
+        <script src="/js/jquery/jquery.min.js"></script>
+          <script src="/js/wallet/w3model.js"></script>
+          <script src="/js/wallet/bignumber.min.js"></script>
+          <script src="/js/wallet/web3.min.js"></script>
+          <script src="/js/wallet/web3model.min.js"></script>
+          <script src="/js/wallet/evmchain.js"></script>
+          <script src="/js/wallet/web3provider.js"></script>
+          <script src="/js/ipfs/ipfs-http-client.js"></script>
+          <script src="/js/wallet/ethers.js"></script>
+
+          <script src="/js/expand/lockr.js"></script>
+          <script src="/js/expand/base64.js"></script>
+          <script src="/js/load.js"></script>
+          
+        </Head>
         <div className='bgEle'></div>
         <div className="container-box">
           {/*导航栏*/}
@@ -127,7 +151,7 @@ export default class Home extends React.Component {
                       <i className='select-icon'></i>
                   </Option>
                 </Select>
-                <button className="connect_button">
+                <button className="connect_button" onClick={this.clickWallet.bind(this)}>
                   CONNECT TO WALLET2
                 </button>
               </div>
@@ -135,26 +159,19 @@ export default class Home extends React.Component {
           </div>
           <div className='main_content_box'>
             {/*内容*/}
-            <div className="search_content">
-              <div className="title" ref={this.title}>INFERER</div>
-              <div className="subtitle" ref={this.subtitle}>Search address for verification</div>
-              <div className="search_bar" ref={this.searchBar}>
+            {this.state.feedBackVisible ? (
+              <div className="search_content" style={{paddingTop: '9.8vh'}}>
+              <div className="search_bar" ref={this.searchBar} >
                 <SearchBar
                   inputValue={this.state.inputValue}
+                  feedBackVisible={this.state.feedBackVisible}
                   onTextChanged={(text) => {
-                    console.log("changed: " + text)
-                    if (text) {
-                      this.title.current.style.opacity = "0"
-                      this.subtitle.current.style.opacity = "0"
-                      this.searchBar.current.style.marginTop = "-15.6%"
-                    }
                     this.setState({inputValue: text});
                   }}
                   onSearch={() => this.handleOnSearchEvent()}
                   // onSearch={(text) => {
                   //     let that = this;
                   //     that.searchResult.current.style.display = "none"
-                  //     console.log("on search: " + text)
                   //     // todo 替换为真实地址 增加地址前置校验等
                   //     let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
                   //     axios.get(api)
@@ -183,20 +200,113 @@ export default class Home extends React.Component {
                   </div>) : (<></>)
                 }
               </div>
-              {this.state.isResult && (<motion.div
-              style={{width: '100%'}}
+              <motion.div
+                className='feedBackBox'
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 1,
-                }}>
-                <div className="search_result" style={{ display: this.state.isResult ? 'flex' : 'none' }}>
-                  <EvaluationResult customStyle={{ marginTop: "12px" }} scoreDesc={this.state.scoreDesc}
-                    keyFactors={this.state.keyFactors} />
+                transition={{ duration: 1 }}>
+                <div className="key_factors_container">
+                  <div style={{display: "flex", flexDirection: "row", height: "4.1vh", alignItems: "center"}}>
+                    <img src="/headPic.svg" className="key_factors_icon"></img>
+                    <div className="key_factors_title">
+                      <span>反馈地址:</span>
+                      <div className='feedback-address'>1111.111.111.1111</div>
+                    </div>
+                  </div>
+            
+                    <div className='feedback-top-line'>
+                          <div className='feedback-start'></div>
+                    </div>
+                    <div className='feedback-list-ul'>
+                        <div className='feedback-top'>反馈细节:</div>
+                        <textarea onChange={e => {
+                          this.setState({textAreaValue: e.target.value})
+                        }}  
+                        value={this.state.textAreaValue}
+                        placeholder='请输入' 
+                        className='feedback-detail'>
+
+                        </textarea>
+                        <div className='feedback-submit' onClick={this.submit.bind(this)}>
+                        <span className='feedback-submit-t'>提交</span>
+                            <div className='feedback-submit-icon'></div>
+                        </div>
+                    </div>
                 </div>
               </motion.div>
-              )}
             </div>
+              
+            ) : (
+
+              <div className="search_content" style={this.state.inputValue ? {paddingTop: '9.8vh'} : {}}>
+                <div className="title" ref={this.title}>INFERER</div>
+                <div className="subtitle" ref={this.subtitle}>Search address for verification</div>
+                <div className="search_bar" ref={this.searchBar}>
+                  <SearchBar
+                    inputValue={this.state.inputValue}
+                    onTextChanged={(text) => {
+                      if (text) {
+                        this.title.current.style.opacity = "0"
+                        this.subtitle.current.style.opacity = "0"
+                        this.searchBar.current.style.marginTop = "-19vh"
+                      }else {
+                        this.title.current.style.opacity = "1"
+                        this.subtitle.current.style.opacity = "1"
+                        this.searchBar.current.style.marginTop = "0"
+                      }
+                      this.setState({inputValue: text});
+                    }}
+                    onSearch={() => this.handleOnSearchEvent()}
+                    // onSearch={(text) => {
+                    //     let that = this;
+                    //     that.searchResult.current.style.display = "none"
+                    //     // todo 替换为真实地址 增加地址前置校验等
+                    //     let api = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20';
+                    //     axios.get(api)
+                    //         .then(function (response) {
+                    //             console.log(response);
+                    //             that.searchResult.current.style.display = "flex"
+                    //             let descs = ["EXCEPTIONAL", "Very Good", "Good", "Fair", "Poor"]
+                    //             let index = that.random(0, 4)
+                    //             let scoreDesc = descs[index]
+                    //             that.setState({scoreDesc: scoreDesc, keyFactors: ["Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity", "Participate PoAP activity"]})
+                    //         })
+                    //         .catch(function (error) {
+                    //             console.log(error);
+                    //         });
+                    // }}
+                    onFocus={() => {
+  
+                    }}
+                    onBlur={() => {
+  
+                    }}
+                  />
+                  {
+                    this.state.loading ? (<div className='loading-box'>
+                      <img src="/loading.png" className='loading-img' />
+                    </div>) : (<></>)
+                  }
+                </div>
+                {this.state.isResult && (<motion.div
+                  style={{width: '100%'}}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.8,
+                  }}>
+                  <div className="search_result" style={{ display: this.state.isResult ? 'flex' : 'none' }}>
+                    <EvaluationResult 
+                      customStyle={{ marginTop: "12px" }} 
+                      scoreDesc={this.state.scoreDesc}
+                      keyFactors={this.state.keyFactors}
+                      openFeedBack={this.visibleChange.bind(this)}
+                    />
+                  </div>
+                </motion.div>
+                )}
+              </div>
+            )}
 
             <div className="footer_bar">
               <div className="footer_bar_content">
@@ -239,7 +349,7 @@ export default class Home extends React.Component {
                       display: flex;
                       align-items: center;
                       justify-content: space-between;
-                      padding:0 13%;
+                      padding:0 13.5vw;
                     }
 
                     .logo {
@@ -249,6 +359,7 @@ export default class Home extends React.Component {
                     }
                     .search_bar{
                       width: 100%;
+                      opacity: 1!important;
                     }
                     .nav_bar_content_right{
                       position: relative;
@@ -274,26 +385,30 @@ export default class Home extends React.Component {
                     .title {
                       font-family: 'DIN';
                       font-style: normal;
-                      font-weight: 900;
-                      font-size: 1em;
+                      font-weight: 700;
+                      font-size: 6.2vw;
+                      line-height: 13.6vh;
                       text-align: center;
                       letter-spacing: 0.04em;
                       color: #A2A7D4;
                       animation-fill-mode: forwards;
-                      transition: opacity 0.25s
+                      transition: opacity 0.25s;
+                      margin-bottom:2.1vh;
+                      pointer-events: none;
                     }
 
                     .subtitle {
                       font-family: 'DIN';
                       font-style: normal;
                       font-weight: 500;
-                      font-size: 25px;
-                      line-height: 36px;
+                      font-size: 1.5vw;
+                      line-height: 3.3vh;
                       text-align: center;
                       letter-spacing: 0.04em;
                       color: #A2A7D4;
                       animation-fill-mode: forwards;
-                      transition: opacity 0.25s
+                      transition: opacity 0.25s;
+                      pointer-events: none;
                     }
                     .main_content_box{
                       width: 100%;
@@ -308,9 +423,8 @@ export default class Home extends React.Component {
                       flex-direction: column;
                       align-items: center;
                       width:100%;
-                      font-size:120px;
-                      min-height: calc(100% - 77px);
-                      padding-top:106px;
+                      min-height: calc(100% - 60px - 6.9vh);
+                      padding-top: 13.2vh;
                     }
                     
                     .search_bar {
@@ -319,8 +433,9 @@ export default class Home extends React.Component {
                     }
                     
                     .search_result {
-                      width: 46%!important;
+                      width: 49.7vw !important;
                       margin:0 auto;
+                      overflow:hidden;
                       display: none;
                     }
 
@@ -331,12 +446,12 @@ export default class Home extends React.Component {
                       flex-direction: row;
                       justify-content: center;
                       background-color: rgba(0, 0, 0, 0.25);
-                      margin-top:20px;
+                      margin-top:6.9vh;
+                      padding:0 18.6vw;
                     }
 
                     .footer_bar_content {
-                      min-width: 1200px;
-                      width: 1200px;
+                      width: 100%;
                       display: flex;
                       align-items: center;
                       justify-content: space-between;
@@ -350,7 +465,168 @@ export default class Home extends React.Component {
                       line-height: 21px;
                       color: rgba(255, 255, 255, 0.8);
                     }
-
+                    .feedBackBox{
+                      width: 100%;
+                    }
+                    .key_factors_icon{
+                      width: 1.5vw;
+                      height: 1.5vw;
+                      margin-right: 13px;
+                    }
+                    .feedback-content{
+                      background-color: #f2f3ff;
+                      margin-top:23px;
+                      padding: 34px;
+                      box-shadow: 0px 0px 8px #9FB3FF;
+                      border-radius: 14px;
+                  }
+                  .feedback-top-line{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    height: 1px;
+                    background-color: #D3DFFF;
+                    margin-top: 1.2vh;
+                    margin-bottom: 3.9vh;
+                }
+                .feedback-start{
+                    position: absolute;
+                    top:-5px;
+                    left:50%;
+                    width: 10px;
+                    height: 10px;
+                    background: url(/feedback-start.png) no-repeat center;
+                    background-size: 100%;
+                }
+                .feedback-address{
+                    margin-left:23px;
+                    font-family: 'Source Han Sans CN';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.2vw;
+                    line-height: 36px;
+                    text-align: center;
+                    letter-spacing: 0.02em;
+                    color: #999999;
+                }
+                  .feedback-list{
+                    margin-top: 35px;
+                    background: #f2f3ff;
+                    padding: 43px 19px 43px 19px;
+                    box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.3);
+                    border-radius: 14px;
+                }
+                .feedback-list-top{
+                    display: flex;
+                }
+                .feedback-list-top-icon{
+                    margin-right:8px;
+                    width: 30px;
+                    height: 30px;
+                    background: url(/feedback-man.png) no-repeat;
+                    background-size: 100%;
+                }
+                .feedback-list-top-title{
+                    font-family: 'DIN';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 29px;
+                    letter-spacing: 0.02em;
+                    color: #727ABA;
+                }
+                .feedback-list-ul{
+                    height: 35.8vh;
+                    position: relative;
+                    padding:1.4vh 1.4vw 2vh 1.1vw;
+                    box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.3);
+                    border-radius: 14px;
+                    background-color: #FFFFFF;
+                }
+            .feedback-top{
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.2vw;
+                line-height: 3.3vh;
+                letter-spacing: 0.02em;
+                color: #727ABA;
+            }
+            .feedback-detail{
+                margin-top:11px;
+                width:100%;
+                height: 27.9vh;
+                padding:1.7vh 0.6vw 0 1.3vw;
+                background: rgba(238,238,238,.5);
+                border-radius: 14px;
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.04vw;
+                line-height: 2.7vh;
+                letter-spacing: 0.02em;
+                color: #999999;
+                border: transparent;
+                resize: none;
+            }
+            .feedback-submit{
+                position: absolute;
+                bottom: 35px;
+                right: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 6.8vw;
+                height: 3.3vh;
+                background: rgba(97,141,255, .5);
+                border-radius: 7px;
+                cursor: pointer;
+            }
+            .feedback-submit-icon{
+                width: 15px;
+                height: 14px;
+                background: url(/feedback-submit.png) no-repeat;
+                background-size: 100%;
+            }
+            .feedback-submit-t{
+                font-family: 'Source Han Sans CN';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1vw;
+                text-align: center;
+                letter-spacing: 0.1em;
+                color: #FFFFFF;
+                text-shadow: 0px 0px 4px #769CFF;
+                resize: none;
+            }
+    
+            .key_factors_container {
+              width: 49vw!important;
+              margin-top: 2.4vh;
+              padding: 3.9vh 1.5vw 3.8vh 1.9vw;
+              background: rgba(255, 255, 255, 0.5);
+              box-shadow: 0px 0px 8px #9FB3FF;
+              border-radius: 14px;
+            }
+            .key_factors_title{
+              display:flex
+            }
+    
+            .key_factors_title span{
+              font-style: normal;
+              font-weight: 700;
+              font-size: 1.5vw;
+              line-height: 4.1vh;
+               text-align: center;
+              letter-spacing: 0.02em;
+              color: #727ABA;
+              font-family: 'Source Han Sans CN';
+              font-style: normal;
+              font-weight: 700;
+              display: flex;
+    align-items: center;
+    
+            }
                   `}</style>
           <style global jsx>{`
                   body>div{
@@ -362,7 +638,7 @@ export default class Home extends React.Component {
                     width: 100%;
                     height: 100%;
                     overflow: hidden;
-                    background-image: linear-gradient(to bottom right, #D5F7FF, #EFDBFF);
+                    background: linear-gradient(107.56deg, #D5F7FF 0%, #EFDBFF 100%);
                     position: absolute;
                     top:0;
                     left: 0;
@@ -462,36 +738,7 @@ export default class Home extends React.Component {
                     background: url(/connect-icon.png);
                     background-size: 100% auto;
                   }
-                  @media (max-width:1920px) {
-                    .search_content{
-                      font-size: 120px!important;
-                    }
-                  }
-                  @media (max-width:1440px) {
-                    .search_content{
-                      font-size: 90px!important;
-                    }
-                  }
-                  @media (max-width:1280px) {
-                    .footer_bar_content {
-                      min-width: 760px!important;
-                      width: 760px!important;
-                    }
-                    .search_content{
-                      font-size: 80px!important;
-                    }
-                  }
-                  @media (max-width:768px) {
-                    .nav_bar_content{
-                      min-width:320px !important;
-                      width:320px !important;
-                    }
-                    .footer_bar_content {
-                      min-width: 320px;
-                    }
-                    .search_content{
-                      font-size: 70px!important;
-                    }
+                 
               `}</style>
         </div>
       </>)

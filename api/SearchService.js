@@ -98,6 +98,20 @@ class SearchService {
                 return result;
             });
     }
+    //反馈
+    async feedBack(params) {        
+        const axios = require('axios').default;
+        return axios.get('http:///api/inferer/feedback', {params: params})
+            .then(function (response) {
+                return response.data
+            })
+            .catch(function (error) {
+                console.log("searchOnETH error = " + error);
+            })
+            .then(function (result) {
+                return result;
+            });
+    }
 
     async getNFTTxListByAddress(address) {
         console.log("getBalanceByAddress: address = " + address);
