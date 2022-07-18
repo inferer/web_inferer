@@ -60,8 +60,8 @@ export default class Home extends React.Component {
             this.setState({ loading: false, isResult: false });
         }
     }
-    visibleChange() {
-        this.setState({ feedBackVisible: true });
+    openFeedBack() {
+        this.setState({ isResult: false, feedBackVisible: true });
     }
     //提交事件
     async submit() {
@@ -183,120 +183,7 @@ export default class Home extends React.Component {
                         </div>
                     </div>
                     <div className="main_content_box">
-                        {/*内容*/}
-                        {this.state.feedBackVisible ? (
-                            <div
-                                className="search_content"
-                                style={{ paddingTop: "9.8vh" }}
-                            >
-                                <div
-                                    className="search_bar"
-                                    ref={this.searchBar}
-                                >
-                                    <SearchBar
-                                        inputValue={this.state.inputValue}
-                                        feedBackVisible={
-                                            this.state.feedBackVisible
-                                        }
-                                        onTextChanged={(text) => {
-                                            this.setState({ inputValue: text });
-                                        }}
-                                        onSearch={() =>
-                                            this.handleOnSearchEvent()
-                                        }
-                                        onFocus={() => {}}
-                                        onBlur={() => {}}
-                                    />
-                                    {this.state.loading ? (
-                                        <div className="loading-box">
-                                            <img
-                                                src="/loading.png"
-                                                className="loading-img"
-                                            />
-                                        </div>
-                                    ) : (
-                                        <></>
-                                    )}
-                                </div>
-                                <motion.div
-                                    className="feedBackBox"
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1 }}
-                                >
-                                    <div className="key_factors_container">
-                                        <div
-                                            style={{
-                                                display: "flex",
-                                                flexDirection: "row",
-                                                height: "4.1vh",
-                                                alignItems: "center",
-                                            }}
-                                        >
-                                            <img
-                                                src="/headPic.svg"
-                                                className="key_factors_icon"
-                                            ></img>
-                                            <div className="key_factors_title">
-                                                <span>Feedback address:</span>
-                                                <div
-                                                    className="feedback-address"
-                                                    value={
-                                                        this.state.inputValue
-                                                    }
-                                                >
-                                                    {this.state.inputValue}
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="feedback-top-line">
-                                            <div className="feedback-start"></div>
-                                        </div>
-                                        <div className="feedback-list-ul">
-                                            <div className="feedback-top">
-                                                Feedback content:
-                                            </div>
-                                            <textarea
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        textAreaValue:
-                                                            e.target.value,
-                                                    });
-                                                }}
-                                                value={this.state.textAreaValue}
-                                                placeholder="Please input your feedback content here"
-                                                className="feedback-detail"
-                                            ></textarea>
-                                            <div className="feedback-buttons">
-                                                <div
-                                                    className="feedback-cancel"
-                                                    onClick={this.cancel.bind(
-                                                        this
-                                                    )}
-                                                >
-                                                    <span className="feedback-cancel-t">
-                                                        Cancel
-                                                    </span>
-                                                </div>
-                                                <div
-                                                    className="feedback-submit"
-                                                    onClick={this.submit.bind(
-                                                        this
-                                                    )}
-                                                >
-                                                    <span className="feedback-submit-t">
-                                                        Submit
-                                                    </span>
-                                                    <div className="feedback-submit-icon"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            </div>
-                        ) : (
-                            <div
+                        <div
                                 className="search_content"
                                 style={
                                     this.state.inputValue
@@ -376,15 +263,93 @@ export default class Home extends React.Component {
                                                 keyFactors={
                                                     this.state.keyFactors
                                                 }
-                                                openFeedBack={this.visibleChange.bind(
+                                                openFeedBack={this.openFeedBack.bind(
                                                     this
                                                 )}
                                             />
                                         </div>
                                     </motion.div>
                                 )}
+                                {this.state.feedBackVisible && (
+                                    <motion.div
+                                        className="feedBackBox"
+                                        initial={{ opacity: 0, y: 50 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 1 }}
+                                    >
+                                        <div className="key_factors_container">
+                                            <div
+                                                style={{
+                                                    display: "flex",
+                                                    flexDirection: "row",
+                                                    height: "4.1vh",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <img
+                                                    src="/headPic.svg"
+                                                    className="key_factors_icon"
+                                                ></img>
+                                                <div className="key_factors_title">
+                                                    <span>Feedback address:</span>
+                                                    <div
+                                                        className="feedback-address"
+                                                        value={
+                                                            this.state.inputValue
+                                                        }
+                                                    >
+                                                        {this.state.inputValue}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div className="feedback-top-line">
+                                                <div className="feedback-start"></div>
+                                            </div>
+                                            <div className="feedback-list-ul">
+                                                <div className="feedback-top">
+                                                    Feedback content:
+                                                </div>
+                                                <textarea
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            textAreaValue:
+                                                                e.target.value,
+                                                        });
+                                                    }}
+                                                    value={this.state.textAreaValue}
+                                                    placeholder="Please input your feedback content here"
+                                                    className="feedback-detail"
+                                                ></textarea>
+                                                <div className="feedback-buttons">
+                                                    <div
+                                                        className="feedback-cancel"
+                                                        onClick={this.cancel.bind(
+                                                            this
+                                                        )}
+                                                    >
+                                                        <span className="feedback-cancel-t">
+                                                            Cancel
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        className="feedback-submit"
+                                                        onClick={this.submit.bind(
+                                                            this
+                                                        )}
+                                                    >
+                                                        <span className="feedback-submit-t">
+                                                            Submit
+                                                        </span>
+                                                        <div className="feedback-submit-icon"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                )}
+                                
                             </div>
-                        )}
 
                         <div className="footer_bar">
                             <div className="footer_bar_content">
