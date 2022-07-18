@@ -94,7 +94,7 @@ class EvaluationResult extends React.Component {
 
               {/* <div className="title_dividing_line"></div> */}
               <div className='connect-top'>
-                <div className="title">Evaluation Result</div>
+                <div className="title">EVALUATION TICKET</div>
                 <div className='connect-top-line'></div>
                 <div className="rate_container">
                   {this.initRate(this.props.scoreDesc)}
@@ -169,7 +169,7 @@ class EvaluationResult extends React.Component {
                                                   {list.map((item, index) => {
                                                     return (
                                                       <div key={index}  className="subInfo">
-                                                        <div>{index == 0 ? 'Top 3 Interacted Address' : ''}</div>
+                                                        <div>{index == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -189,7 +189,7 @@ class EvaluationResult extends React.Component {
                                                   {list.map((item, index) => {
                                                     return (
                                                       <div key={index}  className="subInfo">
-                                                        <div>{index == 0 ? 'Top 3 Interacted Address' : ''}</div>
+                                                        <div>{index == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -312,6 +312,7 @@ class EvaluationResult extends React.Component {
                   color: #666666;
                   width: 100%;
                   justify-content: space-between;
+                  cursor: text;
                 }
                 .rightContent{
                   display: flex;
@@ -537,6 +538,7 @@ class EvaluationResult extends React.Component {
                 }
                 .key_factors_item_style.objectType{
                   display: block;
+                  cursor: pointer;
                 }
 
                 .feedback {
