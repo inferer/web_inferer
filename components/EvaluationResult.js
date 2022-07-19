@@ -231,14 +231,14 @@ class EvaluationResult extends React.Component {
               <style jsx>{`
 
                 .container {
-                  position: relative;
+                //   position: relative;
                   width: 100%;
-                  padding:5px;
+                //   padding:5px;
                 }
                 .container>div{
                   background: rgba(255, 255, 255, 0.5);
-                  box-shadow: 0px 0px 8px #9FB3FF;
-                  border-radius: 14px;
+                  box-shadow: 0px 0px 4px #9FB3FF;
+                  border-radius: 8px;
                   display: flex;
                   flex-direction: column;
                 }
@@ -298,7 +298,7 @@ class EvaluationResult extends React.Component {
                   text-align: left;
                   letter-spacing: 0.02em;
                   color: #727ABA;
-                  margin-left: 51px;
+                //   margin-left: 51px;
                   margin-top: 60px;
                 }
                 .subInfo{
@@ -466,7 +466,7 @@ class EvaluationResult extends React.Component {
                   margin-bottom: 35px;
                   background: rgba(255, 255, 255, 0.5);
                   box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.3);
-                  border-radius: 14px;
+                  border-radius: 8px;
                 }
 
                 .key_factors_icon {
@@ -488,7 +488,7 @@ class EvaluationResult extends React.Component {
 
                 .key_factors_list_container {
                   background: #F0F2FF;
-                  border-radius: 16px;
+                  border-radius: 8px;
                   margin-left: 51px;
                   margin-right: 36px;
                 }
@@ -515,10 +515,10 @@ class EvaluationResult extends React.Component {
                   justify-content: space-between;
                 }
                 .key_factors_item_style:first-child{
-                  border-radius: 16px 16px 0px 0px;
+                  border-radius: 8px 8px 0px 0px;
                 }
                 .key_factors_item_style:last-child{
-                  border-radius: 0px 0px 16px 16px;
+                  border-radius: 0px 0px 8px 8px;
                 }
 
                 .key_factors_item_style {

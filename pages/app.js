@@ -3,7 +3,8 @@ import SearchBar from "../components/SearchBar";
 import EvaluationResult from "../components/EvaluationResult";
 import axios from "axios";
 import Head from "next/head";
-import { Select, Typography } from "antd";
+import { Select, Typography, notification } from "antd";
+import { CheckCircleOutlined } from '@ant-design/icons';
 import { motion, AnimatePresence } from "framer-motion";
 const { Option } = Select;
 const { Text } = Typography;
@@ -25,9 +26,23 @@ export default class Home extends React.Component {
             textAreaValue: "",
             searchRecord: "",
             walletConnected: false,
-            walletAddress: ""
+            walletAddress: "",
+            network:"Ethereum"
         };
     }
+
+    openNotification(message) {
+        const args = {
+            message: message,
+            duration: 1.5,
+            icon: <CheckCircleOutlined style={{ color: '#618DFF' }} />,
+            // style: {
+            //     // width: 600,
+            //     background: '#618DFF'
+            // },
+        };
+        notification.open(args);
+    };
 
     random(min, max) {
         return Math.round(Math.random() * (max - min)) + min;
@@ -39,13 +54,18 @@ export default class Home extends React.Component {
         if (text === "") {
             return;
         } else {
-            this.setState({ loading: true, searchRecord: text});
+            this.setState({ loading: true, searchRecord: text, inputValue: text.toLowerCase()});
         }
         //默认假设无查询结果
         this.setState({ isResult: false });
         const SearchService = require("../api/SearchService");
         let searchService = new SearchService();
-        let response = await searchService.searchOnETH(text);
+        let response = {}
+        if (this.state.network == "Ethereum") {
+            response = await searchService.searchOnETH(text);
+        } else if (this.state.network == "PlatON") {
+            response = await searchService.searchOnPlatON(text);
+        }
         // let response = JSON.parse(`{"status":200,"message":"OK","result":{"level":"Poor","desc":"可能涉及Bot交易: 交易量较大","info":{"User Total Tx Count":"2055","User First Tx Timestamp":"5/18/2021, 6:21:52 PM","User Latest Tx Timestamp":"7/15/2022, 12:02:44 PM","Tx Info":{"Maximum tx value":"52.5 ETH","Minimum tx value":"0 ETH","Median tx value":"0.08 ETH","P80 tx value":"1 ETH"},"NFT Info":{"NFT mint count":"25","NFT burn count":"1","NFT send count":"7","NFT receive count":"74","NFT send interactor count":"6","NFT receive interactor count":"67","NFT total interactor count":"71"},"PoAP Info":{"PoAP mint count":0,"PoAP burn count":0,"PoAP send count":0,"PoAP receive count":0},"NFT Interactor":{"Top 3 Interacted Address":"0xc6efe835e985b116c75430f330b7a4c4aa29afe8, 0xed6552d7e16922982bf80cf43090d71bb4ec2179, 0xe6ff1989f68b6fd95b3b9f966d32c9e7d96e6255","Interacted Count":"6"},"NFT Interact Addresses":{"Interacted Addresses":"0xead6605b9e105e28bd35e9f494131c10c1281ce9, 0xebd9bb8bb470051339a7f13ab6842397b9cd6254, 0xed2a45611b967df5647a17dfeaa0dec40806de54 and more"}}}}`)
         let keyFactors = [];
         if (response && response.status == 200) {
@@ -73,6 +93,7 @@ export default class Home extends React.Component {
         let response = await searchService.feedBack({
             address: this.state.inputValue,
             content: this.state.textAreaValue,
+            network: this.state.network
         });
 
         console.log("submit response = " +  JSON.stringify(response))
@@ -80,6 +101,11 @@ export default class Home extends React.Component {
         if(response.status == 200) {
             console.log("submit 200")
             this.setState({inputValue: "", isResult: false, feedBackVisible: false, textAreaValue: ""})
+            this.openNotification("Thanks for your feedback!")
+
+            this.title.current.style.opacity = "1";
+            this.subtitle.current.style.opacity = "1";
+            this.searchBar.current.style.marginTop = "0";
         } else {
 
         }
@@ -111,7 +137,11 @@ export default class Home extends React.Component {
         }
     }
 
-    handleChange() {}
+    handleChangeNetwork = value => {
+        console.log(value);
+        // this.props.form.validateField(["Dropdown2"]);
+        this.setState({network: value, isResult: false, feedBackVisible: false, inputValue: ""})
+    };
 
     render() {
         return (
@@ -149,6 +179,7 @@ export default class Home extends React.Component {
                                 <Select
                                     className="connect_right"
                                     defaultValue="Ethereum"
+                                    value={this.state.network}
                                     optionLabelProp="label"
                                     dropdownClassName="ethereum_dropdown"
                                     dropdownAlign={{ offset: [0, 15] }}
@@ -167,7 +198,7 @@ export default class Home extends React.Component {
                                     style={{
                                         width: 164,
                                     }}
-                                    onChange={this.handleChange()}
+                                    onChange={this.handleChangeNetwork}
                                     getPopupContainer={() =>
                                         document.getElementById("area")
                                     }
@@ -181,17 +212,17 @@ export default class Home extends React.Component {
                                         </div>
                                         <i className="select-icon"></i>
                                     </Option>
-                                    <Option value="Platon" label="Platon">
+                                    <Option value="PlatON" label="PlatON">
                                         <div>
                                             <div className="select-left"></div>
                                             <span className="selelt-title">
-                                                Platon
+                                                PlatON
                                             </span>
                                         </div>
                                         <i className="select-icon"></i>
                                     </Option>
                                 </Select>
-                                {this.state.walletConnected == true &&
+                                {/* {this.state.walletConnected == true &&
                                     (
                                         <div
                                             className="wallet_address"
@@ -212,7 +243,7 @@ export default class Home extends React.Component {
                                                 CONNECT TO WALLET
                                         </button>
                                     )
-                                }
+                                } */}
                             </div>
                         </div>
                     </div>
@@ -229,7 +260,7 @@ export default class Home extends React.Component {
                                     INFERER
                                 </div>
                                 <div className="subtitle" ref={this.subtitle}>
-                                    Search address idendity
+                                    Search address identity
                                 </div>
                                 <div
                                     className="search_bar"
@@ -291,7 +322,7 @@ export default class Home extends React.Component {
                                         >
                                             <EvaluationResult
                                                 customStyle={{
-                                                    marginTop: "12px",
+                                                    marginTop: "0px",
                                                 }}
                                                 scoreDesc={this.state.scoreDesc}
                                                 keyFactors={
@@ -325,7 +356,7 @@ export default class Home extends React.Component {
                                                     className="key_factors_icon"
                                                 ></img>
                                                 <div className="key_factors_title">
-                                                    <span>Feedback address:</span>
+                                                    <span>Address:</span>
                                                     <div
                                                         className="feedback-address"
                                                         value={
@@ -424,7 +455,6 @@ export default class Home extends React.Component {
                             background-color: transparent;
                             width: 100%;
                             height: 93px;
-                            padding-top: 49px;
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -434,12 +464,14 @@ export default class Home extends React.Component {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            padding: 0 13.5vw;
+                            // padding-top: 49px;
+                            padding: 4.54vh 13.54vw;
+                            // background: #6a88ff;
                         }
 
                         .logo {
-                            width: 30px;
-                            height: 30px;
+                            width: 32px;
+                            height: 32px;
                             -webkit-user-drag: none;
                         }
                         .search_bar {
@@ -485,7 +517,7 @@ export default class Home extends React.Component {
                         .subtitle {
                             font-family: "DIN";
                             font-style: normal;
-                            font-weight: 500;
+                            font-weight: 400;
                             font-size: 1.5vw;
                             line-height: 3.3vh;
                             text-align: center;
@@ -518,10 +550,13 @@ export default class Home extends React.Component {
                         }
 
                         .search_result {
-                            width: 49.7vw !important;
+                            width: 50vw !important;
                             margin: 0 auto;
-                            overflow: hidden;
-                            display: none;
+                            // overflow: hidden;
+                            // display: none;
+                            box-shadow: 0px 0px 4px #9fb3ff;
+                            // border-radius: 8px;
+                            margin-top: 2.4vh;
                         }
 
                         .footer_bar {
@@ -562,8 +597,8 @@ export default class Home extends React.Component {
                             background-color: #f2f3ff;
                             margin-top: 23px;
                             padding: 34px;
-                            box-shadow: 0px 0px 8px #9fb3ff;
-                            border-radius: 14px;
+                            box-shadow: 0px 0px 4px #9fb3ff;
+                            border-radius: 8px;
                         }
                         .feedback-top-line {
                             position: relative;
@@ -572,7 +607,7 @@ export default class Home extends React.Component {
                             height: 1px;
                             background-color: #d3dfff;
                             margin-top: 1.2vh;
-                            margin-bottom: 3.9vh;
+                            margin-bottom: 3.5vh;
                         }
                         .feedback-start {
                             position: absolute;
@@ -584,23 +619,12 @@ export default class Home extends React.Component {
                                 center;
                             background-size: 100%;
                         }
-                        .feedback-address {
-                            margin-left: 23px;
-                            font-family: "Source Han Sans CN";
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 1vw;
-                            line-height: 36px;
-                            text-align: center;
-                            letter-spacing: 0.02em;
-                            color: #71769d;
-                        }
                         .feedback-list {
                             margin-top: 35px;
                             background: #f2f3ff;
                             padding: 43px 19px 43px 19px;
-                            box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.3);
-                            border-radius: 10px;
+                            box-shadow: 0px 0px 4px rgba(159, 179, 255, 0.3);
+                            border-radius: 8px;
                         }
                         .feedback-list-top {
                             display: flex;
@@ -622,18 +646,18 @@ export default class Home extends React.Component {
                             color: #727aba;
                         }
                         .feedback-list-ul {
-                            height: 35.83vh;
+                            height: 36.83vh;
                             position: relative;
                             padding: 1.4vh 1.4vw 2vh 1.1vw;
-                            box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.3);
-                            border-radius: 10px;
+                            box-shadow: 0px 0px 4px rgba(159, 179, 255, 0.3);
+                            border-radius: 8px;
                             background-color: #ffffff;
                         }
                         .feedback-top {
-                            font-family: "Source Han Sans CN";
+                            font-family: "DIN";
                             font-style: normal;
-                            font-weight: 700;
-                            font-size: 1.2vw;
+                            font-weight: 500;
+                            font-size: 1.1vw;
                             line-height: 3.3vh;
                             letter-spacing: 0.02em;
                             color: #727aba;
@@ -643,15 +667,15 @@ export default class Home extends React.Component {
                             width: 100%;
                             height: 23.06vh;
                             padding: 1.7vh 0.6vw 0 1.3vw;
-                            background: rgba(238, 238, 238, 0.5);
-                            border-radius: 10px;
+                            background: rgba(238, 238, 238, 0.2);
+                            border-radius: 8px;
                             font-family: "Source Han Sans CN";
                             font-style: normal;
                             font-weight: 400;
                             font-size: 1.04vw;
                             line-height: 2.7vh;
                             letter-spacing: 0.02em;
-                            color: #999999;
+                            color: rgba(0, 0, 0, 0.9);
                             border: transparent;
                             resize: none;
                         }
@@ -659,6 +683,7 @@ export default class Home extends React.Component {
                           display: flex;
                           justify-content: right;
                           flexDirection: row;
+                          margin-top: 1.65vh;
                         }
                         .feedback-submit {
                             // position: absolute;
@@ -724,13 +749,13 @@ export default class Home extends React.Component {
                         }
 
                         .key_factors_container {
-                            width: 49vw !important;
-                            height: 53.06vh
+                            width: 50vw !important;
+                            height: 53.06vh;
                             margin-top: 2.4vh;
                             padding: 3.9vh 1.5vw 3.8vh 1.9vw;
                             background: rgba(255, 255, 255, 0.5);
-                            box-shadow: 0px 0px 8px #9fb3ff;
-                            border-radius: 14px;
+                            box-shadow: 0px 0px 4px #9fb3ff;
+                            border-radius: 8px;
                         }
                         .key_factors_title {
                             display: flex;
@@ -738,17 +763,51 @@ export default class Home extends React.Component {
 
                         .key_factors_title span {
                             font-style: normal;
-                            font-weight: 700;
-                            font-size: 1.5vw;
+                            font-weight: 500;
+                            font-size: 1.2vw;
                             line-height: 4.1vh;
                             text-align: center;
                             letter-spacing: 0.02em;
                             color: #727aba;
-                            font-family: "Source Han Sans CN";
+                            font-family: "DIN";
                             font-style: normal;
                             font-weight: 700;
                             display: flex;
                             align-items: center;
+                        }
+                        .feedback-address {
+                            font-family: 'DIN';
+                            font-style: bold;
+                            font-weight: 500;
+                            // font-size: 1.6vw;
+                            font-size: 1.1vw;
+                            line-height: 45px;
+                            text-align: center;
+                            letter-spacing: 0.08em;
+                            color: #727aba;
+                            margin-left: 15px;
+
+                            // margin-left: 23px;
+                            // font-family: "Source Han Sans CN";
+                            // font-style: normal;
+                            // font-weight: 400;
+                            // font-size: 1vw;
+                            // line-height: 36px;
+                            // text-align: center;
+                            // letter-spacing: 0.02em;
+                            // color: #71769d;
+                        }
+                        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                            color: #999999;
+                            opacity: 1; /* Firefox */
+                            }
+
+                            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                            color: #999999;
+                            }
+
+                            ::-ms-input-placeholder { /* Microsoft Edge */
+                            color: #999999;
                         }
                     `}</style>
                     <style global jsx>{`
@@ -772,7 +831,7 @@ export default class Home extends React.Component {
                         }
                         .ethereum_dropdown {
                             background: #ffffff;
-                            box-shadow: 0px 0px 6px rgba(85, 106, 232, 0.5);
+                            box-shadow: 0px 0px 4px rgba(85, 106, 232, 0.5);
                             padding: 10px !important;
                             border-radius: 7px;
                         }
@@ -826,7 +885,7 @@ export default class Home extends React.Component {
                             margin-right: 20px;
                             background: #ffffff;
                             color: #6a88ff;
-                            box-shadow: 0px 0px 6px rgba(85, 106, 232, 0.5);
+                            box-shadow: 0px 0px 4px rgba(85, 106, 232, 0.5);
                             border-radius: 7px;
                             display: flex;
                             align-items: center;

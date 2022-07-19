@@ -43,7 +43,7 @@ export default function Home() {
           </div>
           <div className="subpage_1_subtitle_wrapper">
             <p className="subpage_1_subtitle">
-              BUILT ON DATA ANALYSIS, SERVE FOR WEB3 IDENDITY
+              BUILT ON DATA ANALYSIS, SERVE FOR WEB3 IDENTITY
               <br />
               HOPE TO HELP CONTRIBUTE TO GREAT USER ECOSYSTEM ON CHAIN
             </p>
