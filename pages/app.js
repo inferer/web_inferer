@@ -23,6 +23,9 @@ export default class Home extends React.Component {
             inputValue: "",
             feedBackVisible: false,
             textAreaValue: "",
+            searchRecord: "",
+            walletConnected: false,
+            walletAddress: ""
         };
     }
 
@@ -36,7 +39,7 @@ export default class Home extends React.Component {
         if (text === "") {
             return;
         } else {
-            this.setState({ loading: true });
+            this.setState({ loading: true, searchRecord: text});
         }
         //默认假设无查询结果
         this.setState({ isResult: false });
@@ -68,24 +71,39 @@ export default class Home extends React.Component {
         const SearchService = require("../api/SearchService");
         let searchService = new SearchService();
         let response = await searchService.feedBack({
-            address: inputValue,
-            content: textAreaValue,
+            address: this.state.inputValue,
+            content: this.state.textAreaValue,
         });
+
+        console.log("submit response = " +  JSON.stringify(response))
+
+        if(response.status == 200) {
+            console.log("submit 200")
+            this.setState({inputValue: "", isResult: false, feedBackVisible: false, textAreaValue: ""})
+        } else {
+
+        }
     }
 
     async cancel() {
-        // this.title.current.style.opacity = "0";
-        // this.subtitle.current.style.opacity = "0";
-        // this.searchBar.current.style.marginTop = "-19vh";
+        this.title.current.style.opacity = "0";
+        this.subtitle.current.style.opacity = "0";
+        this.searchBar.current.style.marginTop = "-19vh";
         this.setState({ isResult: true });
         this.setState({ feedBackVisible: false });
-        //   this.setState({ scoreDesc: scoreDesc, keyFactors: keyFactors });
-        
     }
 
     clickWallet() {
         if (initWeb3) {
-            initWeb3();
+            initWeb3((address) => {
+                console.log("dddd address = " + address)
+                if(address != "") {
+                    this.setState({ walletConnected: true, walletAddress: address });
+                } else {
+                    this.setState({ walletConnected: false });
+                }
+                
+            });
         } else {
             setTimeout(() => {
                 this.clickWallet();
@@ -173,12 +191,28 @@ export default class Home extends React.Component {
                                         <i className="select-icon"></i>
                                     </Option>
                                 </Select>
-                                <button
-                                    className="connect_button"
-                                    onClick={this.clickWallet.bind(this)}
-                                >
-                                    CONNECT TO WALLET
-                                </button>
+                                {this.state.walletConnected == true &&
+                                    (
+                                        <div
+                                            className="wallet_address"
+                                            value={
+                                                this.state.walletAddress
+                                            }
+                                        >
+                                            {this.state.walletAddress}
+                                        </div>
+                                    )
+                                }
+                                {this.state.walletConnected == false &&
+                                    (
+                                        <button
+                                            className="connect_button"
+                                            onClick={this.clickWallet.bind(this)}
+                                            >
+                                                CONNECT TO WALLET
+                                        </button>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
@@ -238,7 +272,7 @@ export default class Home extends React.Component {
                                         <></>
                                     )}
                                 </div>
-                                {this.state.isResult && (
+                                {this.state.isResult && this.state.inputValue && this.state.inputValue == this.state.searchRecord && (
                                     <motion.div
                                         style={{ width: "100%" }}
                                         initial={{ opacity: 0, y: 50 }}
@@ -270,7 +304,7 @@ export default class Home extends React.Component {
                                         </div>
                                     </motion.div>
                                 )}
-                                {this.state.feedBackVisible && (
+                                {this.state.feedBackVisible && this.state.inputValue && this.state.inputValue == this.state.searchRecord && (
                                     <motion.div
                                         className="feedBackBox"
                                         initial={{ opacity: 0, y: 50 }}
