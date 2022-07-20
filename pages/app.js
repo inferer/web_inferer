@@ -21,6 +21,7 @@ export default class Home extends React.Component {
             keyFactors: [],
             loading: false,
             isResult: false,
+            isError: false,
             inputValue: "",
             feedBackVisible: false,
             textAreaValue: "",
@@ -54,7 +55,7 @@ export default class Home extends React.Component {
         if (text === "") {
             return;
         } else {
-            this.setState({ loading: true, searchRecord: text, inputValue: text.toLowerCase()});
+            this.setState({ loading: true, isError: false, searchRecord: text, inputValue: text.toLowerCase()});
         }
         //默认假设无查询结果
         this.setState({ isResult: false });
@@ -80,7 +81,7 @@ export default class Home extends React.Component {
             this.setState({ scoreDesc: scoreDesc, keyFactors: keyFactors });
         } else {
             // 未查询到结果 隐藏
-            this.setState({ loading: false, isResult: false });
+            this.setState({ loading: false, isResult: false, isError: true });
         }
     }
     openFeedBack() {
@@ -98,7 +99,7 @@ export default class Home extends React.Component {
 
         console.log("submit response = " +  JSON.stringify(response))
 
-        if(response.status == 200) {
+        // if(response.status == 200) {
             console.log("submit 200")
             this.setState({inputValue: "", isResult: false, feedBackVisible: false, textAreaValue: ""})
             this.openNotification("Thanks for your feedback!")
@@ -106,9 +107,9 @@ export default class Home extends React.Component {
             this.title.current.style.opacity = "1";
             this.subtitle.current.style.opacity = "1";
             this.searchBar.current.style.marginTop = "0";
-        } else {
+        // } else {
 
-        }
+        // }
     }
 
     async cancel() {
@@ -413,7 +414,22 @@ export default class Home extends React.Component {
                                         </div>
                                     </motion.div>
                                 )}
-                                
+                                {this.state.isError && this.state.inputValue && this.state.inputValue == this.state.searchRecord && (
+                                    <motion.div
+                                        className="errorBox"
+                                        style={{ width: "100%" }}
+                                        transition={{duration: 0.8}}
+                                    >
+                                        <div className="layout_search_error">
+                                            <img
+                                                src="/search_error.png"
+                                                className="img_searcherror"
+                                            />
+                                            <div className="tx_search_error">404</div>
+                                            <div className="tx_search_error2">Not Found</div>
+                                        </div>
+                                    </motion.div>
+                                )}
                             </div>
 
                         <div className="footer_bar">
@@ -697,9 +713,12 @@ export default class Home extends React.Component {
                             min-width: 50px;
                             height: 3.8vh;
                             min-width: 20px;
-                            background: rgba(97, 141, 255, 1);
+                            background: #548EFF;
                             border-radius: 4px;
                             cursor: pointer;
+                        }
+                        .feedback-submit:hover {
+                            background: #0057FF;
                         }
                         .feedback-submit-icon {
                             width: 20px;
@@ -737,6 +756,9 @@ export default class Home extends React.Component {
                             border-style: solid;
                             cursor: pointer;
                         }
+                        .feedback-cancel:hover {
+                            background: #CEDCFF;
+                        }
                         .feedback-cancel-t {
                             font-family: "Source Han Sans CN";
                             font-style: normal;
@@ -744,10 +766,12 @@ export default class Home extends React.Component {
                             font-size: 0.9vw;
                             text-align: center;
                             letter-spacing: 0.1em;
-                            color: #618DFF;
+                            color: #548EFF;
                             resize: none;
                         }
-
+                        .feedback-cancel-t:hover {
+                            color: #6792FF;
+                        }
                         .key_factors_container {
                             width: 50vw !important;
                             height: 53.06vh;
@@ -759,6 +783,45 @@ export default class Home extends React.Component {
                         }
                         .key_factors_title {
                             display: flex;
+                        }
+
+                        .layout_search_error {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+
+                            margin-top: 11.2vh
+                        }
+
+                        .img_searcherror {
+                            width: 12.4vw;
+                        }
+
+                        .tx_search_error {
+                            color: #727ABA;
+                            font-weight: 500;
+                            font-size: 2.0vw;
+                            line-height: 4.1vh;
+                            text-align: center;
+                            letter-spacing: 0.02em;
+                            font-family: "DIN";
+                            font-style: normal;
+
+                            margin-top: 1.17vh
+                        }
+
+                        .tx_search_error2 {
+                            color: #727ABA;
+                            font-weight: 300;
+                            font-size: 1.6vw;
+                            line-height: 4.1vh;
+                            text-align: center;
+                            letter-spacing: 0.02em;
+                            font-family: "DIN";
+                            font-style: normal;
+
+                            margin-top: 1.46vh
                         }
 
                         .key_factors_title span {

@@ -14,23 +14,27 @@ export default function Home() {
             <div className="nav_bar">
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
+                    <div className="menu_item_docs">
                             DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
-                            COMMUNITY
-                        </button>
-                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
-                            FAQ
-                        </button>
-
-                        <LaunchAppButton onClick={()=>{
+                    </div>
+                    <div className="menu_item_whitepaper">
+                        WHITEPAPER
+                    </div>
+                    <button className="menu_button_item_community" onClick={()=>{router.push('/community')}}>
+                        COMMUNITY
+                    </button>
+                    <button className="menu_button_item_faq" onClick={()=>{router.push('/faq')}}>
+                        FAQ
+                    </button>
+                    <LaunchAppButton onClick={()=>{
                             router.push('/app')
                         }}/>
+                    <div className="menu_container">
+                        
+                        
+                        
+
+                        
                     </div>
                 </div>
             </div>
@@ -48,13 +52,13 @@ export default function Home() {
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What's Inferer ?</span>
-                                <span className='item2'>A: Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and   
+                                <span className='item2'>A: &nbsp;&nbsp;Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and   
                                 contribute to greate user ecysystem on chain.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What products do Inferer provide?</span>
-                                <span className='item2'>A: Currently we have Inferer Search and Inferer API, which serves in different purposes. Inferer Search focuses more on instant-check search 
+                                <span className='item2'>A: &nbsp;&nbsp;Currently we have Inferer Search and Inferer API, which serves in different purposes. Inferer Search focuses more on instant-check search 
      scenarios, which enable user to have a quick scan on address whether it's bot related and what behaviors it generated before; Inferer API 
      focuses more on pre-security check scenarios, which could help prevent hackers from invading system and contribute to more security 
      ecosystem.
@@ -62,33 +66,33 @@ export default function Home() {
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What's Inferer evaluation result?</span>
-                                <span className='item2'>A: We learned from "Credit Score", and integrate it to our evaluation. Currenlty we have 5 evaluation levels, which includes Exceptional, Very 
+                                <span className='item2'>A: &nbsp;&nbsp;We learned from "Credit Score", and integrate it to our evaluation. Currenlty we have 5 evaluation levels, which includes Exceptional, Very 
      Good, Good, Fair and Poor. These levels indicates the user behavior and the degree related with bots. We may adjust it if necessary in the 
      future.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: Can I use Inferer in our AirDrop activity?</span>
-                                <span className='item2'>A: Sure. Inferer fits well in AirDrop list management. It would help in filtering target users efficiently and save the project team much time and 
+                                <span className='item2'>A: &nbsp;&nbsp;Sure. Inferer fits well in AirDrop list management. It would help in filtering target users efficiently and save the project team much time and 
      work.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What about community in Inferer ?</span>
-                                <span className='item2'>A: Inferer's born in web3 and focus on community all the time. We would need big community participation in our evaluation process. Also, 
+                                <span className='item2'>A: &nbsp;&nbsp;Inferer's born in web3 and focus on community all the time. We would need big community participation in our evaluation process. Also, 
      Inferer would not be a centralized service provider and would be running backed up by our community.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What if the evaluation result doesn't fit into the fact?</span>
-                                <span className='item2'>A: Inferer provide feedback feature in our product and welcome users provide further feedbacks when they believe it doesn't fit into the fact,   
+                                <span className='item2'>A: &nbsp;&nbsp;Inferer provide feedback feature in our product and welcome users provide further feedbacks when they believe it doesn't fit into the fact,   
      which would help us improving our service. Internally, when we receive the feedback, we would have a re-analysis process on it and come   
      up with a solution. And this whole process would be checked and published in community.
                                 </span>
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What blockchains does Inferer support?</span>
-                                <span className='item2'>A: Currently Inferer is available in PlatON, Ethereum and Polygon.
+                                <span className='item2'>A: &nbsp;&nbsp;Currently Inferer is available in PlatON, Ethereum and Polygon.
                                 </span>
                             </li>
                         </ul>
@@ -133,31 +137,37 @@ export default function Home() {
               //   justify-content: center;
               // }
 
+              .ul {
+                padding-inline-start: 0px;
+              }
+
               .nav_bar {
                 backdrop-filter: blur(100px);
-                background-color: transparent;
+                // background-color: transparent;
                 width: 100%;
                 height: 9.8%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                // justify-content: center;
+                align-items: center;
               }
 
 
               .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
+                // min-width: 1200px;
+                width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                // justify-content: space-between;
                 z-index:2;
               }
 
               .logo {
-                width: 25px;
-                height: 25px;
-                margin-left: 40px;
+                width: 1.67%;
+                // height: 32px;
+                min-width: 15px;
+                margin-left: 18.49%;
                 -webkit-user-drag: none;
               }
 
@@ -165,6 +175,65 @@ export default function Home() {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                // width: 100%;
+              }
+
+              .menu_item_docs {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                margin-left: 30.1%;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_item_whitepaper {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                margin-left: 1.77%;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_button_item_community {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                background-color: transparent; 
+                border: none;
+                margin-left: 2%;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_button_item_community:hover {
+                color: #44488F;
+              }
+
+              .menu_button_item_faq {
+                font-family: 'DIN';
+                background-color: transparent; 
+                border: none;
+                margin-left: 1%;
+                margin-right: 1.1%;
+                color: white;
+                font-weight: 500;
+                font-size: 16px;
+                cursor: pointer;
+              }
+
+              .menu_button_item_faq:hover {
+                color: #44488F;
               }
 
               .menu_item {
@@ -417,8 +486,8 @@ export default function Home() {
                 border-radius: 10px;
             }
             .item1{
-                font-family: 'DIN-Bold';
-                font-weight: 700;
+                font-family: 'DIN';
+                font-weight: 500;
                 font-size: 24px;
                 line-height: 29px;
                 letter-spacing: 0.02em;
@@ -428,15 +497,15 @@ export default function Home() {
             }
             .item2{
                 margin-top:12px;
-                font-family: 'D-DIN-Regular';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 16px;
+                font-family: 'DIN';
+                // font-style: Bold;
+                font-weight: 400;
+                font-size: 17px;
                 line-height: 22px;
                 letter-spacing: 0.02em;
                 color: #DADADA;
-                padding-left: 1.5em;
-                text-indent: -1.5em;
+                padding-left: 1.9em;
+                text-indent: -1.8em;
             }
             .menu_item {
                 margin-left: 25px;
@@ -452,7 +521,7 @@ export default function Home() {
                 background: url(/faq2.png) no-repeat;
                 background-size: 100% 100%;
                 backgroud-position: cebter;
-                height: calc(100vh - 66px);
+                height: calc(100vh - 66px);;
                 overflow-y: auto;
                 padding-bottom:80px;
             }
@@ -503,9 +572,8 @@ export default function Home() {
                 // .content-fq{
                 //   width:800px!important;
                 // }
-                .footer_bar_content{
+                .footer_bar {
                   width: 800px!important;
-                  min-width: 800px!important;
                 }
                 .nav_bar_content{
                   min-width:800px !important;

@@ -51,24 +51,24 @@ export default function Home() {
                         </div>
                     </div> */}
                     <div className='community-2 '>
-                    <div className='coon-1204 flex-b'>
-                    <div className='left flex-l'>
-                        <span className='community-2-name'>Owned by the community</span>
-                        <span className='community-2-name-detail'>
-                        Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without our
-                        community.
-                        </span>
-                        <span className='community-2-name-detail community-2-next-detail'>
-                        Inferer community would play in a big role in our evaluation system. They're decentralized and become an internal part in our evaluation
-                        process, which improves inferer all the time.
-                        </span>
-                    </div>
+                        <div className='coon-1204 flex-b'>
+                            <div className='left flex-l'>
+                                <span className='community-2-name'>Owned by the community</span>
+                                <span className='community-2-name-detail'>
+                                Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without our
+                                community.
+                                </span>
+                                <span className='community-2-name-detail community-2-next-detail'>
+                                The community would play in a big role in our evaluation system. They're decentralized and become an internal part in our evaluation
+                                process, which improves inferer all the time.
+                                </span>
+                            </div>
                             <div className='right'>
                                 <img className='right-img' src='/community-right.png' />
-                                <div className='right-bg'></div>
+                                {/* <div className='right-bg'></div> */}
                             </div>
+                        </div>
                     </div>
-                  </div>
                  <div className='community-3'>
                     <div className='coon-1204'>
                         <div className='community-3-bg'></div>
@@ -117,14 +117,14 @@ export default function Home() {
 
               .nav_bar {
                 backdrop-filter: blur(100px);
-                background-color: transparent;
+                background-color: #0D0C1E;
                 width: 100%;
-                height: 100px;
+                height: 9.54vh;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                z-index:3;
+                z-index:100;
               }
               
               .nav_bar_content {
@@ -162,34 +162,35 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 16px;
                 cursor: pointer;
               }
 
               .menu_button_item {
                 font-family: 'DIN';
+                font-style: normal;
                 background-color: transparent; 
                 border: none;
                 margin-left: 25px;
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 16px;
                 cursor: pointer;
               }
 
               .menu_button_item:hover {
                 color: #44488F;
               }
-              .right-bg{
-                position: absolute;
-                width: 674px;
-                height: 678px;
-                top: -120px;
-                right: -110px;
-                background: url(/qiu-bg.png) no-repeat;
-                background-size: 100%;
-              }
+            //   .right-bg{
+            //     position: absolute;
+            //     width: 674px;
+            //     height: 678px;
+            //     top: -120px;
+            //     right: -110px;
+            //     background: url(/qiu-bg.png) no-repeat;
+            //     background-size: 100%;
+            //   }
               .flex-s {
                 display: flex;
             }
@@ -215,13 +216,13 @@ export default function Home() {
                 align-items: center;
               }
 
-              .menu_item {
-                margin-left: 25px;
-                margin-right: 25px;
-                color: white;
-                font-weight: 500;
-                font-size: 16px;
-              }
+            //   .menu_item {
+            //     margin-left: 25px;
+            //     margin-right: 25px;
+            //     color: white;
+            //     font-weight: 500;
+            //     font-size: 16px;
+            //   }
               .content{
                 padding-top:152px;
                 width: 100%;
@@ -241,7 +242,7 @@ export default function Home() {
                 padding: 100px 0 115px 0;
             }
             .name{
-                font-family: 'DIN';
+                font-family: 'D-DIN-Medium';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 28px;
@@ -252,8 +253,7 @@ export default function Home() {
             }
             .name-detail{
                 margin-top: 18px;
-                font-family: 'DIN';
-                font-style: normal;
+                font-family: 'D-DIN-Regular';
                 font-weight: 500;
                 font-size: 22px;
                 line-height: 27px;
@@ -265,13 +265,13 @@ export default function Home() {
                 padding: 74px 0 83px 0;
             }
             .left{
-                width: 62.86%
+                width: 34.95vw
                 padding-top: 114px;
                 width: calc(100% - 397px);
-                margin-right: 97px
+                // margin-right: 97px
             }
             .community-2-name{
-                font-family: 'DIN-Regular';
+                font-family: 'D-DIN-Medium';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 28px;
@@ -282,7 +282,7 @@ export default function Home() {
             }
             .community-2-name-detail {
                 margin-top: 12px;
-                font-family: 'DIN-Regular';
+                font-family: 'D-DIN-Regular';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 22px;
@@ -297,30 +297,32 @@ export default function Home() {
                 position: relative;
             }
             .right-img{
-                position: relative;
+                // position: relative;
                 z-index: 1;
-                width: 397px;
-                height: 397px;
+                width: 35.1vw;
+                height: 51.29vh;
             }
-            .right-bg{
-                position: absolute;
-                height: 678px;
-                top: -120px;
-                right: -110px;
-                background: url(/qiu-bg.png) no-repeat;
-                background-size: 100%;
-            }
+            // .right-bg{
+            //     position: absolute;
+            //     height: 678px;
+            //     top: -120px;
+            //     right: -110px;
+            //     background: url(/qiu-bg.png) no-repeat;
+            //     background-size: 100%;
+            // }
             .community-3{
-                position: relative;
-                margin-top:80px;
+                // position: relative;
+                padding-top: 7.5vh;
                 width:100%;
+                height:87.13vh
+                background: #ffffff;
             }
             .community-3-bg{
                 position: absolute;
-                top: -232px;
-                left: -172px;
-                width: 1581px;
-                height: 1148px;
+                // top: -232px;
+                // left: -172px;
+                width: 100%;
+                height: 87.13vh;
                 background: url(/community-foot.png) no-repeat center;
                 background-size: 100%;
             }

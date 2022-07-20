@@ -5,11 +5,12 @@ export default class LaunchAppButton extends React.Component {
 
     render() {
         return (
-            <div className='container' style={this.props.customStyle} onClick={this.props.onClick}>
+            // onClick={this.props.onClick}
+            <div className='container' style={this.props.customStyle}>
                 <div className='color_bg'></div>
-                <div className='button'>
+                <a className='button' target="_blank" href="/app">
                     <div className='button_text'>LAUNCH APP</div>
-                </div>
+                </a>
 
 
                 <style jsx>{`

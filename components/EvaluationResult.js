@@ -148,10 +148,10 @@ class EvaluationResult extends React.Component {
                                             let list = item.value.split(',');
                                             return (
                                               <>
-                                            {     list.map((item, index) => {
+                                            {     list.map((item, subindex) => {
                                                   return (
-                                                    <div key={index} className="subInfo">
-                                                      <div>{index == 0 ? 'Top 3 Interacted Address' : ''}</div>
+                                                    <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                      <div>{subindex == 0 ? 'Top 3 Interacted Address' : ''}</div>
                                                       <div className='rightContent'>
                                                         <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                         <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -166,10 +166,10 @@ class EvaluationResult extends React.Component {
                                             if(item.value.indexOf('and more') != -1) {
                                               return (
                                                 <>
-                                                  {list.map((item, index) => {
+                                                  {list.map((item, subindex) => {
                                                     return (
-                                                      <div key={index}  className="subInfo">
-                                                        <div>{index == 0 ? 'Interacted Addresses' : ''}</div>
+                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -177,7 +177,7 @@ class EvaluationResult extends React.Component {
                                                       </div>
                                                     )
                                                   })}
-                                                  <div className="subInfo">
+                                                  <div key={index} className="subInfo" style={{background: index%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
                                                     <div></div>
                                                     <div>......</div>
                                                   </div>
@@ -186,10 +186,10 @@ class EvaluationResult extends React.Component {
                                             }else {
                                               return (
                                                 <>
-                                                  {list.map((item, index) => {
+                                                  {list.map((item, subindex) => {
                                                     return (
-                                                      <div key={index}  className="subInfo">
-                                                        <div>{index == 0 ? 'Interacted Addresses' : ''}</div>
+                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -202,7 +202,7 @@ class EvaluationResult extends React.Component {
                                             }
                                           }else {
                                             return (
-                                              <div className="subInfo">
+                                              <div key={index} className="subInfo" style={{background: index%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
                                                 <div>{item.key}</div>
                                                 <div>{item.value}</div>
                                               </div>
@@ -304,7 +304,6 @@ class EvaluationResult extends React.Component {
                 .subInfo{
                   width: 100%;
                   height: 62px;
-                  background: #F6FDFF;
                   padding:0 21px 0 41px;
                   display: flex;
                   align-items:center;
@@ -313,6 +312,9 @@ class EvaluationResult extends React.Component {
                   width: 100%;
                   justify-content: space-between;
                   cursor: text;
+                }
+                .subInfo:hover{
+                    background: #000000;
                 }
                 .rightContent{
                   display: flex;
@@ -536,9 +538,15 @@ class EvaluationResult extends React.Component {
                     justify-content: space-between;
                   }
                 }
+                .key_factors_item_style.stringType:hover{
+                    background:#000000;
+                }
                 .key_factors_item_style.objectType{
                   display: block;
                   cursor: pointer;
+                }
+                .key_factors_item_style.objectType:hover{
+                    background:#000000;
                 }
 
                 .feedback {

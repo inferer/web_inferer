@@ -2,24 +2,31 @@
 import React from 'react';
 
 export default ({ title, subtitle, icon, customStyle }) => (
-    <div className='container' style={customStyle}>
+    <a className='container' style={customStyle} target="_blank" href="/app">
+        
         <img src={icon} className='icon'></img>
-        <div style={{marginLeft: '16px'}}>
-            <div className='title'>{title}</div>
-            <div>
-                <div className='subtitle'>{subtitle}</div>
-            </div>
-        </div>
+            <div style={{marginLeft: '16px'}}>
+                <div className='title'>{title}</div>
+                <div>
+                    <div className='subtitle'>{subtitle}</div>
+                </div>
+            </div>       
 
         <style jsx>{`
           .container {
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: start;
             background: #0A0917;
+            // background: #ffffff;
             border-radius: 15px;
-            width: 573px;
-            height: 146px;
+            width: 29.9vw;
+            height: 13.52vh;
+          }
+
+          .container:hover {
+              background: #1F1C43;
           }
           
           .icon {
@@ -52,6 +59,11 @@ export default ({ title, subtitle, icon, customStyle }) => (
             line-height: 21px;
             color: #FFFFFF;
           }
+
+          .button {
+              width: 100%;
+              height:100%;
+          }
           
           .arrow {
             width: 10px;
@@ -70,5 +82,5 @@ export default ({ title, subtitle, icon, customStyle }) => (
             }
            }
         `}</style>
-    </div>
+    </a>
 );
