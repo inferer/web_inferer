@@ -311,11 +311,10 @@ export default function Home() {
             //     background-size: 100%;
             // }
             .community-3{
-                // position: relative;
                 padding-top: 7.5vh;
                 width:100%;
                 height:87.13vh
-                background: #ffffff;
+                // background: #ffffff;
             }
             .community-3-bg{
                 position: absolute;
@@ -323,12 +322,12 @@ export default function Home() {
                 // left: -172px;
                 width: 100%;
                 height: 87.13vh;
-                background: url(/community-foot.png) no-repeat center;
+                background: url(/community-foot.png) no-repeat;
                 background-size: 100%;
             }
             .community-join{
                 position: relative;
-                z-index:1;
+                // z-index:1;
                 padding:89px 194px 120px 194px;
                 background: #0D0C1E;
                 border-radius: 47px;

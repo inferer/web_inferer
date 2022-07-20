@@ -2,7 +2,7 @@
 import React from 'react';
 
 export default ({ title, subtitle, icon, customStyle }) => (
-    <a className='container' style={customStyle} target="_blank" href="/app">
+    <a className='container' style={customStyle} target="_blank" href="https://twitter.com/inferer_xyz">
         
         <img src={icon} className='icon'></img>
             <div style={{marginLeft: '16px'}}>
@@ -69,18 +69,18 @@ export default ({ title, subtitle, icon, customStyle }) => (
             width: 10px;
             height: 10px;
           }
-          @media (max-width:1280px) {
-            .container {
-              width: 373px !important;
-              height: 126px;
-            }
-           }
-           @media (max-width:768px) {
-            .container {
-              width: 237px !important;
-              height: 126px;
-            }
-           }
+        //   @media (max-width:1280px) {
+        //     .container {
+        //       width: 373px !important;
+        //       height: 126px;
+        //     }
+        //    }
+        //    @media (max-width:768px) {
+        //     .container {
+        //       width: 237px !important;
+        //       height: 126px;
+        //     }
+        //    }
         `}</style>
     </a>
 );

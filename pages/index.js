@@ -630,9 +630,9 @@ export default function Home() {
                 // .subpage_1_title_bg{
                 //   margin-top: -20px !important;
                 // }
-                .card_container{
-                  width:500px!important
-                }
+                // .card_container{
+                //   width:500px!important
+                // }
                 .nav_bar_content{
                   min-width:320px !important;
                }

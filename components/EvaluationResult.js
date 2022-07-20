@@ -161,6 +161,44 @@ class EvaluationResult extends React.Component {
                                                 })}
                                               </>
                                             )
+                                          }else if(item.key == 'Contributed Projects') {
+                                            let list = item.value.split(',');
+                                            if(item.value.indexOf('and more') != -1) {
+                                              return (
+                                                <>
+                                                  {list.map((item, subindex) => {
+                                                    return (
+                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{subindex == 0 ? 'Contributed Projects' : ''}</div>
+                                                        <div className='rightContent'>
+                                                          <span className='addSpan'>{item}</span>
+                                                        </div>
+                                                      </div>
+                                                    )
+                                                  })}
+                                                  <div key={index} className="subInfo" style={{background: index%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                    <div></div>
+                                                    <div>......</div>
+                                                  </div>
+                                                </>
+                                              )
+                                            }else {
+                                              return (
+                                                <>
+                                                  {list.map((item, subindex) => {
+                                                    return (
+                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
+                                                        <div className='rightContent'>
+                                                          <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
+                                                          <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
+                                                        </div>
+                                                      </div>
+                                                    )
+                                                  })}
+                                                </>
+                                              )
+                                            }
                                           }else if(item.key == 'Interacted Addresses') {
                                             let list = item.value.split(',');
                                             if(item.value.indexOf('and more') != -1) {
