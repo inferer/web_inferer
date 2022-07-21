@@ -11,24 +11,21 @@ export default function Home() {
             <div className="nav_bar">
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
+                    <div className="menu_item_docs">
                             DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
-                            COMMUNITY
-                        </button>
-                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
-                            FAQ
-                        </button>
-
-                        <LaunchAppButton onClick={()=>{
+                    </div>
+                    <div className="menu_item_whitepaper">
+                        WHITEPAPER
+                    </div>
+                    <button className="menu_button_item_community" onClick={()=>{router.push('/community')}}>
+                        COMMUNITY
+                    </button>
+                    <button className="menu_button_item_faq" onClick={()=>{router.push('/faq')}}>
+                        FAQ
+                    </button>
+                    <LaunchAppButton onClick={()=>{
                             router.push('/app')
                         }}/>
-                    </div>
                 </div>
             </div>
 
@@ -103,28 +100,30 @@ export default function Home() {
                 backdrop-filter: blur(100px);
                 background-color: #0D0C1E;
                 width: 100%;
-                height: 9.54vh;
+                height: 9.8%;
                 position: fixed;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                z-index:100;
+                // justify-content: center;
+                align-items: center;
+                z-index: 1;
               }
-              
+
+
               .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
+                // min-width: 1200px;
+                width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                // justify-content: space-between;
                 z-index:2;
               }
 
-              
-
               .logo {
-                width: 32px;
-                height: 32px;
+                width: 1.67%;
+                // height: 32px;
+                min-width: 15px;
+                margin-left: 18.49%;
                 -webkit-user-drag: none;
               }
 
@@ -132,6 +131,70 @@ export default function Home() {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                // width: 100%;
+              }
+
+              .menu_item_docs {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                margin-left: 30.1%;
+                color: white;
+                font-weight: 500;
+                font-size: 0.83vw;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_item_whitepaper {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                margin-left: 1.77%;
+                color: white;
+                font-weight: 500;
+                font-size: 0.83vw;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_button_item_community {
+                font-family: 'Source Han Sans CN';
+                font-style: bold;
+                background-color: transparent; 
+                border: none;
+                margin-left: 2%;
+                color: white;
+                font-weight: 500;
+                font-size: 0.83vw;
+                cursor: pointer;
+                letter-spacing: 0.08em;
+                line-height: 24px;
+              }
+
+              .menu_button_item_community:hover {
+                color: #44488F;
+              }
+
+              .menu_button_item_faq {
+                font-family: 'Source Han Sans CN';
+                background-color: transparent; 
+                border: none;
+                margin-left: 1%;
+                margin-right: 1.1%;
+                color: white;
+                font-weight: 500;
+                font-size: 0.83vw;
+                cursor: pointer;
+              }
+
+              .menu_button_item_faq:hover {
+                color: #44488F;
+              }
+
+              .menu_launch {
+                  display: flex;
+                  flex-direction: row;
               }
 
               .menu_item {
@@ -141,29 +204,26 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
 
               .menu_button_item {
                 font-family: 'DIN';
-                font-style: normal;
                 background-color: transparent; 
                 border: none;
                 margin-left: 25px;
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 14px;
                 cursor: pointer;
               }
 
               .menu_button_item:hover {
                 color: #44488F;
               }
-              .flex-s {
-                display: flex;
-            }
+              
             .flex-b {
                 display: flex;
                 flex-direction: row;
@@ -195,7 +255,7 @@ export default function Home() {
                 // padding-top:152px;
                 width: 100%;
                 // background-size: 100%;
-                padding-bottom:205px;
+                padding-bottom:215px;
             }
             .community-1{
                 width:100vw;

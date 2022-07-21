@@ -123,17 +123,6 @@ export default function Home() {
 
               }
 
-              // .nav_bar {
-              //   backdrop-filter: blur(100px);
-              //   background-color: transparent;
-              //   width: 100%;
-              //   height: 100px;
-              //   position: fixed;
-              //   display: flex;
-              //   flex-direction: row;
-              //   justify-content: center;
-              // }
-
               .ul {
                 padding-inline-start: 0px;
               }
@@ -148,6 +137,7 @@ export default function Home() {
                 flex-direction: row;
                 // justify-content: center;
                 align-items: center;
+                z-index: 1;
               }
 
 
@@ -157,7 +147,7 @@ export default function Home() {
                 display: flex;
                 align-items: center;
                 // justify-content: space-between;
-                z-index:2;
+                // z-index:100;
               }
 
               .logo {
@@ -181,7 +171,7 @@ export default function Home() {
                 margin-left: 30.1%;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.83vw;
                 cursor: pointer;
                 letter-spacing: 0.08em;
                 line-height: 24px;
@@ -193,7 +183,7 @@ export default function Home() {
                 margin-left: 1.77%;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.83vw;
                 cursor: pointer;
                 letter-spacing: 0.08em;
                 line-height: 24px;
@@ -207,7 +197,7 @@ export default function Home() {
                 margin-left: 2%;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.83vw;
                 cursor: pointer;
                 letter-spacing: 0.08em;
                 line-height: 24px;
@@ -218,14 +208,14 @@ export default function Home() {
               }
 
               .menu_button_item_faq {
-                font-family: 'DIN';
+                font-family: 'Source Han Sans CN';
                 background-color: transparent; 
                 border: none;
                 margin-left: 1%;
                 margin-right: 1.1%;
                 color: white;
                 font-weight: 500;
-                font-size: 16px;
+                font-size: 0.83vw;
                 cursor: pointer;
               }
 
