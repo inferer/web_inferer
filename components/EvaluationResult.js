@@ -72,7 +72,7 @@ class EvaluationResult extends React.Component {
               <div className="key_factors_container">
                   <div style={{display: "flex", flexDirection: "row", height: "80px", alignItems: "center"}}>
                       <img src="/icon_keey_factor.svg" className="key_factors_icon"></img>
-                      <div className="key_factors_title">Key Factors 2</div>
+                      <div className="key_factors_title">Key Factors</div>
                   </div>
 
                   <div className="key_factors_list_container">
@@ -109,15 +109,15 @@ class EvaluationResult extends React.Component {
                                         <div className="key_factors_item_title">{keyFactor.key}</div>
                                       </div>
                                       {this.state.activeIndex.indexOf(index) != -1 ? <div>
-                                        {arr.map(item => {
+                                        {arr.map((item,subindex) => {
                                           if(item.key == 'Top 3 Interacted Address') {
                                             let list = item.value.split(',');
                                             return (
                                               <>
-                                            {     list.map((item, subindex) => {
+                                            {     list.map((item, splitindex) => {
                                                   return (
-                                                    <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
-                                                      <div>{subindex == 0 ? 'Top 3 Interacted Address' : ''}</div>
+                                                    <div key={splitindex} className="subInfo" style={{background: splitindex%2 == 1 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                      <div>{splitindex == 0 ? 'Top 3 Interacted Address' : ''}</div>
                                                       <div className='rightContent'>
                                                         <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                         <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -132,10 +132,10 @@ class EvaluationResult extends React.Component {
                                             if(item.value.indexOf('and more') != -1) {
                                               return (
                                                 <>
-                                                  {list.map((item, subindex) => {
+                                                  {list.map((item, splitindex) => {
                                                     return (
-                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
-                                                        <div>{subindex == 0 ? 'Contributed Projects' : ''}</div>
+                                                      <div key={splitindex} className="subInfo" style={{background: splitindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{splitindex == 0 ? 'Contributed Projects' : ''}</div>
                                                         <div className='rightContent'>
                                                           <span className='addSpan'>{item}</span>
                                                         </div>
@@ -151,10 +151,10 @@ class EvaluationResult extends React.Component {
                                             }else {
                                               return (
                                                 <>
-                                                  {list.map((item, subindex) => {
+                                                  {list.map((item, splitindex) => {
                                                     return (
-                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
-                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
+                                                      <div key={splitindex} className="subInfo" style={{background: splitindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{splitindex == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -170,10 +170,10 @@ class EvaluationResult extends React.Component {
                                             if(item.value.indexOf('and more') != -1) {
                                               return (
                                                 <>
-                                                  {list.map((item, subindex) => {
+                                                  {list.map((item, splitindex) => {
                                                     return (
-                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
-                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
+                                                      <div key={splitindex} className="subInfo" style={{background: splitindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{splitindex == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -190,10 +190,10 @@ class EvaluationResult extends React.Component {
                                             }else {
                                               return (
                                                 <>
-                                                  {list.map((item, subindex) => {
+                                                  {list.map((item, splitindex) => {
                                                     return (
-                                                      <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
-                                                        <div>{subindex == 0 ? 'Interacted Addresses' : ''}</div>
+                                                      <div key={splitindex} className="subInfo" style={{background: splitindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                                        <div>{splitindex == 0 ? 'Interacted Addresses' : ''}</div>
                                                         <div className='rightContent'>
                                                           <Tooltip title={item}><span className='addSpan'>{item}</span></Tooltip>
                                                           <span><img src="/copy.svg" className='copySpan' onClick={this.copyHandle.bind(this, item)}></img></span>
@@ -204,9 +204,16 @@ class EvaluationResult extends React.Component {
                                                 </>
                                               )
                                             }
+                                          }else if(item.key == 'Interacted Count') {
+                                              return (
+                                                <div key={index} className="subInfo" style={{background: "#F6FDFF"}}>
+                                                    <div>{item.key}</div>
+                                                    <div>{item.value}</div>
+                                                </div>
+                                              )
                                           }else {
                                             return (
-                                              <div key={index} className="subInfo" style={{background: index%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
+                                              <div key={subindex} className="subInfo" style={{background: subindex%2 == 0 ? "#F6FDFF" : "#EDFBFF"}}>
                                                 <div>{item.key}</div>
                                                 <div>{item.value}</div>
                                               </div>
@@ -317,9 +324,10 @@ class EvaluationResult extends React.Component {
                   justify-content: space-between;
                   cursor: text;
                 }
-                .subInfo:hover{
-                    background: #000000;
-                }
+                // .subInfo:hover {
+                //     background: #000000;
+                // }
+
                 .rightContent{
                   display: flex;
                   align-items: center;
@@ -538,6 +546,8 @@ class EvaluationResult extends React.Component {
                   flexDirection: row;
                   align-items: center;
                 }
+
+
                 .key_factors_item_style.stringType{
                   height:60px;
                   display: flex;
@@ -548,15 +558,10 @@ class EvaluationResult extends React.Component {
                     justify-content: space-between;
                   }
                 }
-                .key_factors_item_style.stringType:hover{
-                    background:#000000;
-                }
+
                 .key_factors_item_style.objectType{
                   display: block;
                   cursor: pointer;
-                }
-                .key_factors_item_style.objectType:hover{
-                    background:#000000;
                 }
 
                 .feedback {
