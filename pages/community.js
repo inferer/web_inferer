@@ -30,9 +30,8 @@ export default function Home() {
             </div>
 
             <div style={{width: "100%", height: "58.5px"}}/>
-            <div className="content">
-                <div>
-                    <div className='community-1 layout_column'>
+            <div>
+                <div className='community-1 layout_column'>
                             <span className='name'>Community</span>
                             <span className='name-detail'>Inferer community is an ecosystem of users, developers, designers and evaluators. </span>
                     </div>
@@ -52,48 +51,45 @@ export default function Home() {
                                 <img className='right-img' src='/community-right.png' />
                         </div>
                     </div>
-                 <div className='community-3'>
-                    <div className='community-3-bg'></div>
-                    <div className='community-join layout_column'>
-                        <div className='layout_column'>
-                            <span className='title-m'>Join the community</span>
-                            <p className='title-j'>Join the community and participate in our discussions. </p>
-                        </div>
-                        <div className='community-icon'>
-                            <ul className='flex-b'>
-                                <li className='layout_justify_center layout_column'>
-                                    <div className='radius flex-c layout_justify_center'>
-                                        <div className='twitter-icon'></div>
-                                    </div>
-                                    <span className='tips'>Twitter<br/> Community</span>
-                                </li>
-                                <li className='layout_justify_center layout_column'>
-                                    <div className='discoverd-icon flex-c layout_justify_center'>
-                                    </div>
-                                    <span className='tips'>Discord <br/> Community</span>
-                                </li>
-                                <li className='layout_justify_center layout_column'>
-                                    <div className='radius flex-c layout_justify_center'>
-                                    <i className='tel-icon'></i>
-                                    </div>
-                                    <span className='tips'>Telegram<br/>  Community</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className='community-input flex-b'>
-                            <input type="text" className='input' placeholder='Your e-mail'></input>
-                            <div className='submit'>Subscribe</div>
+                    <div className='community-3'>
+                        <div className='community-join layout_column'>
+                            <div className='layout_column'>
+                                <span className='title-m'>Join the community 2</span>
+                                <p className='title-j'>Join the community and participate in our discussions. </p>
+                            </div>
+                            <div className='community-icon'>
+                                <ul className='flex-b'>
+                                    <li className='layout_justify_center layout_column'>
+                                        <div className='radius flex-c layout_justify_center'>
+                                            <div className='twitter-icon'></div>
+                                        </div>
+                                        <span className='tips'>Twitter<br/> Community</span>
+                                    </li>
+                                    <li className='layout_justify_center layout_column'>
+                                        <div className='discoverd-icon flex-c layout_justify_center'>
+                                        </div>
+                                        <span className='tips'>Discord <br/> Community</span>
+                                    </li>
+                                    <li className='layout_justify_center layout_column'>
+                                        <div className='radius flex-c layout_justify_center'>
+                                        <i className='tel-icon'></i>
+                                        </div>
+                                        <span className='tips'>Telegram<br/>  Community</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className='community-input flex-b'>
+                                <input type="text" className='input' placeholder='Your e-mail'></input>
+                                <div className='submit'>Subscribe</div>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                </div>
             </div>
 
             <style jsx>{`
               .container{
                 width: 100%;
                 height: 100%;
-                background: #17152A;
               }
 
               .nav_bar {
@@ -251,12 +247,7 @@ export default function Home() {
                 align-items: center;
               }
 
-            .content{
-                // padding-top:152px;
-                width: 100%;
-                // background-size: 100%;
-                padding-bottom:215px;
-            }
+            
             .community-1{
                 width:100vw;
                 padding-left:18.59vw;
@@ -264,6 +255,7 @@ export default function Home() {
                 padding-top: 20.84vh;
                 padding-bottom:10.5vh;
                 // padding: 100px 0 115px 0;
+                background: #17152A;
             }
             .name{
                 font-family: 'DIN';
@@ -319,19 +311,19 @@ export default function Home() {
                 width: 35.1vw;
                 // height: 51.29vh;
             }
-            .community-3{
+            .community-3 {
                 padding-top: 8.5vh;
+                // padding-bottom:10.31vh;
+                padding-bottom:60.31vh;
                 padding-left:18.59vw;
                 padding-right:18.59vw;
-                width:100%;
-                height:67.31vh
-                // background: #ffffff;
-            }
-            .community-3-bg{
-                width: 100vw;
-                // height: 87.13vh;
+                width:100vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                // background: #17152A;
                 background: url(/community-foot.png) no-repeat;
-                // background-size: 100%;
+                background-size: 100% 100%;
             }
             .community-join {
                 background: #0D0C1E;

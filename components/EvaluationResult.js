@@ -13,58 +13,24 @@ class EvaluationResult extends React.Component {
   }
 
   initRate(scoreDesc) {
+      console.log(`scoreDesc = ${scoreDesc}`)
     var nums = 0;
     switch(scoreDesc)
     {
       case "Poor":
-        nums = 1;
-        break;
+        return <img src="/rate_poor.png" className="img_rate_result"></img>
       case "Fair":
-        nums = 2;
-        break;
+        return <img src="/rate_fair.png" className="img_rate_result"></img>
       case "Good":
-        nums = 3;
-        break;
-      case "Very Good":
-        nums = 4;
-        break;
-      case "EXCEPTIONAL":
-        nums = 5;
-        break;
+        return <img src="/rate_good.png" className="img_rate_result"></img>
+      case "Very good":
+          console.log(`------verygood = ${scoreDesc}`)
+        return <img src="/rate_verygood.png" className="img_rate_result"></img>
+      case "Exceptional":
+        return <img src="/rate_excellent.png" className="img_rate_result"></img>
     }
-    const expresses = [
-      {rate: "/on-start.png", choose: true,},
-      {rate: "/on-start.png", choose: true},
-      {rate: "/on-start.png", choose: true},
-      {rate: "/on-start.png", choose: false},
-      {rate: "/on-start.png", choose: false},
-    ]
-    
-    return expresses.map((value,index)=>{
-      let bg = '';
-      if(nums == 1) {
-        if(index + 1 <= nums) {
-          bg = '/solidblackstar.png'
-        }else {
-          bg = '/emptyblackstar.png'
-        }
-      }else if(nums == 2 || nums == 3 || nums == 4) {
-        if(index + 1 <= nums) {
-          bg = '/solidbludstar.png'
-        }else {
-          bg = '/emptybluestar.png'
-        }
-      }else if(nums == 5) {
-        bg = '/redstar.png'
-      }
-      return <div key={index+2} style={{marginRight: 13, width: 28, height: 25, background: `url(${bg}) no-repeat`,backgroundSize: '100%'}} className='star' onClick={()=>{
-        if(value.choose){
-          value.choose = false
-        } else {
-          value.choose = true
-        }
-      }}></div>
-    })
+
+    return "";
   }
   
   clickHandle(index) {
@@ -106,7 +72,7 @@ class EvaluationResult extends React.Component {
               <div className="key_factors_container">
                   <div style={{display: "flex", flexDirection: "row", height: "80px", alignItems: "center"}}>
                       <img src="/icon_keey_factor.svg" className="key_factors_icon"></img>
-                      <div className="key_factors_title">Key Factors</div>
+                      <div className="key_factors_title">Key Factors 2</div>
                   </div>
 
                   <div className="key_factors_list_container">
@@ -513,6 +479,12 @@ class EvaluationResult extends React.Component {
                   margin-left: 18px;
                   width: 28px;
                   height: 28px;
+                }
+
+                .img_rate_result {
+                  margin: 0 auto;
+                  width: 9.84vw;
+                  -webkit-user-drag: none;
                 }
 
                 .key_factors_title {

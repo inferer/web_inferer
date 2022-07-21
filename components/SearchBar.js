@@ -2,9 +2,25 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            inputFocused:false
+        };
+    }
     onSearch() {
         let text = document.getElementById("query").value;
         this.props.onSearch(text);
+    }
+
+    onFocus() {
+        // console.log("oncccfocus")
+        this.setState({ inputFocused: true });
+    }
+
+    onBlur() {
+        // console.log("onBlur")
+        this.setState({ inputFocused: false });
     }
 
     CheckBrowserIsIE(evt){
@@ -16,44 +32,57 @@ class SearchBar extends React.Component {
         return result;           
     }
 
-    // onKeyUp(e) {
-    //     console.log("onKeyUp")
-    //     var keycode = 0; 
-    //     //IE浏览器 
-    //     if(this.CheckBrowserIsIE()){ 
-    //         keycode = event.keyCode; 
-    //     }else{ 
-    //         keycode = event.key; 
-    //     }
-    //     if(keycode == 13) {
-    //         let text = document.getElementById("query").value;
-    //         this.props.onSearch(text);
-    //     }
-    // }
+    onKeyDown(e) {
+        // console.log(`onKeyDown`)
+        var keycode = 0; 
+        //IE浏览器 
+        if(this.CheckBrowserIsIE()){ 
+            keycode = event.keyCode; 
+        }else{ 
+            keycode = event.key; 
+        }
+        // console.log(`onKeyDown keycode = ${keycode}`)
+        if(keycode == 'Enter') {
+            let text = document.getElementById("query").value;
+            if(text != "") {
+                // console.log(`onKeyDown text empty`)
+                this.props.onSearch(text);
+            }
+        }
+    }
 
 
     render() {
         return (
-            <div className='bar' style={this.props.inputValue || this.props.feedBackVisible ? {marginTop: 0 } : {}} >
-            <img src='/icon_search.svg' className="search_icon"></img>
-            <div className='inputBox'>
-              <input
-                  value={this.props.inputValue}
-                  autoComplete="off"
-                  id="query"
-                  onInput={()=> {
-                      let text = document.getElementById("query").value;
-                      this.props.onTextChanged(text);
-                  }}
-                //   placeholder="Search address identity"
-                //   onKeyPress={this.onKeyUp()}
-              ></input>
-            </div>
-            <div className="search_button" onClick={()=>{
-                this.onSearch()
-            }}>
-                SEARCH
-            </div>
+            <div className={this.state.inputFocused ? 'bar_focused' : 'bar'} id='bar' style={this.props.inputValue || this.props.feedBackVisible ? {marginTop: 0 } : {}} >
+                <img src='/icon_search.svg' className="search_icon"></img>
+                <div className='inputBox'>
+                    <input
+                        value={this.props.inputValue}
+                        autoComplete="off"
+                        id="query"
+                        onInput={()=> {
+                            let text = document.getElementById("query").value;
+                            this.props.onTextChanged(text);
+                        }}
+                        onFocus={()=>{
+                            this.onFocus()
+                        }}
+                        onBlur={()=>{
+                            this.onBlur()
+                        }}
+                        onKeyDown={()=>{
+                            this.onKeyDown()
+                        }}
+                        //   placeholder="Search address identity"
+                        //   onKeyPress={this.onKeyUp()}
+                    ></input>
+                </div>
+                <div className="search_button" onClick={()=>{
+                    this.onSearch()
+                }}>
+                    SEARCH
+                </div>
 
             <style jsx>{`
           
@@ -68,6 +97,21 @@ class SearchBar extends React.Component {
             box-shadow: 0px 0px 4px #9FB3FF;
             border-radius: 8px;
           }
+
+          .bar_focused {
+            width: 50vw!important;
+            margin: 6.6vh auto 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 5.8vh;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 4px #6686FF;
+            border-radius: 8px;
+            border: solid #9A98E6;
+            border-width: 1px 1px;
+          }
+
           .inputBox{
             flex:1;
             overflow: hidden;
@@ -118,6 +162,11 @@ class SearchBar extends React.Component {
             border-bottom-left-radius: 0px;
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
+          }
+
+          .search_button:hover {
+              background:#6A88FF;
+              color: #ffffff;
           }
 
             ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
