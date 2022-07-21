@@ -34,22 +34,13 @@ export default function Home() {
 
             <div style={{width: "100%", height: "58.5px"}}/>
             <div className="content">
-                <div className='content-fq'>
-                    <div className='coon-1204'>
-                        <div className='community-1 flex-l'>
+                <div>
+                    <div className='community-1 layout_column'>
                             <span className='name'>Community</span>
                             <span className='name-detail'>Inferer community is an ecosystem of users, developers, designers and evaluators. </span>
-                        </div>
                     </div>
-                    {/* <div className='test'>
-                        <div className='community-1 flex-l'>
-                            <span className='name'>Community</span>
-                            <span className='name-detail'>Inferer community is an ecosystem of users, developers, designers and evaluators. </span>
-                        </div>
-                    </div> */}
-                    <div className='community-2 '>
-                        <div className='coon-1204 flex-b'>
-                            <div className='left flex-l'>
+                    <div className='community-2'>
+                        <div className='layout_column'>
                                 <span className='community-2-name'>Owned by the community</span>
                                 <span className='community-2-name-detail'>
                                 Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without our
@@ -59,49 +50,45 @@ export default function Home() {
                                 The community would play in a big role in our evaluation system. They're decentralized and become an internal part in our evaluation
                                 process, which improves inferer all the time.
                                 </span>
-                            </div>
-                            <div className='right'>
+                        </div>
+                        <div>
                                 <img className='right-img' src='/community-right.png' />
-                                {/* <div className='right-bg'></div> */}
-                            </div>
                         </div>
                     </div>
                  <div className='community-3'>
-                    <div className='coon-1204'>
-                        <div className='community-3-bg'></div>
-                        <div className='community-join flex-l flex-j'>
-                            <div className='community-title flex-l'>
-                                <span className='title-m'>Join the community</span>
-                                <p className='title-j'>Join the community and participate in our discussions. </p>
-                            </div>
-                            <div className='community-icon'>
-                                <ul className='flex-b'>
-                                    <li className='flex-c flex-j flex-l'>
-                                        <div className='radius flex-c flex-j'>
-                                        <i className='twitter-icon'></i>
-                                        </div>
-                                        <span className='tips'>Twitter<br/> Community</span>
-                                    </li>
-                                    <li className='flex-c flex-j flex-l'>
-                                    <div className='discoverd-icon flex-c flex-j'>
-                                        </div>
-                                        <span className='tips'>Discord <br/> Community</span>
-                                    </li>
-                                    <li className='flex-c flex-j flex-l'>
-                                    <div className='radius flex-c flex-j'>
-                                        <i className='tel-icon'></i>
-                                        </div>
-                                        <span className='tips'>Telegram<br/>  Community</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='community-input flex-b'>
-                                <input type="text" className='input' placeholder='Your e-mail'></input>
-                                <div className='submit'>Subscribe</div>
-                            </div>
+                    <div className='community-3-bg'></div>
+                    <div className='community-join layout_column'>
+                        <div className='layout_column'>
+                            <span className='title-m'>Join the community</span>
+                            <p className='title-j'>Join the community and participate in our discussions. </p>
+                        </div>
+                        <div className='community-icon'>
+                            <ul className='flex-b'>
+                                <li className='layout_justify_center layout_column'>
+                                    <div className='radius flex-c layout_justify_center'>
+                                        <div className='twitter-icon'></div>
+                                    </div>
+                                    <span className='tips'>Twitter<br/> Community</span>
+                                </li>
+                                <li className='layout_justify_center layout_column'>
+                                    <div className='discoverd-icon flex-c layout_justify_center'>
+                                    </div>
+                                    <span className='tips'>Discord <br/> Community</span>
+                                </li>
+                                <li className='layout_justify_center layout_column'>
+                                    <div className='radius flex-c layout_justify_center'>
+                                    <i className='tel-icon'></i>
+                                    </div>
+                                    <span className='tips'>Telegram<br/>  Community</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='community-input flex-b'>
+                            <input type="text" className='input' placeholder='Your e-mail'></input>
+                            <div className='submit'>Subscribe</div>
                         </div>
                     </div>
-                 </div>
+                    </div>
                 </div>
             </div>
 
@@ -133,16 +120,11 @@ export default function Home() {
                 z-index:2;
               }
 
-              .test {
-                  margin-left: 20.85%
-              }
-
               
 
               .logo {
-                width: 25px;
-                height: 25px;
-                margin-left: 40px;
+                width: 32px;
+                height: 32px;
                 -webkit-user-drag: none;
               }
 
@@ -179,32 +161,28 @@ export default function Home() {
               .menu_button_item:hover {
                 color: #44488F;
               }
-            //   .right-bg{
-            //     position: absolute;
-            //     width: 674px;
-            //     height: 678px;
-            //     top: -120px;
-            //     right: -110px;
-            //     background: url(/qiu-bg.png) no-repeat;
-            //     background-size: 100%;
-            //   }
               .flex-s {
                 display: flex;
             }
             .flex-b {
                 display: flex;
+                flex-direction: row;
                 justify-content: space-between;
             }
             .flex-c {
                 align-items: center;
             }
-            .flex-l {
+            .layout_column {
                 display: flex;
                 flex-direction: column;
             }
-            .flex-j{
+            .layout_justify_center{
                 display: flex;
                 justify-content: center;
+            }
+            .layout_justify_space{
+                display: flex;
+                justify-content: space-bettwen;
             }
             
               .menu_container {
@@ -213,35 +191,24 @@ export default function Home() {
                 align-items: center;
               }
 
-            //   .menu_item {
-            //     margin-left: 25px;
-            //     margin-right: 25px;
-            //     color: white;
-            //     font-weight: 500;
-            //     font-size: 16px;
-            //   }
-              .content{
-                padding-top:152px;
-                width: 100%;
-                background-size: 100%;
-            }
-            .coon-1204{
-                position: relative;
-                width: 1200px;
-                height: 100%;
-                margin: 0 auto;
-                padding:0 40px 0 40px;
-            }
             .content{
+                // padding-top:152px;
+                width: 100%;
+                // background-size: 100%;
                 padding-bottom:205px;
             }
             .community-1{
-                padding: 100px 0 115px 0;
+                width:100vw;
+                padding-left:18.59vw;
+                padding-right:18.59vw;
+                padding-top: 20.84vh;
+                padding-bottom:10.5vh;
+                // padding: 100px 0 115px 0;
             }
             .name{
-                font-family: 'D-DIN-Medium';
+                font-family: 'DIN';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 28px;
                 line-height: 34px;
                 letter-spacing: 0.02em;
@@ -250,92 +217,77 @@ export default function Home() {
             }
             .name-detail{
                 margin-top: 18px;
-                font-family: 'D-DIN-Regular';
-                font-weight: 500;
+                font-family: 'DIN';
+                font-weight: 60;
                 font-size: 22px;
                 line-height: 27px;
                 letter-spacing: 0.02em;
-                color: rgba(255, 255, 255, 0.6);
+                color: rgba(255, 255, 255, 0.5);
             }
             .community-2{
+                width: 100vw;
                 background: #0D0C1E;
-                // padding: 74px 0 83px 0;
-            }
-            .left{
-                width: 34.95vw
-                padding-top: 114px;
-                width: calc(100% - 397px);
-                // margin-right: 97px
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left:18.59vw;
+                padding-right:11.35vw;
             }
             .community-2-name{
-                font-family: 'D-DIN-Medium';
+                font-family: 'DIN';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 28px;
                 line-height: 34px;
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                margin-top: 11.56vh;
             }
             .community-2-name-detail {
-                margin-top: 12px;
-                font-family: 'D-DIN-Regular';
-                font-style: normal;
-                font-weight: 500;
+                margin-top: 20px;
+                margin-bottom: 50px;
+                font-family: 'DIN';
+                font-weight: 60;
                 font-size: 22px;
                 line-height: 27px;
-                letter-spacing: 0.02em;
-                color: rgba(255, 255, 255, 0.6);
-            }
-            .community-2-next-detail{
-                margin-top: 30px
-            }
-            .right{
-                position: relative;
+                letter-spacing: 0.04em;
+                color: rgba(255, 255, 255, 0.5);
             }
             .right-img{
-                // position: relative;
                 z-index: 1;
                 width: 35.1vw;
-                height: 51.29vh;
+                // height: 51.29vh;
             }
-            // .right-bg{
-            //     position: absolute;
-            //     height: 678px;
-            //     top: -120px;
-            //     right: -110px;
-            //     background: url(/qiu-bg.png) no-repeat;
-            //     background-size: 100%;
-            // }
             .community-3{
-                padding-top: 7.5vh;
+                padding-top: 8.5vh;
+                padding-left:18.59vw;
+                padding-right:18.59vw;
                 width:100%;
-                height:87.13vh
+                height:67.31vh
                 // background: #ffffff;
             }
             .community-3-bg{
-                position: absolute;
-                // top: -232px;
-                // left: -172px;
-                width: 100%;
-                height: 87.13vh;
+                width: 100vw;
+                // height: 87.13vh;
                 background: url(/community-foot.png) no-repeat;
-                background-size: 100%;
+                // background-size: 100%;
             }
-            .community-join{
-                position: relative;
-                // z-index:1;
-                padding:89px 194px 120px 194px;
+            .community-join {
                 background: #0D0C1E;
                 border-radius: 47px;
+                padding-top: 8.24vh;
+                padding-left: 9.74vw;
+                padding-right:9.74vw;
+                padding-bottom:11.11vh;
             }
             .community-icon{
-                margin-top: 83px;
+                margin-top: 6.5vh;
             }
             .title-m{
                 font-family: 'DIN';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 28px;
                 line-height: 34px;
                 text-align: center;
@@ -346,12 +298,13 @@ export default function Home() {
             .title-j{
                 font-family: 'DIN';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 300;
                 font-size: 22px;
                 line-height: 27px;
                 text-align: center;
                 // text-transform: capitalize;
-                color: #979797;
+                color: rgba(255, 255, 255, 0.5);
+                margin-top:12px;
             }
             .radius{
                 width:122px;
@@ -361,7 +314,7 @@ export default function Home() {
             }
             .twitter-icon{
                 display:block;
-                width:80px;
+                width:5.08vw;
                 height:58px;
                 background: url(/twitter.png) no-repeat;
                 background-size: 100%;
@@ -383,7 +336,7 @@ export default function Home() {
                 margin-top:17px;
                 font-family: 'DIN';
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 400;
                 font-size: 22px;
                 line-height: 27px;
                 text-align: center;
@@ -427,27 +380,27 @@ export default function Home() {
             `}</style>
             
             <style global jsx>{`
-              body {
-                width: 100%;
-                background-color: #0d0b17;
-              }
+            //   body {
+            //     width: 100%;
+            //     background-color: #0d0b17;
+            //   }
              
 
-               @media (max-width:1280px) {
-                .coon-1204{
-                    width:800px!important;
-                  }
-                .nav_bar_content{
-                  min-width:800px !important;
+            //    @media (max-width:1280px) {
+            //     .coon-1204{
+            //         width:800px!important;
+            //       }
+            //     .nav_bar_content{
+            //       min-width:800px !important;
 
-                }
-               }
-               @media (max-width:768px) {
-                .nav_bar_content{
-                  min-width:320px !important;
+            //     }
+            //    }
+            //    @media (max-width:768px) {
+            //     .nav_bar_content{
+            //       min-width:320px !important;
 
-                }
-               }
+            //     }
+            //    }
 
             `}</style>
         </div>
