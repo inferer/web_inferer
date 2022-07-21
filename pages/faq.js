@@ -3,9 +3,6 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
-import {
-  Button
-} from '@mui/material';
 
 export default function Home() {
     return (

@@ -147,21 +147,6 @@ export default class Home extends React.Component {
     render() {
         return (
             <>
-                <Head>
-                    <script src="/js/jquery/jquery.min.js"></script>
-                    <script src="/js/wallet/w3model.js"></script>
-                    <script src="/js/wallet/bignumber.min.js"></script>
-                    <script src="/js/wallet/web3.min.js"></script>
-                    <script src="/js/wallet/web3model.min.js"></script>
-                    <script src="/js/wallet/evmchain.js"></script>
-                    <script src="/js/wallet/web3provider.js"></script>
-                    <script src="/js/ipfs/ipfs-http-client.js"></script>
-                    <script src="/js/wallet/ethers.js"></script>
-
-                    <script src="/js/expand/lockr.js"></script>
-                    <script src="/js/expand/base64.js"></script>
-                    <script src="/js/load.js"></script>
-                </Head>
                 <div className="bgEle"></div>
                 <div className="container-box">
                     {/*导航栏*/}

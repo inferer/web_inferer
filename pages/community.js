@@ -3,9 +3,6 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
-import {
-  Button
-} from '@mui/material';
 
 export default function Home() {
     return (
@@ -262,7 +259,7 @@ export default function Home() {
             }
             .community-2{
                 background: #0D0C1E;
-                padding: 74px 0 83px 0;
+                // padding: 74px 0 83px 0;
             }
             .left{
                 width: 34.95vw

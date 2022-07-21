@@ -3,9 +3,6 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
-import {
-  Button
-} from '@mui/material';
 
 export default function Home() {
     return (
@@ -162,22 +159,16 @@ export default function Home() {
                 flex-direction: row;
                 justify-content: center;
               }
-              // .nav_bar {
-              //   backdrop-filter: blur(100px);
-              //   background-color: transparent;
-              //   width: 100%;
-              //   height: 117px;
-              //   position: fixed;
-              //   display: flex;
-              //   flex-direction: row;
-              //   justify-content: center;
-              // }
-
-              .nav_bar_mobile{
-                display:none;
-              }
 
               .nav_bar_content {
+                min-width: 1200px;
+                width: 1200px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index:2;
+
+
                 min-width: 1200px;
                 width: 1200px;
                 display: flex;
@@ -206,7 +197,7 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 16px;
                 cursor: pointer;
               }
 
@@ -218,7 +209,7 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 16px;
                 cursor: pointer;
               }
 
@@ -610,34 +601,6 @@ export default function Home() {
                 background: url(/qiu-bg.png) no-repeat;
                 background-size: 100%;
               }
-
-              @media (max-width:1280px) {
-                // .subpage_1_title_bg{
-                //   margin-top: -20px !important;
-                // }
-                // .card_container{
-                //   width:800px!important
-                // }
-                .footer_bar_content {
-                  min-width: 800px;
-                }
-                .nav_bar_content{
-                  min-width:800px !important;
-
-                }
-               }
-               @media (max-width:768px) {
-                // .subpage_1_title_bg{
-                //   margin-top: -20px !important;
-                // }
-                // .card_container{
-                //   width:500px!important
-                // }
-                .nav_bar_content{
-                  min-width:320px !important;
-               }
-
-           
 
             `}</style>
             <style global jsx>{`

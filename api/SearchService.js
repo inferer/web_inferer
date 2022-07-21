@@ -7,7 +7,7 @@ class SearchService {
         };
         
         const axios = require('axios').default;
-        return axios.get('http://api.inferer.xyz/api/infer', {params: params})
+        return axios.get('https://api2.inferer.xyz/api/infer', {params: params})
             .then(function (response) {
                 // if(response.data.status == '1') {
                 //     // console.log(response.data);
@@ -39,7 +39,7 @@ class SearchService {
         };
         
         const axios = require('axios').default;
-        return axios.get('http://api.inferer.xyz/api/platon/infer', {params: params})
+        return axios.get('https://api2.inferer.xyz/api/platon/infer', {params: params})
             .then(function (response) {
                 // if(response.data.status == '1') {
                 //     // console.log(response.data);
@@ -67,7 +67,7 @@ class SearchService {
     //反馈
     async feedBack(params) {        
         const axios = require('axios').default;
-        return axios.post('http://api.inferer.xyz/api/feedback', params)
+        return axios.post('https://api2.inferer.xyz/api/feedback', params)
             .then(function (response) {
                 console.log("feedback response = " + JSON.stringify(response))
                 return response.data
