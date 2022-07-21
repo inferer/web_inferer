@@ -4,7 +4,7 @@ import EvaluationResult from "../components/EvaluationResult";
 import axios from "axios";
 import Head from "next/head";
 import { Select, Typography, notification } from "antd";
-import { CheckCircleOutlined } from '@ant-design/icons';
+import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { motion, AnimatePresence } from "framer-motion";
 const { Option } = Select;
 const { Text } = Typography;
@@ -32,11 +32,11 @@ export default class Home extends React.Component {
         };
     }
 
-    openNotification(message) {
+    openNotification(message, success) {
         const args = {
             message: message,
             duration: 1.5,
-            icon: <CheckCircleOutlined style={{ color: '#618DFF' }} />,
+            icon: success ? <CheckCircleOutlined style={{ color: '#618DFF' }} /> : <InfoCircleOutlined style={{ color: 'red' }} />,
             // style: {
             //     // width: 600,
             //     background: '#618DFF'
@@ -90,6 +90,17 @@ export default class Home extends React.Component {
     //提交事件
     async submit() {
         const SearchService = require("../api/SearchService");
+
+        if(this.state.inputValue == "") {
+            this.openNotification("No Address Provided.", false)
+            return
+        }
+
+        if(this.state.textAreaValue == "") {
+            this.openNotification("No Content Provided.", false)
+            return
+        }
+
         let searchService = new SearchService();
         let response = await searchService.feedBack({
             address: this.state.inputValue,
@@ -102,7 +113,7 @@ export default class Home extends React.Component {
         // if(response.status == 200) {
             console.log("submit 200")
             this.setState({inputValue: "", isResult: false, feedBackVisible: false, textAreaValue: ""})
-            this.openNotification("Thanks for your feedback!")
+            this.openNotification("Thanks for your feedback!", true)
 
             this.title.current.style.opacity = "1";
             this.subtitle.current.style.opacity = "1";
@@ -435,7 +446,7 @@ export default class Home extends React.Component {
                                     </div>
                                 </div>
                                 <div className="footer_text">
-                                    Thanks to Platon
+                                    Thanks to PlatON
                                 </div>
                             </div>
                         </div>

@@ -108,7 +108,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='footer_text'>
-                        Thanks to Platon
+                        Thanks to PlatON
                     </div>
                 </div>
             </div>

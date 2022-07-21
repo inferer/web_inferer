@@ -125,7 +125,7 @@ export default class Feedback extends React.Component {
                             </div>
                         </div>
                         <div className='footer_text'>
-                            Thanks to Platon
+                            Thanks to PlatON
                         </div>
                     </div>
                 </div>

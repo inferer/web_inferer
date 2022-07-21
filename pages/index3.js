@@ -93,7 +93,7 @@ export default class Home extends React.Component {
                     <div className="foot">
                             <div className='coon-1204 flex-b'>
                                 <div>Made by Inferer Labs</div>
-                                <div>Thanks to Platon</div>
+                                <div>Thanks to PlatON</div>
                             </div>
                         </div>
                     <style jsx>{`
