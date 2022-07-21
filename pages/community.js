@@ -3,8 +3,45 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
+import {useState} from "react";
+import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { notification } from "antd";
 
 export default function Home() {
+    const [inputValue, setInputValue] = useState(true);
+    const onSubmit = async () => {
+        // console.log("onSubmit")
+        const SearchService = require("../api/SearchService");
+
+        if(inputValue == "") {
+            openNotification("No Email Provided.", false)
+            return
+        }
+
+        let searchService = new SearchService();
+        let response = await searchService.subscribe({
+            email: inputValue
+        });
+
+        console.log("onSubmit response = " +  JSON.stringify(response))
+
+        setInputValue("")
+        openNotification("Success!", true)
+    }
+
+    const openNotification = (message, success) => {
+        const args = {
+            message: message,
+            duration: 1.5,
+            icon: success ? <CheckCircleOutlined style={{ color: '#618DFF' }} /> : <InfoCircleOutlined style={{ color: 'red' }} />,
+            // style: {
+            //     // width: 600,
+            //     background: '#618DFF'
+            // },
+        };
+        notification.open(args);
+    };
+
     return (
         <div className="container">
             {/*导航栏*/}
@@ -54,7 +91,7 @@ export default function Home() {
                     <div className='community-3'>
                         <div className='community-join layout_column'>
                             <div className='layout_column'>
-                                <span className='title-m'>Join the community 2</span>
+                                <span className='title-m'>Join the community</span>
                                 <p className='title-j'>Join the community and participate in our discussions. </p>
                             </div>
                             <div className='community-icon'>
@@ -79,8 +116,16 @@ export default function Home() {
                                 </ul>
                             </div>
                             <div className='community-input flex-b'>
-                                <input type="text" className='input' placeholder='Your e-mail'></input>
-                                <div className='submit'>Subscribe</div>
+                                <input type="text" className='input' placeholder='Your e-mail'
+                                    value={inputValue}
+                                    autoComplete="off"
+                                    id="query"
+                                    onInput={()=> {
+                                        let text = document.getElementById("query").value;
+                                        setInputValue(text)
+                                    }}></input>
+                                
+                                <button className='submit' onClick={onSubmit}>Subscribe</button>
                             </div>
                         </div>
                     </div>
@@ -90,6 +135,7 @@ export default function Home() {
               .container{
                 width: 100%;
                 height: 100%;
+                background: #17152A;
               }
 
               .nav_bar {
@@ -318,6 +364,7 @@ export default function Home() {
                 padding-left:18.59vw;
                 padding-right:18.59vw;
                 width:100vw;
+                height:87.13vh;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -332,6 +379,8 @@ export default function Home() {
                 padding-left: 9.74vw;
                 padding-right:9.74vw;
                 padding-bottom:11.11vh;
+                width:62.81vw;
+                height:70.31vh;
             }
             .community-icon{
                 margin-top: 6.5vh;
@@ -340,8 +389,8 @@ export default function Home() {
                 font-family: 'DIN';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 1.46vw;
+                line-height: 3.15vh;
                 text-align: center;
                 letter-spacing: 0.02em;
                 text-transform: uppercase;
@@ -359,51 +408,52 @@ export default function Home() {
                 margin-top:12px;
             }
             .radius{
-                width:122px;
-                height:122px;
+                width:6.35vw;
+                height:6.35vw;
                 background: #231E38;
                 border-radius:50%;
             }
             .twitter-icon{
                 display:block;
-                width:5.08vw;
-                height:58px;
+                width:4.08vw;
+                height:3.02vw;
                 background: url(/twitter.png) no-repeat;
                 background-size: 100%;
             }
             .discoverd-icon{
-                width:122px;
-                height:122px;
+                width:6.35vw;
+                height:6.35vw;
                 background: url(/discovered.png) no-repeat;
                 background-size: 100%;
             }
             .tel-icon{
                 display:block;
-                width:80px;
-                height:58px;
+                width:4.17vw;
+                height:4.17vw;
                 background: url(/tel.png) no-repeat;
                 background-size: 100%;
             }
             .tips{
-                margin-top:17px;
+                margin-top:1.57vh;
                 font-family: 'DIN';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 22px;
-                line-height: 27px;
+                font-size: 1.15vw;
+                line-height: 3vh;
                 text-align: center;
                 color: #FFFFFF;
             }
             .community-input{
-                margin-top:103px;
+                margin-top:8vh;
             }
             .input{
                 border: transparent;
-                width:calc(100% - 193px);
-                padding:16px 0 15px 25px;
+                width:calc(100% - 10.05vw);
+                padding:0px 0 0px 1.3vw;
                 background: #17152A;
                 border-radius: 10px 0px 0px 10px;
-                border-color: #ffffff
+                border-color: #ffffff;
+                color: #ffffff;
             }
 
             .input:focus{
@@ -413,19 +463,21 @@ export default function Home() {
             }
 
             .submit{
-                height: 67px;
-                width: 193px;
-                padding:16px 25px;
+                height: 6.2vh;
+                width: 10.05vw;
+                // padding:0px 0px;
                 font-family: 'Source Han Sans CN';
                 font-style: normal;
                 font-weight: 500;
-                font-size: 24px;
-                line-height: 36px;
+                font-size: 1.25vw;
+                line-height: 3.33vh;
                 text-align: center;
                 letter-spacing: 0.05em;
                 color: #FFFFFF;
                 background: #44488F;
                 border-radius: 0px 10px 10px 0px;
+                cursor: pointer;
+                border: none;
             }
            }
 

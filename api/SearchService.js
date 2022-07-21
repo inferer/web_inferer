@@ -73,7 +73,22 @@ class SearchService {
                 return response.data
             })
             .catch(function (error) {
-                console.log("searchOnETH error = " + error);
+                console.log("feedBack error = " + error);
+            })
+            .then(function (result) {
+                return result;
+            });
+    }
+
+    async subscribe(params) {        
+        const axios = require('axios').default;
+        return axios.post('https://api2.inferer.xyz/api/subscrib', params)
+            .then(function (response) {
+                console.log("subscribe response = " + JSON.stringify(response))
+                return response.data
+            })
+            .catch(function (error) {
+                console.log("subscribe error = " + error);
             })
             .then(function (result) {
                 return result;
