@@ -15,7 +15,6 @@ export default class LaunchAppButton extends React.Component {
 
                 <style jsx>{`
                   .container {
-
                     width: 9.22vw;
                     height: 4.01vw;
                     min-width:77px;
@@ -65,6 +64,23 @@ export default class LaunchAppButton extends React.Component {
                     animation-fill-mode: forwards;
                     transition: filter 0.8s
                   }
+
+                @media (max-width:1080px) {
+                    .container {
+                        width: 93.49px;
+                        height: 40.67px;
+                    // height: 126px;
+                    }
+
+                    .button {
+                        width:75px;
+                        height:23.24px;
+                    }
+
+                    .button_text {
+                        font-size: 5px;
+                    }
+                }
 
                 `}</style>
             </div>

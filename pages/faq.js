@@ -36,9 +36,9 @@ export default function Home() {
                 </div>
             </div>
 
-            <div style={{width: "100%", height: "58.5px"}}/>
+            {/* <div style={{width: "100%", height: "58.5px"}}/> */}
             <div className="content">
-                <div className='content-fq' style={{marginTop: '4.44%'}}>
+                <div className='content-fq' style={{marginTop: '13.98vh'}}>
                     <div className='list-content'>
                         <ul className='ul'>
                             <li></li>
@@ -458,8 +458,8 @@ export default function Home() {
 
              
                .faq{
-                width: 26.58%;
-                height: 112px;
+                width: 16.67vw;
+                height: 5.83vw;
                 background: url(/faq-title.png) no-repeat;
                 background-size: 100%;
                 }
@@ -504,11 +504,12 @@ export default function Home() {
             
               }
               .content{
-                width: 100%;
-                background: url(/faq2.png) no-repeat;
-                background-size: 100% 100%;
-                backgroud-position: cebter;
-                height: calc(100vh - 66px);;
+                width: 100vw;
+                height: 100%;
+                background: url(/faq_bg.png) no-repeat;
+                background-size: 100% 120%;
+                // backgroud-position: cebter;
+                height: calc(100vh - 5.56vh);
                 overflow-y: auto;
                 padding-bottom:80px;
             }
@@ -532,12 +533,12 @@ export default function Home() {
                 
                 
             }
-            .content-bg{
-                width: 100%;
-                height: 175px;
-                background: url(/conten-foot.png) no-repeat;
-                background-size: 100%;
-            }
+            // .content-bg{
+            //     width: 100%;
+            //     height: 175px;
+            //     background: url(/conten-foot.png) no-repeat;
+            //     background-size: 100%;
+            // }
             .foot{
                 position: relative;
                 width:100%;
