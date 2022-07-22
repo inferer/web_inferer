@@ -8,7 +8,7 @@ import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { notification } from "antd";
 
 export default function Home() {
-    const [inputValue, setInputValue] = useState(true);
+    const [inputValue, setInputValue] = useState('');
     const onSubmit = async () => {
         // console.log("onSubmit")
         const SearchService = require("../api/SearchService");

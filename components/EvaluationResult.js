@@ -324,9 +324,10 @@ class EvaluationResult extends React.Component {
                   justify-content: space-between;
                   cursor: text;
                 }
-                // .subInfo:hover {
-                //     background: #000000;
-                // }
+                .subInfo:hover {
+                    background: #000000;
+                    color: #000000;
+                }
 
                 .rightContent{
                   display: flex;

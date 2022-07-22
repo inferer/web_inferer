@@ -446,16 +446,6 @@ export default function Home() {
                 margin-right: -167px;
                 margin-top: -115px;
               }
-              .right-bg{
-                position: absolute;
-                width: 674px;
-                height: 678px;
-                top: -120px;
-                right: -110px;
-                background: url(/qiu-bg.png) no-repeat;
-                background-size: 100%;
-              }
-
              
                .faq{
                 width: 16.67vw;

@@ -131,23 +131,23 @@ export default class Home extends React.Component {
         this.setState({ feedBackVisible: false });
     }
 
-    clickWallet() {
-        if (initWeb3) {
-            initWeb3((address) => {
-                console.log("dddd address = " + address)
-                if(address != "") {
-                    this.setState({ walletConnected: true, walletAddress: address });
-                } else {
-                    this.setState({ walletConnected: false });
-                }
+    // clickWallet() {
+    //     if (initWeb3) {
+    //         initWeb3((address) => {
+    //             console.log("dddd address = " + address)
+    //             if(address != "") {
+    //                 this.setState({ walletConnected: true, walletAddress: address });
+    //             } else {
+    //                 this.setState({ walletConnected: false });
+    //             }
                 
-            });
-        } else {
-            setTimeout(() => {
-                this.clickWallet();
-            }, 200);
-        }
-    }
+    //         });
+    //     } else {
+    //         setTimeout(() => {
+    //             this.clickWallet();
+    //         }, 200);
+    //     }
+    // }
 
     handleChangeNetwork = value => {
         console.log(value);
