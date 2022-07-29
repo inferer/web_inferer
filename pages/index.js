@@ -3,10 +3,15 @@ import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
+import Head from 'next/head'
 
 export default function Home() {
     return (
         <div className="container">
+            <Head>
+              <title>Inferer - user idendity service in web3</title>
+              {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+            </Head>
             
 
             {/* <div style={{width: "100%", height: "58.5px"}}/> */}
@@ -64,8 +69,8 @@ export default function Home() {
                 <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
-                            So many bots we've seen on chain and they're huring user experience in many ways. The cost for
-                    building bots is too low to further generate more bots. It also increase the secrity risks in many
+                            So many bots we've seen on chain and they're hurting user experience in many ways. The cost for
+                    building bots is too low to further generate more bots. It also increase the security risks in many
                     products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
                     hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
@@ -84,7 +89,7 @@ export default function Home() {
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
-                    reCaptcha in web2, which doesn’t cause trouble to users.
+                    reCaptcha in web2, which doesn't cause trouble to users.
                 </div>
                 <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/>
             </div>

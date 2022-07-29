@@ -6,6 +6,7 @@ import router from "next/router";
 import {useState} from "react";
 import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { notification } from "antd";
+import Head from 'next/head';
 
 export default function Home() {
     const [inputValue, setInputValue] = useState('');
@@ -44,6 +45,11 @@ export default function Home() {
 
     return (
         <div className="container">
+            <Head>
+              <title>Inferer - user idendity service in web3</title>
+              {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+            </Head>
+
             {/*导航栏*/}
             <div className="nav_bar">
                 <div className="nav_bar_content">

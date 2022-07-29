@@ -158,6 +158,10 @@ export default class Home extends React.Component {
     render() {
         return (
             <>
+                <Head>
+                    <title>Inferer Search - Searc address idendity</title>
+                    {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+                    </Head>
                 <div className="bgEle"></div>
                 <div className="container-box">
                     {/*导航栏*/}
