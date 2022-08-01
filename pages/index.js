@@ -63,14 +63,14 @@ export default function Home() {
             <div className="subpage_2">
                 <LogoText text="What's Inferer" customStyle={{marginTop: '117px'}}/>
                 <div className="subtitle">
-                    Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
+                    Inferer is a blockchain user idendity service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
                 <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                             So many bots we've seen on chain and they're hurting user experience in many ways. The cost for
-                    building bots is too low to further generate more bots. It also increase the security risks in many
+                    building bots is too low to further generate more bots. It also increases the security risks in many
                     products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
                     hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
