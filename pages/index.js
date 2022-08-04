@@ -120,7 +120,7 @@ export default function Home() {
                     <ContactCard title='Discord' subtitle='Participate in our Discord to get latest info.'
                                 icon={'/icon_discord.png'}/>
                     <ContactCard title='Telegram' subtitle='Join in our Telegram group to get latest info.'
-                                icon={'/icon_email.png'}/>
+                                icon={'/icon_telegram.png'}/>
                     <ContactCard title='Email' subtitle='Email us if anything interests you.'
                                 icon={'/icon_email.png'}/>
                 </div>

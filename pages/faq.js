@@ -55,7 +55,7 @@ export default function Home() {
                             </li>
                             <li className='list flex-l'>
                                 <span className='item1'>Q: What's Inferer ?</span>
-                                <span className='item2'>A: &nbsp;&nbsp;Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and   
+                                <span className='item2'>A: &nbsp;&nbsp;Inferer is a blockchain user idendity service built on data analyis, aimed to prevent bots from hurting user experience on chain and   
                                 contribute to greate user ecysystem on chain.
                                 </span>
                             </li>
