@@ -149,7 +149,7 @@ class SearchBar extends React.Component {
             height: 100%;
             background: #FFFFFF;
             box-shadow: 0px 0px 8px rgba(159, 179, 255, 0.25);
-            font-family: 'DIN';
+            font-family: 'D-DIN-Bold';
             font-style: bold;
             font-weight: 500;
             font-size: 1.6vw;
