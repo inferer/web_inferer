@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <div className="container">
             <Head>
-              <title>Inferer - user idendity service in web3</title>
+              <title>Inferer - user identity analysis service in web 3</title>
               {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
             </Head>
             
@@ -63,8 +63,8 @@ export default function Home() {
             <div className="subpage_2">
                 <LogoText text="What's Inferer" customStyle={{marginTop: '117px'}}/>
                 <div className="subtitle">
-                    Inferer is a blockchain user idendity service built on data analyis, aimed to prevent bots from
-                    hurting user experience on chain and contribute to greate user ecysystem on chain.
+                    Inferer is a user identity analysis service on blockchain. We try to build a label-rich user portrait system,
+                    which is based on on-chain and off-chain data analysis and data mining, infer user identity through algorithms models and offers the final user identify evaluation service.
                 </div>
                 <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
@@ -587,7 +587,7 @@ export default function Home() {
                 margin-top: 29px;
                 margin-right: 40px;
                 margin-left: 40px;
-                text-indent: 1.5em
+                // text-indent: 1.5em
               }
 
               .footer_bar {
