@@ -651,6 +651,7 @@ export default function Home() {
 
                 }
                }
+
                @media (max-width:768px) {
                 // .subpage_1_title_bg{
                 //   margin-top: -20px !important;
@@ -667,7 +668,7 @@ export default function Home() {
                .logo {
                 width: 30px;
                 height: 30px;
-                margin-left: 35px;
+                margin-left: 60px;
                }
                .footer_bar_content {
                 display: none;
@@ -684,6 +685,19 @@ export default function Home() {
               .nav_bar {
                 height: 70px;
               }
+              .button {
+                height: 32px !important;
+              }
+              .button_text {
+                font-size: 1.0rem;
+              }
+            }
+
+            @media (max-width:480px){
+              .card_container img{
+                display: none;
+              }
+
             }
            
 
