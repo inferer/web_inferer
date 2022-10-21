@@ -51,7 +51,7 @@ export default class LaunchAppButton extends React.Component {
                     font-family: 'Source Han Sans CN';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 14px;
+                    font-size: 1.2rem;
                     letter-spacing: 0.02em;
                     color: white;
                     pointer-events: none

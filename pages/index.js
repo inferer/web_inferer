@@ -10,6 +10,38 @@ import {
 export default function Home() {
     return (
         <div className="container">
+
+            {/*导航栏*/}
+            <div className="nav_bar">
+                <div className="nav_bar_content">
+                  <div className="menu_container">
+                      <img src="/icon_nav_logo.svg" className="logo"/>
+                  </div>
+                  <div className="menu_container">
+                    <ul>
+                      <li className="menu_item">
+                          DOCS
+                      </li>
+                      <li className="menu_item">
+                          WHITEPAPER
+                      </li>
+                      <li>
+                      <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
+                          COMMUNITY
+                      </button>
+                      </li>
+                      <li>
+                      <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
+                          FAQ
+                      </button>
+                      </li>
+                      </ul>
+                      <LaunchAppButton onClick={()=>{
+                          router.push('/app')
+                      }}/>
+                  </div>
+                </div>
+            </div>
             
 
             {/* <div style={{width: "100%", height: "58.5px"}}/> */}
@@ -35,86 +67,63 @@ export default function Home() {
                 </div>
             </div>
 
-            {/*导航栏*/}
-            <div className="nav_bar">
-                <div className="nav_bar_content">
-                    <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
-                            COMMUNITY
-                        </button>
-                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
-                            FAQ
-                        </button>
-
-                        <LaunchAppButton onClick={()=>{
-                            router.push('/app')
-                        }}/>
-                    </div>
-                </div>
-            </div>
+            
 
             {/*page 2*/}
             <div className="subpage_2">
-                <LogoText text="What's Inferer" customStyle={{marginTop: '117px'}}/>
+                <LogoText text="What's Inferer" customStyle={{marginTop: '5.35%'}}/>
                 <div className="subtitle">
                     Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from
                     hurting user experience on chain and contribute to greate user ecysystem on chain.
                 </div>
-                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
-                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
+                <img src="/icon_logo_yun.png" style={{marginTop: '1.35%', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
+                <LogoText text="Why we build Inferer?" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className="subtitle">
                             So many bots we've seen on chain and they're huring user experience in many ways. The cost for
                     building bots is too low to further generate more bots. It also increase the secrity risks in many
                     products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
                     hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}} />
+                <img src="/img_1.png" style={{marginTop: '5.35%', marginBottom: '5.35%', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}} />
             </div>
 
             {/*page 3*/}
             <div className="subpage_3">
-                <LogoText text="Built on Data Analysis" customStyle={{marginTop: '112px'}}></LogoText>
+                <LogoText text="Built on Data Analysis" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className="subtitle">
                     Blockchain is unique with its immutable data on chain and all data is public to everyone, which we
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
                 <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%', "-webkit-user-drag": "none"}}/>
-                <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
+                <LogoText text="Benefits" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
                     reCaptcha in web2, which doesn’t cause trouble to users.
                 </div>
-                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/>
+                <img src="/img_3.png" className='img-w-100' style={{marginTop: '1.35%', marginBottom: '5.35%', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
                 <LogoText text="Products" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
-                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
+                <img src="/inferer_api.png" style={{marginTop: '0.35%', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 5*/}
             <div className="subpage_5">
-                <LogoText text="Inferer community" customStyle={{marginTop: '108px'}}></LogoText>
+                <LogoText text="Inferer community" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className="subtitle">
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}}/>
+                <img src="/img_4.png" style={{marginTop: '0.55%', marginBottom: '5.35%', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}}/>
             </div>
 
             {/*page 6*/}
             <div className="subpage_6">
-                <LogoText text="Contact us" customStyle={{marginTop: '108px'}}></LogoText>
+                <LogoText text="Contact us" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className='card_container'>
                     <ContactCard title='Twitter' subtitle='Inferer is born in web3 and values community.'
                                  icon={'/icon_twitter.png'}/>
@@ -143,8 +152,19 @@ export default function Home() {
             </div>
 
             <style jsx>{`
+              ul {
+                list-style: none;
+                list-style-type: none;
+              }
+
+              ul li{
+                float: left;
+                margin-left: 15px;
+                margin-top: 8px;
+              }
+
               .container {
-                min-width: 600px;
+                //min-width: 600px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -157,10 +177,15 @@ export default function Home() {
                 background-color: transparent;
                 width: 100%;
                 height: 9.8%;
-                position: fixed;
+                //position: fixed;
                 display: flex;
-                flex-direction: row;
-                justify-content: center;
+                flex-direction: column;
+                //justify-content: center;
+                position: fixed;
+                width: 100%;
+                height: 100px;
+                top: 0px;
+                z-index: 9999;
               }
               // .nav_bar {
               //   backdrop-filter: blur(100px);
@@ -178,8 +203,8 @@ export default function Home() {
               }
 
               .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
+                //min-width: 1200px;
+                //width: 1200px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -187,9 +212,9 @@ export default function Home() {
               }
 
               .logo {
-                width: 32px;
-                height: 32px;
-                // margin-left: 0px;
+                width: 40px;
+                height: 40px;
+                margin-left: 105px;
                 -webkit-user-drag: none;
               }
 
@@ -206,7 +231,7 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 1.2rem;
                 cursor: pointer;
               }
 
@@ -218,7 +243,7 @@ export default function Home() {
                 margin-right: 15px;
                 color: white;
                 font-weight: 500;
-                font-size: 14px;
+                font-size: 1.2rem;
                 cursor: pointer;
               }
 
@@ -233,6 +258,7 @@ export default function Home() {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                margin-top: 80px;
               }
 
               .subpage_1_title_wrapper {
@@ -269,7 +295,7 @@ export default function Home() {
                 text-align: center;
                 font-family: D-DIN-Regular;
                 font-weight: 10;
-                font-size: 1.2vw;
+                font-size: 1rem;
                 letter-spacing: 0.08em;
               }
 
@@ -529,15 +555,15 @@ export default function Home() {
               .subtitle {
                 font-family: 'D-DIN-Normal';
                 font-style: normal;
-                font-weight: 700;
-                font-size: 1.0vw;
-                line-height: 1.2vw;
-                letter-spacing: 0.02em;
+                //font-weight: 700;
+                font-size: 1.5rem;
+                //line-height: 1.2vw;
+                //letter-spacing: 0.02em;
                 color: white;
-                max-width: 53%;
+                max-width: 70%;
                 margin-top: 29px;
-                margin-right: 40px;
-                margin-left: 40px;
+                //margin-right: 40px;
+                //margin-left: 40px;
                 text-indent: 1.5em
               }
 
@@ -635,7 +661,30 @@ export default function Home() {
                 .nav_bar_content{
                   min-width:320px !important;
                }
-
+               .menu_container ul{
+                  display: none;
+               }
+               .logo {
+                width: 30px;
+                height: 30px;
+                margin-left: 35px;
+               }
+               .footer_bar_content {
+                display: none;
+              }
+              .card_container {
+                row-gap: 5px;
+                column-gap: 1.2%;
+              }
+              .subtitle {
+                margin-top: 15px;
+                font-size: 1.1rem;
+                max-width: 80%;
+              }
+              .nav_bar {
+                height: 70px;
+              }
+            }
            
 
             `}</style>
