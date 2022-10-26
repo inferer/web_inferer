@@ -95,16 +95,16 @@ export default function Home() {
 
             {/*page 6*/}
             <div className="subpage_6">
-                <LogoText text="Contact us" customStyle={{marginTop: '108px'}}></LogoText>
+                <LogoText text="Contact us" customStyle={{marginTop: '5.35%'}}></LogoText>
                 <div className='card_container'>
-                    <ContactCard title='Twitter' subtitle='Follow our Twitter to get latest info.'
-                                icon={'/icon_twitter.png'}/>
-                    <ContactCard title='Discord' subtitle='Participate in our Discord to get latest info.'
-                                icon={'/icon_discord.png'}/>
-                    <ContactCard title='Telegram' subtitle='Join in our Telegram group to get latest info.'
-                                icon={'/icon_telegram.png'}/>
-                    <ContactCard title='Email' subtitle='Email us if anything interests you.'
-                                icon={'/icon_email.png'}/>
+                    <ContactCard title='Twitter' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_twitter.png'}/>
+                    <ContactCard title='Discord' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_discord.png'}/>
+                    <ContactCard title='Email' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_email.png'}/>
+                    <ContactCard title='Github' subtitle='Inferer is born in web3 and values community.'
+                                 icon={'/icon_github.png'}/>
                 </div>
             </div>
 
@@ -531,12 +531,11 @@ export default function Home() {
 
               .subpage_6 {
                 width: 100%;
-                background-color: #171529;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                background-color: #171529;
               }
-
               .card_container {
                 margin-top: 67px;
                 margin-bottom: 10%;
@@ -544,16 +543,13 @@ export default function Home() {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                // justify-content: center;
-                // width: 1209px;
+                width: 1209px;
                 row-gap: 63px;
                 column-gap: 5%;
               }
-
               icon{
                 margin-left: 2% !important;
               }
-
               .img_curve {
                 width: 100%;
                 -webkit-user-drag: none;
@@ -664,46 +660,49 @@ export default function Home() {
                 //   margin-top: -20px !important;
                 // }
                 .card_container{
-                  width:500px!important
+                  width:320px!important;
+                }
+                .icon{
+                  display: none;
                 }
                 .nav_bar_content{
                   min-width:320px !important;
-               }
-               .menu_container ul{
+                }
+                .menu_container ul{
                   display: none;
-               }
-               .logo {
-                width: 30px;
-                height: 30px;
-                margin-left: 60px;
-               }
-               .footer_bar_content {
-                display: none;
+                }
+                .logo {
+                  width: 30px;
+                  height: 30px;
+                  margin-left: 60px;
+                }
+                .footer_bar_content {
+                  display: none;
+                }
+                .card_container {
+                  row-gap: 5px;
+                  column-gap: 1.2%;
+                }
+                .subtitle {
+                  margin-top: 15px;
+                  font-size: 1.1rem;
+                  max-width: 80%;
+                }
+                .nav_bar {
+                  height: 70px;
+                }
+                .button {
+                  height: 32px !important;
+                }
+                .button_text {
+                  font-size: 1.0rem;
+                }
               }
-              .card_container {
-                row-gap: 5px;
-                column-gap: 1.2%;
-              }
-              .subtitle {
-                margin-top: 15px;
-                font-size: 1.1rem;
-                max-width: 80%;
-              }
-              .nav_bar {
-                height: 70px;
-              }
-              .button {
-                height: 32px !important;
-              }
-              .button_text {
-                font-size: 1.0rem;
-              }
-            }
 
-            @media (max-width:480px){
-              .container .icon{
-                display: none;
-              }
+             @media (max-width:480px){
+                .container .icon{
+                  display: none;
+                }
 
             }
            

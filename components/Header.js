@@ -83,7 +83,6 @@ export default class Header extends React.Component{
                   //justify-content: center;
                   position: fixed;
                   width: 100%;
-                  height: 100px;
                   top: 0px;
                   z-index: 9999;
                 }
@@ -176,6 +175,13 @@ export default class Header extends React.Component{
                   width: 30px;
                   height: 30px;
                   margin-left: 60px;
+                 }
+                 .button{
+                  width: 117px;
+                  height: 32px;
+                 }
+                 .button-text{
+                  font-size: 1.2rem;
                  }
                 }
         `}</style>

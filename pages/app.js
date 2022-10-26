@@ -1,9 +1,3 @@
-import React from 'react';
-import SearchBar from '../components/SearchBar';
-import EvaluationResult from '../components/EvaluationResult'
-import axios from 'axios'
-import { Select } from 'antd';
-import { motion, AnimatePresence } from "framer-motion"
 import React from "react";
 import SearchBar from "../components/SearchBar";
 import EvaluationResult from "../components/EvaluationResult";
@@ -51,13 +45,9 @@ export default class Home extends React.Component {
         notification.open(args);
     };
 
-  random(min, max) {
-    return Math.round(Math.random() * (max - min)) + min;
-  }
     random(min, max) {
         return Math.round(Math.random() * (max - min)) + min;
     }
-
     async handleOnSearchEvent() {
         //0x303425052e462dd0f3044aee17e1f5be9c7de783
         let text = this.state.inputValue;

@@ -36,8 +36,8 @@ export default class LaunchAppButton extends React.Component {
 
                   .button {
                     position: absolute;
-                    width: 7.40vw;
-                    height: 2.29vw;
+                    width: 137px;
+                    height: 40px;
                     border-radius: 5px;
                     background-color: #121422;
                     display: flex;
@@ -69,8 +69,8 @@ export default class LaunchAppButton extends React.Component {
                   @media (max-width:480px){
 
                   .button {
-                    width: 102px;
-                    height: 34px;
+                    width: 92px;
+                    height: 26px;
                   }
                   .button_text {
                     font-size: 0.8rem;

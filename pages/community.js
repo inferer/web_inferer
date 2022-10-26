@@ -10,6 +10,41 @@ import { notification } from "antd";
 import Head from 'next/head';
 
 export default function Home() {
+
+    const [inputValue, setInputValue] = useState('');
+    const onSubmit = async () => {
+        // console.log("onSubmit")
+        const SearchService = require("../api/SearchService");
+
+        if(inputValue == "") {
+            openNotification("No Email Provided.", false)
+            return
+        }
+
+        let searchService = new SearchService();
+        let response = await searchService.subscribe({
+            email: inputValue
+        });
+
+        console.log("onSubmit response = " +  JSON.stringify(response))
+
+        setInputValue("")
+        openNotification("Success!", true)
+    }
+
+    const openNotification = (message, success) => {
+        const args = {
+            message: message,
+            duration: 1.5,
+            icon: success ? <CheckCircleOutlined style={{ color: '#618DFF' }} /> : <InfoCircleOutlined style={{ color: 'red' }} />,
+            // style: {
+            //     // width: 600,
+            //     background: '#618DFF'
+            // },
+        };
+        notification.open(args);
+    };
+
     return (
         <div className="container">
             <Head>
