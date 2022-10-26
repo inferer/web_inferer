@@ -1,4 +1,5 @@
 import LogoText from '../components/LogoText';
+import HeaderBlaner from '../components/Header';
 import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
@@ -12,36 +13,7 @@ export default function Home() {
         <div className="container">
 
             {/*导航栏*/}
-            <div className="nav_bar">
-                <div className="nav_bar_content">
-                  <div className="menu_container">
-                      <img src="/icon_nav_logo.svg" className="logo"/>
-                  </div>
-                  <div className="menu_container">
-                    <ul>
-                      <li className="menu_item">
-                          DOCS
-                      </li>
-                      <li className="menu_item">
-                          WHITEPAPER
-                      </li>
-                      <li>
-                      <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
-                          COMMUNITY
-                      </button>
-                      </li>
-                      <li>
-                      <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
-                          FAQ
-                      </button>
-                      </li>
-                      </ul>
-                      <LaunchAppButton onClick={()=>{
-                          router.push('/app')
-                      }}/>
-                  </div>
-                </div>
-            </div>
+            <HeaderBlaner/>
             
 
             {/* <div style={{width: "100%", height: "58.5px"}}/> */}
@@ -152,16 +124,6 @@ export default function Home() {
             </div>
 
             <style jsx>{`
-              ul {
-                list-style: none;
-                list-style-type: none;
-              }
-
-              ul li{
-                float: left;
-                margin-left: 15px;
-                margin-top: 8px;
-              }
 
               .container {
                 //min-width: 600px;
@@ -170,85 +132,6 @@ export default function Home() {
                 align-items: center;
                 width: 100%;
 
-              }
-
-              .nav_bar {
-                backdrop-filter: blur(100px);
-                background-color: transparent;
-                width: 100%;
-                height: 9.8%;
-                //position: fixed;
-                display: flex;
-                flex-direction: column;
-                //justify-content: center;
-                position: fixed;
-                width: 100%;
-                height: 100px;
-                top: 0px;
-                z-index: 9999;
-              }
-              // .nav_bar {
-              //   backdrop-filter: blur(100px);
-              //   background-color: transparent;
-              //   width: 100%;
-              //   height: 117px;
-              //   position: fixed;
-              //   display: flex;
-              //   flex-direction: row;
-              //   justify-content: center;
-              // }
-
-              .nav_bar_mobile{
-                display:none;
-              }
-
-              .nav_bar_content {
-                //min-width: 1200px;
-                //width: 1200px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                z-index:2;
-              }
-
-              .logo {
-                width: 40px;
-                height: 40px;
-                margin-left: 105px;
-                -webkit-user-drag: none;
-              }
-
-              .menu_container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-              }
-
-              .menu_item {
-                font-family: 'DIN';
-                font-style: normal;
-                margin-left: 25px;
-                margin-right: 15px;
-                color: white;
-                font-weight: 500;
-                font-size: 1.2rem;
-                cursor: pointer;
-              }
-
-              .menu_button_item {
-                font-family: 'DIN';
-                background-color: transparent; 
-                border: none;
-                margin-left: 25px;
-                margin-right: 15px;
-                color: white;
-                font-weight: 500;
-                font-size: 1.2rem;
-                cursor: pointer;
-              }
-
-              .menu_button_item:hover {
-                color: #44488F;
               }
 
               .subpage_1 {
@@ -694,7 +577,7 @@ export default function Home() {
             }
 
             @media (max-width:480px){
-              .card_container img{
+              .container .icon{
                 display: none;
               }
 
@@ -706,6 +589,9 @@ export default function Home() {
               body {
                 width: 100%;
                 background-color: #0d0b17;
+              }
+              div{
+                overflow-x: none;
               }
             `}</style>
         </div>

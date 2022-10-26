@@ -84,6 +84,12 @@ class SearchBar extends React.Component {
             letter-spacing: 0.08em;
             color: #9A98E6;
           }
+
+          @media (max-width:768px) {
+            .bar {
+                width: 70%;
+            }
+          }
         `}</style>
             </div>
         )

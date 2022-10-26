@@ -14,7 +14,7 @@ export default class LaunchAppButton extends React.Component {
 
                 <style jsx>{`
                   .container {
-                    width: 177px;
+                    width: 30%;
                     height: 77px;
                     display: flex;
                     align-items: center;
@@ -23,12 +23,14 @@ export default class LaunchAppButton extends React.Component {
 
                   .color_bg {
                     filter: none;
-                    width: 100%;
+                    width: 177px;
                     height: 100%;
                     background-image: url("/button_color_bg.png");
                     background-size: 100%;
                     animation-fill-mode: forwards;
-                    transition: filter 0.5s
+                    transition: filter 0.5s;
+                    background-repeat:no-repeat;
+                    background-position: center center;
                   }
 
                   .button {
@@ -62,6 +64,17 @@ export default class LaunchAppButton extends React.Component {
                     animation-fill-mode: forwards;
                     transition: filter 0.8s
                   }
+
+                  @media (max-width:480px){
+
+                  .button {
+                    width: 102px;
+                    height: 34px;
+                  }
+                  .button_text {
+                    font-size: 0.8rem;
+                  }
+                }
 
                 `}</style>
             </div>

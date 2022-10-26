@@ -283,7 +283,7 @@ export default class Home extends React.Component {
                     width:100%;
                     min-height:400px;
                     height:calc(100vh - 112px);
-                    overflow-y: scroll;
+                    overflow-y: hidden;
                     padding-bottom:120px;
                   }
                   

@@ -1,4 +1,5 @@
 import LogoText from '../components/LogoText';
+import HeaderBlaner from '../components/Header';
 import ContactCard from '../components/ContactCard';
 import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
@@ -10,30 +11,7 @@ import {
 export default function Home() {
     return (
         <div className="container">
-            {/*导航栏*/}
-            <div className="nav_bar">
-                <div className="nav_bar_content">
-                    <img src="/icon_nav_logo.svg" className="logo"/>
-                    <div className="menu_container">
-                        <div className="menu_item">
-                            DOCS
-                        </div>
-                        <div className="menu_item">
-                            WHITEPAPER
-                        </div>
-                        <button className="menu_button_item" onClick={()=>{router.push('/community')}}>
-                            COMMUNITY
-                        </button>
-                        <button className="menu_button_item" onClick={()=>{router.push('/faq')}}>
-                            FAQ
-                        </button>
-
-                        <LaunchAppButton onClick={()=>{
-                            router.push('/app')
-                        }}/>
-                    </div>
-                </div>
-            </div>
+            <HeaderBlaner/>
 
             <div style={{width: "100%", height: "58.5px"}}/>
             <div className="content">
@@ -115,71 +93,11 @@ export default function Home() {
                 background: #17152A;
               }
 
-              .nav_bar {
-                backdrop-filter: blur(100px);
-                background-color: transparent;
-                width: 100%;
-                height: 100px;
-                position: fixed;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-              }
-              
-              .nav_bar_content {
-                min-width: 1200px;
-                width: 1200px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                z-index:2;
-              }
-
               .test {
                   margin-left: 20.85%
               }
 
               
-
-              .logo {
-                width: 25px;
-                height: 25px;
-                margin-left: 40px;
-                -webkit-user-drag: none;
-              }
-
-              .menu_container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-              }
-
-              .menu_item {
-                font-family: 'DIN';
-                font-style: normal;
-                margin-left: 25px;
-                margin-right: 15px;
-                color: white;
-                font-weight: 500;
-                font-size: 14px;
-                cursor: pointer;
-              }
-
-              .menu_button_item {
-                font-family: 'DIN';
-                background-color: transparent; 
-                border: none;
-                margin-left: 25px;
-                margin-right: 15px;
-                color: white;
-                font-weight: 500;
-                font-size: 14px;
-                cursor: pointer;
-              }
-
-              .menu_button_item:hover {
-                color: #44488F;
-              }
               .right-bg{
                 position: absolute;
                 width: 674px;
@@ -208,19 +126,6 @@ export default function Home() {
                 justify-content: center;
             }
             
-              .menu_container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-              }
-
-              .menu_item {
-                margin-left: 25px;
-                margin-right: 25px;
-                color: white;
-                font-weight: 500;
-                font-size: 16px;
-              }
               .content{
                 padding-top:152px;
                 width: 100%;
@@ -423,6 +328,13 @@ export default function Home() {
                 border-radius: 0px 10px 10px 0px;
             }
            }
+
+           @media (max-width:768px){
+            .right{
+              display: none;
+            }
+
+          }
 
             `}</style>
             
