@@ -1,3 +1,9 @@
+import React from 'react';
+import SearchBar from '../components/SearchBar';
+import EvaluationResult from '../components/EvaluationResult'
+import axios from 'axios'
+import { Select } from 'antd';
+import { motion, AnimatePresence } from "framer-motion"
 import React from "react";
 import SearchBar from "../components/SearchBar";
 import EvaluationResult from "../components/EvaluationResult";
@@ -45,6 +51,9 @@ export default class Home extends React.Component {
         notification.open(args);
     };
 
+  random(min, max) {
+    return Math.round(Math.random() * (max - min)) + min;
+  }
     random(min, max) {
         return Math.round(Math.random() * (max - min)) + min;
     }
@@ -140,7 +149,7 @@ export default class Home extends React.Component {
     //             } else {
     //                 this.setState({ walletConnected: false });
     //             }
-                
+
     //         });
     //     } else {
     //         setTimeout(() => {
@@ -515,230 +524,80 @@ export default class Home extends React.Component {
                             cursor: pointer;
                         }
 
-                        .title {
-                            font-family: "DIN";
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 6.2vw;
-                            line-height: 13.6vh;
-                            text-align: center;
-                            letter-spacing: 0.04em;
-                            color: #a2a7d4;
-                            animation-fill-mode: forwards;
-                            transition: opacity 0.25s;
-                            margin-bottom: 2.1vh;
-                            pointer-events: none;
-                        }
+                  .title {
+                    font-family: 'D-DIN-Bold';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 120px;
+                    line-height: 147px;
+                    text-align: center;
+                    letter-spacing: 0.04em;
+                    color: #A2A7D4;
+                    margin: 10% 0 5% 0;
+                    animation-fill-mode: forwards;
+                    transition: opacity 0.25s
+                  }
 
-                        .subtitle {
-                            font-family: "DIN";
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 1.5vw;
-                            line-height: 3.3vh;
-                            text-align: center;
-                            letter-spacing: 0.04em;
-                            color: #a2a7d4;
-                            animation-fill-mode: forwards;
-                            transition: opacity 0.25s;
-                            pointer-events: none;
-                        }
-                        .main_content_box {
-                            width: 100%;
-                            position: absolute;
-                            top: 110px;
-                            left: 0;
-                            bottom: 0;
-                            overflow-y: auto;
-                        }
-                        .search_content {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            width: 100%;
-                            min-height: calc(100% - 60px - 6.9vh);
-                            padding-top: 13.2vh;
-                        }
+                  .subtitle {
+                    font-family: 'DIN';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 36px;
+                    text-align: center;
+                    letter-spacing: 0.04em;
+                    color: #A2A7D4;
+                    animation-fill-mode: forwards;
+                    transition: opacity 0.25s
+                  }
 
-                        .search_bar {
-                            animation-fill-mode: forwards;
-                            transition: margin-top 0.25s;
-                        }
+                  .search_content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width:100%;
+                    min-height:400px;
+                    height:calc(100vh - 112px);
+                    overflow-y: hidden;
+                    padding-bottom:120px;
+                  }
+                  
+                  .search_bar {
+                    animation-fill-mode: forwards;
+                    transition: margin-top 0.25s
+                  }
+                  
+                  .search_result {
+                    width: 924px;
+                    display: none;
+                  }
 
-                        .search_result {
-                            width: 50vw !important;
-                            margin: 0 auto;
-                            // overflow: hidden;
-                            // display: none;
-                            box-shadow: 0px 0px 4px #9fb3ff;
-                            // border-radius: 8px;
-                            margin-top: 2.4vh;
-                        }
+                  .footer_bar {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.25);
+                    margin-top: auto;
+                  }
 
-                        .footer_bar {
-                            width: 100%;
-                            height: 60px;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            background-color: rgba(0, 0, 0, 0.25);
-                            margin-top: 6.9vh;
-                            padding: 0 18.6vw;
-                        }
+                  .footer_bar_content {
+                    min-width: 1200px;
+                    width: 1200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                  }
 
-                        .footer_bar_content {
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                        }
-
-                        .footer_text {
-                            font-family: "Source Han Sans CN";
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 16px;
-                            line-height: 21px;
-                            color: rgba(255, 255, 255, 0.8);
-                        }
-                        .feedBackBox {
-                            width: 100%;
-                        }
-                        .key_factors_icon {
-                            width: 1.5vw;
-                            height: 1.5vw;
-                            margin-right: 13px;
-                        }
-                        .feedback-content {
-                            background-color: #f2f3ff;
-                            margin-top: 23px;
-                            padding: 34px;
-                            box-shadow: 0px 0px 4px #9fb3ff;
-                            border-radius: 8px;
-                        }
-                        .feedback-top-line {
-                            position: relative;
-                            display: flex;
-                            justify-content: center;
-                            height: 1px;
-                            background-color: #d3dfff;
-                            margin-top: 1.2vh;
-                            margin-bottom: 3.5vh;
-                        }
-                        .feedback-start {
-                            position: absolute;
-                            top: -5px;
-                            left: 50%;
-                            width: 10px;
-                            height: 10px;
-                            background: url(/feedback-start.png) no-repeat
-                                center;
-                            background-size: 100%;
-                        }
-                        .feedback-list {
-                            margin-top: 35px;
-                            background: #f2f3ff;
-                            padding: 43px 19px 43px 19px;
-                            box-shadow: 0px 0px 4px rgba(159, 179, 255, 0.3);
-                            border-radius: 8px;
-                        }
-                        .feedback-list-top {
-                            display: flex;
-                        }
-                        .feedback-list-top-icon {
-                            margin-right: 8px;
-                            width: 30px;
-                            height: 30px;
-                            background: url(/feedback-man.png) no-repeat;
-                            background-size: 100%;
-                        }
-                        .feedback-list-top-title {
-                            font-family: "DIN";
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 24px;
-                            line-height: 29px;
-                            letter-spacing: 0.02em;
-                            color: #727aba;
-                        }
-                        .feedback-list-ul {
-                            height: 36.83vh;
-                            position: relative;
-                            padding: 1.4vh 1.4vw 2vh 1.1vw;
-                            box-shadow: 0px 0px 4px rgba(159, 179, 255, 0.3);
-                            border-radius: 8px;
-                            background-color: #ffffff;
-                        }
-                        .feedback-top {
-                            font-family: "DIN";
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 1.1vw;
-                            line-height: 3.3vh;
-                            letter-spacing: 0.02em;
-                            color: #727aba;
-                        }
-                        .feedback-detail {
-                            margin-top: 11px;
-                            width: 100%;
-                            height: 23.06vh;
-                            padding: 1.7vh 0.6vw 0 1.3vw;
-                            background: rgba(238, 238, 238, 0.2);
-                            border-radius: 8px;
-                            font-family: "Source Han Sans CN";
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 1.04vw;
-                            line-height: 2.7vh;
-                            letter-spacing: 0.02em;
-                            color: rgba(0, 0, 0, 0.9);
-                            border: transparent;
-                            resize: none;
-                        }
-                        .feedback-buttons {
-                          display: flex;
-                          justify-content: right;
-                          flexDirection: row;
-                          margin-top: 1.65vh;
-                        }
-                        .feedback-submit {
-                            // position: absolute;
-                            // bottom: 0px;
-                            // right: 35px;
-                            margin-left: 15px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            width: 6.8vw;
-                            min-width: 50px;
-                            height: 3.8vh;
-                            min-width: 20px;
-                            background: #548EFF;
-                            border-radius: 4px;
-                            cursor: pointer;
-                        }
-                        .feedback-submit:hover {
-                            background: #0057FF;
-                        }
-                        .feedback-submit-icon {
-                            width: 20px;
-                            height: 20px;
-                            background: url(/feedback-submit.png) no-repeat;
-                            background-size: 100%;
-                            margin-top: 2px;
-                            // align-items: center;
-                        }
-                        .feedback-submit-t {
-                            font-family: "Source Han Sans CN";
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 0.9vw;
-                            text-align: center;
-                            letter-spacing: 0.1em;
-                            color: #ffffff;
-                            // text-shadow: 0px 0px 4px #618DFF;
-                            resize: none;
-                        }
+                  .footer_text {
+                    font-family: 'Source Han Sans CN';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 21px;
+                    color: rgba(255, 255, 255, 0.8);
+                  }
 
                         .feedback-cancel {
                             // position: absolute;

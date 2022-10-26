@@ -5,10 +5,22 @@
     src: url('../fonts/DIN\ Bold.otf');
 }
 
+@font-face {
+    font-family: 'DIN-Bold';
+    /* src: url('/public/fonts/DIN-BOLD.OTF') format("opentype"); */
+    /* src: url('/public/fonts/DIN-BOLD.OTF'); */
+    src: url('../fonts/DIN-BOLD.OTF');
+}
+
 
 @font-face {
     font-family: 'D-DIN-Regular';
-    src: url('../fonts/DIN-Regular.pfb.ttf');
+    src: url('../fonts/DIN-LIGHTALTERNATE.OTF');
+}
+
+@font-face {
+    font-family: 'D-DIN-Medium';
+    src: url('../fonts/DIN-MEDIUM.OTF');
 }
 
 @font-face {

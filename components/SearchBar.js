@@ -181,6 +181,12 @@ class SearchBar extends React.Component {
             ::-ms-input-placeholder { /* Microsoft Edge */
                 color: #999999;
             }
+
+          @media (max-width:768px) {
+            .bar {
+                width: 70%;
+            }
+          }
         `}</style>
             </div>
         )

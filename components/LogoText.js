@@ -28,11 +28,18 @@ export default ({ text, customStyle }) => (
             font-family: 'D-DIN-Normal';
             font-style: normal;
             font-weight: 700;
-            font-size: 32px;
+            font-size: 2.2rem;
             color: white;
             margin-left: 20px;
             margin-right: 20px;
             justify-self: center;
+          }
+
+          @media (max-width:768px) {
+            .text {
+              font-weight: 500;
+              font-size: 2.0rem;
+            }
           }
         `}</style>
     </div>

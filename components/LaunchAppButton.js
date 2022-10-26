@@ -15,9 +15,8 @@ export default class LaunchAppButton extends React.Component {
 
                 <style jsx>{`
                   .container {
-                    width: 9.22vw;
-                    height: 4.01vw;
-                    min-width:77px;
+                    width: 30%;
+                    height: 77px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -25,12 +24,14 @@ export default class LaunchAppButton extends React.Component {
 
                   .color_bg {
                     filter: none;
-                    width: 100%;
+                    width: 177px;
                     height: 100%;
                     background-image: url("/button_color_bg.png");
                     background-size: 100%;
                     animation-fill-mode: forwards;
-                    transition: filter 0.5s
+                    transition: filter 0.5s;
+                    background-repeat:no-repeat;
+                    background-position: center center;
                   }
 
                   .button {
@@ -53,7 +54,7 @@ export default class LaunchAppButton extends React.Component {
                     font-family: 'Source Han Sans CN';
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 0.73vw;
+                    font-size: 1.2rem;
                     letter-spacing: 0.02em;
                     color: white;
                     pointer-events: none
@@ -65,21 +66,15 @@ export default class LaunchAppButton extends React.Component {
                     transition: filter 0.8s
                   }
 
-                @media (max-width:1080px) {
-                    .container {
-                        width: 93.49px;
-                        height: 40.67px;
-                    // height: 126px;
-                    }
+                  @media (max-width:480px){
 
-                    .button {
-                        width:75px;
-                        height:23.24px;
-                    }
-
-                    .button_text {
-                        font-size: 5px;
-                    }
+                  .button {
+                    width: 102px;
+                    height: 34px;
+                  }
+                  .button_text {
+                    font-size: 0.8rem;
+                  }
                 }
 
                 `}</style>
