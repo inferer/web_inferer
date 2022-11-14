@@ -18,7 +18,7 @@ export default function Home() {
           {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
         </Head>
         <div className=" hidden sm:block">
-          <div className="container">
+          <div className="container_pc">
 
               {/*导航栏*/}
               <HeaderBlaner/>
@@ -132,7 +132,7 @@ export default function Home() {
 
               <style jsx>{`
 
-                .container {
+                .container_pc {
                   //min-width: 600px;
                   display: flex;
                   flex-direction: column;
@@ -707,7 +707,7 @@ export default function Home() {
                 }
 
               @media (max-width:480px){
-                  .container .icon{
+                  .container_pc .icon{
                     display: none;
                   }
 
