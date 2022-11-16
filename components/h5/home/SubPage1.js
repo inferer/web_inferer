@@ -1,17 +1,11 @@
 import React from "react";
+import H5Menu from '../Menu'
 
 const SubPage1 = () => {
   return (
-    <div className="bg-[url('/h5/subpage1_bg.png')] bg-no-repeat bg-top bg-cover w-full pb-[19.2vw]">
-      <div className="flex items-center justify-between px-[5.3333vw] pt-[6.6667vw]">
-        <div>
-          <img src="/h5/logo.png" className="w-[5.3333vw] h-[5.3333vw]" />
-        </div>
-        <div>
-          <img src="/h5/menus.png" className="w-[5.3333vw] h-[5.3333vw]" />
-        </div>
-      </div>
-      <div className="mt-[40.5333vw] flex justify-center">
+    <div className="bg-[url('/h5/subpage1_bg.png')] bg-no-repeat bg-top bg-cover w-full pb-[19.2vw] pt-[52.533vw]">
+      <H5Menu />
+      <div className="flex justify-center">
         <div className="text-[9.6vw] font-bold text-white main-title">INFERER</div>
       </div>
       <div className="flex justify-center mt-[53.2vw]">

@@ -57,3 +57,11 @@ html, body {
     text-fill-color: transparent;
 }
 
+.menu-text{
+    background: linear-gradient(127.27deg, #3555FF 12.05%, #A157FF 85.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+

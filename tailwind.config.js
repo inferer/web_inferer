@@ -11,4 +11,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    // ...
+   container: false,
+  }
 }
