@@ -67,7 +67,7 @@ d           <div className=" shrink-0">
           </div>
         </div>
       </div>
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw]">
+      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[16vw]">
         <div className="flex justify-center flex-col items-center">
           <Title text="Contact us" />
           <div className="grid grid-cols-2 gap-[3.2vw] mt-[3.8667vw]">
@@ -90,10 +90,6 @@ d           <div className=" shrink-0">
           </div>
         </div>
         
-      </div>
-      <div className="h-[8vw] bg-[#0A0917] px-[5.3333vw] flex items-center justify-between">
-        <div className="text-[#646787] text-[1.8667vw] font-medium">Made by Inferer Labs</div>
-        <div className="text-[#646787] text-[1.8667vw] font-medium">Thanks to Platon</div>
       </div>
     </div>
   )

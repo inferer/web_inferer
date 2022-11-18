@@ -16,7 +16,7 @@ const SubPage2 = () => {
         <div className="mt-[10.6667vw]">
           <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw]" />
         </div>
-        <Title text="Why we build Inferer?" className="mt[9.3333vw]" />
+        <Title text="Why we build Inferer?" className="mt-[9.3333vw]" />
         <div className="px-[5.3333vw] mt-[3.2vw]">
           <TextWrap>
           So many bots we've seen on chain and the cost for

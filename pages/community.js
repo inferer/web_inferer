@@ -7,6 +7,7 @@ import {useState} from "react";
 import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { notification } from "antd";
 import Head from 'next/head';
+import H5Community from '../components/h5/community';
 
 export default function Home() {
     const [inputValue, setInputValue] = useState('');
@@ -44,11 +45,14 @@ export default function Home() {
     };
 
     return (
+        <>
+        <Head>
+            <title>Inferer - user idendity service in web3</title>
+            {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
+        </Head>
+        <div className="hidden sm:block">
         <div className="container">
-            <Head>
-              <title>Inferer - user idendity service in web3</title>
-              {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
-            </Head>
+            
 
             {/*导航栏*/}
             <div className="nav_bar">
@@ -514,5 +518,10 @@ export default function Home() {
 
             `}</style>
         </div>
+        </div>
+        <div className="block sm:hidden faq-bg">
+          <H5Community />
+        </div>
+        </>
     );
 }

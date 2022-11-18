@@ -4,15 +4,13 @@ import LaunchAppButton from '../components/LaunchAppButton';
 import Link from "next/link";
 import router from "next/router";
 import Head from 'next/head'
-import SubPage1 from '../components/h5/home/SubPage1';
-import SubPage2 from '../components/h5/home/SubPage2';
-import SubPage3 from '../components/h5/home/SubPage3';
+import H5Home from '../components/h5/home/index';
 
 export default function Home() {
     return (
       <>
         <Head>
-          <title>Inferer - user identity analysis service in web 3</title>
+          <title>Inferer - user idendity analysis service in web 3</title>
           {/* <meta name="viewport" content="initial-scale=1.0, width=device-width" /> */}
         </Head>
         <div className=' hidden sm:block'>
@@ -666,9 +664,7 @@ export default function Home() {
         </div>
         </div>
         <div className="block sm:hidden">
-          <SubPage1 />
-          <SubPage2 />
-          <SubPage3 />
+          <H5Home />
         </div>
       </>
 
