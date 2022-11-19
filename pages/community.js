@@ -520,7 +520,12 @@ export default function Home() {
         </div>
         </div>
         <div className="block sm:hidden faq-bg">
-          <H5Community />
+          <H5Community 
+            defaultValue={inputValue} 
+            inputValueChange={setInputValue}
+            onSubmit={email => {
+            onSubmit()
+          }}  />
         </div>
         </>
     );

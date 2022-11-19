@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import H5Menu from '../Menu'
 import Title from '../Title'
 import H5Footer from '../H5Footer'
 import LazyImage from '../../LazyImage'
 
-const H5Community = () => {
+const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
+  const [inputValue, setInputValue] = useState('');
+  useEffect(() => {
+    if (defaultValue === '' && inputValue !== '') {
+      setInputValue('')
+    }
+  }, [defaultValue])
   return (
     <div className="pt-[17.33333vw] pb-[8.2667vw] min-h-screen ">
       <H5Menu />
@@ -51,9 +57,19 @@ const H5Community = () => {
         <div className="flex w-full">
           <input className="bg-[rgba(23,21,50,1)] h-[11.0667vw] rounded-l-[1.3333vw] w-full outline-none pl-[3.2vw] text-[3.2vw] font-medium text-white"
             placeholder="Your email"
+            value={inputValue}
+            onChange={e => {
+              setInputValue(e.target.value)
+              inputValueChange(e.target.value)
+            }}
           />
-          <div className="text-[3.7333vw] shrink-0 letter-spacing font-bold btn-bg w-[27.6vw] h-[11.0667vw] flex justify-center items-center rounded-r-[1.3333vw] text-white cursor-pointer">
-          Subscribe
+          <div className="text-[3.7333vw] shrink-0 letter-spacing font-bold btn-bg w-[27.6vw] h-[11.0667vw] flex justify-center items-center rounded-r-[1.3333vw] text-white cursor-pointer"
+            onClick={e => {
+              e.stopPropagation()
+              onSubmit && onSubmit()
+            }}
+          >
+          SUBSCRIBE
           </div>
         </div>
       </div>

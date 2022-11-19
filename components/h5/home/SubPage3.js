@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import LazyImage from '../../LazyImage'
 import Title from '../Title'
 import TextWrap from './TextWrap'
@@ -71,22 +72,30 @@ d           <div className=" shrink-0">
         <div className="flex justify-center flex-col items-center">
           <Title text="Contact us" />
           <div className="grid grid-cols-2 gap-[3.2vw] mt-[3.8667vw]">
+            <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/twitter.png" className="w-[7.7333vw] h-[7.7333vw]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Twitter</span>
             </div>
+            </a>
+            <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/discord.png" className="w-[7.7333vw] h-[7.7333vw]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Discord</span>
             </div>
+            </a>
+            <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/tg.png" className="w-[7.7333vw] h-[7.7333vw]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Telegram</span>
             </div>
+            </a>
+            <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/mail.png" className="w-[7.7333vw] h-[7.7333vw]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Mail</span>
             </div>
+            </a>
           </div>
         </div>
         
