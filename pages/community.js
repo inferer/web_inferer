@@ -222,6 +222,7 @@ export default function Home() {
                 cursor: pointer;
                 letter-spacing: 0.08em;
                 line-height: 24px;
+                padding: 1px 6px;
               }
 
               .menu_button_item_community:hover {
@@ -366,6 +367,7 @@ export default function Home() {
                 z-index: 1;
                 width: 35.1vw;
                 // height: 51.29vh;
+                max-width: inherit
             }
             .community-3 {
                 padding-top: 8.5vh;
@@ -519,7 +521,7 @@ export default function Home() {
             `}</style>
         </div>
         </div>
-        <div className="block sm:hidden faq-bg">
+        <div className="block sm:hidden faq-bg h5-wrap">
           <H5Community 
             defaultValue={inputValue} 
             inputValueChange={setInputValue}

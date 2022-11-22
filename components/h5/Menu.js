@@ -6,15 +6,23 @@ const MenuItem = ({
   showMenu,
   onClick
 }) => {
+  const router = useRouter()
   const [currentItem, setCurrentItem] = useState('')
+
+  useEffect(() => {
+    if (router.pathname === '/') setCurrentItem('Home')
+    if (router.pathname === '/faq') setCurrentItem('FAQ')
+    if (router.pathname === '/community') setCurrentItem('Community')
+  }, [router])
+
   return (
     <div className="px-[5.3333vw]"
-      onMouseOver={e => {
-        setCurrentItem(title)
-      }}
-      onMouseLeave={() => {
-        setCurrentItem('')
-      }}
+      // onMouseOver={e => {
+      //   setCurrentItem(title)
+      // }}
+      // onMouseLeave={() => {
+      //   setCurrentItem('')
+      // }}
       onClick={() => {
         onClick && onClick()
       }}
@@ -23,7 +31,7 @@ const MenuItem = ({
         h-[10.4vw] rounded-[2.8vw] flex items-center justify-center text-white text-[4.2667vw] font-medium cursor-pointer 
         ${showMenu ? 'hover:bg-[rgba(10,9,23,1)]' : ''}
         `}>
-        <span className={`${currentItem === title ? 'menu-text' : ' '}`}>{title}</span>
+        <span className={`${currentItem === title ? 'menu-text text-[4.2667vw] font-medium' : ' '}`}>{title}</span>
       </div>
     </div>
   )

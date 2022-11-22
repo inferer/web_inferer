@@ -2,7 +2,7 @@
     font-family: Poppins;
     src: url('/fonts/Poppins-Regular.ttf');
 }
-html, body {
+.h5-wrap {
     font-family: Poppins;
 }
 .community-1{

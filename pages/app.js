@@ -57,6 +57,7 @@ export default class Home extends React.Component {
         } else {
             this.setState({ loading: true, isError: false, searchRecord: text, inputValue: text.toLowerCase()});
         }
+        return
         //默认假设无查询结果
         this.setState({ isResult: false });
         const SearchService = require("../api/SearchService");

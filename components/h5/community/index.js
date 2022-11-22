@@ -69,7 +69,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
               onSubmit && onSubmit()
             }}
           >
-          SUBSCRIBE
+          <span className=" font-bold">SUBSCRIBE</span> 
           </div>
         </div>
       </div>

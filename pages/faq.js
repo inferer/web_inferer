@@ -49,9 +49,8 @@ export default function Home() {
             {/* <div style={{width: "100%", height: "58.5px"}}/> */}
             <div className="content">
                 <div className='content-fq' style={{marginTop: '13.98vh'}}>
-                    <div className='list-content'>
+                    <div className='list-content pt-[22px]'>
                         <ul className='ul'>
-                            <li></li>
                             <li>
                                 <div className='flex-c flex-j'>
                                     <div className='faq'></div>
@@ -591,7 +590,7 @@ export default function Home() {
             `}</style>
         </div>
         </div>
-        <div className="block sm:hidden faq-bg">
+        <div className="block sm:hidden faq-bg h5-wrap">
           <H5Faq />
         </div>
       </>

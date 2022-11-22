@@ -15,6 +15,9 @@
     font-family: 'D-DIN-Normal';
     src: url('../fonts/DIN-Normal.ttf');
 }
+.nav_bar_content button {
+  padding: 1px 6px;
+}
 
 .loadingContainer {
     position: relative;
@@ -42,6 +45,7 @@
   .loading-img{
     width: 80px;
     height: 80px;
+    display: inline-block;
    
     /* position: absolute;
     top: 0;

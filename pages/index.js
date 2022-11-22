@@ -5,6 +5,7 @@ import Link from "next/link";
 import router from "next/router";
 import Head from 'next/head'
 import H5Home from '../components/h5/home/index';
+import LazyImage from '../components/LazyImage'
 
 export default function Home() {
     return (
@@ -30,7 +31,7 @@ export default function Home() {
                     }}/>
                 </div>
                 <div className="subpage_1_title_wrapper">
-                    <p className="subpage_1_title">INFERER</p>
+                    <p className="subpage_1_title mb-[1em]">INFERER</p>
                 </div>
                 <div className="subpage_1_subtitle_wrapper">
                     <p className="subpage_1_subtitle">
@@ -663,7 +664,7 @@ export default function Home() {
             `}</style>
         </div>
         </div>
-        <div className="block sm:hidden">
+        <div className="block sm:hidden h5-wrap">
           <H5Home />
         </div>
       </>
