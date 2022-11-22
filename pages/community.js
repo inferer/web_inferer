@@ -8,6 +8,7 @@ import { CheckCircleOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { notification } from "antd";
 import Head from 'next/head';
 import H5Community from '../components/h5/community';
+import LazyImage from '../components/LazyImage'
 
 export default function Home() {
     const [inputValue, setInputValue] = useState('');
@@ -95,7 +96,8 @@ export default function Home() {
                                 </span>
                         </div>
                         <div>
-                                <img className='right-img' src='/community-right.png' />
+                                {/* <img className='right-img' src='/community-right.png' /> */}
+                            <LazyImage className='w-[35.1vw] max-w-none' src='/community-right.png' />
                         </div>
                     </div>
                     <div className='community-3'>

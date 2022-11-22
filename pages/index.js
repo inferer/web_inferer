@@ -23,12 +23,17 @@ export default function Home() {
 
             {/*page 1*/}
             <div className="subpage_1">
-                <img src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}}></img>
+                {/* <img src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}}></img> */}
+                <LazyImage src="/home_curve_yun.png" style={{marginTop: '0px', width: '100%', height: '100%'}} />
                 <div className="subpage_1_title_wrapper">
-                    <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
+                    {/* <img className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
                         width: '51.46%',
                         marginTop: '-8%'
-                    }}/>
+                    }}/> */}
+                    <LazyImage className='subpage_1_title_bg' src="/subpage_1_title_bg.png" style={{
+                        width: '51.46%',
+                        marginTop: '-8%'
+                    }} />
                 </div>
                 <div className="subpage_1_title_wrapper">
                     <p className="subpage_1_title mb-[1em]">INFERER</p>
@@ -46,6 +51,7 @@ export default function Home() {
             <div className="nav_bar">
                 <div className="nav_bar_content">
                     <img src="/icon_nav_logo.svg" className="logo"/>
+                    {/* <LazyImage src="/icon_nav_logo.svg" className="w-[1.67%] min-w-[15px] ml-[18.49%]" style={{userDrag: 'none'}} /> */}
                     <div className="menu_item_docs">
                             DOCS
                     </div>
@@ -71,7 +77,8 @@ export default function Home() {
                     Inferer is a user identity analysis service on blockchain. We try to build a label-rich user portrait system,
                     which is based on on-chain and off-chain data analysis and data mining, infer user identity through algorithms models and offers the final user identify evaluation service.
                 </div>
-                <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
+                {/* <img src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/icon_logo_yun.png" style={{marginTop: '26px', width: '51.82%', height: '50%', "-webkit-user-drag": "none"}}/>
                 <LogoText text="Why we build Inferer?" customStyle={{marginTop: '88px'}}></LogoText>
                 <div className="subtitle">
                             So many bots we've seen on chain and they're hurting user experience in many ways. The cost for
@@ -79,7 +86,8 @@ export default function Home() {
                     products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
                     hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
                 </div>
-                <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}} />
+                {/* <img src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}} /> */}
+                <LazyImage src="/img_1.png" style={{marginTop: '41px', marginBottom: '112px', width: '46.20%', height: '50%', "-webkit-user-drag": "none"}}  />
             </div>
 
             {/*page 3*/}
@@ -90,20 +98,24 @@ export default function Home() {
                     believe the solution for bots also points to data. We could learn from data on chain and evaluate
                     bots based on the behaviors in data.
                 </div>
-                <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%', "-webkit-user-drag": "none"}}/>
+                {/* <img src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/built.png" style={{marginTop: '26px', width: '46.35%', height: '50%', "-webkit-user-drag": "none"}} />
                 <LogoText text="Benefits" customStyle={{marginTop: '105px'}}></LogoText>
                 <div className="subtitle">
                     Verification is processed internally in Inferer. We would not need user interaction the way like
                     reCaptcha in web2, which doesn't cause trouble to users.
                 </div>
-                <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/>
+                {/* <img src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/img_3.png" className='img-w-100' style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '45%', "-webkit-user-drag": "none"}} />
             </div>
 
             {/*page 4*/}
             <div className="subpage_4">
                 <LogoText text="Products" customStyle={{marginTop: '5.35%'}}></LogoText>
-                <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
-                <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/>
+                {/* <img src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/inferer_search.png" style={{marginTop: '1.68%', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}} />
+                {/* <img src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/inferer_api.png" style={{marginTop: '26px', marginBottom: '100px', width: '65.68%', height: '33.27%', "-webkit-user-drag": "none"}} />
             </div>
 
             {/*page 5*/}
@@ -113,7 +125,8 @@ export default function Home() {
                     Inferer is born in web3 and values community. Community would play a big role in inferer evaluation
                     and management. We hope inferer community could help contribute to great user ecosystem on chain.
                 </div>
-                <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}}/>
+                {/* <img src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}}/> */}
+                <LazyImage src="/img_4.png" style={{marginTop: '54px', marginBottom: '112px', width: '46.20%', height: '0%', "-webkit-user-drag": "none"}} />
             </div>
 
             {/*page 6*/}

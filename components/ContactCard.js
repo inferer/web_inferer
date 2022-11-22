@@ -1,10 +1,12 @@
 // app.js
 import React from 'react';
+import LazyImage from './LazyImage';
 
 export default ({ title, subtitle, icon, customStyle }) => (
     <a className='container' style={customStyle} target="_blank" href="https://twitter.com/inferer_xyz">
         
-        <img src={icon} className='icon'></img>
+        {/* <img src={icon} className='icon'></img> */}
+        <LazyImage src={icon} className=' ml-[10%] w-[58px] h-[59px]' />
             <div style={{marginLeft: '16px'}}>
                 <div className='title'>{title}</div>
                 <div>
