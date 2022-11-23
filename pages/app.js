@@ -57,7 +57,6 @@ export default class Home extends React.Component {
         } else {
             this.setState({ loading: true, isError: false, searchRecord: text, inputValue: text.toLowerCase()});
         }
-        return
         //默认假设无查询结果
         this.setState({ isResult: false });
         const SearchService = require("../api/SearchService");
@@ -797,6 +796,7 @@ export default class Home extends React.Component {
 
                         .img_searcherror {
                             width: 12.4vw;
+                            max-width: none;
                         }
 
                         .tx_search_error {

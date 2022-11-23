@@ -31,7 +31,7 @@ const MenuItem = ({
         h-[10.4vw] rounded-[2.8vw] flex items-center justify-center text-white text-[4.2667vw] font-medium cursor-pointer 
         ${showMenu ? 'hover:bg-[rgba(10,9,23,1)]' : ''}
         `}>
-        <span className={`${currentItem === title ? 'menu-text text-[4.2667vw] font-medium' : ' '}`}>{title}</span>
+        <span className={`${currentItem === title ? 'menu-text text-[4.2667vw] font-fbold' : ' font-fmedium'}`}>{title}</span>
       </div>
     </div>
   )

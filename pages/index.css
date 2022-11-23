@@ -2,8 +2,23 @@
     font-family: Poppins;
     src: url('/fonts/Poppins-Regular.ttf');
 }
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('/fonts/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('/fonts/Poppins-Bold.ttf');
+}
+
 .h5-wrap {
     font-family: Poppins;
+}
+.font-fmedium{
+    font-family: Poppins-Medium;
+}
+.font-fbold {
+    font-family: Poppins-Bold;
 }
 .community-1{
     padding: 160px 0 85px 0;

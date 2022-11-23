@@ -6,7 +6,7 @@ import H5Footer from '../H5Footer'
 const TextCard = ({ title, children }) => {
   return (
     <div className="bg-[rgba(10,9,23,1)] py-[4.2667vw] px-[3.7333vw] rounded-[2.8vw] mb-[6.4vw]">
-      <div className="font-bold text-[4.2667vw] text-white mb-[1.3333vw]">{ title }</div>
+      <div className="font-bold text-[4.2667vw] text-white mb-[1.3333vw] font-fbold">{ title }</div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
     </div>
   )

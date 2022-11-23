@@ -16,7 +16,7 @@ const SubPage3 = () => {
             </TextWrap>
           </div>
           <div className="mt-[8.1333vw]">
-            <LazyImage src="/h5/sub3_b.png" className="w-[82.4vw] h-[66.8vw]" />
+            <LazyImage src="/h5/sub3_b.png" className="w-[100vw] h-[84.9333vw]" />
           </div>
         </div>
       </div>
@@ -28,10 +28,10 @@ d           <div className=" shrink-0">
                 <LazyImage src="/h5/sub4_1.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
-              <div className="text-white font-bold text-[4.8vw]">Inferer Search</div>
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Search</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on instant-check search scenarios, and provide a quick scan on address.</span>
-                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer">
+                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium">
                   Try it out 
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
@@ -43,13 +43,13 @@ d           <div className=" shrink-0">
               <LazyImage src="/h5/sub4_2.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
-              <div className="text-white font-bold text-[4.8vw]">Inferer API</div>
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer API</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on pre-security check scenarios, and get integrated in dApps</span>
-                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer">
-                  Try it out 
+                <div className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium">
+                  For more detail
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
-                </span>
+                </div>
               </TextWrap>
             </div>
           </div>
@@ -75,25 +75,25 @@ d           <div className=" shrink-0">
             <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/twitter.png" className="w-[7.7333vw] h-[7.7333vw]" />
-              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Twitter</span>
+              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold">Twitter</span>
             </div>
             </a>
             <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/discord.png" className="w-[7.7333vw] h-[7.7333vw]" />
-              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Discord</span>
+              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold">Discord</span>
             </div>
             </a>
             <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/tg.png" className="w-[7.7333vw] h-[7.7333vw]" />
-              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Telegram</span>
+              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold">Telegram</span>
             </div>
             </a>
             <a href="https://twitter.com/inferer_xyz" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer">
               <LazyImage src="/h5/mail.png" className="w-[7.7333vw] h-[7.7333vw]" />
-              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw]">Mail</span>
+              <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold">Mail</span>
             </div>
             </a>
           </div>
