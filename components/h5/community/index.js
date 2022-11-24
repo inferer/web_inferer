@@ -21,7 +21,9 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         Inferer community is an ecosystem of users, developers, designers and evaluators. 
       </div>
       <div className="flex justify-center mt-[10.6667vw]">
-        <Title text="Owned by the community" className="text-[4.2667vw] font-fmedium" />
+        <Title className="" >
+          <span className="text-[4.2667vw] font-fmedium">Owned by the community</span>
+        </Title>
       </div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing mt-[4vw] px-[5.3333vw]">
       Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without ourcommunity. 
@@ -34,21 +36,23 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         <LazyImage src="/h5/sub2_b.png" className="w-[89.2vw] h-[34.9333vw]" />
       </div>
       <div className="flex justify-center mt-[10.6667vw]">
-        <Title text="Join the community" className="text-[4.2667vw]" />
+        <Title className="text-[4.2667vw]" >
+          <span className="text-[4.2667vw] font-fmedium">Join the community</span>
+        </Title>
       </div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]">
       Join the community and participate in our discussions. 
       </div>
       <div className="mt-[7.2vw] flex justify-center">
-        <div className="flex items-center flex-col justify-center cursor-pointer mx-[4vw]">
+        <div className="flex items-center flex-col justify-center cursor-pointer w-[22.2667vw] shrink-0">
           <LazyImage src="/h5/twitter.png" className="w-[10.6667vw] h-[10.6667vw]" />
           <span className="text-white font-medium text-[3.7333vw] mt-[2.1333vw] font-fmedium">Twitter</span>
         </div>
-        <div className="flex items-center flex-col justify-center cursor-pointer mx-[4vw]">
+        <div className="flex items-center flex-col justify-center cursor-pointer w-[22.2667vw]">
           <LazyImage src="/h5/discord.png" className="w-[10.6667vw] h-[10.6667vw]" />
           <span className="text-white font-medium text-[3.7333vw] mt-[2.1333vw] font-fmedium">Discord</span>
         </div>
-        <div className="flex items-center flex-col justify-center cursor-pointer mx-[4vw]">
+        <div className="flex items-center flex-col justify-center cursor-pointer w-[22.2667vw]">
           <LazyImage src="/h5/tg.png" className="w-[10.6667vw] h-[10.6667vw]" />
           <span className="text-white font-medium text-[3.7333vw] mt-[2.1333vw] font-fmedium">Telegram</span>
         </div>
