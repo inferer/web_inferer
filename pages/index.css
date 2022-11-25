@@ -88,4 +88,8 @@
 .btn-bg{
     background: linear-gradient(127.27deg, rgba(53, 85, 255, 0.4) 12.05%, rgba(161, 87, 255, 0.4) 85.34%), #0F0E23;
 }
+.menu-shadow {
+    box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.57);
+    border-radius: 0px 0px 21px 21px;
+}
 

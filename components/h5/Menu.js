@@ -99,9 +99,10 @@ const H5Menu = ({ className }) => {
       </div>
       
       <div className={`
-        bg-[#0F0C2F] h-[48vw] absolute left-0 w-full rounded-b-[2.8vw] pt-[15vw] transition-all duration-300
+        bg-[#0F0C2F] h-[48vw] absolute left-0 w-full rounded-b-[2.8vw] pt-[14vw] menu-shadow transition-all duration-300
         ${showMenu ? 'top-0 opacity-100 z-10' : '-top-[50px] -z-10 opacity-0'}
-      `}>
+      `}
+      >
         <MenuItem title="Home" showMenu={showMenu} onClick={() => {
           setShowMenu(false)
           router.push('/')
