@@ -29,7 +29,7 @@ const MenuItem = ({
     >
       <div className={`
         h-[10.4vw] rounded-[2.8vw] flex items-center justify-center text-white text-[4.2667vw] font-medium cursor-pointer 
-        ${showMenu ? 'hover:bg-[rgba(10,9,23,1)]' : ''}
+        ${currentItem === title ? 'bg-[rgba(10,9,23,1)]' : ''}
         `}>
         <span className={`${currentItem === title ? 'menu-text text-[4.2667vw] font-fbold' : ' font-fmedium'}`}>{title}</span>
       </div>
@@ -99,8 +99,8 @@ const H5Menu = ({ className }) => {
       </div>
       
       <div className={`
-        bg-[#0F0C2F] h-[48vw] absolute left-0 w-full rounded-b-[2.8vw] pt-[14vw] transition-all duration-300
-        ${showMenu ? 'top-0 opacity-100 z-10' : '-top-[50px] -z-10'}
+        bg-[#0F0C2F] h-[48vw] absolute left-0 w-full rounded-b-[2.8vw] pt-[15vw] transition-all duration-300
+        ${showMenu ? 'top-0 opacity-100 z-10' : '-top-[50px] -z-10 opacity-0'}
       `}>
         <MenuItem title="Home" showMenu={showMenu} onClick={() => {
           setShowMenu(false)
