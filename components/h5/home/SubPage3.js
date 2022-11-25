@@ -23,8 +23,8 @@ const SubPage3 = () => {
       <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw]">
         <div className="flex justify-center flex-col items-center">
           <Title text="Products" />
-          <div className="w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[8.9333vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
-d           <div className=" shrink-0">
+          <div className="w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+            <div className=" shrink-0">
                 <LazyImage src="/h5/sub4_1.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">

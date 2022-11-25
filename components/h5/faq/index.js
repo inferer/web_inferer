@@ -14,7 +14,7 @@ const TextCard = ({ title, children }) => {
 
 const H5Faq = () => {
   return (
-    <div className="pt-[17.33333vw] pb-[8.2667vw] min-h-screen ">
+    <div className="pt-[17.33333vw] ">
       <H5Menu />
       <div className="flex justify-center">
         <Title text="FAQ" className="text-[6.4vw] font-bold" />

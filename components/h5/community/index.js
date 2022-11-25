@@ -12,7 +12,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
     }
   }, [defaultValue])
   return (
-    <div className="pt-[17.33333vw] pb-[8.2667vw] min-h-screen ">
+    <div className="pt-[17.33333vw] min-h-screen ">
       <H5Menu />
       <div className="text-[6.4vw] font-bold text-white text-center font-fbold">
         Community
