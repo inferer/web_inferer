@@ -106,13 +106,13 @@ const H5Menu = ({ className }) => {
           setShowMenu(false)
           router.push('/')
         }} />
-        <MenuItem title="FAQ" showMenu={showMenu}  onClick={() => {
-          setShowMenu(false)
-          router.push('/faq')
-        }} />
         <MenuItem title="Community" showMenu={showMenu}  onClick={() => {
           setShowMenu(false)
           router.push('/community')
+        }} />
+        <MenuItem title="FAQ" showMenu={showMenu}  onClick={() => {
+          setShowMenu(false)
+          router.push('/faq')
         }} />
       </div>
     </div>

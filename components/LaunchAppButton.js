@@ -8,7 +8,8 @@ export default class LaunchAppButton extends React.Component {
             // onClick={this.props.onClick}
             <div className='container' style={this.props.customStyle}>
                 <div className='color_bg'></div>
-                <a className='button' target="_blank" href="/app">
+                {/* <a className='button' target="_blank" href="/app"> */}
+                <a className='button' target="_blank" href="https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj">
                     <div className='button_text'>LAUNCH APP</div>
                 </a>
 

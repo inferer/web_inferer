@@ -6,7 +6,7 @@ const SubPage1 = () => {
     <div className="bg-[url('/h5/subpage1_bg.png')] bg-no-repeat bg-top bg-cover w-full pb-[19.2vw] pt-[52.533vw]">
       <H5Menu />
       <div className="flex justify-center">
-        <div className="text-[9.6vw] font-bold text-white main-title letter-spacing font-fbold" style={{letterSpacing: '0.04rem'}}>INFERER</div>
+        <div className="text-[9.6vw] font-bold text-white main-title letter-spacing font-fbold" style={{letterSpacing: '0.16em'}}>INFERER</div>
       </div>
       <div className="flex justify-center mt-[53.2vw]">
         <div className="w-[36.2667vw] text-[rgba(78,77,122,1)] text-[3.2vw] leading-[150%] text-center">

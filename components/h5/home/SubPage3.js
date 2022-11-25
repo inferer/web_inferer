@@ -28,10 +28,15 @@ d           <div className=" shrink-0">
                 <LazyImage src="/h5/sub4_1.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
-              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Search</div>
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Identity</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on instant-check search scenarios, and provide a quick scan on address.</span>
-                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium">
+                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
+                  onClick={e => {
+                    e.stopPropagation()
+                    window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+                  }}
+                >
                   Try it out 
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
