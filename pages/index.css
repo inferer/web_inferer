@@ -62,7 +62,6 @@
 .text-gradient {
     letter-spacing: 0.05em;
     text-decoration-line: underline;
-
     /* gradient */
 
     background: linear-gradient(127.27deg, #3555FF 12.05%, #A157FF 85.34%);
@@ -85,11 +84,26 @@
 .letter-spacing {
     letter-spacing: 0.02em;
 }
+.letter-spacing-lg {
+    letter-spacing: 0.06em;
+}
 .btn-bg{
     background: linear-gradient(127.27deg, rgba(53, 85, 255, 0.4) 12.05%, rgba(161, 87, 255, 0.4) 85.34%), #0F0E23;
 }
 .menu-shadow {
     box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.57);
     border-radius: 0px 0px 21px 21px;
+}
+.border-gd{
+
+}
+.launch-btn {
+    width: 141px;
+    height: 44px;
+    background: linear-gradient(133.61deg, #3555FF 10%, #A157FF 100%);
+    border-radius: 4px;
+}
+.bg-gr{
+    background: linear-gradient(133.61deg, #3555FF 10%, #A157FF 100%);
 }
 
