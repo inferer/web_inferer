@@ -18,7 +18,7 @@ export default function Home() {
         <div className=' hidden sm:block min-w-[1200px]'>
           <PCHome />
         </div>
-        <div className="block sm:hidden h5-wrap">
+        <div className="block sm:hidden h5-wrap bg-black">
           <H5Home />
         </div>
       </>

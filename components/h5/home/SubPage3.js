@@ -37,7 +37,10 @@ const SubPage3 = () => {
                     window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
                   }}
                 >
-                  Try it out 
+                  <div className="text-gradient tracking-wider relative inline-block">
+                   Try it out 
+                    <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                  </div>
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
               </TextWrap>
@@ -52,7 +55,10 @@ d           <div className=" shrink-0">
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on pre-security check scenarios, and get integrated in dApps</span>
                 <div className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium">
-                  For more detail
+                  <div className="text-gradient tracking-wider relative inline-block">
+                    For more detail
+                    <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                  </div>
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </div>
               </TextWrap>
@@ -68,7 +74,7 @@ d           <div className=" shrink-0">
             <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
               <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer Identity</div>
               <TextWrap>
-                <span className="text-[16px] tracking-wider]">Focus on instant-check search scenarios, which enable user to
+                <span className="text-[16px] tracking-widest">Focus on instant-check search scenarios, which enable user to
 have a quick scan on address.</span>
                 
               </TextWrap>
@@ -80,7 +86,7 @@ have a quick scan on address.</span>
               >
                 <div className="text-gradient tracking-wider relative inline-block">
                   Try it out 
-                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-0 left-0"></div>
+                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
                 <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
@@ -91,7 +97,7 @@ have a quick scan on address.</span>
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
               <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer API</div>
               <TextWrap>
-                <span className="text-[16px] tracking-wider]">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers. </span>
+                <span className="text-[16px] tracking-widest">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers. </span>
                 
               </TextWrap>
               <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
@@ -101,8 +107,8 @@ have a quick scan on address.</span>
                 }}
               >
                 <div className="text-gradient tracking-wider relative inline-block">
-                For more detail
-                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-0 left-0"></div>
+                  For more detail
+                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
                 <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
@@ -119,7 +125,7 @@ have a quick scan on address.</span>
       </div>
       <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[120px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
-          <Title text="Inferer community" />
+          <Title text="Community" />
           <div className="px-[5.3333vw] mt-[3.2vw] sm:mt-[33px] sm:px-0">
             <TextWrap>
             Inferer is born in web3 and values community. Community would play a big role in inferer evaluation and management. We hope inferer community could help contribute to great user ecosystem on chain.

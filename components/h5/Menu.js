@@ -46,27 +46,28 @@ const H5Menu = ({ className }) => {
   const [showMenu, setShowMenu] = useState(false)
   const [showBg, setShowBg] = useState(false)
   useEffect(() => {
-    window.onscroll = () => {
+    const handleScroll = () => {
       if (window.scrollY <= 1) {
         setShowBg(false)
       } else {
         setShowBg(true)
       }
     }
+    window.addEventListener('scroll', handleScroll)
 
     const clickAnyway = () => {
       setShowMenu(false)
     }
     document.addEventListener('click', clickAnyway)
     return () => {
-      window.onscroll = null
+      window.removeEventListener('scroll', handleScroll)
       document.removeEventListener('click', clickAnyway)
     }
   }, [])
 
   return (
     <>
-    <div className={`px-[5.3333vw] py-[6.6667vw] fixed w-full top-0 left-0 transition-all ${showBg ? 'bg-[#0F0C2F] bg-opacity-95' : ''} ${showMenu ? ' -z-10' : ' z-10'}`}>
+    <div className={`px-[5.3333vw] py-[6.6667vw] fixed w-full top-0 left-0 transition-all ${showBg ? 'bg-[#0F0C2F] bg-opacity-95' : ''} ${showMenu ? ' -z-10' : ' z-10'} ${className}`}>
       <div className="flex items-center justify-between relative z-50">
         <div>
           <img src="/h5/logo.png" className="w-[5.3333vw] h-[5.3333vw]" />
