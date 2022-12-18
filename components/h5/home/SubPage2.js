@@ -14,7 +14,8 @@ const SubPage2 = () => {
           </TextWrap>
         </div>
         <div className="mt-[10.6667vw] sm:mt-[92px]">
-          <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px]" />
+          <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] block sm:hidden" />
+          <LazyImage src="/pc/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] hidden sm:block" />
         </div>
         <Title text="Why we build Inferer?" className="mt-[9.3333vw] sm:mt-[120px]" />
         <div className="px-[5.3333vw] sm:px-0 mt-[3.2vw] sm:mt-8">
