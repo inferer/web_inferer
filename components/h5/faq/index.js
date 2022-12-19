@@ -9,7 +9,7 @@ const TextCard = ({ title, children }) => {
     <div className="bg-[rgba(10,9,23,1)] py-[4.2667vw] px-[3.7333vw] rounded-[2.8vw] mb-[6.4vw]
       sm:rounded-[21px] sm:px-[28px] sm:py-[32px] sm:mb-[48px]
     ">
-      <div className="text-[4.2667vw] sm:text-[32px] sm:mb-[10px] text-white mb-[1.3333vw] font-fbold">{ title }</div>
+      <div className="text-[4.2667vw] sm:text-[24px] sm:mb-[10px] text-white mb-[1.3333vw] font-fbold">{ title }</div>
       <div className="text-[3.2vw] sm:text-[24px] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
     </div>
   )
@@ -23,7 +23,7 @@ const H5Faq = () => {
       <Menu />
       <div className="flex justify-center">
         <Title text="FAQ" className="text-[6.4vw] font-bold block sm:hidden" />
-        <div className="text-[48px] text-white font-fbold sm:block hidden">FAQ</div>
+        <div className="text-[36px] text-white font-fbold sm:block hidden">FAQ</div>
       </div>
       <div 
         className="px-[5.3333vw] mt-[3.7333vw] sm:px-0 sm:mt-[48px]">

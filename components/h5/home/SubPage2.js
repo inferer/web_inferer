@@ -13,7 +13,7 @@ const SubPage2 = () => {
           Inferer is a user identity analysis service on blockchain. We try to build a label-rich user portrait system, which is based on on-chain and off-chain data analysis and data mining, infer user identity through algorithms models and offers the final user identify evaluation service.
           </TextWrap>
         </div>
-        <div className="mt-[10.6667vw] sm:mt-[92px]">
+        <div className="mt-[10.6667vw] sm:mt-[2px]">
           <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] block sm:hidden" />
           <LazyImage src="/pc/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] hidden sm:block" />
         </div>

@@ -21,7 +21,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         <Menu />
       </div>
       
-      <div className="text-[6.4vw] sm:text-[48px] text-white text-center sm:text-left font-fbold">
+      <div className="text-[6.4vw] sm:text-[36px] text-white text-center sm:text-left font-fbold">
         Community
       </div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]
@@ -38,7 +38,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
             <div className="hidden sm:block text-[32px] text-white font-fmedium">Owned by the community</div>
           </div>
           <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing mt-[4vw] px-[5.3333vw]
-            sm:text-[24px] sm:leading-[36px] sm:mt-3 sm:px-0
+            sm:text-[22px] sm:leading-[36px] sm:mt-3 sm:px-0
           ">
           Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without ourcommunity. 
           <br />
@@ -63,7 +63,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         </div>
         <div className="flex justify-center">
           <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]
-            sm:text-[24px] sm:leading-[36px] sm:max-w-[540px] sm:px-0 sm:mt-[13px]
+            sm:text-[22px] sm:leading-[36px] sm:max-w-[540px] sm:px-0 sm:mt-[13px]
           ">
           Join the community and participate in our discussions. 
           </div>

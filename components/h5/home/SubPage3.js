@@ -74,8 +74,10 @@ d           <div className=" shrink-0">
             <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
               <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer Identity</div>
               <TextWrap>
-                <span className="text-[16px] tracking-widest">Focus on instant-check search scenarios, which enable user to
+                <div className="leading-6">
+                <span className="text-[16px] tracking-widest leading-6">Focus on instant-check search scenarios, which enable user to
 have a quick scan on address.</span>
+                  </div>
                 
               </TextWrap>
               <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
@@ -95,9 +97,11 @@ have a quick scan on address.</span>
           </div>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px]">
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
-              <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer API</div>
+              <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
               <TextWrap>
-                <span className="text-[16px] tracking-widest">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers. </span>
+                <div className="leading-6">
+                <span className="text-[16px] tracking-widest leading-6">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers. </span>
+                </div>
                 
               </TextWrap>
               <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
@@ -146,7 +150,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Twitter</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Twitter</div>
-                <div className="text-[14px]">Follow our Twitter to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Follow our Twitter to get latest info.</div>
               </div>
             </div>
             </a>
@@ -156,7 +160,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Discord</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Discord</div>
-                <div className="text-[14px]">Participate in our Discord to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Participate in our Discord to get latest info.</div>
               </div>
             </div>
             </a>
@@ -166,7 +170,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Telegram</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Telegram</div>
-                <div className="text-[14px]">Join in our Telegram group to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Join in our Telegram group to get latest info.</div>
               </div>
             </div>
             </a>
@@ -176,7 +180,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Mail</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Mail</div>
-                <div className="text-[14px]">Email us if anything interests you.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Email us if anything interests you.</div>
               </div>
             </div>
             </a>
