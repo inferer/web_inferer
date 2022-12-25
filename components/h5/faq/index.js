@@ -9,8 +9,8 @@ const TextCard = ({ title, children }) => {
     <div className="bg-[rgba(10,9,23,1)] py-[4.2667vw] px-[3.7333vw] rounded-[2.8vw] mb-[6.4vw]
       sm:rounded-[21px] sm:px-[28px] sm:py-[32px] sm:mb-[48px]
     ">
-      <div className="text-[4.2667vw] sm:text-[24px] sm:mb-[10px] text-white mb-[1.3333vw] font-fbold">{ title }</div>
-      <div className="text-[3.2vw] sm:text-[24px] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
+      <div className="text-[4.2667vw] sm:text-[24px] sm:mb-[10px] text-white mb-[1.3333vw] font-fmedium">{ title }</div>
+      <div className="text-[3.2vw] sm:text-[22px] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
     </div>
   )
 }

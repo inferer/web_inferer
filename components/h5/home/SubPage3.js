@@ -71,7 +71,8 @@ d           <div className=" shrink-0">
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
             </div>
-            <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
+            <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
+              <LazyImage src="/pc/circle2.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer Identity</div>
               <TextWrap>
                 <div className="leading-6">
@@ -96,7 +97,8 @@ have a quick scan on address.</span>
             </div>
           </div>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px]">
-            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col ">
+            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative">
+              <LazyImage src="/pc/circle1.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
               <TextWrap>
                 <div className="leading-6">
