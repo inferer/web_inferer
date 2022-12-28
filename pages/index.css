@@ -10,15 +10,22 @@
     font-family: Poppins-Bold;
     src: url('/fonts/Poppins-Bold.ttf');
 }
+@font-face {
+    font-family: Poppins-ExtraLight;
+    src: url('/fonts/Poppins-ExtraLight.ttf');
+}
 
-.h5-wrap {
-    font-family: Poppins;
+.h5-wrap, body {
+    font-family: Poppins-ExtraLight;
 }
 .font-fmedium{
     font-family: Poppins-Medium;
 }
 .font-fbold {
     font-family: Poppins-Bold;
+}
+.font-exlt {
+    font-family: Poppins-ExtraLight;
 }
 .community-1{
     padding: 160px 0 85px 0;

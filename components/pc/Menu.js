@@ -55,7 +55,7 @@ const Menu = () => {
       ${showBg ? 'bg-[#0A0917] bg-opacity-95' : ''}
     `}>
       <div className='w-full max-w-[1200px] flex justify-between items-center'>
-        <img src='/h5/logo.png' className='w-10 h-10' 
+        <img src='/h5/logo.png' className='w-8 h-8' 
           onClick={e => {
             router.push('/')
           }}
