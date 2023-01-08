@@ -152,7 +152,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Twitter</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Twitter</div>
-                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Follow our Twitter to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)] font-exlt">Follow our Twitter to get latest info.</div>
               </div>
             </div>
             </a>
@@ -162,7 +162,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Discord</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Discord</div>
-                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Participate in our Discord to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)] font-exlt">Participate in our Discord to get latest info.</div>
               </div>
             </div>
             </a>
@@ -172,7 +172,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Telegram</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Telegram</div>
-                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Join in our Telegram group to get latest info.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)] font-exlt">Join in our Telegram group to get latest info.</div>
               </div>
             </div>
             </a>
@@ -182,7 +182,7 @@ have a quick scan on address.</span>
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Mail</span>
               <div className="hidden sm:block font-fmedium text-white ml-4">
                 <div className="text-[22px] mb-1">Mail</div>
-                <div className="text-[14px] text-[rgba(255,255,255,0.6)]">Email us if anything interests you.</div>
+                <div className="text-[14px] text-[rgba(255,255,255,0.6)] font-exlt">Email us if anything interests you.</div>
               </div>
             </div>
             </a>
