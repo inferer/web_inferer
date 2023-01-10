@@ -18,6 +18,11 @@
 .h5-wrap, body {
     font-family: Poppins-ExtraLight;
 }
+@media screen and (max-width:640px) {
+    .h5-wrap, body {
+        font-family: Poppins;
+    }
+}
 .font-fmedium{
     font-family: Poppins-Medium;
 }
@@ -116,8 +121,15 @@
 .tip-img{
     margin-bottom: -3.1vw;
 }
+
 @media screen and (max-width:1100px) {
     .tip-img{
         margin-bottom: -2.6vw;
     }
+    .h5-wrap, body {
+        font-family: Poppins;
+    }
+}
+input.placeholder::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }

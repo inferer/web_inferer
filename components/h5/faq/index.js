@@ -28,7 +28,7 @@ const H5Faq = () => {
       <div 
         className="px-[5.3333vw] mt-[3.7333vw] sm:px-0 sm:mt-[48px]">
         <TextCard title="What's Inferer ?" >
-        Inferer is a blockchain user verification service built on data analyis, aimed to prevent bots from hurting user experience on chain and contribute to greate user ecysystem on chain.
+        Inferer is a user identity analysis service on blockchain. We try to build a label-rich user portrait system, which is based on on-chain and off-chain data analysis and data mining, infer user identity through algorithm models and offers the final user identify evaluation service.
         </TextCard>
         <TextCard title="What products do Inferer provide?" >
         Currently we have Inferer Search and Inferer API, which serves in different purposes. Inferer Search focuses more on instant-check search scenarios, which enable user to have a quick scan on address whether it's bot related and what behaviors it generated before; Inferer API focuses more on pre-security check scenarios, which could help prevent hackers from invading system and contribute to more security 
