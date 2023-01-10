@@ -10,7 +10,7 @@ const TextCard = ({ title, children }) => {
       sm:rounded-[21px] sm:px-[28px] sm:py-[32px] sm:mb-[48px]
     ">
       <div className="text-[4.2667vw] sm:text-[24px] sm:mb-[10px] text-white mb-[1.3333vw] font-fmedium">{ title }</div>
-      <div className="text-[3.2vw] sm:text-[22px] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
+      <div className="text-[3.2vw] sm:text-[18px] text-[rgba(255,255,255,0.6)] leading-[150%]" style={{letterSpacing: '0.05em'}}>{children}</div>
     </div>
   )
 }

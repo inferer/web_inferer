@@ -25,7 +25,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         Community
       </div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]
-        sm:text-[22px] sm:text-left sm:px-0 sm:mt-6 sm:leading-[33px]
+        sm:text-[18px] sm:text-left sm:px-0 sm:mt-6 sm:leading-[33px]
       ">
         Inferer community is an ecosystem of users, developers, designers and evaluators. 
       </div>
@@ -38,7 +38,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
             <div className="hidden sm:block text-[32px] text-white font-fmedium">Owned by the community</div>
           </div>
           <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing mt-[4vw] px-[5.3333vw]
-            sm:text-[22px] sm:leading-[36px] sm:mt-3 sm:px-0
+            sm:text-[18px] sm:leading-[36px] sm:mt-3 sm:px-0
           ">
           Inferer is born in web3 and values community.  We hope to help contribute to great user ecosystem on chain and it wouldn’t be possible without ourcommunity. 
           <br />
@@ -63,7 +63,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         </div>
         <div className="flex justify-center">
           <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]
-            sm:text-[22px] sm:leading-[36px] sm:max-w-[540px] sm:px-0 sm:mt-[13px]
+            sm:text-[18px] sm:leading-[36px] sm:max-w-[540px] sm:px-0 sm:mt-[13px]
           ">
           Join the community and participate in our discussions. 
           </div>
@@ -97,7 +97,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
             />
             <div className="
               text-[3.7333vw] shrink-0 letter-spacing font-bold btn-bg w-[27.6vw] h-[11.0667vw] flex justify-center items-center rounded-r-[1.3333vw] text-white cursor-pointer
-              sm:h-[67px] sm:w-[200px] sm:rounded-r-[10px] sm:text-[22px]
+              sm:h-[67px] sm:w-[200px] sm:rounded-r-[10px] sm:text-[18px]
             "
               onClick={e => {
                 e.stopPropagation()

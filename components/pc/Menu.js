@@ -2,6 +2,7 @@ import LaunchAppButton from '../LaunchAppButton';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from 'react';
+import { Tooltip } from 'antd';
 
 const MenuItem = ({ children, text, onClick }) => {
   const router = useRouter()
@@ -62,10 +63,17 @@ const Menu = () => {
         />
         <div className='text-base font-fbold text-white flex space-x-9 items-center'>
           <MenuItem className="cursor-pointer hover:text-[#44488F]">
+            <Tooltip placement="bottom" color='#2D2F31' title={'Coming soon'}
+              overlayInnerStyle={{borderRadius: '6px', padding: '10px', fontSize: '14px'}}>
               DOCS
+            </Tooltip>
           </MenuItem>
+          
           <MenuItem className="cursor-pointer hover:text-[#44488F]">
-              WHITEPAPER
+            <Tooltip placement="bottom" color='#2D2F31' title={'Coming soon'}
+                overlayInnerStyle={{borderRadius: '6px', padding: '10px', fontSize: '14px'}}>
+                WHITEPAPER
+            </Tooltip>
           </MenuItem>
           <MenuItem className="cursor-pointer hover:text-[#44488F]" onClick={()=>{
             router.push('/community')
