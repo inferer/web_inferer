@@ -133,3 +133,15 @@
 input.placeholder::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
+.ranking-bg {
+    background-image: url('/ranking/bg2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.reddit-title{
+    background: linear-gradient(280.16deg, #F73B47 8.51%, #FF7E35 142.08%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

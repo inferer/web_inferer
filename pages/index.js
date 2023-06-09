@@ -1,11 +1,5 @@
-import LogoText from '../components/LogoText';
-import ContactCard from '../components/ContactCard';
-import LaunchAppButton from '../components/LaunchAppButton';
-import Link from "next/link";
-import router from "next/router";
 import Head from 'next/head'
 import H5Home from '../components/h5/home/index';
-import LazyImage from '../components/LazyImage'
 import PCHome from '../components/pc/home';
 
 export default function Home() {

@@ -1,9 +1,4 @@
-import LogoText from '../components/LogoText';
-import ContactCard from '../components/ContactCard';
-import LaunchAppButton from '../components/LaunchAppButton';
 import H5Faq from '../components/h5/faq/index'
-import Link from "next/link";
-import router from "next/router";
 import Head from 'next/head';
 
 export default function Home() {
