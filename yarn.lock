@@ -892,6 +892,14 @@ dom-helpers@^5.0.1:
     "@babel/runtime" "^7.8.7"
     csstype "^3.0.2"
 
+echarts@^5.4.2:
+  version "5.4.2"
+  resolved "https://registry.npmmirror.com/echarts/-/echarts-5.4.2.tgz#9f38781c9c6ae323e896956178f6956952c77a48"
+  integrity sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==
+  dependencies:
+    tslib "2.3.0"
+    zrender "5.4.3"
+
 electron-to-chromium@^1.4.411:
   version "1.4.425"
   resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.425.tgz#399df13091b836d28283a545c25c8e4d9da86da8"
@@ -2139,6 +2147,11 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.npmmirror.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
 tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4.0:
   version "2.5.3"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.5.3.tgz#24944ba2d990940e6e982c4bea147aba80209913"
@@ -2176,3 +2189,10 @@ yaml@^2.1.1:
   version "2.3.1"
   resolved "https://registry.npmmirror.com/yaml/-/yaml-2.3.1.tgz#02fe0975d23cd441242aa7204e09fc28ac2ac33b"
   integrity sha512-2eHWfjaoXgTBC2jNM1LRef62VQa0umtvRiDSk6HSzW7RvS5YtkabJrwYLLEKWBc8a5U2PTSCs+dJjUTJdlHsWQ==
+
+zrender@5.4.3:
+  version "5.4.3"
+  resolved "https://registry.npmmirror.com/zrender/-/zrender-5.4.3.tgz#41ffaf835f3a3210224abd9d6964b48ff01e79f5"
+  integrity sha512-DRUM4ZLnoaT0PBVvGBDO9oWIDBKFdAVieNWxWwK0niYzJCMwGchRk21/hsE+RKkIveH3XHCyvXcJDkgLVvfizQ==
+  dependencies:
+    tslib "2.3.0"

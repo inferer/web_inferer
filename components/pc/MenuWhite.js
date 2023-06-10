@@ -51,7 +51,7 @@ const MenuWhite = () => {
   }, [])
   return (
     <div className={`justify-center h-[104px] items-center hidden sm:flex transition-all
-      ${showBg ? 'bg-[#0A0917] bg-opacity-95' : ''}
+      ${showBg ? 'bg-opacity-95' : ''}
     `}>
       <div className='w-full max-w-[1200px] flex justify-between items-center'>
         <div className="flex items-center">
