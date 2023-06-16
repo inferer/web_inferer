@@ -26,21 +26,21 @@ const CollInfo = () => {
   ])
 
   return (
-    <div className="mt-[120px] holder_bg h-[484px] rounded-xl flex relative">
+    <div className="mt-[120px] coll_bg h-[484px] rounded-xl flex relative">
       <LazyImage src="/addressan/circle4.png" className="w-[62px] h-[62px] absolute left-[11px] -top-[31px]" />
       <div className="flex-1">
-        <div className="flex mt-[42px] mb-5 justify-center">
+        <div className="flex mt-[82px] mb-5 justify-center">
           <div className="relative w-[132px] h-[174px] flex items-center justify-center">
-            <LazyImage src="/addressan/nft-asset.png" className=" max-w-full max-h-full w-auto h-auto" />
-            <LazyImage src="/addressan/avatar_bg.png" className="w-[132px] h-[174px] absolute left-0 top-0" />
+            <LazyImage src="/addressan/images/demo.png" className=" w-full h-full" />
+            {/* <LazyImage src="/addressan/avatar_bg.png" className="w-[132px] h-[174px] absolute left-0 top-0" /> */}
           </div>
         </div>
-        <div className="flex items-center justify-center">
-          <LazyImage src="/addressan/sq.png" className=" w-[10px] h-[10px]" />
-          <div className="w-10 border-b border-[rgba(246,59,71,0.6)] mx-[18px]"></div>
-          <div className=" font-fmedium text-[24px] num-text2">Holder</div>
-          <div className="w-10 border-b border-[rgba(246,59,71,0.6)] mx-[18px]"></div>
-          <LazyImage src="/addressan/sq.png" className=" w-[10px] h-[10px]" />
+        <div className="flex items-center justify-center mt-5">
+          <LazyImage src="/addressan/left.png" className=" w-[16px] h-[16px]" />
+          <div className="w-10 border-b border-[#2C76FF] mx-[18px]"></div>
+          <div className=" font-fmedium text-[24px] text-[#2C76FF]">Series</div>
+          <div className="w-10 border-b border-[#2C76FF] mx-[18px]"></div>
+          <LazyImage src="/addressan/right.png" className=" w-[16px] h-[16px]" />
         </div>
         
       </div>
