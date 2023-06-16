@@ -2,7 +2,6 @@ import RankWrap from './RankWrap';
 import RankTitle from './RankTitle';
 import { Table, TableHead, TableBody, TableHeadCell, TableRow, TableCell } from './Table';
 import LazyImage from '../../../components/LazyImage';
-import { LineChartS } from './LineChart';
 
 const TopAccounts = () => {
   return (
