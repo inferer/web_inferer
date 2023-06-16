@@ -1,4 +1,5 @@
 import LazyImage from "../../../components/LazyImage";
+import { Like, UnLike, StarList, CollectIcon, ShareIcon, BuyIcon, MsgIcon } from './coms';
 
 
 const TextMain = ({ children }) => {
@@ -58,11 +59,9 @@ const DetailsData = () => {
       <div className="pr-[50px]">
         <div className="flex justify-end mt-[54px]">
           <div className="flex">
-            <LazyImage src="/addressan/images/dup.png" className="w-[28px] h-[28px] mr-[4px]" />
-            <div className="menu-text text-[22px]">888</div>
+            <Like likeCount={888} />
             <div className="line__v mx-[10px]"></div>
-            <LazyImage src="/addressan/images/ddown.png" className="w-[28px] h-[28px] mr-[4px]" />
-            <div className="menu-text text-[22px]">888</div>
+            <UnLike unlikeCount={24} />
           </div>
         </div>
         <div className="flex justify-end mt-[58px]">
@@ -73,18 +72,15 @@ const DetailsData = () => {
         </div>
         <div className="flex justify-end mt-[15px]">
           <div className="flex items-center">
-            <LazyImage src="/addressan/star1.png" className="w-[28px] h-[28px] ml-[4px]" />
-            <LazyImage src="/addressan/star1.png" className="w-[28px] h-[28px] ml-[4px]" />
-            <LazyImage src="/addressan/star1.png" className="w-[28px] h-[28px] ml-[4px]" />
-            <LazyImage src="/addressan/star2.png" className="w-[28px] h-[28px] ml-[4px]" />
+            <StarList score={4} />
           </div>
         </div>
         <div className="flex justify-end mt-[120px]">
           <div className="flex items-center">
-            <LazyImage src="/addressan/like.png" className="w-[42px] h-[42px] ml-[60px]" />
-            <LazyImage src="/addressan/share.png" className="w-[42px] h-[42px] ml-[60px]" />
-            <LazyImage src="/addressan/buy.png" className="w-[42px] h-[42px] ml-[60px]" />
-            <LazyImage src="/addressan/msg.png" className="w-[42px] h-[42px] ml-[60px]" />
+            <CollectIcon value={0} />
+            <ShareIcon />
+            <BuyIcon />
+            <MsgIcon />
           </div>
         </div>
       </div>

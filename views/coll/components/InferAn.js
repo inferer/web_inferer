@@ -19,7 +19,7 @@ const InferAn = () => {
   }, [])
 
   return (
-    <RankWrap className='min-h-[300px] mt-[120px]'>
+    <RankWrap className='sm:min-h-[300px] mt-[120px]'>
       <LazyImage src='/ranking/circle4.png' className='w-8 h-8 absolute left-[26px] -top-[16px]' />
       <LazyImage src='/addressan/circle3.png' className='w-[138px] h-[138px] absolute right-[145px] -top-[81px]' />
       <TTitle text="Inferer Analysis" tips="Full analysis on all Coll. holders" />

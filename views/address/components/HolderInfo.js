@@ -42,6 +42,8 @@ const HolderInfo = () => {
           <div className="w-10 border-b border-[rgba(246,59,71,0.6)] mx-[18px]"></div>
           <LazyImage src="/addressan/sq.png" className=" w-[10px] h-[10px]" />
         </div>
+        <div className=" pl-[24px]">
+
         <div className="mt-[83px]">
           <div className="flex items-center">
             <LazyImage src="/addressan/reddit_logo.png" className="w-[26px] h-[26px] mr-[6px]" />
@@ -54,7 +56,7 @@ const HolderInfo = () => {
         </div>
         <div className="mt-[22px]">
           <div className="flex items-center">
-            <LazyImage src="/addressan/reddit2.png" className="w-[26px] h-[26px] mr-[6px]" />
+            <LazyImage src="/addressan/reddit3.png" className="w-[26px] h-[26px] mr-[6px]" />
             <TextMain>Reddit</TextMain>
           </div>
           <div className="mt-2 flex items-center">
@@ -63,7 +65,7 @@ const HolderInfo = () => {
         </div>
         <div className="mt-[22px]">
           <div className="flex items-center">
-            <LazyImage src="/addressan/link.png" className="w-[26px] h-[26px] mr-[6px]" />
+            <LazyImage src="/addressan/link.png" className="w-[24px] h-[24px] mr-[6px]" />
             <TextMain>Address</TextMain>
           </div>
           <div className="mt-2 flex items-center">
@@ -71,6 +73,8 @@ const HolderInfo = () => {
             <LazyImage src="/addressan/images/copy.png" className="w-[16px] h-[16px] ml-[4px] cursor-pointer" />
           </div>
         </div>
+        </div>
+
       </div>
       <div className="w-[755px] px-[64px] pr-[98px] pt-[30px] pb-[70px]">
          <div className="flex items-center">

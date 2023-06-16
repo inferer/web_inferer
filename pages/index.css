@@ -265,7 +265,8 @@ input.placeholder::placeholder {
 .line__v{
     width: 2px;
     height: 22px;
-
+    position: relative;
+    top: 4px;
     background: linear-gradient(124.16deg, #3555FF 8.05%, #A157FF 66.68%);
     opacity: 0.3;
 }
@@ -408,4 +409,20 @@ input.placeholder::placeholder {
     background-color: #EEF4FF;
     margin-bottom: 10px;
     margin-right: 24px;
+  }
+
+.like-wrap .menu-text.up {
+    background: linear-gradient(280.16deg, #F73B47 8.51%, #FF7E35 142.08%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+.like-wrap .menu-text.down {
+    background: linear-gradient(124.16deg, #3F4664 8.05%, #3F4664 66.68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
   }
