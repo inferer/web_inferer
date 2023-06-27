@@ -156,7 +156,7 @@ have a quick scan on address.</span>
               </div>
             </div>
             </a>
-            <a href="https://twitter.com/inferer_xyz" target="_blank" >
+            <a href="https://t.me/+zTwxF2bS6a85NzI1" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] hover:bg-[#171532] transition-all duration-300  rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer sm:w-[573px] sm:h-[146px] sm:rounded-[15px] sm:pl-8">
               <LazyImage src="/h5/discord.png" className="w-[7.7333vw] h-[7.7333vw] sm:w-[58px] sm:h-[58px]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Discord</span>
@@ -166,7 +166,7 @@ have a quick scan on address.</span>
               </div>
             </div>
             </a>
-            <a href="https://twitter.com/inferer_xyz" target="_blank" >
+            <a href="https://t.me/+zTwxF2bS6a85NzI1" target="_blank" >
             <div className="w-[43.0667vw] h-[17.4667vw] bg-[rgba(10,9,23,1)] hover:bg-[#171532] transition-all duration-300  rounded-[2vw] flex items-center pl-[5.3333vw] cursor-pointer sm:w-[573px] sm:h-[146px] sm:rounded-[15px] sm:pl-8">
               <LazyImage src="/h5/tg.png" className="w-[7.7333vw] h-[7.7333vw] sm:w-[58px] sm:h-[58px]" />
               <span className="text-white font-bold text-[4.2667vw] ml-[2.8vw] font-fbold block sm:hidden">Telegram</span>
