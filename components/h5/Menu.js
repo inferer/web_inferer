@@ -108,6 +108,10 @@ const H5Menu = ({ className }) => {
           setShowMenu(false)
           router.push('/')
         }} />
+        <MenuItem title="Ranking" showMenu={showMenu} onClick={() => {
+          setShowMenu(false)
+          window.open('https://ranking.inferer.xyz', '_blank')
+        }} />
         <MenuItem title="Community" showMenu={showMenu}  onClick={() => {
           setShowMenu(false)
           router.push('/community')

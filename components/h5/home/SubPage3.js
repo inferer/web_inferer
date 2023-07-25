@@ -48,13 +48,18 @@ const SubPage3 = () => {
           </div>
           <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center flex-row-reverse px-[3.2vw] py-[4.2667vw] ">
 d           <div className=" shrink-0">
-              <LazyImage src="/h5/sub4_2.png" className="w-[33.6vw] h-[24.2667vw]" />
+              <LazyImage src="/h5/sub4_3.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
-              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer API</div>
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Ranking</div>
               <TextWrap>
-                <span className="text-[3.2vw]">Focus on pre-security check scenarios, and get integrated in dApps</span>
-                <div className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium">
+                <span className="text-[3.2vw]">Focus on pre-security check scenarios.</span>
+                <div className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
+                  onClick={e => {
+                    e.stopPropagation()
+                    window.open('https://ranking.inferer.xyz', '_blank')
+                  }}
+                >
                   <div className="text-gradient tracking-wider relative inline-block">
                     For more detail
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
@@ -64,6 +69,30 @@ d           <div className=" shrink-0">
               </TextWrap>
             </div>
           </div>
+          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+            <div className=" shrink-0">
+                <LazyImage src="/h5/sub4_2.png" className="w-[33.6vw] h-[24.2667vw]" />
+            </div>
+            <div className="ml-[3.7333vw]">
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer API</div>
+              <TextWrap>
+                <span className="text-[3.2vw]">Focus on pre-security check scenarios, and get integrated in dApps</span>
+                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
+                  onClick={e => {
+                    e.stopPropagation()
+                    // window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+                  }}
+                >
+                  <div className="text-gradient tracking-wider relative inline-block">
+                    For more detail
+                    <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                  </div>
+                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                </span>
+              </TextWrap>
+            </div>
+          </div>
+
           <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
             <div className=" shrink-0">
               <LazyImage src="/h5/sub4_1.png" className="w-[368px] h-[260px]" />
@@ -99,11 +128,48 @@ have a quick scan on address.</span>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px]">
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative">
               <LazyImage src="/pc/circle1.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
-              <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
+              <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer Ranking</div>
               <TextWrap>
                 <div className="leading-6">
                 <span className="text-[16px] tracking-widest leading-6">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers. </span>
                 </div>
+                
+              </TextWrap>
+              <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
+                onClick={e => {
+                  e.stopPropagation()
+                  window.open('https://ranking.inferer.xyz', '_blank')
+                }}
+              >
+                <div className="text-gradient tracking-wider relative inline-block">
+                  For more detail
+                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                </div>
+                
+                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+              </div>
+            </div>
+            <div>
+              <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
+            </div>
+            <div className=" shrink-0 ml-[40px] ">
+              <LazyImage src="/h5/sub4_3.png" className="w-[368px] h-[260px]" />
+            </div>
+          </div>
+          <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
+            <div className=" shrink-0">
+              <LazyImage src="/h5/sub4_2.png" className="w-[368px] h-[260px]" />
+            </div>
+            <div>
+              <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
+            </div>
+            <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
+              {/* <LazyImage src="/pc/circle2.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" /> */}
+              <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
+              <TextWrap>
+                <div className="leading-6">
+                <span className="text-[16px] tracking-widest leading-6">Focus on pre-security check scenarios, which could be integrated in customer’s product and help reduce the harm conducted by bots or hackers.</span>
+                  </div>
                 
               </TextWrap>
               <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
@@ -119,12 +185,6 @@ have a quick scan on address.</span>
                 
                 <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
               </div>
-            </div>
-            <div>
-              <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
-            </div>
-            <div className=" shrink-0 ml-[40px] ">
-              <LazyImage src="/h5/sub4_2.png" className="w-[368px] h-[260px]" />
             </div>
           </div>
         </div>

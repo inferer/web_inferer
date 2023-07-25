@@ -76,6 +76,11 @@ const Menu = () => {
             </Tooltip>
           </MenuItem>
           <MenuItem className="cursor-pointer hover:text-[#44488F]" onClick={()=>{
+            window.open('https://ranking.inferer.xyz', '_blank')
+          }}>
+              RANKING
+          </MenuItem>
+          <MenuItem className="cursor-pointer hover:text-[#44488F]" onClick={()=>{
             router.push('/community')
           }}>
               COMMUNITY
