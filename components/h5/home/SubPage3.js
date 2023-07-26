@@ -50,22 +50,22 @@ const SubPage3 = () => {
 d           <div className=" shrink-0">
               <LazyImage src="/h5/sub4_3.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
-            <div className="ml-[3.7333vw]">
+            <div className="">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Ranking</div>
               <TextWrap>
-                <span className="text-[3.2vw]">Focus on pre-security check scenarios.</span>
-                <div className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
+                <span className="text-[3.2vw]">Focus on project & token holder analysis, and provide a user oriented ranking.</span>
+                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
                   onClick={e => {
                     e.stopPropagation()
                     window.open('https://ranking.inferer.xyz', '_blank')
                   }}
                 >
                   <div className="text-gradient tracking-wider relative inline-block">
-                    For more detail
+                    Try it out
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                   </div>
                   <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
-                </div>
+                </span>
               </TextWrap>
             </div>
           </div>
@@ -127,7 +127,7 @@ have a quick scan on address.</span>
           </div>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px]">
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative">
-              <LazyImage src="/pc/circle1.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
+              <LazyImage src="/pc/circle3.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer Ranking</div>
               <TextWrap>
                 <div className="leading-6">
@@ -142,7 +142,7 @@ have a quick scan on address.</span>
                 }}
               >
                 <div className="text-gradient tracking-wider relative inline-block">
-                  For more detail
+                Try it out
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
@@ -164,7 +164,7 @@ have a quick scan on address.</span>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
             </div>
             <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
-              {/* <LazyImage src="/pc/circle2.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" /> */}
+              <LazyImage src="/pc/circle1.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
               <TextWrap>
                 <div className="leading-6">
@@ -179,7 +179,7 @@ have a quick scan on address.</span>
                 }}
               >
                 <div className="text-gradient tracking-wider relative inline-block">
-                  For more detail
+                For more detail
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
