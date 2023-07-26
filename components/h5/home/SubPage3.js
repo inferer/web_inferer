@@ -7,7 +7,7 @@ import TextWrap from './TextWrap'
 const SubPage3 = () => {
   return (
     <div className="">
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[120px] flex justify-center">
+      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Built on Data Analysis" />
           <div className="px-[5.3333vw] mt-[3.2vw] sm:mt-10 sm:px-0">
@@ -156,7 +156,7 @@ have a quick scan on address.</span>
               <LazyImage src="/h5/sub4_3.png" className="w-[368px] h-[260px]" />
             </div>
           </div>
-          <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
+          <div className="hidden w-full mt-[140px] sm:flex items-center justify-center">
             <div className=" shrink-0">
               <LazyImage src="/h5/sub4_2.png" className="w-[368px] h-[260px]" />
             </div>
