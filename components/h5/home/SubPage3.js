@@ -20,7 +20,7 @@ const SubPage3 = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] flex justify-center">
+      <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Products" />
           <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
