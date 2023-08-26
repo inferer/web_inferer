@@ -3,7 +3,7 @@ import SearchBar from '../components/SearchBar';
 import axios from 'axios'
 import { Select } from 'antd';
 import { motion } from "framer-motion"
-import { AnimatePresence } from 'framer-motion';
+import LazyImage from '../components/LazyImage';
 const { Option } = Select;
 
 export default class Feedback extends React.Component {
@@ -26,7 +26,7 @@ export default class Feedback extends React.Component {
                 {/*导航栏*/}
                 <div className="nav_bar">
                     <div className="nav_bar_content">
-                        <img src="/icon_nav_logo_blue.svg" className="logo"/>
+                        <LazyImage src="/icon_nav_logo_blue.svg" className="logo"/>
                         <div className='nav_bar_content_right'>
                           <div className='connect-right-icon'></div>
                         <Select
@@ -325,7 +325,7 @@ export default class Feedback extends React.Component {
                 left:50%;
                 width: 10px;
                 height: 10px;
-                background: url(/feedback-start.png) no-repeat center;
+                background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-start.png) no-repeat center;
                 background-size: 100%;
             }
             .feedback-address{
@@ -353,7 +353,7 @@ export default class Feedback extends React.Component {
                 margin-right:8px;
                 width: 30px;
                 height: 30px;
-                background: url(/feedback-man.png) no-repeat;
+                background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-man.png) no-repeat;
                 background-size: 100%;
             }
             .feedback-list-top-title{
@@ -416,7 +416,7 @@ export default class Feedback extends React.Component {
             box-shadow: 0px 0px 6px #769CFF;
             width: 15px;
             height: 14px;
-            background: url(/feedback-submit.png) no-repeat;
+            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-submit.png) no-repeat;
             background-size: 100%;
         }
         .feedback-submit-t{
@@ -476,7 +476,7 @@ export default class Feedback extends React.Component {
           width:26px;
           height:26px;
           z-index:9;
-          background: url(/connect-icon.png);
+          background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/connect-icon.png);
           background-size: 26px 26px;
           }
           .ant-select-selection-item{

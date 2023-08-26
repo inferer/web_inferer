@@ -631,7 +631,7 @@ export default class Home extends React.Component {
                             left: 50%;
                             width: 10px;
                             height: 10px;
-                            background: url(/feedback-start.png) no-repeat
+                            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-start.png) no-repeat
                                 center;
                             background-size: 100%;
                         }
@@ -649,7 +649,7 @@ export default class Home extends React.Component {
                             margin-right: 8px;
                             width: 30px;
                             height: 30px;
-                            background: url(/feedback-man.png) no-repeat;
+                            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-man.png) no-repeat;
                             background-size: 100%;
                         }
                         .feedback-list-top-title {
@@ -723,7 +723,7 @@ export default class Home extends React.Component {
                         .feedback-submit-icon {
                             width: 20px;
                             height: 20px;
-                            background: url(/feedback-submit.png) no-repeat;
+                            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/feedback-submit.png) no-repeat;
                             background-size: 100%;
                             margin-top: 2px;
                             // align-items: center;
@@ -961,7 +961,7 @@ export default class Home extends React.Component {
                             width: 22px;
                             height: 22px;
                             z-index: 9;
-                            background: url(/connect-icon.png);
+                            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/connect-icon.png);
                             background-size: 22px 22px;
                         }
                         .ant-select-selection-item {
@@ -990,7 +990,7 @@ export default class Home extends React.Component {
                         .select-left {
                             width: 14px;
                             height: 14px;
-                            background: url(/connect-icon.png);
+                            background: url(https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/connect-icon.png);
                             background-size: 100% auto;
                         }
                     `}</style>

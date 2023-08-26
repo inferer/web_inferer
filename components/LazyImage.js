@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 
+const isDev = process.env.NODE_ENV === 'development'
+
 const LazyImage = ({ src, className, ...others}) => {
   const [imgSrc, setImgSrc] = useState('')
   const { ref: inViewRef, inView, entry } = useInView({});
   useEffect(() => {
     if (inView && !imgSrc) {
-      setImgSrc(src)
+      setImgSrc(isDev ? src : `https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer${src}`)
     }
     
   }, [inView])
