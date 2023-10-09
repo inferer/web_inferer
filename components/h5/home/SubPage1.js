@@ -18,7 +18,7 @@ const SubPage1 = () => {
         <div className="bg-[url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/h5/launch_btn_bg.png')] bg-no-repeat bg-center bg-cover w-[36.5333vw] h-[11.2vw] flex justify-center items-center text-white font-bold text-[4.2667vw] cursor-pointer font-fbold"
           onClick={e => {
             e.stopPropagation()
-            window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+            window.open('https://id.inferer.xyz', '_blank')
           }}
         >
         LAUNCH APP

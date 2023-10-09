@@ -93,7 +93,7 @@ const Menu = () => {
           <div className='launch-btn p-[2px] cursor-pointer ' 
           onClick={()=>{
               // router.push('/app')
-              window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+              window.open('https://id.inferer.xyz', '_blank')
           }}>
             <div className='bg-[#121327] hover:bg-transparent transition-all rounded-[3px] flex justify-center items-center h-full text-white'>LAUNCH APP</div>
             

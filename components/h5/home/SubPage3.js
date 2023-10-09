@@ -34,7 +34,7 @@ const SubPage3 = () => {
                 <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
                   onClick={e => {
                     e.stopPropagation()
-                    window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+                    window.open('https://id.inferer.xyz', '_blank')
                   }}
                 >
                   <div className="text-gradient tracking-wider relative inline-block">
@@ -113,7 +113,7 @@ have a quick scan on address.</span>
               <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
                 onClick={e => {
                   e.stopPropagation()
-                  window.open('https://chrome.google.com/webstore/detail/inferer/cihpoafnmmlancocngfdmdcfhkfjglnj', '_blank')
+                  window.open('https://id.inferer.xyz', '_blank')
                 }}
               >
                 <div className="text-gradient tracking-wider relative inline-block">
