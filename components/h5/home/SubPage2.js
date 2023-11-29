@@ -10,7 +10,7 @@ const SubPage2 = () => {
         <Title text="What's Inferer ?" />
         <div className="px-[5.3333vw] sm:px-0 mt-[3.2vw] sm:mt-[32px]">
           <TextWrap>
-          Inferer is a user identity analysis service on blockchain. We try to build a label-rich user portrait system, which is based on on-chain and off-chain data analysis and data mining, infer user identity through algorithms models and offers the final user identify evaluation service.
+          Inferer is a user data protocol service in web3. We're providing identity analysis service, project evaluation service and finally serve the connection service between user identity and project ranking, which we believe we would be the next generation of airdrop.
           </TextWrap>
         </div>
         <div className="mt-[10.6667vw] sm:mt-[2px]">

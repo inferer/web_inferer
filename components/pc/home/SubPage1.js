@@ -10,7 +10,7 @@ const SubPage1 = () => {
           <div className=" uppercase text-[rgba(255,255,255,0.6)] text-[1.1458vw] tracking-[0.08em] leading-[33px] text-center font-exlt relative">
             <LazyImage src='/pc/star.png' className="w-[7.21vw] h-[7.21vw] absolute left-0 ml-[3.65vw] bottom-0 tip-img" /> 
             <div>Built on data analysis, serve for web3 identity </div>
-            <div>Hope to help contribute to great user ecosystem on chain</div>
+            <div>Hope to advance data rights for users in protocol</div>
           </div>
         </div>
       </div>
