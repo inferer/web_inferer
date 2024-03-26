@@ -68,12 +68,10 @@ const Menu = () => {
               DOCS
             </Tooltip>
           </MenuItem>
-          
-          <MenuItem className="cursor-pointer hover:text-[#44488F]">
-            <Tooltip placement="bottom" color='#2D2F31' title={'Coming soon'}
-                overlayInnerStyle={{borderRadius: '6px', padding: '10px', fontSize: '14px'}}>
-                WHITEPAPER
-            </Tooltip>
+          <MenuItem className="cursor-pointer hover:text-[#44488F]" onClick={()=>{
+            window.open('https://mirror.xyz/inferer.eth', '_blank')
+          }}>
+              WHITEPAPER
           </MenuItem>
           <MenuItem className="cursor-pointer hover:text-[#44488F]" onClick={()=>{
             window.open('https://ranking.inferer.xyz', '_blank')
