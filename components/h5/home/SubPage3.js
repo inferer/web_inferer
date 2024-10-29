@@ -185,7 +185,7 @@ have a quick scan on address.</span>
           </div>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px] flex-row-reverse">
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ml-[40px] ">
-              <LazyImage src="/pc/circle4.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
+              <img src="/pc/circle4.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer Ranking</div>
               <TextWrap>
                 <div className="leading-6">
