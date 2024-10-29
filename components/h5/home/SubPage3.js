@@ -16,7 +16,7 @@ const SubPage3 = () => {
             </TextWrap>
           </div>
           <div className="mt-[8.1333vw] sm:mt-[100px]">
-            <LazyImage src="/h5/sub3_b2.png" className="w-[89.2vw] h-[30.67vw] sm:w-[69.375vw] sm:h-auto" />
+            <img src="/h5/sub3_b2.png" className="w-[89.2vw] h-[30.67vw] sm:w-[69.375vw] sm:h-auto" />
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ const SubPage3 = () => {
           {/* Inferer Airdrop Protocol */}
           <div className=" sm:hidden w-[89.2vw] min-h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
            <div className=" shrink-0">
-              <LazyImage src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
+              <img src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Airdrop Protocol</div>
@@ -122,7 +122,7 @@ const SubPage3 = () => {
 
           <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
             <div className=" shrink-0">
-              <LazyImage src="/h5/sub4_4.png" className="w-[368px] h-[260px]" />
+              <img src="/h5/sub4_4.png" className="w-[368px] h-[260px]" />
             </div>
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
