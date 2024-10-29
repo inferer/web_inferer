@@ -7,23 +7,20 @@ const SubPage2 = () => {
   return (
     <div className="bg-[#171532] pt-[11.2vw] pb-[12vw] sm:pt-[120px] sm:pb-[136px] sm:flex sm:justify-center">
       <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
-        <Title text="What's Inferer ?" />
-        <div className="px-[5.3333vw] sm:px-0 mt-[3.2vw] sm:mt-[32px]">
+        <Title text="Inferer Airdrop Protocol" />
+        <div className="px-[5.3333vw] sm:w-[62.5vw] sm:px-0 mt-[3.2vw] sm:mt-[32px]">
           <TextWrap>
-          Inferer is a user data protocol service in web3. We're providing identity analysis service, project evaluation service and finally serve the connection service between user identity and project ranking, which we believe we would be the next generation of airdrop.
+          Inferer Airdrop protocol is the first ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement) and created new possibilities on airdrop. It’s AMM based, user analyzed and data(user) profited.
           </TextWrap>
         </div>
         <div className="mt-[10.6667vw] sm:mt-[2px]">
           <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] block sm:hidden" />
           <LazyImage src="/pc/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] hidden sm:block" />
         </div>
-        <Title text="Why we build Inferer?" className="mt-[9.3333vw] sm:mt-[120px]" />
-        <div className="px-[5.3333vw] sm:px-0 mt-[3.2vw] sm:mt-8">
+        <Title text="User Data Rights" className="mt-[9.3333vw] sm:mt-[120px]" />
+        <div className="px-[5.3333vw] sm:w-[62.5vw] sm:px-0 mt-[3.2vw] sm:mt-8">
           <TextWrap>
-          So many bots we've seen on chain and they're huring user experience in many ways. The cost for
-building bots is too low to further generate more bots. It also increase the secrity risks in many
-products. We hope Inferer could increase the cost of bot activity and raise the bar when they try to
-hurt others, which facilitates current crypto users and would be more attractive to new crypto users.
+          User data rights would prosper in web3 era. People would get their deserved economic feedbacks in this new era. The problem billions dollars of earnings created upon user data are solely poured into giant web2 entities’ revenue would be fixed. With blockchain technology, people would have a much more fair, permissionless and efficient data rights economics.
           </TextWrap>
         </div>
         <div className="mt-[10.8vw] sm:mt-12">

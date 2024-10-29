@@ -3,12 +3,12 @@ import H5Menu from '../Menu'
 
 const SubPage1 = () => {
   return (
-    <div className="bg-[url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/h5/subpage1_bg.png')] bg-no-repeat bg-top bg-cover w-full pb-[19.2vw] pt-[118.7vw]">
+    <div className="bg-[url('/pc/page1_bg.png')] bg-no-repeat bg-top bg-cover w-full pb-[19.2vw] pt-[38.7vw]">
       <H5Menu />
-      {/* <div className="flex justify-center">
-        <div className="text-[9.6vw] font-bold text-white main-title letter-spacing font-fbold" style={{letterSpacing: '0.16em'}}>INFERER</div>
-      </div> */}
-      <div className="flex justify-center mt-[0]">
+      <div className="w-[100vw] h-[23.33vw] bg-[url('/pc/page1_title_bg.png')] flex justify-center items-center" style={{backgroundSize: '100% 100%'}}>
+        <div className="font-exlt text-center text-[4vw] text-white uppercase" style={{letterSpacing: '5px'}}>INFERER AIRDROP PROTOCOL</div>
+      </div>
+      <div className="flex justify-center mt-[20vw]">
         <div className="w-[76.2667vw] text-[rgba(78,77,122,1)] text-[3.2vw] leading-[150%] text-center">
         Based on uniswap, targeted on web3 advertisement
         Committed to serve advancing user data rights in web3

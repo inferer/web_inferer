@@ -9,25 +9,50 @@ const SubPage3 = () => {
     <div className="">
       <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
-          <Title text="Built on Data Analysis" />
-          <div className="px-[5.3333vw] mt-[3.2vw] sm:mt-10 sm:px-0">
+          <Title text="Innovative Solution" />
+          <div className="px-[5.3333vw] sm:w-[62.5vw] mt-[3.2vw] sm:mt-10 sm:px-0">
             <TextWrap>
-            Blockchain is unique with its immutable data on chain and all data is public to everyone, which we  believe the solution for bots also points to data. We could learn from data on chain and evaluate bots based on the behaviors in data. 
+            Inferer Airdrop Protocol innovatively integrated AMM mechanism into advertisement market and create a brand new way to facilitate user data benefits. It would offer a user data pool market that exchanges between data demanders and data owners. Users would get more incentivized once the demands surges, in a decentralized, accurate and automative way.
             </TextWrap>
           </div>
           <div className="mt-[8.1333vw] sm:mt-[100px]">
-            <LazyImage src="/h5/sub3_b.png" className="w-[100vw] h-[84.9333vw] sm:w-[900px] sm:h-auto" />
+            <LazyImage src="/h5/sub3_b2.png" className="w-[89.2vw] h-[30.67vw] sm:w-[69.375vw] sm:h-auto" />
           </div>
         </div>
       </div>
       <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Products" />
-          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+          {/* Inferer Airdrop Protocol */}
+          <div className=" sm:hidden w-[89.2vw] min-h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+           <div className=" shrink-0">
+              <LazyImage src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
+            </div>
+            <div className="ml-[3.7333vw]">
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Airdrop Protocol</div>
+              <TextWrap>
+                <span className="text-[3.2vw]">First ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement).</span>
+                <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
+                  onClick={e => {
+                    e.stopPropagation()
+                    window.open('https://ranking.inferer.xyz', '_blank')
+                  }}
+                >
+                  <div className="text-gradient tracking-wider relative inline-block">
+                    Try it out
+                    <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                  </div>
+                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                </span>
+              </TextWrap>
+            </div>
+          </div>
+          {/* Inferer Identity */}
+          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center flex-row-reverse px-[3.2vw] py-[4.2667vw] ">
             <div className=" shrink-0">
                 <LazyImage src="/h5/sub4_1.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
-            <div className="ml-[3.7333vw]">
+            <div className="">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Identity</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on instant-check search scenarios, and provide a quick scan on address.</span>
@@ -46,11 +71,12 @@ const SubPage3 = () => {
               </TextWrap>
             </div>
           </div>
-          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center flex-row-reverse px-[3.2vw] py-[4.2667vw] ">
-d           <div className=" shrink-0">
+          {/* Inferer Ranking */}
+          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+           <div className=" shrink-0">
               <LazyImage src="/h5/sub4_3.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
-            <div className="">
+            <div className="ml-[3.7333vw]">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Ranking</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on project & token holder analysis, and provide a user oriented ranking.</span>
@@ -69,11 +95,12 @@ d           <div className=" shrink-0">
               </TextWrap>
             </div>
           </div>
-          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
+          {/* Inferer API */}
+          <div className=" sm:hidden w-[89.2vw] h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center flex-row-reverse px-[3.2vw] py-[4.2667vw] ">
             <div className=" shrink-0">
                 <LazyImage src="/h5/sub4_2.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
-            <div className="ml-[3.7333vw]">
+            <div className="">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer API</div>
               <TextWrap>
                 <span className="text-[3.2vw]">Focus on pre-security check scenarios, and get integrated in dApps</span>
@@ -95,12 +122,43 @@ d           <div className=" shrink-0">
 
           <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
             <div className=" shrink-0">
-              <LazyImage src="/h5/sub4_1.png" className="w-[368px] h-[260px]" />
+              <LazyImage src="/h5/sub4_4.png" className="w-[368px] h-[260px]" />
             </div>
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
             </div>
-            <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
+            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative  ml-[40px] ">
+              <LazyImage src="/pc/circle3.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
+              <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer Airdrop Protocol</div>
+              <TextWrap>
+                <div className="leading-6">
+                <span className="text-[16px] tracking-widest leading-6">First ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement).</span>
+                  </div>
+                
+              </TextWrap>
+              <div className=" font-medium text-[16px] cursor-pointer font-fmedium mt-5"
+                onClick={e => {
+                  e.stopPropagation()
+                  window.open('https://id.inferer.xyz', '_blank')
+                }}
+              >
+                <div className="text-gradient tracking-wider relative inline-block">
+                  Try it out 
+                  <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
+                </div>
+                
+                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+              </div>
+            </div>
+          </div>
+          <div className="hidden w-full mt-[98px] sm:flex items-center justify-center flex-row-reverse">
+            <div className=" shrink-0">
+              <LazyImage src="/h5/sub4_1.png" className="w-[368px] h-[260px] ml-[40px] " />
+            </div>
+            <div>
+              <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
+            </div>
+            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
               <LazyImage src="/pc/circle2.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[37px]">Inferer Identity</div>
               <TextWrap>
@@ -125,9 +183,9 @@ have a quick scan on address.</span>
               </div>
             </div>
           </div>
-          <div className="hidden w-full sm:flex items-center justify-center mt-[140px]">
-            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative">
-              <LazyImage src="/pc/circle3.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
+          <div className="hidden w-full sm:flex items-center justify-center mt-[140px] flex-row-reverse">
+            <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ml-[40px] ">
+              <LazyImage src="/pc/circle4.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer Ranking</div>
               <TextWrap>
                 <div className="leading-6">
@@ -152,18 +210,18 @@ have a quick scan on address.</span>
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
             </div>
-            <div className=" shrink-0 ml-[40px] ">
+            <div className=" shrink-0">
               <LazyImage src="/h5/sub4_3.png" className="w-[368px] h-[260px]" />
             </div>
           </div>
-          <div className="hidden w-full mt-[140px] sm:flex items-center justify-center">
-            <div className=" shrink-0">
+          <div className="hidden w-full mt-[140px] sm:flex items-center justify-center flex-row-reverse">
+            <div className=" shrink-0 ml-[40px]">
               <LazyImage src="/h5/sub4_2.png" className="w-[368px] h-[260px]" />
             </div>
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
             </div>
-            <div className="ml-[40px] bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
+            <div className=" bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ">
               <LazyImage src="/pc/circle1.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer API</div>
               <TextWrap>
