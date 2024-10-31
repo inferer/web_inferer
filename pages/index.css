@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: Poppins;
     src: url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/Poppins-Regular.ttf');
 }
@@ -13,6 +13,23 @@
 @font-face {
     font-family: Poppins-ExtraLight;
     src: url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/Poppins-ExtraLight.ttf');
+} */
+
+@font-face {
+    font-family: Poppins;
+    src: url('/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('/fonts/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('/fonts/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: Poppins-ExtraLight;
+    src: url('/fonts/Poppins-ExtraLight.ttf');
 }
 
 .h5-wrap, body {
@@ -31,6 +48,9 @@
 }
 .font-exlt {
     font-family: Poppins-ExtraLight;
+}
+.font-fnormal {
+    font-family: Poppins;
 }
 .community-1{
     padding: 160px 0 85px 0;
