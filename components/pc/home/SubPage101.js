@@ -8,7 +8,7 @@ const SubPage1 = () => {
         <div className="max-w-[1288px] flex justify-center">
           <div className="flex justify-center">
             <div className="w-[67.08vw] h-[23.33vw] bg-[url('/pc/page1_title_bg.png')] flex justify-center items-center" style={{backgroundSize: '100% 100%'}}>
-              <div className="font-exlt text-center text-[1.8vw] text-white uppercase" style={{letterSpacing: '0.30vw'}}>INFERER AIRDROP PROTOCOL</div>
+              {/* <div className="font-exlt text-center text-[1.8vw] text-white uppercase" style={{letterSpacing: '0.30vw'}}>INFERER AIRDROP PROTOCOL</div> */}
             </div>
           </div>
         </div>
