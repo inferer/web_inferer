@@ -4,7 +4,7 @@ import LazyImage from "../../LazyImage";
 const SubPage1 = () => {
   return (
     <div className="bg-[url('/pc/page1_bg.png')] flex justify-center bg-no-repeat" style={{backgroundSize: '100% 100%', backgroundColor: '#0f0923'}}>
-      <div className="max-w-[1288px] pt-[10.00vw] pb-[14.166vw]">
+      <div className="max-w-[1488px] pt-[10.00vw] pb-[14.166vw]">
         <div className="max-w-[1288px] flex justify-center">
           <div className="flex justify-center">
             <div className="w-[67.08vw] h-[23.33vw] bg-[url('/pc/page1_title_bg.png')] flex justify-center items-center" style={{backgroundSize: '100% 100%'}}>
