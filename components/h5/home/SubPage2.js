@@ -13,9 +13,8 @@ const SubPage2 = () => {
           Inferer Airdrop protocol is the first ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement) and created new possibilities on airdrop. It’s AMM based, user analyzed and data(user) profited.
           </TextWrap>
         </div>
-        <div className="mt-[10.6667vw] sm:mt-[2px]">
-          <LazyImage src="/h5/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] block sm:hidden" />
-          <LazyImage src="/pc/inferer.png" className="w-[80vw] h-[31.0667vw] sm:w-[995px] sm:h-[387px] hidden sm:block" />
+        <div className="mt-[10.6667vw] sm:mt-[4.6875vw]">
+          <LazyImage src="/pc/protocol.png" className="w-[89.2vw] h-auto sm:w-[46.19vw] sm:h-[17.8125vw]" />
         </div>
         <Title text="User Data Rights" className="mt-[9.3333vw] sm:mt-[120px]" />
         <div className="px-[5.3333vw] sm:w-[62.5vw] sm:px-0 mt-[3.2vw] sm:mt-8">
@@ -23,8 +22,8 @@ const SubPage2 = () => {
           User data rights would prosper in web3 era. People would get their deserved economic feedbacks in this new era. The problem billions dollars of earnings created upon user data are solely poured into giant web2 entities’ revenue would be fixed. With blockchain technology, people would have a much more fair, permissionless and efficient data rights economics.
           </TextWrap>
         </div>
-        <div className="mt-[10.8vw] sm:mt-12">
-          <LazyImage src="/h5/sub2_b.png" className="w-[89.2vw] h-[35.0667vw] sm:w-[887px] sm:h-[348px]" />
+        <div className="mt-[10.8vw] sm:mt-[4.6875vw]">
+          <LazyImage src="/pc/user_data.png" className="w-[89.2vw] h-auto sm:w-[51.718vw] sm:h-[20.833vw]" />
         </div>
       </div>
 

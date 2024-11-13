@@ -15,8 +15,8 @@ const SubPage3 = () => {
             Inferer Airdrop Protocol innovatively integrated AMM mechanism into advertisement market and create a brand new way to facilitate user data benefits. It would offer a user data pool market that exchanges between data demanders and data owners. Users would get more incentivized once the demands surges, in a decentralized, accurate and automative way.
             </TextWrap>
           </div>
-          <div className="mt-[8.1333vw] sm:mt-[100px]">
-            <img src="/h5/sub3_b2.png" className="w-[89.2vw] h-[30.67vw] sm:w-[69.375vw] sm:h-auto" />
+          <div className="mt-[8.1333vw] sm:mt-[4.6875vw]">
+            <img src="/pc/solution.png" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
           </div>
         </div>
       </div>
