@@ -7,7 +7,7 @@ import TextWrap from './TextWrap'
 const SubPage3 = () => {
   return (
     <div className="">
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[140px] flex justify-center">
+      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[7.29vw] sm:pb-[8.33vw] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Innovative Solution" />
           <div className="px-[5.3333vw] sm:w-[62.5vw] mt-[3.2vw] sm:mt-10 sm:px-0">
@@ -20,7 +20,7 @@ const SubPage3 = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] sm:pb-[140px] flex justify-center">
+      <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] sm:pt-[6.45vw] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Products" />
           {/* Inferer Airdrop Protocol */}
