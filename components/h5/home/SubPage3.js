@@ -16,7 +16,7 @@ const SubPage3 = () => {
             </TextWrap>
           </div>
           <div className="mt-[8.1333vw] sm:mt-[4.6875vw]">
-            <img src="/pc/solution.png" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
+            <img src="/pc/solution.svg" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
           </div>
         </div>
       </div>
