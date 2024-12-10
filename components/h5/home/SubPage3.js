@@ -16,7 +16,7 @@ const SubPage3 = () => {
             </TextWrap>
           </div>
           <div className="mt-[8.1333vw] sm:mt-[4.6875vw]">
-            <img src="/pc/solution.svg" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
+            <LazyImage src="/pc/solution.svg" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ const SubPage3 = () => {
           {/* Inferer Airdrop Protocol */}
           <div className=" sm:hidden w-[89.2vw] min-h-[32.8vw] bg-[#0A0917] rounded-[2.8vw] mt-[6.4vw] flex items-center px-[3.2vw] py-[4.2667vw] ">
            <div className=" shrink-0">
-              <img src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
+              <LazyImage src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Airdrop Protocol</div>
@@ -42,7 +42,7 @@ const SubPage3 = () => {
                     Try it out
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                   </div>
-                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                  <LazyImage src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
               </TextWrap>
             </div>
@@ -66,7 +66,7 @@ const SubPage3 = () => {
                    Try it out 
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                   </div>
-                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                  <LazyImage src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
               </TextWrap>
             </div>
@@ -90,7 +90,7 @@ const SubPage3 = () => {
                     Try it out
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                   </div>
-                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                  <LazyImage src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
               </TextWrap>
             </div>
@@ -114,7 +114,7 @@ const SubPage3 = () => {
                     For more detail
                     <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                   </div>
-                  <img src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
+                  <LazyImage src="/h5/url.png" className=" inline-block w-[3.2vw] h-[3.2vw] ml-[0.9333vw]" />
                 </span>
               </TextWrap>
             </div>
@@ -122,7 +122,7 @@ const SubPage3 = () => {
 
           <div className="hidden w-full mt-[98px] sm:flex items-center justify-center">
             <div className=" shrink-0">
-              <img src="/h5/sub4_4.png" className="w-[368px] h-[260px]" />
+              <LazyImage src="/h5/sub4_4.png" className="w-[368px] h-[260px]" />
             </div>
             <div>
               <LazyImage src="/pc/line.png" className="w-[110px] h-[12px] ml-10" />
@@ -147,7 +147,7 @@ const SubPage3 = () => {
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
-                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+                <LazyImage src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
               </div>
             </div>
           </div>
@@ -179,13 +179,13 @@ have a quick scan on address.</span>
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
-                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+                <LazyImage src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
               </div>
             </div>
           </div>
           <div className="hidden w-full sm:flex items-center justify-center mt-[140px] flex-row-reverse">
             <div className="bg-[#0A0917] rounded-[12px] px-[30px] py-[40px] w-[650px] h-[260px] flex flex-col relative ml-[40px] ">
-              <img src="/pc/circle4.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
+              <LazyImage src="/pc/circle4.png" className="w-[32px] h-[32px] absolute left-[30px] top-0 -mt-[15px]" />
               <div className="text-white font-bold text-[34px] font-fbold mb-[10px]">Inferer Ranking</div>
               <TextWrap>
                 <div className="leading-6">
@@ -204,7 +204,7 @@ have a quick scan on address.</span>
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
-                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+                <LazyImage src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
               </div>
             </div>
             <div>
@@ -241,7 +241,7 @@ have a quick scan on address.</span>
                   <div className="bg-gr w-full h-[1px] bg-gr absolute bottom-[3px] left-0"></div>
                 </div>
                 
-                <img src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
+                <LazyImage src="/h5/url.png" className=" inline-block w-[20px] h-[20px] ml-[4px]" />
               </div>
             </div>
           </div>

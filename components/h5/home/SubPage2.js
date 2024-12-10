@@ -14,7 +14,7 @@ const SubPage2 = () => {
           </TextWrap>
         </div>
         <div className="mt-[10.6667vw] sm:mt-[4.6875vw]">
-          <img src="/pc/protocol.svg" className="w-[89.2vw] h-auto sm:w-[46.19vw] sm:h-[17.8125vw]" />
+          <LazyImage src="/pc/protocol.svg" className="w-[89.2vw] h-auto sm:w-[46.19vw] sm:h-[17.8125vw]" />
         </div>
         <Title text="User Data Rights" className="mt-[9.3333vw] sm:mt-[8.3333vw]" />
         <div className="px-[5.3333vw] sm:w-[62.5vw] sm:px-0 mt-[3.2vw] sm:mt-8">
@@ -23,7 +23,7 @@ const SubPage2 = () => {
           </TextWrap>
         </div>
         <div className="mt-[10.8vw] sm:mt-[4.6875vw]">
-          <img src="/pc/user_data.svg" className="w-[89.2vw] h-auto sm:w-[51.718vw] sm:h-[20.833vw]" />
+          <LazyImage src="/pc/user_data.svg" className="w-[89.2vw] h-auto sm:w-[51.718vw] sm:h-[20.833vw]" />
         </div>
       </div>
 

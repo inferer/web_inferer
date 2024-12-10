@@ -64,9 +64,11 @@ const deleteOldFile = () => {
 //单个上传文件
 let tempKeys = [...uploadKeys]
 const uploadFile = (pathItem) => {
+  
   return new Promise((resolve) => {
     const uploadKey = `web_inferer/${pathItem.split("/public/")[1]}`;
-    if ((uploadKeys || []).find(key => uploadKey)) {
+
+    if ((uploadKeys || []).find(key => uploadKey === key)) {
       console.log(`${uploadKey} 已上传到CDN！`);
       resolve(true)
       return
@@ -85,6 +87,8 @@ const uploadFile = (pathItem) => {
           console.log(`上传${uploadKey}到cdn成功！`);
           fs.writeFileSync(path.resolve(__dirname, 'uploadKeys.json'), JSON.stringify(tempKeys), 'utf-8');
           resolve(true)
+        } else {
+          console.log(err, 111111)
         }
       }
     );
@@ -97,7 +101,7 @@ const playUpload = async () => {
   // await deleteOldFile();
   // 获取即将上传的所有文件路径
   const fileData = await fileDisplay(filePath);
-  console.log(fileData)
+  // console.log(fileData)
   // 开始逐一上传
   await Promise.resolve(fileData.forEach(async (item) => {
     await uploadFile(item);
