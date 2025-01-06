@@ -7,7 +7,7 @@ import TextWrap from './TextWrap'
 const SubPage3 = () => {
   return (
     <div className="">
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[7.29vw] sm:pb-[8.33vw] flex justify-center">
+      <div className="bg-[#0F0E23] pt-[16vw] pb-[9.4667vw] sm:pt-[7.29vw] sm:pb-[8.33vw] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Innovative Solution" />
           <div className="px-[5.3333vw] sm:w-[62.5vw] mt-[3.2vw] sm:mt-10 sm:px-0">
@@ -15,12 +15,12 @@ const SubPage3 = () => {
             Inferer Airdrop Protocol innovatively integrated AMM mechanism into advertisement market and create a brand new way to facilitate user data benefits. It would offer a user data pool market that exchanges between data demanders and data owners. Users would get more incentivized once the demands surges, in a decentralized, accurate and automative way.
             </TextWrap>
           </div>
-          <div className="mt-[8.1333vw] sm:mt-[4.6875vw]">
+          <div className="mt-[6.666vw] sm:mt-[4.6875vw]">
             <LazyImage src="/pc/solution.svg" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
           </div>
         </div>
       </div>
-      <div className="bg-[rgba(23,21,50,1)] pt-[11.2vw] pb-[9.4667vw] sm:pt-[6.45vw] sm:pb-[140px] flex justify-center">
+      <div className="bg-[rgba(23,21,50,1)] pt-[16vw] pb-[9.4667vw] sm:pt-[6.45vw] sm:pb-[140px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Products" />
           {/* Inferer Airdrop Protocol */}
@@ -247,7 +247,7 @@ have a quick scan on address.</span>
           </div>
         </div>
       </div>
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[120px] flex justify-center">
+      <div className="bg-[#0F0E23] pt-[16vw] pb-[9.4667vw] sm:pt-[120px] sm:pb-[120px] flex justify-center">
         <div className="flex justify-center flex-col items-center sm:max-w-[1200px]">
           <Title text="Community" />
           <div className="px-[5.3333vw] mt-[3.2vw] sm:mt-[33px] sm:px-0">
@@ -255,12 +255,12 @@ have a quick scan on address.</span>
             Inferer is born in web3 and values community. Community would play a big role in inferer evaluation and management. We hope inferer community could help contribute to great user ecosystem on chain.
             </TextWrap>
           </div>
-          <div className="mt-[4.1333vw] sm:mt-[100px]">
+          <div className="mt-[6.666vw] sm:mt-[100px]">
             <LazyImage src="/h5/sub_5.png" className="w-[89.3333vw] h-[48.1333vw] sm:w-[887px] sm:h-auto" />
           </div>
         </div>
       </div>
-      <div className="bg-[#0F0E23] pt-[11.2vw] pb-[16vw] sm:pt-[91px] sm:pb-[74px]">
+      <div className="bg-[#0F0E23] pt-[16vw] pb-[16vw] sm:pt-[91px] sm:pb-[74px]">
         <div className="flex justify-center flex-col items-center">
           <Title text="Contact us" />
           <div className="grid grid-cols-2 gap-[3.2vw] mt-[3.8667vw]">
