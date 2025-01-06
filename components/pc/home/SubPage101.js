@@ -7,7 +7,7 @@ const SubPage1 = () => {
       <div className="max-w-[1488px] pt-[8.69vw] pb-[14.166vw] flex justify-center items-center flex-col">
         <div className="max-w-[1288px] flex justify-center">
           <div className="flex justify-center">
-            <div className="w-[67.08vw] h-[23.33vw] bg-[url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/pc/page1_title_bg12.png')] flex justify-center items-center" style={{backgroundSize: '100% 100%'}}>
+            <div className="w-[67.08vw] h-[23.33vw] bg-[url('https://website-1315068501.cos.ap-nanjing.myqcloud.com/web_inferer/pc/page1_title_bg.png')] flex justify-center items-center" style={{backgroundSize: '100% 100%'}}>
               <LazyImage className="w-[31.1979vw] h-[2.8125vw]" src="/pc/page1_title_text.svg" />
               {/* <div className="font-exlt text-center text-[1.8vw] text-white uppercase" style={{letterSpacing: '0.30vw'}}>INFERER AIRDROP PROTOCOL</div> */}
             </div>
