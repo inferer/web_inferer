@@ -1,5 +1,5 @@
 import React from "react";
-import SubPage1 from './SubPage1';
+import SubPage1 from './SubPage12';
 import SubPage2 from './SubPage2';
 import SubPage3 from './SubPage3';
 import H5Footer from '../H5Footer'
