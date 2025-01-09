@@ -31,7 +31,7 @@ const SubPage3 = () => {
             <div className="ml-[3.7333vw]">
               <div className="text-white font-bold text-[4.8vw] font-fbold">Airdrop Protocol</div>
               <TextWrap>
-                <span className="text-[3.2vw]">First ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement).</span>
+                <span className="text-[3.2vw]">First ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 advertisement.</span>
                 <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
                   onClick={e => {
                     e.stopPropagation()
