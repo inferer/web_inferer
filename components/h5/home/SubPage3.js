@@ -15,7 +15,7 @@ const SubPage3 = () => {
             Inferer Airdrop Protocol innovatively integrated AMM mechanism into advertisement market and create a brand new way to facilitate user data benefits. It would offer a user data pool market that exchanges between data demanders and data owners. Users would get more incentivized once the demands surges, in a decentralized, accurate and automative way.
             </TextWrap>
           </div>
-          <div className="mt-[6.666vw] sm:mt-[4.6875vw]">
+          <div className="mt-[6.666vw] sm:mt-[90px]">
             <LazyImage src="/pc/solution.svg" className="w-[89.2vw] h-auto sm:w-[54.48vw] sm:h-[26.45625vw]" />
           </div>
         </div>
@@ -29,7 +29,7 @@ const SubPage3 = () => {
               <LazyImage src="/h5/sub4_4.png" className="w-[33.6vw] h-[24.2667vw]" />
             </div>
             <div className="ml-[3.7333vw]">
-              <div className="text-white font-bold text-[4.8vw] font-fbold">Inferer Airdrop Protocol</div>
+              <div className="text-white font-bold text-[4.8vw] font-fbold">Airdrop Protocol</div>
               <TextWrap>
                 <span className="text-[3.2vw]">First ever decentralized crypto airdrop protocol, which is based on uniswap, targeted on web3 airdrop(advertisement).</span>
                 <span className="text-gradient font-medium text-[3.2vw] cursor-pointer font-fmedium"
