@@ -21,7 +21,7 @@ const H5Community = ({ onSubmit, defaultValue, inputValueChange }) => {
         <Menu />
       </div>
       
-      <div className="text-[6.4vw] sm:text-[36px] text-white text-center sm:text-left font-fbold">
+      <div className="text-[6.4vw] sm:text-[36px] text-white text-center sm:text-left font-fbold font-bold">
         Community
       </div>
       <div className="text-[3.2vw] text-[rgba(255,255,255,0.6)] leading-[4.8vw] letter-spacing text-center mt-[3.2vw] px-[10.6667vw]
